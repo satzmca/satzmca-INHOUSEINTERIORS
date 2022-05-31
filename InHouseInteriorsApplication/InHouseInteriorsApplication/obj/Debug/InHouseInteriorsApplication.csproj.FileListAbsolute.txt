@@ -1,1 +1,10 @@
 D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\bin\Debug\InHouseInteriorsApplication.exe.config
+D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\bin\Debug\InHouseInteriorsApplication.exe
+D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\bin\Debug\InHouseInteriorsApplication.pdb
+D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\obj\Debug\InHouseInteriorsApplication.csprojResolveAssemblyReference.cache
+D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\obj\Debug\InHouseInteriorsApplication.Properties.Resources.resources
+D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\obj\Debug\InHouseInteriorsApplication.csproj.GenerateResource.Cache
+D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\obj\Debug\InHouseInteriorsApplication.exe
+D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\obj\Debug\InHouseInteriorsApplication.pdb
+D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\obj\Debug\InHouseInteriorsApplication.LoginPage.resources
+D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\obj\Debug\InHouseInteriorsApplication.MainPage.resources

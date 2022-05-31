@@ -30,8 +30,11 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.descriptionMasterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.workMasterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.partyMasterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,19 +58,43 @@
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(43, 23);
             this.fileToolStripMenuItem.Text = "File";
             // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.descriptionMasterToolStripMenuItem,
+            this.workMasterToolStripMenuItem,
+            this.partyMasterToolStripMenuItem});
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(180, 24);
+            this.toolStripMenuItem1.Text = "Master";
+            // 
+            // descriptionMasterToolStripMenuItem
+            // 
+            this.descriptionMasterToolStripMenuItem.Name = "descriptionMasterToolStripMenuItem";
+            this.descriptionMasterToolStripMenuItem.Size = new System.Drawing.Size(195, 24);
+            this.descriptionMasterToolStripMenuItem.Text = "Description Master";
+            this.descriptionMasterToolStripMenuItem.Click += new System.EventHandler(this.DescriptionMasterToolStripMenuItem_Click);
+            // 
+            // workMasterToolStripMenuItem
+            // 
+            this.workMasterToolStripMenuItem.Name = "workMasterToolStripMenuItem";
+            this.workMasterToolStripMenuItem.Size = new System.Drawing.Size(195, 24);
+            this.workMasterToolStripMenuItem.Text = "Work Master";
+            this.workMasterToolStripMenuItem.Click += new System.EventHandler(this.WorkMasterToolStripMenuItem_Click);
+            // 
+            // partyMasterToolStripMenuItem
+            // 
+            this.partyMasterToolStripMenuItem.Name = "partyMasterToolStripMenuItem";
+            this.partyMasterToolStripMenuItem.Size = new System.Drawing.Size(195, 24);
+            this.partyMasterToolStripMenuItem.Text = "Party Master";
+            this.partyMasterToolStripMenuItem.Click += new System.EventHandler(this.PartyMasterToolStripMenuItem_Click);
+            // 
             // logOutToolStripMenuItem
             // 
             this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
-            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
+            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.logOutToolStripMenuItem.Text = "Log Out";
             this.logOutToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click);
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(152, 24);
-            this.toolStripMenuItem1.Text = "Master";
-            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // MainPage
             // 
@@ -94,5 +121,8 @@
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem logOutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem workMasterToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem descriptionMasterToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem partyMasterToolStripMenuItem;
     }
 }

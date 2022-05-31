@@ -20,7 +20,7 @@ namespace InHouseInteriorsApplication
         private void btnLogin_Click(object sender, EventArgs e)
         {
 
-            if (txtUserName.Text == "admin" && txtPassword.Text == "admin")
+            if (txtUserName.Text == "" && txtPassword.Text == "")
             {
                 MainPage mainpage = new MainPage();
                 mainpage.ShowDialog();
@@ -39,6 +39,19 @@ namespace InHouseInteriorsApplication
         {
             lblTime.Text = DateTime.Now.ToLongTimeString();
             lblDate.Text = DateTime.Now.ToLongDateString();
+        }        
+
+        private void PctClose_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.Close();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Error_PctClose");
+            }
+            
         }
     }
 }

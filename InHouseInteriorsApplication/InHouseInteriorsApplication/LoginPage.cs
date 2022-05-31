@@ -53,5 +53,17 @@ namespace InHouseInteriorsApplication
             }
             
         }
+
+        private void PicLogin_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error_PicLogin");
+            }
+        }
     }
 }

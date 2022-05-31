@@ -141,7 +141,7 @@
             // 
             // pctClose
             // 
-            this.pctClose.Image = global::InHouseInteriorsApplication.Properties.Resources.close;
+            this.pctClose.Image = global::InHouseInteriorsApplication.Properties.Resources.close2;
             this.pctClose.Location = new System.Drawing.Point(951, 2);
             this.pctClose.Name = "pctClose";
             this.pctClose.Size = new System.Drawing.Size(50, 50);

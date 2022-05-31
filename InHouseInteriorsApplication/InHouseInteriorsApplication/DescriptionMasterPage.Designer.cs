@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.grpDescription = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.txtRate = new System.Windows.Forms.TextBox();
+            this.lblRate = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
             this.txtWeight = new System.Windows.Forms.TextBox();
             this.txtDescription = new System.Windows.Forms.TextBox();
             this.lblWeight = new System.Windows.Forms.Label();
             this.lblDescription = new System.Windows.Forms.Label();
-            this.txtRate = new System.Windows.Forms.TextBox();
-            this.lblRate = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.pctClose = new System.Windows.Forms.PictureBox();
             this.grpDescription.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctClose)).BeginInit();
@@ -60,16 +60,25 @@
             this.grpDescription.TabStop = false;
             this.grpDescription.Text = "Description Master";
             // 
-            // label1
+            // txtRate
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(327, 10);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(289, 45);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "In-House Interiors";
+            this.txtRate.Font = new System.Drawing.Font("Segoe UI", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.txtRate.Location = new System.Drawing.Point(378, 289);
+            this.txtRate.Name = "txtRate";
+            this.txtRate.Size = new System.Drawing.Size(350, 32);
+            this.txtRate.TabIndex = 14;
+            this.txtRate.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtRate_KeyPress);
+            // 
+            // lblRate
+            // 
+            this.lblRate.AutoSize = true;
+            this.lblRate.Font = new System.Drawing.Font("Segoe UI", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRate.ForeColor = System.Drawing.Color.White;
+            this.lblRate.Location = new System.Drawing.Point(248, 289);
+            this.lblRate.Name = "lblRate";
+            this.lblRate.Size = new System.Drawing.Size(52, 25);
+            this.lblRate.TabIndex = 13;
+            this.lblRate.Text = "Rate";
             // 
             // btnSave
             // 
@@ -121,29 +130,20 @@
             this.lblDescription.TabIndex = 8;
             this.lblDescription.Text = "Description";
             // 
-            // txtRate
+            // label1
             // 
-            this.txtRate.Font = new System.Drawing.Font("Segoe UI", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.txtRate.Location = new System.Drawing.Point(378, 289);
-            this.txtRate.Name = "txtRate";
-            this.txtRate.Size = new System.Drawing.Size(350, 32);
-            this.txtRate.TabIndex = 14;
-            this.txtRate.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtRate_KeyPress);
-            // 
-            // lblRate
-            // 
-            this.lblRate.AutoSize = true;
-            this.lblRate.Font = new System.Drawing.Font("Segoe UI", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRate.ForeColor = System.Drawing.Color.White;
-            this.lblRate.Location = new System.Drawing.Point(248, 289);
-            this.lblRate.Name = "lblRate";
-            this.lblRate.Size = new System.Drawing.Size(52, 25);
-            this.lblRate.TabIndex = 13;
-            this.lblRate.Text = "Rate";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(327, 10);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(289, 45);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "In-House Interiors";
             // 
             // pctClose
             // 
-            this.pctClose.Image = global::InHouseInteriorsApplication.Properties.Resources.close;
+            this.pctClose.Image = global::InHouseInteriorsApplication.Properties.Resources.close2;
             this.pctClose.Location = new System.Drawing.Point(951, 2);
             this.pctClose.Name = "pctClose";
             this.pctClose.Size = new System.Drawing.Size(50, 50);

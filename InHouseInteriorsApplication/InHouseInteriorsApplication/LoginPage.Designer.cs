@@ -40,11 +40,11 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.lblTime = new System.Windows.Forms.Label();
             this.lblDate = new System.Windows.Forms.Label();
-            this.pctClose = new System.Windows.Forms.PictureBox();
+            this.picLogin = new System.Windows.Forms.PictureBox();
             this.picTime = new System.Windows.Forms.PictureBox();
             this.picLogo = new System.Windows.Forms.PictureBox();
             this.grpLogin.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pctClose)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picTime)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.SuspendLayout();
@@ -153,16 +153,16 @@
             this.lblDate.TabIndex = 5;
             this.lblDate.Text = "Date";
             // 
-            // pctClose
+            // picLogin
             // 
-            this.pctClose.Image = global::InHouseInteriorsApplication.Properties.Resources.close;
-            this.pctClose.Location = new System.Drawing.Point(648, 0);
-            this.pctClose.Name = "pctClose";
-            this.pctClose.Size = new System.Drawing.Size(50, 50);
-            this.pctClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pctClose.TabIndex = 7;
-            this.pctClose.TabStop = false;
-            this.pctClose.Click += new System.EventHandler(this.PctClose_Click);
+            this.picLogin.Image = global::InHouseInteriorsApplication.Properties.Resources.close2;
+            this.picLogin.Location = new System.Drawing.Point(645, 2);
+            this.picLogin.Name = "picLogin";
+            this.picLogin.Size = new System.Drawing.Size(50, 50);
+            this.picLogin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picLogin.TabIndex = 7;
+            this.picLogin.TabStop = false;
+            this.picLogin.Click += new System.EventHandler(this.PicLogin_Click);
             // 
             // picTime
             // 
@@ -190,7 +190,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Red;
             this.ClientSize = new System.Drawing.Size(697, 450);
-            this.Controls.Add(this.pctClose);
+            this.Controls.Add(this.picLogin);
             this.Controls.Add(this.picTime);
             this.Controls.Add(this.lblDate);
             this.Controls.Add(this.lblTime);
@@ -204,7 +204,7 @@
             this.Load += new System.EventHandler(this.LoginPage_Load);
             this.grpLogin.ResumeLayout(false);
             this.grpLogin.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pctClose)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picTime)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
             this.ResumeLayout(false);
@@ -226,7 +226,7 @@
         private System.Windows.Forms.Label lblTime;
         private System.Windows.Forms.Label lblDate;
         private System.Windows.Forms.PictureBox picTime;
-        private System.Windows.Forms.PictureBox pctClose;
+        private System.Windows.Forms.PictureBox picLogin;
     }
 }
 

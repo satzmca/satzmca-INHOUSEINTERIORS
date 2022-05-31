@@ -30,19 +30,19 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.grpDescription = new System.Windows.Forms.GroupBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtMobileNo2 = new System.Windows.Forms.TextBox();
+            this.lblMobileNo2 = new System.Windows.Forms.Label();
+            this.txtMobileNo1 = new System.Windows.Forms.TextBox();
+            this.lblMobileNo1 = new System.Windows.Forms.Label();
+            this.txtAddress2 = new System.Windows.Forms.TextBox();
+            this.lblAddress2 = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
             this.txtAddress1 = new System.Windows.Forms.TextBox();
             this.txtPartyName = new System.Windows.Forms.TextBox();
             this.lblAddress1 = new System.Windows.Forms.Label();
             this.lblPartName = new System.Windows.Forms.Label();
-            this.txtAddress2 = new System.Windows.Forms.TextBox();
-            this.lblAddress2 = new System.Windows.Forms.Label();
-            this.txtMobileNo1 = new System.Windows.Forms.TextBox();
-            this.lblMobileNo1 = new System.Windows.Forms.Label();
-            this.txtMobileNo2 = new System.Windows.Forms.TextBox();
-            this.lblMobileNo2 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.pctClose = new System.Windows.Forms.PictureBox();
             this.grpDescription.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctClose)).BeginInit();
@@ -82,6 +82,90 @@
             this.grpDescription.TabIndex = 12;
             this.grpDescription.TabStop = false;
             this.grpDescription.Text = "Party Master";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Vendor",
+            "Supplier "});
+            this.comboBox1.Location = new System.Drawing.Point(139, 116);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(829, 33);
+            this.comboBox1.TabIndex = 11;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(6, 116);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(102, 25);
+            this.label2.TabIndex = 21;
+            this.label2.Text = "PartyType";
+            // 
+            // txtMobileNo2
+            // 
+            this.txtMobileNo2.Font = new System.Drawing.Font("Segoe UI", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.txtMobileNo2.Location = new System.Drawing.Point(620, 279);
+            this.txtMobileNo2.MaxLength = 12;
+            this.txtMobileNo2.Name = "txtMobileNo2";
+            this.txtMobileNo2.Size = new System.Drawing.Size(350, 32);
+            this.txtMobileNo2.TabIndex = 15;
+            this.txtMobileNo2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtMobileNo2_KeyPress);
+            // 
+            // lblMobileNo2
+            // 
+            this.lblMobileNo2.AutoSize = true;
+            this.lblMobileNo2.Font = new System.Drawing.Font("Segoe UI", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMobileNo2.ForeColor = System.Drawing.Color.White;
+            this.lblMobileNo2.Location = new System.Drawing.Point(495, 282);
+            this.lblMobileNo2.Name = "lblMobileNo2";
+            this.lblMobileNo2.Size = new System.Drawing.Size(110, 25);
+            this.lblMobileNo2.TabIndex = 19;
+            this.lblMobileNo2.Text = "MobileNo2";
+            // 
+            // txtMobileNo1
+            // 
+            this.txtMobileNo1.Font = new System.Drawing.Font("Segoe UI", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.txtMobileNo1.Location = new System.Drawing.Point(139, 279);
+            this.txtMobileNo1.MaxLength = 12;
+            this.txtMobileNo1.Name = "txtMobileNo1";
+            this.txtMobileNo1.Size = new System.Drawing.Size(350, 32);
+            this.txtMobileNo1.TabIndex = 14;
+            this.txtMobileNo1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtMobileNo1_KeyPress);
+            // 
+            // lblMobileNo1
+            // 
+            this.lblMobileNo1.AutoSize = true;
+            this.lblMobileNo1.Font = new System.Drawing.Font("Segoe UI", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMobileNo1.ForeColor = System.Drawing.Color.White;
+            this.lblMobileNo1.Location = new System.Drawing.Point(6, 282);
+            this.lblMobileNo1.Name = "lblMobileNo1";
+            this.lblMobileNo1.Size = new System.Drawing.Size(110, 25);
+            this.lblMobileNo1.TabIndex = 17;
+            this.lblMobileNo1.Text = "MobileNo1";
+            // 
+            // txtAddress2
+            // 
+            this.txtAddress2.Font = new System.Drawing.Font("Segoe UI", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.txtAddress2.Location = new System.Drawing.Point(618, 171);
+            this.txtAddress2.Multiline = true;
+            this.txtAddress2.Name = "txtAddress2";
+            this.txtAddress2.Size = new System.Drawing.Size(350, 71);
+            this.txtAddress2.TabIndex = 13;
+            // 
+            // lblAddress2
+            // 
+            this.lblAddress2.AutoSize = true;
+            this.lblAddress2.Font = new System.Drawing.Font("Segoe UI", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddress2.ForeColor = System.Drawing.Color.White;
+            this.lblAddress2.Location = new System.Drawing.Point(495, 190);
+            this.lblAddress2.Name = "lblAddress2";
+            this.lblAddress2.Size = new System.Drawing.Size(92, 25);
+            this.lblAddress2.TabIndex = 15;
+            this.lblAddress2.Text = "Address2";
             // 
             // btnSave
             // 
@@ -134,93 +218,9 @@
             this.lblPartName.TabIndex = 8;
             this.lblPartName.Text = "PartyName";
             // 
-            // txtAddress2
-            // 
-            this.txtAddress2.Font = new System.Drawing.Font("Segoe UI", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.txtAddress2.Location = new System.Drawing.Point(618, 171);
-            this.txtAddress2.Multiline = true;
-            this.txtAddress2.Name = "txtAddress2";
-            this.txtAddress2.Size = new System.Drawing.Size(350, 71);
-            this.txtAddress2.TabIndex = 13;
-            // 
-            // lblAddress2
-            // 
-            this.lblAddress2.AutoSize = true;
-            this.lblAddress2.Font = new System.Drawing.Font("Segoe UI", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAddress2.ForeColor = System.Drawing.Color.White;
-            this.lblAddress2.Location = new System.Drawing.Point(495, 190);
-            this.lblAddress2.Name = "lblAddress2";
-            this.lblAddress2.Size = new System.Drawing.Size(92, 25);
-            this.lblAddress2.TabIndex = 15;
-            this.lblAddress2.Text = "Address2";
-            // 
-            // txtMobileNo1
-            // 
-            this.txtMobileNo1.Font = new System.Drawing.Font("Segoe UI", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.txtMobileNo1.Location = new System.Drawing.Point(139, 279);
-            this.txtMobileNo1.MaxLength = 12;
-            this.txtMobileNo1.Name = "txtMobileNo1";
-            this.txtMobileNo1.Size = new System.Drawing.Size(350, 32);
-            this.txtMobileNo1.TabIndex = 14;
-            this.txtMobileNo1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtMobileNo1_KeyPress);
-            // 
-            // lblMobileNo1
-            // 
-            this.lblMobileNo1.AutoSize = true;
-            this.lblMobileNo1.Font = new System.Drawing.Font("Segoe UI", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMobileNo1.ForeColor = System.Drawing.Color.White;
-            this.lblMobileNo1.Location = new System.Drawing.Point(6, 282);
-            this.lblMobileNo1.Name = "lblMobileNo1";
-            this.lblMobileNo1.Size = new System.Drawing.Size(110, 25);
-            this.lblMobileNo1.TabIndex = 17;
-            this.lblMobileNo1.Text = "MobileNo1";
-            // 
-            // txtMobileNo2
-            // 
-            this.txtMobileNo2.Font = new System.Drawing.Font("Segoe UI", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.txtMobileNo2.Location = new System.Drawing.Point(620, 279);
-            this.txtMobileNo2.MaxLength = 12;
-            this.txtMobileNo2.Name = "txtMobileNo2";
-            this.txtMobileNo2.Size = new System.Drawing.Size(350, 32);
-            this.txtMobileNo2.TabIndex = 15;
-            this.txtMobileNo2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtMobileNo2_KeyPress);
-            // 
-            // lblMobileNo2
-            // 
-            this.lblMobileNo2.AutoSize = true;
-            this.lblMobileNo2.Font = new System.Drawing.Font("Segoe UI", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMobileNo2.ForeColor = System.Drawing.Color.White;
-            this.lblMobileNo2.Location = new System.Drawing.Point(495, 282);
-            this.lblMobileNo2.Name = "lblMobileNo2";
-            this.lblMobileNo2.Size = new System.Drawing.Size(110, 25);
-            this.lblMobileNo2.TabIndex = 19;
-            this.lblMobileNo2.Text = "MobileNo2";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(6, 116);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(102, 25);
-            this.label2.TabIndex = 21;
-            this.label2.Text = "PartyType";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Vendor",
-            "Supplier "});
-            this.comboBox1.Location = new System.Drawing.Point(139, 116);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(829, 33);
-            this.comboBox1.TabIndex = 11;
-            // 
             // pctClose
             // 
-            this.pctClose.Image = global::InHouseInteriorsApplication.Properties.Resources.close;
+            this.pctClose.Image = global::InHouseInteriorsApplication.Properties.Resources.close2;
             this.pctClose.Location = new System.Drawing.Point(951, 2);
             this.pctClose.Name = "pctClose";
             this.pctClose.Size = new System.Drawing.Size(50, 50);

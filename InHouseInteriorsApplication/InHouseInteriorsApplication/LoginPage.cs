@@ -19,13 +19,14 @@ namespace InHouseInteriorsApplication
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if (txtUserName.Text == "" || txtPassword.Text == "")
-                MessageBox.Show("Invalid Username & Password");
-            else
+
+            if (txtUserName.Text == "admin" && txtPassword.Text == "admin")
             {
                 MainPage mainpage = new MainPage();
                 mainpage.ShowDialog();
-            } 
+            }
+            else
+                MessageBox.Show("Invalid Username & Password");
 
         }
 

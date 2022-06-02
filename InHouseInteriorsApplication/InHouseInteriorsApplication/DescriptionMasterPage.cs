@@ -104,5 +104,24 @@ namespace InHouseInteriorsApplication
                 cls.WriteException("DescriptionMasterPage : PartyMasterToolStripMenuItem_Click" + ex.ToString());
             }
         }
+
+        private void DescriptionMasterPage_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                bind();
+            }
+            catch(Exception ex)
+            {
+                cls.WriteException("DescriptionMasterPage : DescriptionMasterPage_Load" + ex.ToString());
+            }
+        }
+
+        public void bind()
+        {
+            DataTable dt = new DataTable();
+            dt = cls.FetchData(SpName: "USP_Description_insert", ReqType: "SELECT_DESCRIPTION");
+            dgvDescription.DataSource = dt;            
+        }
     }
 }

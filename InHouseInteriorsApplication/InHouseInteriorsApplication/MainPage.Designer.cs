@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -35,7 +36,13 @@
             this.workMasterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.partyMasterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lblusername = new System.Windows.Forms.Label();
+            this.picTime = new System.Windows.Forms.PictureBox();
+            this.lblDate = new System.Windows.Forms.Label();
+            this.lblTime = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picTime)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -65,7 +72,7 @@
             this.workMasterToolStripMenuItem,
             this.partyMasterToolStripMenuItem});
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(180, 24);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(128, 24);
             this.toolStripMenuItem1.Text = "Master";
             // 
             // descriptionMasterToolStripMenuItem
@@ -92,9 +99,60 @@
             // logOutToolStripMenuItem
             // 
             this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
-            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(128, 24);
             this.logOutToolStripMenuItem.Text = "Log Out";
             this.logOutToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click);
+            // 
+            // lblusername
+            // 
+            this.lblusername.AutoSize = true;
+            this.lblusername.BackColor = System.Drawing.Color.Transparent;
+            this.lblusername.Font = new System.Drawing.Font("Segoe UI", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.lblusername.ForeColor = System.Drawing.Color.White;
+            this.lblusername.Location = new System.Drawing.Point(1068, 53);
+            this.lblusername.Name = "lblusername";
+            this.lblusername.Size = new System.Drawing.Size(158, 45);
+            this.lblusername.TabIndex = 1;
+            this.lblusername.Text = "Welcome";
+            // 
+            // picTime
+            // 
+            this.picTime.BackColor = System.Drawing.Color.Transparent;
+            this.picTime.Image = global::InHouseInteriorsApplication.Properties.Resources.time;
+            this.picTime.Location = new System.Drawing.Point(1066, 101);
+            this.picTime.Name = "picTime";
+            this.picTime.Size = new System.Drawing.Size(70, 70);
+            this.picTime.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picTime.TabIndex = 9;
+            this.picTime.TabStop = false;
+            // 
+            // lblDate
+            // 
+            this.lblDate.AutoSize = true;
+            this.lblDate.BackColor = System.Drawing.Color.Transparent;
+            this.lblDate.Font = new System.Drawing.Font("Segoe UI", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDate.ForeColor = System.Drawing.Color.White;
+            this.lblDate.Location = new System.Drawing.Point(1138, 139);
+            this.lblDate.Name = "lblDate";
+            this.lblDate.Size = new System.Drawing.Size(62, 30);
+            this.lblDate.TabIndex = 8;
+            this.lblDate.Text = "Date";
+            // 
+            // lblTime
+            // 
+            this.lblTime.AutoSize = true;
+            this.lblTime.BackColor = System.Drawing.Color.Transparent;
+            this.lblTime.Font = new System.Drawing.Font("Segoe UI", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTime.ForeColor = System.Drawing.Color.White;
+            this.lblTime.Location = new System.Drawing.Point(1138, 104);
+            this.lblTime.Name = "lblTime";
+            this.lblTime.Size = new System.Drawing.Size(64, 30);
+            this.lblTime.TabIndex = 7;
+            this.lblTime.Text = "Time";
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
             // 
             // MainPage
             // 
@@ -102,14 +160,20 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::InHouseInteriorsApplication.Properties.Resources.InHouseBackGround;
             this.ClientSize = new System.Drawing.Size(1503, 796);
+            this.Controls.Add(this.picTime);
+            this.Controls.Add(this.lblDate);
+            this.Controls.Add(this.lblTime);
+            this.Controls.Add(this.lblusername);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainPage";
             this.Text = "MainPage";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.MainPage_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picTime)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -124,5 +188,10 @@
         private System.Windows.Forms.ToolStripMenuItem workMasterToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem descriptionMasterToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem partyMasterToolStripMenuItem;
+        private System.Windows.Forms.Label lblusername;
+        private System.Windows.Forms.PictureBox picTime;
+        private System.Windows.Forms.Label lblDate;
+        private System.Windows.Forms.Label lblTime;
+        private System.Windows.Forms.Timer timer1;
     }
 }

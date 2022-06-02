@@ -1,4 +1,7 @@
-﻿using System;
+﻿using InHouseInteriorsApplication.Class;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,6 +16,7 @@ namespace InHouseInteriorsApplication
 {
     public partial class DescriptionMasterPage : Form
     {
+        ClassConfig cls = new ClassConfig();
         public DescriptionMasterPage()
         {
             InitializeComponent();
@@ -26,7 +30,8 @@ namespace InHouseInteriorsApplication
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error_PctClose");
+                MessageBox.Show("Error");
+                cls.WriteException("DescriptionMasterPage : PctClose_Click" + ex.ToString());
             }
         }
 
@@ -65,6 +70,38 @@ namespace InHouseInteriorsApplication
             if (Regex.IsMatch(txtRate.Text, @"\.\d\d\d\d"))
             {
                 e.Handled = true;
+            }
+        }
+
+        private void BtnSave_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (txtDescription.Text != "" && txtWeight.Text != "" && txtRate.Text != "")
+                {
+                    var dict = JObject.Parse(@"{'Description':'" + txtDescription.Text + "', 'Weight':'" + txtWeight.Text + "', 'Rate':'" + txtRate.Text + "'}");
+                    string res = cls.InsertData(SpName: "USP_Description_insert", ReqType: "INSERT_DESCRIPTION", dict: dict);
+                    if (res == "1")
+                    {
+                        MessageBox.Show("Saved Successfully");
+                        txtDescription.Text = "";
+                        txtWeight.Text = "";
+                        txtRate.Text = "";
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Already Exists");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Fill All The Fields");
+                }
+            }
+            catch (Exception ex)
+            {
+                cls.WriteException("DescriptionMasterPage : PartyMasterToolStripMenuItem_Click" + ex.ToString());
             }
         }
     }

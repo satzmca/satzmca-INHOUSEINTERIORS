@@ -12,3 +12,4 @@ D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\I
 D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\obj\Debug\InHouseInteriorsApplication.DescriptionMasterPage.resources
 D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\obj\Debug\InHouseInteriorsApplication.PartyMasterPage.resources
 D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\obj\Debug\InHouseInteriorsApplication.WorkMasterPage.resources
+D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\obj\Debug\InHouseInteriorsApplication.csproj.CopyComplete

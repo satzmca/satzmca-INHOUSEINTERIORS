@@ -1,4 +1,5 @@
-﻿using System;
+﻿using InHouseInteriorsApplication.Class;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,7 @@ namespace InHouseInteriorsApplication
 {
     public partial class MainPage : Form
     {
+        ClassConfig cls = new ClassConfig();
         public MainPage()
         {
             InitializeComponent();
@@ -31,7 +33,8 @@ namespace InHouseInteriorsApplication
             }
             catch(Exception ex)
             {
-                MessageBox.Show("DescriptionMaster" + ex.ToString());
+                MessageBox.Show("Error");
+                cls.WriteException("MainPage : DescriptionMasterToolStripMenuItem_Click" + ex.ToString());
             }
         }
 
@@ -44,7 +47,8 @@ namespace InHouseInteriorsApplication
             }
             catch (Exception ex)
             {
-                MessageBox.Show("WorkMasterPage" + ex.ToString());
+                MessageBox.Show("Error");
+                cls.WriteException("MainPage : WorkMasterToolStripMenuItem_Click" + ex.ToString());
             }
         }
 
@@ -57,10 +61,21 @@ namespace InHouseInteriorsApplication
             }
             catch (Exception ex)
             {
-                MessageBox.Show("PartyMasterPage" + ex.ToString());
+                MessageBox.Show("Error");
+                cls.WriteException("MainPage : PartyMasterToolStripMenuItem_Click" + ex.ToString());
             }
         }
 
-        
+        private void MainPage_Load(object sender, EventArgs e)
+        {
+            timer1.Start();
+            lblusername.Text = "Hi.. " + ClassConfig.UserName.ToString().ToLowerInvariant() + " Welcome";
+        }
+
+        private void Timer1_Tick(object sender, EventArgs e)
+        {
+            lblTime.Text = DateTime.Now.ToLongTimeString();
+            lblDate.Text = DateTime.Now.ToLongDateString();
+        }
     }
 }

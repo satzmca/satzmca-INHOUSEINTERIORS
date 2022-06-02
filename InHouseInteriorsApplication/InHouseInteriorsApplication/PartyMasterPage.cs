@@ -1,4 +1,5 @@
-﻿using System;
+﻿using InHouseInteriorsApplication.Class;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,6 +14,7 @@ namespace InHouseInteriorsApplication
 {
     public partial class PartyMasterPage : Form
     {
+        ClassConfig cls = new ClassConfig();
         public PartyMasterPage()
         {
             InitializeComponent();
@@ -27,7 +29,8 @@ namespace InHouseInteriorsApplication
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error_PctClose");
+                MessageBox.Show("Error");
+                cls.WriteException("PartyMasterPage : PctClose_Click" + ex.ToString());
             }
         }
 

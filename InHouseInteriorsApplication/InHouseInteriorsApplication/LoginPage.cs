@@ -1,4 +1,6 @@
-﻿using System;
+﻿using InHouseInteriorsApplication.Class;
+using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,29 +14,59 @@ namespace InHouseInteriorsApplication
 {
     public partial class LoginPage : Form
     {
+        ClassConfig cls = new ClassConfig();
+        
         public LoginPage()
         {
             InitializeComponent();
         }
-
-        private void btnLogin_Click(object sender, EventArgs e)
-        {
-
-            if (txtUserName.Text == "" && txtPassword.Text == "")
-            {
-                MainPage mainpage = new MainPage();
-                mainpage.ShowDialog();
-            }
-            else
-                MessageBox.Show("Invalid Username & Password");
-
-        }
-
+      
         private void LoginPage_Load(object sender, EventArgs e)
         {
             timer1.Start();
+            //var dict = JObject.Parse(@"{'UserName':'"+txtUserName.Text+"'}");            
+            ClassConfig.UserTable = cls.FetchData(SpName: "USP_UsersSelect", ReqType: "SELECT_USER");
         }
 
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                if (txtUserName.Text == "" || txtPassword.Text == "")
+                {
+                    MessageBox.Show("Invalid Username & Password");
+                }
+                else
+                {
+                    DataRow[] rslt = ClassConfig.UserTable.Select("UserName='" + txtUserName.Text + "' AND Password = '" + txtPassword.Text + "'");
+                    if (rslt.Length > 0)
+                    {
+                        DataTable dt = rslt.CopyToDataTable();
+
+                        if (dt.Rows.Count > 0)
+                        {
+                            ClassConfig.UserName = dt.Rows[0]["LoginName"].ToString();
+                            MainPage mainpage = new MainPage();
+                            mainpage.ShowDialog();
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Invalid Username & Password");
+                    }
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error");
+                cls.WriteException("Login Page : btnLogin_Click" + ex.ToString());
+            }
+
+
+        }
         private void timer1_Tick(object sender, EventArgs e)
         {
             lblTime.Text = DateTime.Now.ToLongTimeString();
@@ -49,7 +81,8 @@ namespace InHouseInteriorsApplication
             }
             catch(Exception ex)
             {
-                MessageBox.Show("Error_PctClose");
+                MessageBox.Show("Error");
+                cls.WriteException("Login Page : PctClose_Click" + ex.ToString());
             }
             
         }
@@ -62,7 +95,8 @@ namespace InHouseInteriorsApplication
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error_PicLogin");
+                MessageBox.Show("Error");
+                cls.WriteException("Login Page : PicLogin_Click" + ex.ToString());
             }
         }
     }

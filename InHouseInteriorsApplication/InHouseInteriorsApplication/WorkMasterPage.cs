@@ -1,4 +1,5 @@
-﻿using System;
+﻿using InHouseInteriorsApplication.Class;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,7 @@ namespace InHouseInteriorsApplication
 {
     public partial class WorkMasterPage : Form
     {
+        ClassConfig cls = new ClassConfig();
         public WorkMasterPage()
         {
             InitializeComponent();
@@ -25,8 +27,14 @@ namespace InHouseInteriorsApplication
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error_PctClose");
+                MessageBox.Show("Error");
+                cls.WriteException("WorkMasterPage : PctClose_Click" + ex.ToString());
             }
+        }
+
+        private void BtnSave_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

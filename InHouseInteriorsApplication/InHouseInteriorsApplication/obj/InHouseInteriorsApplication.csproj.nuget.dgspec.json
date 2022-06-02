@@ -1,0 +1,54 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\My\\28 APR 2022\\Project\\satzmca-INHOUSEINTERIORS\\InHouseInteriorsApplication\\InHouseInteriorsApplication\\InHouseInteriorsApplication.csproj": {}
+  },
+  "projects": {
+    "D:\\My\\28 APR 2022\\Project\\satzmca-INHOUSEINTERIORS\\InHouseInteriorsApplication\\InHouseInteriorsApplication\\InHouseInteriorsApplication.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\My\\28 APR 2022\\Project\\satzmca-INHOUSEINTERIORS\\InHouseInteriorsApplication\\InHouseInteriorsApplication\\InHouseInteriorsApplication.csproj",
+        "projectName": "InHouseInteriorsApplication",
+        "projectPath": "D:\\My\\28 APR 2022\\Project\\satzmca-INHOUSEINTERIORS\\InHouseInteriorsApplication\\InHouseInteriorsApplication\\InHouseInteriorsApplication.csproj",
+        "packagesPath": "C:\\Users\\Sathish\\.nuget\\packages\\",
+        "outputPath": "D:\\My\\28 APR 2022\\Project\\satzmca-INHOUSEINTERIORS\\InHouseInteriorsApplication\\InHouseInteriorsApplication\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Sathish\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net45"
+        ],
+        "sources": {
+          "http://nuget.sitefinity.com/nuget": {},
+          "https://www.nuget.org": {}
+        },
+        "frameworks": {
+          "net45": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net45": {}
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    }
+  }
+}

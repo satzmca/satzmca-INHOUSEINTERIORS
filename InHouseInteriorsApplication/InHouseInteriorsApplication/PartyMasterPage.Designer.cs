@@ -30,6 +30,9 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.grpDescription = new System.Windows.Forms.GroupBox();
+            this.txtParty_id = new System.Windows.Forms.TextBox();
+            this.dgvParty = new System.Windows.Forms.DataGridView();
+            this.btnDelete = new System.Windows.Forms.Button();
             this.cmbPartyType = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtMobileNo2 = new System.Windows.Forms.TextBox();
@@ -44,12 +47,10 @@
             this.lblAddress1 = new System.Windows.Forms.Label();
             this.lblPartName = new System.Windows.Forms.Label();
             this.pctClose = new System.Windows.Forms.PictureBox();
-            this.btnDelete = new System.Windows.Forms.Button();
-            this.dgvParty = new System.Windows.Forms.DataGridView();
-            this.txtParty_id = new System.Windows.Forms.TextBox();
+            this.btnClear = new System.Windows.Forms.Button();
             this.grpDescription.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pctClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvParty)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctClose)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -65,6 +66,7 @@
             // 
             // grpDescription
             // 
+            this.grpDescription.Controls.Add(this.btnClear);
             this.grpDescription.Controls.Add(this.txtParty_id);
             this.grpDescription.Controls.Add(this.dgvParty);
             this.grpDescription.Controls.Add(this.btnDelete);
@@ -89,6 +91,42 @@
             this.grpDescription.TabIndex = 12;
             this.grpDescription.TabStop = false;
             this.grpDescription.Text = "Party Master";
+            // 
+            // txtParty_id
+            // 
+            this.txtParty_id.Location = new System.Drawing.Point(414, 25);
+            this.txtParty_id.Name = "txtParty_id";
+            this.txtParty_id.Size = new System.Drawing.Size(100, 31);
+            this.txtParty_id.TabIndex = 27;
+            this.txtParty_id.Visible = false;
+            // 
+            // dgvParty
+            // 
+            this.dgvParty.AllowUserToAddRows = false;
+            this.dgvParty.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvParty.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.dgvParty.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dgvParty.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvParty.Location = new System.Drawing.Point(537, 62);
+            this.dgvParty.Name = "dgvParty";
+            this.dgvParty.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dgvParty.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvParty.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
+            this.dgvParty.Size = new System.Drawing.Size(1048, 504);
+            this.dgvParty.TabIndex = 26;
+            this.dgvParty.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvParty_CellClick);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold);
+            this.btnDelete.ForeColor = System.Drawing.Color.Black;
+            this.btnDelete.Location = new System.Drawing.Point(186, 512);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(151, 54);
+            this.btnDelete.TabIndex = 22;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
             // 
             // cmbPartyType
             // 
@@ -182,7 +220,7 @@
             this.btnSave.ForeColor = System.Drawing.Color.Black;
             this.btnSave.Location = new System.Drawing.Point(10, 512);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(233, 54);
+            this.btnSave.Size = new System.Drawing.Size(151, 54);
             this.btnSave.TabIndex = 16;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
@@ -238,41 +276,17 @@
             this.pctClose.TabStop = false;
             this.pctClose.Click += new System.EventHandler(this.PctClose_Click);
             // 
-            // btnDelete
+            // btnClear
             // 
-            this.btnDelete.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold);
-            this.btnDelete.ForeColor = System.Drawing.Color.Black;
-            this.btnDelete.Location = new System.Drawing.Point(281, 512);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(233, 54);
-            this.btnDelete.TabIndex = 22;
-            this.btnDelete.Text = "Delete";
-            this.btnDelete.UseVisualStyleBackColor = true;
-            this.btnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
-            // 
-            // dgvParty
-            // 
-            this.dgvParty.AllowUserToAddRows = false;
-            this.dgvParty.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvParty.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
-            this.dgvParty.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dgvParty.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvParty.Location = new System.Drawing.Point(537, 62);
-            this.dgvParty.Name = "dgvParty";
-            this.dgvParty.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.dgvParty.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvParty.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
-            this.dgvParty.Size = new System.Drawing.Size(1048, 504);
-            this.dgvParty.TabIndex = 26;
-            this.dgvParty.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvParty_CellClick);
-            // 
-            // txtParty_id
-            // 
-            this.txtParty_id.Location = new System.Drawing.Point(414, 25);
-            this.txtParty_id.Name = "txtParty_id";
-            this.txtParty_id.Size = new System.Drawing.Size(100, 31);
-            this.txtParty_id.TabIndex = 27;
-            this.txtParty_id.Visible = false;
+            this.btnClear.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold);
+            this.btnClear.ForeColor = System.Drawing.Color.Black;
+            this.btnClear.Location = new System.Drawing.Point(362, 512);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(151, 54);
+            this.btnClear.TabIndex = 29;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.BtnReset_Click);
             // 
             // PartyMasterPage
             // 
@@ -290,8 +304,8 @@
             this.Load += new System.EventHandler(this.PartyMasterPage_Load);
             this.grpDescription.ResumeLayout(false);
             this.grpDescription.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pctClose)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvParty)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctClose)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -318,5 +332,6 @@
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.DataGridView dgvParty;
         private System.Windows.Forms.TextBox txtParty_id;
+        private System.Windows.Forms.Button btnClear;
     }
 }

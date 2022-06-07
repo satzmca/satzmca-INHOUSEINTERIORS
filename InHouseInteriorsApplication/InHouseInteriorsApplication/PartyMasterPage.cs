@@ -75,13 +75,7 @@ namespace InHouseInteriorsApplication
                     if (res == "1")
                     {
                         MessageBox.Show("Saved Successfully");
-                        txtParty_id.Text = "";
-                        txtPartyName.Text = "";
-                        cmbPartyType.SelectedItem = "--Select--";
-                        txtAddress1.Text = "";
-                        txtAddress2.Text = "";
-                        txtMobileNo1.Text = "";
-                        txtMobileNo2.Text = "";
+                        Clear();
                         bind();
                     }
                     else
@@ -159,13 +153,7 @@ namespace InHouseInteriorsApplication
                         string res = cls.InsertData(SpName: "USP_Party_Insert", ReqType: "DELETE_PARTY", dict: dict);
                         if (res == "1")
                         {
-                            txtParty_id.Text = "";
-                            txtPartyName.Text = "";
-                            cmbPartyType.SelectedItem = "--Select--";
-                            txtAddress1.Text = "";
-                            txtAddress2.Text = "";
-                            txtMobileNo1.Text = "";
-                            txtMobileNo2.Text = "";
+                            Clear();
                             bind();
                         }
                     }
@@ -176,6 +164,31 @@ namespace InHouseInteriorsApplication
                 MessageBox.Show("Error");
                 cls.WriteException("PartyMasterPage : BtnDelete_Click" + ex.ToString());
             }
+        }
+
+        private void BtnReset_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                MessageBox.Show("Reset Successfully");
+                Clear();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error");
+                cls.WriteException("PartyMasterPage : BtnReset_Click" + ex.ToString());
+            }
+        }
+
+        public void Clear()
+        {
+            txtParty_id.Text = "";
+            txtPartyName.Text = "";
+            cmbPartyType.SelectedItem = "--Select--";
+            txtAddress1.Text = "";
+            txtAddress2.Text = "";
+            txtMobileNo1.Text = "";
+            txtMobileNo2.Text = "";
         }
     }
 }

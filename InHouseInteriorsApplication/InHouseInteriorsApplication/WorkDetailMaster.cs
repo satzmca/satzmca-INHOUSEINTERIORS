@@ -88,6 +88,13 @@ namespace InHouseInteriorsApplication
                     {
                         bool achecked = Convert.ToBoolean(cell.Value);
                         cell.Value = achecked;
+
+                        if (achecked)
+                        {
+                            row.DefaultCellStyle.BackColor = Color.MediumSeaGreen;
+                            row.DefaultCellStyle.ForeColor = Color.White;
+                        }
+                        
                     }
                 }
             }
@@ -152,17 +159,17 @@ namespace InHouseInteriorsApplication
         {
             try
             {
-                foreach (DataGridViewRow Myrow in dgvWorkDetail.Rows)
-                {            //Here 2 cell is target value and 1 cell is Volume
-                    if (Myrow.Cells[0].Value.ToString() != null && Myrow.Cells[0].Value.ToString() != "")
-                    {
-                        if (Convert.ToInt32(Myrow.Cells[0].Value) == 0)// Or your condition 
-                        {
-                            Myrow.DefaultCellStyle.BackColor = Color.MediumSeaGreen;
-                            Myrow.DefaultCellStyle.ForeColor = Color.White;
-                        }
-                    }
-                }
+                //foreach (DataGridViewRow Myrow in dgvWorkDetail.Rows)
+                //{            //Here 2 cell is target value and 1 cell is Volume
+                //    if (Myrow.Cells[0].Value.ToString() != null && Myrow.Cells[0].Value.ToString() != "" && Myrow.Cells[0].Value.ToString() != "0")
+                //    {
+                //        if (Convert.ToInt32(Myrow.Cells[0].Value) == 1)// Or your condition 
+                //        {
+                //            Myrow.DefaultCellStyle.BackColor = Color.MediumSeaGreen;
+                //            Myrow.DefaultCellStyle.ForeColor = Color.White;
+                //        }
+                //    }
+                //}
             }
             catch (Exception ex)
             {

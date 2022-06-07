@@ -56,8 +56,7 @@ namespace InHouseInteriorsApplication
                     if (res == "1")
                     {
                         MessageBox.Show("Saved Successfully");
-                        txtWorkName.Text = "";
-                        txtWork_id.Text = "";
+                        Clear();
                         bind();
                     }
                     else
@@ -127,9 +126,7 @@ namespace InHouseInteriorsApplication
                         var dict = JObject.Parse(@"{'Description_id':'" + txtWork_id.Text + "'}");
                         string res = cls.InsertData(SpName: "USP_Work_Insert", ReqType: "DELETE_WORK", dict: dict);
                         if (res == "1")
-                        {
-                            txtWorkName.Text = "";
-                            txtWork_id.Text = "";
+                        {                            
                             bind();
                         }
                     }
@@ -140,6 +137,26 @@ namespace InHouseInteriorsApplication
                 MessageBox.Show("Error");
                 cls.WriteException("WorkMasterPage : BtnDelete_Click" + ex.ToString());
             }
+        }
+
+        private void BtnReset_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                MessageBox.Show("Reset Successfully");
+                Clear();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error");
+                cls.WriteException("WorkMasterPage : BtnReset_Click" + ex.ToString());
+            }
+        }
+
+        public void Clear()
+        {
+            txtWorkName.Text = "";
+            txtWork_id.Text = "";
         }
     }
 }

@@ -30,18 +30,19 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.grpWork = new System.Windows.Forms.GroupBox();
-            this.pctClose = new System.Windows.Forms.PictureBox();
             this.btnDelete = new System.Windows.Forms.Button();
             this.txtWork_id = new System.Windows.Forms.TextBox();
             this.dgvWork = new System.Windows.Forms.DataGridView();
+            this.Work_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnSave = new System.Windows.Forms.Button();
             this.txtWorkName = new System.Windows.Forms.TextBox();
             this.lblWorkName = new System.Windows.Forms.Label();
-            this.Work_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pctClose = new System.Windows.Forms.PictureBox();
+            this.btnClear = new System.Windows.Forms.Button();
             this.grpWork.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pctClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvWork)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctClose)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -57,6 +58,7 @@
             // 
             // grpWork
             // 
+            this.grpWork.Controls.Add(this.btnClear);
             this.grpWork.Controls.Add(this.btnDelete);
             this.grpWork.Controls.Add(this.txtWork_id);
             this.grpWork.Controls.Add(this.dgvWork);
@@ -72,22 +74,11 @@
             this.grpWork.TabStop = false;
             this.grpWork.Text = "Work Master";
             // 
-            // pctClose
-            // 
-            this.pctClose.Image = global::InHouseInteriorsApplication.Properties.Resources.close2;
-            this.pctClose.Location = new System.Drawing.Point(951, 2);
-            this.pctClose.Name = "pctClose";
-            this.pctClose.Size = new System.Drawing.Size(50, 50);
-            this.pctClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pctClose.TabIndex = 11;
-            this.pctClose.TabStop = false;
-            this.pctClose.Click += new System.EventHandler(this.PctClose_Click);
-            // 
             // btnDelete
             // 
             this.btnDelete.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold);
             this.btnDelete.ForeColor = System.Drawing.Color.Black;
-            this.btnDelete.Location = new System.Drawing.Point(544, 116);
+            this.btnDelete.Location = new System.Drawing.Point(468, 116);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(150, 42);
             this.btnDelete.TabIndex = 27;
@@ -105,6 +96,7 @@
             // 
             // dgvWork
             // 
+            this.dgvWork.AllowUserToAddRows = false;
             this.dgvWork.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dgvWork.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvWork.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -119,11 +111,26 @@
             this.dgvWork.TabIndex = 25;
             this.dgvWork.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvWork_CellClick);
             // 
+            // Work_id
+            // 
+            this.Work_id.DataPropertyName = "Work_id";
+            this.Work_id.FillWeight = 101.5228F;
+            this.Work_id.HeaderText = "SNo";
+            this.Work_id.Name = "Work_id";
+            // 
+            // Description
+            // 
+            this.Description.DataPropertyName = "WorkName";
+            this.Description.FillWeight = 98.47716F;
+            this.Description.HeaderText = "WorkName";
+            this.Description.Name = "Description";
+            this.Description.Width = 800;
+            // 
             // btnSave
             // 
             this.btnSave.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold);
             this.btnSave.ForeColor = System.Drawing.Color.Black;
-            this.btnSave.Location = new System.Drawing.Point(388, 116);
+            this.btnSave.Location = new System.Drawing.Point(312, 116);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(150, 42);
             this.btnSave.TabIndex = 22;
@@ -150,20 +157,28 @@
             this.lblWorkName.TabIndex = 18;
             this.lblWorkName.Text = "Work Name";
             // 
-            // Work_id
+            // pctClose
             // 
-            this.Work_id.DataPropertyName = "Work_id";
-            this.Work_id.FillWeight = 101.5228F;
-            this.Work_id.HeaderText = "SNo";
-            this.Work_id.Name = "Work_id";
+            this.pctClose.Image = global::InHouseInteriorsApplication.Properties.Resources.close2;
+            this.pctClose.Location = new System.Drawing.Point(951, 2);
+            this.pctClose.Name = "pctClose";
+            this.pctClose.Size = new System.Drawing.Size(50, 50);
+            this.pctClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pctClose.TabIndex = 11;
+            this.pctClose.TabStop = false;
+            this.pctClose.Click += new System.EventHandler(this.PctClose_Click);
             // 
-            // Description
+            // btnClear
             // 
-            this.Description.DataPropertyName = "WorkName";
-            this.Description.FillWeight = 98.47716F;
-            this.Description.HeaderText = "WorkName";
-            this.Description.Name = "Description";
-            this.Description.Width = 800;
+            this.btnClear.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold);
+            this.btnClear.ForeColor = System.Drawing.Color.Black;
+            this.btnClear.Location = new System.Drawing.Point(624, 116);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(150, 42);
+            this.btnClear.TabIndex = 28;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.BtnReset_Click);
             // 
             // WorkMasterPage
             // 
@@ -181,8 +196,8 @@
             this.Load += new System.EventHandler(this.WorkMasterPage_Load);
             this.grpWork.ResumeLayout(false);
             this.grpWork.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pctClose)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvWork)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctClose)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -201,5 +216,6 @@
         private System.Windows.Forms.Label lblWorkName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Work_id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Description;
+        private System.Windows.Forms.Button btnClear;
     }
 }

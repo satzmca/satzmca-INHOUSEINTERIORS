@@ -29,7 +29,13 @@
         private void InitializeComponent()
         {
             this.grpDescription = new System.Windows.Forms.GroupBox();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.txtDes_id = new System.Windows.Forms.TextBox();
             this.dgvDescription = new System.Windows.Forms.DataGridView();
+            this.Description_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Weight = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Rate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtRate = new System.Windows.Forms.TextBox();
             this.lblRate = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
@@ -39,12 +45,7 @@
             this.lblDescription = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pctClose = new System.Windows.Forms.PictureBox();
-            this.Description_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Weight = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Rate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtDes_id = new System.Windows.Forms.TextBox();
-            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnClear = new System.Windows.Forms.Button();
             this.grpDescription.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDescription)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctClose)).BeginInit();
@@ -52,6 +53,7 @@
             // 
             // grpDescription
             // 
+            this.grpDescription.Controls.Add(this.btnClear);
             this.grpDescription.Controls.Add(this.btnDelete);
             this.grpDescription.Controls.Add(this.txtDes_id);
             this.grpDescription.Controls.Add(this.dgvDescription);
@@ -71,8 +73,29 @@
             this.grpDescription.TabStop = false;
             this.grpDescription.Text = "Description Master";
             // 
+            // btnDelete
+            // 
+            this.btnDelete.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold);
+            this.btnDelete.ForeColor = System.Drawing.Color.Black;
+            this.btnDelete.Location = new System.Drawing.Point(403, 246);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(150, 42);
+            this.btnDelete.TabIndex = 17;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
+            // 
+            // txtDes_id
+            // 
+            this.txtDes_id.Location = new System.Drawing.Point(715, 48);
+            this.txtDes_id.Name = "txtDes_id";
+            this.txtDes_id.Size = new System.Drawing.Size(100, 31);
+            this.txtDes_id.TabIndex = 16;
+            this.txtDes_id.Visible = false;
+            // 
             // dgvDescription
             // 
+            this.dgvDescription.AllowUserToAddRows = false;
             this.dgvDescription.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvDescription.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dgvDescription.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
@@ -89,6 +112,30 @@
             this.dgvDescription.Size = new System.Drawing.Size(945, 281);
             this.dgvDescription.TabIndex = 15;
             this.dgvDescription.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvDescription_CellClick);
+            // 
+            // Description_id
+            // 
+            this.Description_id.DataPropertyName = "Description_id";
+            this.Description_id.HeaderText = "SNo";
+            this.Description_id.Name = "Description_id";
+            // 
+            // Description
+            // 
+            this.Description.DataPropertyName = "Description";
+            this.Description.HeaderText = "Description";
+            this.Description.Name = "Description";
+            // 
+            // Weight
+            // 
+            this.Weight.DataPropertyName = "Weight";
+            this.Weight.HeaderText = "Weight";
+            this.Weight.Name = "Weight";
+            // 
+            // Rate
+            // 
+            this.Rate.DataPropertyName = "Rate";
+            this.Rate.HeaderText = "Rate";
+            this.Rate.Name = "Rate";
             // 
             // txtRate
             // 
@@ -114,7 +161,7 @@
             // 
             this.btnSave.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold);
             this.btnSave.ForeColor = System.Drawing.Color.Black;
-            this.btnSave.Location = new System.Drawing.Point(388, 250);
+            this.btnSave.Location = new System.Drawing.Point(247, 246);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(150, 42);
             this.btnSave.TabIndex = 12;
@@ -183,49 +230,17 @@
             this.pctClose.TabStop = false;
             this.pctClose.Click += new System.EventHandler(this.PctClose_Click);
             // 
-            // Description_id
+            // btnClear
             // 
-            this.Description_id.DataPropertyName = "Description_id";
-            this.Description_id.HeaderText = "SNo";
-            this.Description_id.Name = "Description_id";
-            // 
-            // Description
-            // 
-            this.Description.DataPropertyName = "Description";
-            this.Description.HeaderText = "Description";
-            this.Description.Name = "Description";
-            // 
-            // Weight
-            // 
-            this.Weight.DataPropertyName = "Weight";
-            this.Weight.HeaderText = "Weight";
-            this.Weight.Name = "Weight";
-            // 
-            // Rate
-            // 
-            this.Rate.DataPropertyName = "Rate";
-            this.Rate.HeaderText = "Rate";
-            this.Rate.Name = "Rate";
-            // 
-            // txtDes_id
-            // 
-            this.txtDes_id.Location = new System.Drawing.Point(715, 48);
-            this.txtDes_id.Name = "txtDes_id";
-            this.txtDes_id.Size = new System.Drawing.Size(100, 31);
-            this.txtDes_id.TabIndex = 16;
-            this.txtDes_id.Visible = false;
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold);
-            this.btnDelete.ForeColor = System.Drawing.Color.Black;
-            this.btnDelete.Location = new System.Drawing.Point(544, 250);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(150, 42);
-            this.btnDelete.TabIndex = 17;
-            this.btnDelete.Text = "Delete";
-            this.btnDelete.UseVisualStyleBackColor = true;
-            this.btnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
+            this.btnClear.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold);
+            this.btnClear.ForeColor = System.Drawing.Color.Black;
+            this.btnClear.Location = new System.Drawing.Point(559, 246);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(150, 42);
+            this.btnClear.TabIndex = 18;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.BtnReset_Click);
             // 
             // DescriptionMasterPage
             // 
@@ -269,5 +284,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Rate;
         private System.Windows.Forms.TextBox txtDes_id;
         private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnClear;
     }
 }

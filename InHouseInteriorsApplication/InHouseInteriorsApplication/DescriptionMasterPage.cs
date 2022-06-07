@@ -75,10 +75,7 @@ namespace InHouseInteriorsApplication
                     if (res == "1")
                     {
                         MessageBox.Show("Saved Successfully");
-                        txtDescription.Text = "";
-                        txtWeight.Text = "";
-                        txtRate.Text = "";
-                        txtDes_id.Text = "";
+                        Clear();
                         bind();
                     }
                     else
@@ -152,10 +149,7 @@ namespace InHouseInteriorsApplication
                         if (res == "1")
                         {
                             MessageBox.Show("Saved Successfully");
-                            txtDescription.Text = "";
-                            txtWeight.Text = "";
-                            txtRate.Text = "";
-                            txtDes_id.Text = "";
+                            Clear();
                             bind();
                         }                        
                     }
@@ -166,6 +160,28 @@ namespace InHouseInteriorsApplication
                 MessageBox.Show("Error");
                 cls.WriteException("DescriptionMasterPage : BtnDelete_Click" + ex.ToString());
             }
+        }
+
+        private void BtnReset_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                MessageBox.Show("Reset Successfully");
+                Clear();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error");
+                cls.WriteException("DescriptionMasterPage : BtnReset_Click" + ex.ToString());
+            }
+        }
+
+        public void Clear()
+        {
+            txtDescription.Text = "";
+            txtWeight.Text = "";
+            txtRate.Text = "";
+            txtDes_id.Text = "";
         }
     }
 }

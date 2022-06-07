@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.grpDescription = new System.Windows.Forms.GroupBox();
+            this.dgvDescription = new System.Windows.Forms.DataGridView();
             this.txtRate = new System.Windows.Forms.TextBox();
             this.lblRate = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
@@ -38,18 +39,21 @@
             this.lblDescription = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pctClose = new System.Windows.Forms.PictureBox();
-            this.dgvDescription = new System.Windows.Forms.DataGridView();
             this.Description_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Weight = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Rate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtDes_id = new System.Windows.Forms.TextBox();
+            this.btnDelete = new System.Windows.Forms.Button();
             this.grpDescription.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pctClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDescription)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctClose)).BeginInit();
             this.SuspendLayout();
             // 
             // grpDescription
             // 
+            this.grpDescription.Controls.Add(this.btnDelete);
+            this.grpDescription.Controls.Add(this.txtDes_id);
             this.grpDescription.Controls.Add(this.dgvDescription);
             this.grpDescription.Controls.Add(this.txtRate);
             this.grpDescription.Controls.Add(this.lblRate);
@@ -58,7 +62,7 @@
             this.grpDescription.Controls.Add(this.txtDescription);
             this.grpDescription.Controls.Add(this.lblWeight);
             this.grpDescription.Controls.Add(this.lblDescription);
-            this.grpDescription.Font = new System.Drawing.Font("Segoe UI", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.grpDescription.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpDescription.ForeColor = System.Drawing.Color.White;
             this.grpDescription.Location = new System.Drawing.Point(13, 50);
             this.grpDescription.Name = "grpDescription";
@@ -67,31 +71,50 @@
             this.grpDescription.TabStop = false;
             this.grpDescription.Text = "Description Master";
             // 
+            // dgvDescription
+            // 
+            this.dgvDescription.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvDescription.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.dgvDescription.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dgvDescription.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDescription.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Description_id,
+            this.Description,
+            this.Weight,
+            this.Rate});
+            this.dgvDescription.Location = new System.Drawing.Point(16, 317);
+            this.dgvDescription.Name = "dgvDescription";
+            this.dgvDescription.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvDescription.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
+            this.dgvDescription.Size = new System.Drawing.Size(945, 281);
+            this.dgvDescription.TabIndex = 15;
+            this.dgvDescription.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvDescription_CellClick);
+            // 
             // txtRate
             // 
-            this.txtRate.Font = new System.Drawing.Font("Segoe UI", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.txtRate.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRate.Location = new System.Drawing.Point(388, 182);
             this.txtRate.Name = "txtRate";
-            this.txtRate.Size = new System.Drawing.Size(321, 32);
+            this.txtRate.Size = new System.Drawing.Size(321, 31);
             this.txtRate.TabIndex = 14;
             this.txtRate.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtRate_KeyPress);
             // 
             // lblRate
             // 
             this.lblRate.AutoSize = true;
-            this.lblRate.Font = new System.Drawing.Font("Segoe UI", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRate.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold);
             this.lblRate.ForeColor = System.Drawing.Color.White;
-            this.lblRate.Location = new System.Drawing.Point(258, 182);
+            this.lblRate.Location = new System.Drawing.Point(252, 182);
             this.lblRate.Name = "lblRate";
-            this.lblRate.Size = new System.Drawing.Size(52, 25);
+            this.lblRate.Size = new System.Drawing.Size(60, 23);
             this.lblRate.TabIndex = 13;
             this.lblRate.Text = "Rate";
             // 
             // btnSave
             // 
-            this.btnSave.Font = new System.Drawing.Font("Segoe UI", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.btnSave.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold);
             this.btnSave.ForeColor = System.Drawing.Color.Black;
-            this.btnSave.Location = new System.Drawing.Point(467, 249);
+            this.btnSave.Location = new System.Drawing.Point(388, 250);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(150, 42);
             this.btnSave.TabIndex = 12;
@@ -101,40 +124,40 @@
             // 
             // txtWeight
             // 
-            this.txtWeight.Font = new System.Drawing.Font("Segoe UI", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.txtWeight.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtWeight.Location = new System.Drawing.Point(388, 115);
             this.txtWeight.Name = "txtWeight";
-            this.txtWeight.Size = new System.Drawing.Size(321, 32);
+            this.txtWeight.Size = new System.Drawing.Size(321, 31);
             this.txtWeight.TabIndex = 11;
-            this.txtWeight.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtWeight_KeyPress);
+            this.txtWeight.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtRate_KeyPress);
             // 
             // txtDescription
             // 
-            this.txtDescription.Font = new System.Drawing.Font("Segoe UI", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.txtDescription.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDescription.Location = new System.Drawing.Point(388, 48);
             this.txtDescription.Name = "txtDescription";
-            this.txtDescription.Size = new System.Drawing.Size(321, 32);
+            this.txtDescription.Size = new System.Drawing.Size(321, 31);
             this.txtDescription.TabIndex = 10;
             // 
             // lblWeight
             // 
             this.lblWeight.AutoSize = true;
-            this.lblWeight.Font = new System.Drawing.Font("Segoe UI", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWeight.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold);
             this.lblWeight.ForeColor = System.Drawing.Color.White;
-            this.lblWeight.Location = new System.Drawing.Point(258, 115);
+            this.lblWeight.Location = new System.Drawing.Point(252, 115);
             this.lblWeight.Name = "lblWeight";
-            this.lblWeight.Size = new System.Drawing.Size(76, 25);
+            this.lblWeight.Size = new System.Drawing.Size(87, 23);
             this.lblWeight.TabIndex = 9;
             this.lblWeight.Text = "Weight";
             // 
             // lblDescription
             // 
             this.lblDescription.AutoSize = true;
-            this.lblDescription.Font = new System.Drawing.Font("Segoe UI", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescription.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDescription.ForeColor = System.Drawing.Color.White;
-            this.lblDescription.Location = new System.Drawing.Point(258, 48);
+            this.lblDescription.Location = new System.Drawing.Point(252, 48);
             this.lblDescription.Name = "lblDescription";
-            this.lblDescription.Size = new System.Drawing.Size(113, 25);
+            this.lblDescription.Size = new System.Drawing.Size(133, 23);
             this.lblDescription.TabIndex = 8;
             this.lblDescription.Text = "Description";
             // 
@@ -160,50 +183,49 @@
             this.pctClose.TabStop = false;
             this.pctClose.Click += new System.EventHandler(this.PctClose_Click);
             // 
-            // dgvDescription
-            // 
-            this.dgvDescription.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
-            this.dgvDescription.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
-            this.dgvDescription.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvDescription.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDescription.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Description_id,
-            this.Description,
-            this.Weight,
-            this.Rate});
-            this.dgvDescription.Location = new System.Drawing.Point(16, 317);
-            this.dgvDescription.Name = "dgvDescription";
-            this.dgvDescription.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
-            this.dgvDescription.Size = new System.Drawing.Size(945, 281);
-            this.dgvDescription.TabIndex = 15;
-            // 
             // Description_id
             // 
             this.Description_id.DataPropertyName = "Description_id";
-            this.Description_id.HeaderText = "Description_id";
+            this.Description_id.HeaderText = "SNo";
             this.Description_id.Name = "Description_id";
-            this.Description_id.Width = 163;
             // 
             // Description
             // 
             this.Description.DataPropertyName = "Description";
             this.Description.HeaderText = "Description";
             this.Description.Name = "Description";
-            this.Description.Width = 138;
             // 
             // Weight
             // 
             this.Weight.DataPropertyName = "Weight";
             this.Weight.HeaderText = "Weight";
             this.Weight.Name = "Weight";
-            this.Weight.Width = 101;
             // 
             // Rate
             // 
             this.Rate.DataPropertyName = "Rate";
             this.Rate.HeaderText = "Rate";
             this.Rate.Name = "Rate";
-            this.Rate.Width = 77;
+            // 
+            // txtDes_id
+            // 
+            this.txtDes_id.Location = new System.Drawing.Point(715, 48);
+            this.txtDes_id.Name = "txtDes_id";
+            this.txtDes_id.Size = new System.Drawing.Size(100, 31);
+            this.txtDes_id.TabIndex = 16;
+            this.txtDes_id.Visible = false;
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold);
+            this.btnDelete.ForeColor = System.Drawing.Color.Black;
+            this.btnDelete.Location = new System.Drawing.Point(544, 250);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(150, 42);
+            this.btnDelete.TabIndex = 17;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
             // 
             // DescriptionMasterPage
             // 
@@ -221,8 +243,8 @@
             this.Load += new System.EventHandler(this.DescriptionMasterPage_Load);
             this.grpDescription.ResumeLayout(false);
             this.grpDescription.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pctClose)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDescription)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctClose)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -245,5 +267,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Description;
         private System.Windows.Forms.DataGridViewTextBoxColumn Weight;
         private System.Windows.Forms.DataGridViewTextBoxColumn Rate;
+        private System.Windows.Forms.TextBox txtDes_id;
+        private System.Windows.Forms.Button btnDelete;
     }
 }

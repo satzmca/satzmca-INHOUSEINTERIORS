@@ -41,6 +41,7 @@
             this.lblDate = new System.Windows.Forms.Label();
             this.lblTime = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.workDetailMasterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picTime)).BeginInit();
             this.SuspendLayout();
@@ -70,36 +71,37 @@
             this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.descriptionMasterToolStripMenuItem,
             this.workMasterToolStripMenuItem,
-            this.partyMasterToolStripMenuItem});
+            this.partyMasterToolStripMenuItem,
+            this.workDetailMasterToolStripMenuItem});
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(128, 24);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(180, 24);
             this.toolStripMenuItem1.Text = "Master";
             // 
             // descriptionMasterToolStripMenuItem
             // 
             this.descriptionMasterToolStripMenuItem.Name = "descriptionMasterToolStripMenuItem";
-            this.descriptionMasterToolStripMenuItem.Size = new System.Drawing.Size(195, 24);
+            this.descriptionMasterToolStripMenuItem.Size = new System.Drawing.Size(199, 24);
             this.descriptionMasterToolStripMenuItem.Text = "Description Master";
             this.descriptionMasterToolStripMenuItem.Click += new System.EventHandler(this.DescriptionMasterToolStripMenuItem_Click);
             // 
             // workMasterToolStripMenuItem
             // 
             this.workMasterToolStripMenuItem.Name = "workMasterToolStripMenuItem";
-            this.workMasterToolStripMenuItem.Size = new System.Drawing.Size(195, 24);
+            this.workMasterToolStripMenuItem.Size = new System.Drawing.Size(199, 24);
             this.workMasterToolStripMenuItem.Text = "Work Master";
             this.workMasterToolStripMenuItem.Click += new System.EventHandler(this.WorkMasterToolStripMenuItem_Click);
             // 
             // partyMasterToolStripMenuItem
             // 
             this.partyMasterToolStripMenuItem.Name = "partyMasterToolStripMenuItem";
-            this.partyMasterToolStripMenuItem.Size = new System.Drawing.Size(195, 24);
+            this.partyMasterToolStripMenuItem.Size = new System.Drawing.Size(199, 24);
             this.partyMasterToolStripMenuItem.Text = "Party Master";
             this.partyMasterToolStripMenuItem.Click += new System.EventHandler(this.PartyMasterToolStripMenuItem_Click);
             // 
             // logOutToolStripMenuItem
             // 
             this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
-            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(128, 24);
+            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.logOutToolStripMenuItem.Text = "Log Out";
             this.logOutToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click);
             // 
@@ -154,6 +156,13 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
             // 
+            // workDetailMasterToolStripMenuItem
+            // 
+            this.workDetailMasterToolStripMenuItem.Name = "workDetailMasterToolStripMenuItem";
+            this.workDetailMasterToolStripMenuItem.Size = new System.Drawing.Size(199, 24);
+            this.workDetailMasterToolStripMenuItem.Text = "Work Detail Master";
+            this.workDetailMasterToolStripMenuItem.Click += new System.EventHandler(this.WorkDetailMasterToolStripMenuItem_Click);
+            // 
             // MainPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -193,5 +202,6 @@
         private System.Windows.Forms.Label lblDate;
         private System.Windows.Forms.Label lblTime;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.ToolStripMenuItem workDetailMasterToolStripMenuItem;
     }
 }

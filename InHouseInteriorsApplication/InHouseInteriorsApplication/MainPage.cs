@@ -77,5 +77,19 @@ namespace InHouseInteriorsApplication
             lblTime.Text = DateTime.Now.ToLongTimeString();
             lblDate.Text = DateTime.Now.ToLongDateString();
         }
+
+        private void WorkDetailMasterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                WorkDetailMaster WorkDetailMaster = new WorkDetailMaster();
+                WorkDetailMaster.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error");
+                cls.WriteException("MainPage : WorkDetailMasterToolStripMenuItem_Click" + ex.ToString());
+            }
+        }
     }
 }

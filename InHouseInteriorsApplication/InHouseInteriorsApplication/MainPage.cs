@@ -36,7 +36,7 @@ namespace InHouseInteriorsApplication
                 MessageBox.Show("Error");
                 cls.WriteException("MainPage : DescriptionMasterToolStripMenuItem_Click" + ex.ToString());
             }
-        }
+        } // senthil
 
         private void WorkMasterToolStripMenuItem_Click(object sender, EventArgs e)
         {

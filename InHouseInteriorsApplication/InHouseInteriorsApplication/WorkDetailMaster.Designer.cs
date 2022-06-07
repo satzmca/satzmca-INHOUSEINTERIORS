@@ -32,7 +32,6 @@
             this.grpWorkDetail = new System.Windows.Forms.GroupBox();
             this.txtParty_id = new System.Windows.Forms.TextBox();
             this.dgvWorkDetail = new System.Windows.Forms.DataGridView();
-            this.btnDelete = new System.Windows.Forms.Button();
             this.cmbWorkName = new System.Windows.Forms.ComboBox();
             this.lblWorkName = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
@@ -63,7 +62,6 @@
             // 
             this.grpWorkDetail.Controls.Add(this.txtParty_id);
             this.grpWorkDetail.Controls.Add(this.dgvWorkDetail);
-            this.grpWorkDetail.Controls.Add(this.btnDelete);
             this.grpWorkDetail.Controls.Add(this.cmbWorkName);
             this.grpWorkDetail.Controls.Add(this.lblWorkName);
             this.grpWorkDetail.Controls.Add(this.btnSave);
@@ -108,17 +106,6 @@
             this.dgvWorkDetail.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvWorkDetail_CellClick);
             this.dgvWorkDetail.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.DgvWorkDetail_CellFormatting);
             // 
-            // btnDelete
-            // 
-            this.btnDelete.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold);
-            this.btnDelete.ForeColor = System.Drawing.Color.Black;
-            this.btnDelete.Location = new System.Drawing.Point(281, 512);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(233, 54);
-            this.btnDelete.TabIndex = 22;
-            this.btnDelete.Text = "Delete";
-            this.btnDelete.UseVisualStyleBackColor = true;
-            // 
             // cmbWorkName
             // 
             this.cmbWorkName.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -148,7 +135,7 @@
             this.btnSave.ForeColor = System.Drawing.Color.Black;
             this.btnSave.Location = new System.Drawing.Point(10, 512);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(233, 54);
+            this.btnSave.Size = new System.Drawing.Size(504, 54);
             this.btnSave.TabIndex = 16;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
@@ -232,7 +219,6 @@
         private System.Windows.Forms.GroupBox grpWorkDetail;
         private System.Windows.Forms.TextBox txtParty_id;
         private System.Windows.Forms.DataGridView dgvWorkDetail;
-        private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.ComboBox cmbWorkName;
         private System.Windows.Forms.Label lblWorkName;
         private System.Windows.Forms.Button btnSave;

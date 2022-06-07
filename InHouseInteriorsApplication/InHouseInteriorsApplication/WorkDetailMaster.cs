@@ -115,6 +115,18 @@ namespace InHouseInteriorsApplication
                             var dict = JObject.Parse(@"{'Work_id':'" + cmbWorkName.SelectedValue + "', 'Description_id':'" + Description_id + "', 'WorkDetail_id':'" + WorkDetail_id + "'}");
                             res = cls.InsertData(SpName: "USP_WorkDetail_Insert", ReqType: "INSERT_WORKDETAIL", dict: dict);
                         }
+                        else
+                        {
+                            int WorkDetail_id = Convert.ToInt32(Myrow.Cells[1].Value);
+                            int Description_id = Convert.ToInt32(Myrow.Cells[2].Value);
+
+                            if (WorkDetail_id > 0)
+                            {
+                                string res = "";
+                                var dict = JObject.Parse(@"{'WorkDetail_id':'" + WorkDetail_id + "'}");
+                                res = cls.InsertData(SpName: "USP_WorkDetail_Insert", ReqType: "DELETE_WORKDETAIL", dict: dict);
+                            }                            
+                        }
                     }
 
                     if (incrementval > 0)
@@ -196,6 +208,11 @@ namespace InHouseInteriorsApplication
                 MessageBox.Show("Error");
                 cls.WriteException("PartyMasterPage : CmbWorkName_SelectedIndexChanged" + ex.ToString());
             }
+        }
+
+        private void BtnDelete_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

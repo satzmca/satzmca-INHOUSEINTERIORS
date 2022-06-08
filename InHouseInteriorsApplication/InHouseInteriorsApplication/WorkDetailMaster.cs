@@ -50,6 +50,10 @@ namespace InHouseInteriorsApplication
         {
             DataTable workdt = new DataTable();
 
+
+            cmbWorkName.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            cmbWorkName.AutoCompleteSource = AutoCompleteSource.ListItems;
+
             var dict = JObject.Parse(@"{'IsWorkSelect':'Y'}");
             workdt = cls.FetchData(SpName: "USP_Work_Insert", ReqType: "SELECT_WORK", dict);
             //DataRow dr = workdt.NewRow();
@@ -104,44 +108,51 @@ namespace InHouseInteriorsApplication
         {
             try
             {
-                if(cmbWorkName.SelectedValue.ToString() != "0" && cmbWorkName.SelectedValue.ToString() != "")
+                if(cmbWorkName.SelectedValue != null)
                 {
-                    int incrementval = 0;
-                    foreach (DataGridViewRow Myrow in dgvWorkDetail.Rows)
-                    {            //Here 2 cell is target value and 1 cell is Volume
-                        
-                        bool achecked = Convert.ToBoolean(Myrow.Cells[0].Value);
-
-                        if (achecked)
-                        {
-                            int WorkDetail_id = Convert.ToInt32(Myrow.Cells[1].Value);
-                            int Description_id = Convert.ToInt32(Myrow.Cells[2].Value);
-
-                            incrementval++;
-                            string res = "";
-                            var dict = JObject.Parse(@"{'Work_id':'" + cmbWorkName.SelectedValue + "', 'Description_id':'" + Description_id + "', 'WorkDetail_id':'" + WorkDetail_id + "'}");
-                            res = cls.InsertData(SpName: "USP_WorkDetail_Insert", ReqType: "INSERT_WORKDETAIL", dict: dict);
-                        }
-                        else
-                        {
-                            int WorkDetail_id = Convert.ToInt32(Myrow.Cells[1].Value);
-                            int Description_id = Convert.ToInt32(Myrow.Cells[2].Value);
-
-                            if (WorkDetail_id > 0)
-                            {
-                                string res = "";
-                                var dict = JObject.Parse(@"{'WorkDetail_id':'" + WorkDetail_id + "'}");
-                                res = cls.InsertData(SpName: "USP_WorkDetail_Insert", ReqType: "DELETE_WORKDETAIL", dict: dict);
-                            }                            
-                        }
-                    }
-
-                    if (incrementval > 0)
+                    if (cmbWorkName.SelectedValue.ToString() != "0" && cmbWorkName.SelectedValue.ToString() != "")
                     {
-                        MessageBox.Show(incrementval+" Records Updated Successfully");
-                        bind();
+                        int incrementval = 0;
+                        foreach (DataGridViewRow Myrow in dgvWorkDetail.Rows)
+                        {            //Here 2 cell is target value and 1 cell is Volume
+
+                            bool achecked = Convert.ToBoolean(Myrow.Cells[0].Value);
+
+                            if (achecked)
+                            {
+                                int WorkDetail_id = Convert.ToInt32(Myrow.Cells[1].Value);
+                                int Description_id = Convert.ToInt32(Myrow.Cells[2].Value);
+
+                                incrementval++;
+                                string res = "";
+                                var dict = JObject.Parse(@"{'Work_id':'" + cmbWorkName.SelectedValue + "', 'Description_id':'" + Description_id + "', 'WorkDetail_id':'" + WorkDetail_id + "'}");
+                                res = cls.InsertData(SpName: "USP_WorkDetail_Insert", ReqType: "INSERT_WORKDETAIL", dict: dict);
+                            }
+                            else
+                            {
+                                int WorkDetail_id = Convert.ToInt32(Myrow.Cells[1].Value);
+                                int Description_id = Convert.ToInt32(Myrow.Cells[2].Value);
+
+                                if (WorkDetail_id > 0)
+                                {
+                                    string res = "";
+                                    var dict = JObject.Parse(@"{'WorkDetail_id':'" + WorkDetail_id + "'}");
+                                    res = cls.InsertData(SpName: "USP_WorkDetail_Insert", ReqType: "DELETE_WORKDETAIL", dict: dict);
+                                }
+                            }
+                        }
+
+                        if (incrementval > 0)
+                        {
+                            MessageBox.Show(incrementval + " Records Updated Successfully");
+                            bind();
+                        }
                     }
-                }
+                    else
+                    {
+                        MessageBox.Show("Choose Work Name");
+                    }
+                }                
                 else
                 {
                     MessageBox.Show("Choose Work Name");
@@ -215,11 +226,6 @@ namespace InHouseInteriorsApplication
                 MessageBox.Show("Error");
                 cls.WriteException("PartyMasterPage : CmbWorkName_SelectedIndexChanged" + ex.ToString());
             }
-        }
-
-        private void BtnDelete_Click(object sender, EventArgs e)
-        {
-
-        }
+        }             
     }
 }

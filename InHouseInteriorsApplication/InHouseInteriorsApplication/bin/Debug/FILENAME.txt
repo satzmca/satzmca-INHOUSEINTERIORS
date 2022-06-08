@@ -287,3 +287,5 @@ ClassConfig : FetchDataSystem.Data.SqlClient.SqlException (0x80131904): Error co
    at InHouseInteriorsApplication.Class.ClassConfig.FetchData(String SpName, String ReqType, JObject dict) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\Class\ClassConfig.cs:line 64
 ClientConnectionId:89cc28d5-2e7c-4a04-b9e3-23c6a1cb94a7
 Error Number:8114,State:1,Class:16
+PartyMasterPage : BtnSave_ClickSystem.NullReferenceException: Object reference not set to an instance of an object.
+   at InHouseInteriorsApplication.WorkDetailMaster.BtnSave_Click(Object sender, EventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkDetailMaster.cs:line 111

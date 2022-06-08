@@ -32,16 +32,16 @@
             this.grpWorkDetail = new System.Windows.Forms.GroupBox();
             this.txtParty_id = new System.Windows.Forms.TextBox();
             this.dgvWorkDetail = new System.Windows.Forms.DataGridView();
-            this.cmbWorkName = new System.Windows.Forms.ComboBox();
-            this.lblWorkName = new System.Windows.Forms.Label();
-            this.btnSave = new System.Windows.Forms.Button();
-            this.pctClose = new System.Windows.Forms.PictureBox();
             this.IsCheckDescription = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.WorkDetail_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Description_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Weight = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Rate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cmbWorkName = new System.Windows.Forms.ComboBox();
+            this.lblWorkName = new System.Windows.Forms.Label();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.pctClose = new System.Windows.Forms.PictureBox();
             this.grpWorkDetail.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvWorkDetail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctClose)).BeginInit();
@@ -76,7 +76,7 @@
             // 
             // txtParty_id
             // 
-            this.txtParty_id.Location = new System.Drawing.Point(414, 25);
+            this.txtParty_id.Location = new System.Drawing.Point(416, 25);
             this.txtParty_id.Name = "txtParty_id";
             this.txtParty_id.Size = new System.Drawing.Size(100, 31);
             this.txtParty_id.TabIndex = 27;
@@ -96,61 +96,15 @@
             this.Description,
             this.Weight,
             this.Rate});
-            this.dgvWorkDetail.Location = new System.Drawing.Point(537, 62);
+            this.dgvWorkDetail.Location = new System.Drawing.Point(537, 25);
             this.dgvWorkDetail.Name = "dgvWorkDetail";
             this.dgvWorkDetail.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dgvWorkDetail.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgvWorkDetail.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
-            this.dgvWorkDetail.Size = new System.Drawing.Size(1048, 504);
+            this.dgvWorkDetail.Size = new System.Drawing.Size(1048, 603);
             this.dgvWorkDetail.TabIndex = 26;
             this.dgvWorkDetail.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvWorkDetail_CellClick);
             this.dgvWorkDetail.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.DgvWorkDetail_CellFormatting);
-            // 
-            // cmbWorkName
-            // 
-            this.cmbWorkName.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbWorkName.FormattingEnabled = true;
-            this.cmbWorkName.Items.AddRange(new object[] {
-            "--Select--"});
-            this.cmbWorkName.Location = new System.Drawing.Point(164, 66);
-            this.cmbWorkName.Name = "cmbWorkName";
-            this.cmbWorkName.Size = new System.Drawing.Size(350, 31);
-            this.cmbWorkName.TabIndex = 11;
-            this.cmbWorkName.SelectedIndexChanged += new System.EventHandler(this.CmbWorkName_SelectedIndexChanged);
-            // 
-            // lblWorkName
-            // 
-            this.lblWorkName.AutoSize = true;
-            this.lblWorkName.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold);
-            this.lblWorkName.ForeColor = System.Drawing.Color.White;
-            this.lblWorkName.Location = new System.Drawing.Point(6, 66);
-            this.lblWorkName.Name = "lblWorkName";
-            this.lblWorkName.Size = new System.Drawing.Size(128, 23);
-            this.lblWorkName.TabIndex = 21;
-            this.lblWorkName.Text = "WorkName";
-            // 
-            // btnSave
-            // 
-            this.btnSave.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold);
-            this.btnSave.ForeColor = System.Drawing.Color.Black;
-            this.btnSave.Location = new System.Drawing.Point(10, 512);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(504, 54);
-            this.btnSave.TabIndex = 16;
-            this.btnSave.Text = "Save";
-            this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
-            // 
-            // pctClose
-            // 
-            this.pctClose.Image = global::InHouseInteriorsApplication.Properties.Resources.close2;
-            this.pctClose.Location = new System.Drawing.Point(1560, 2);
-            this.pctClose.Name = "pctClose";
-            this.pctClose.Size = new System.Drawing.Size(50, 50);
-            this.pctClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pctClose.TabIndex = 14;
-            this.pctClose.TabStop = false;
-            this.pctClose.Click += new System.EventHandler(this.PctClose_Click);
             // 
             // IsCheckDescription
             // 
@@ -189,6 +143,52 @@
             this.Rate.DataPropertyName = "Rate";
             this.Rate.HeaderText = "Rate";
             this.Rate.Name = "Rate";
+            // 
+            // cmbWorkName
+            // 
+            this.cmbWorkName.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbWorkName.FormattingEnabled = true;
+            this.cmbWorkName.Items.AddRange(new object[] {
+            "--Select--"});
+            this.cmbWorkName.Location = new System.Drawing.Point(166, 65);
+            this.cmbWorkName.Name = "cmbWorkName";
+            this.cmbWorkName.Size = new System.Drawing.Size(350, 31);
+            this.cmbWorkName.TabIndex = 11;
+            this.cmbWorkName.SelectedIndexChanged += new System.EventHandler(this.CmbWorkName_SelectedIndexChanged);
+            // 
+            // lblWorkName
+            // 
+            this.lblWorkName.AutoSize = true;
+            this.lblWorkName.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold);
+            this.lblWorkName.ForeColor = System.Drawing.Color.White;
+            this.lblWorkName.Location = new System.Drawing.Point(8, 65);
+            this.lblWorkName.Name = "lblWorkName";
+            this.lblWorkName.Size = new System.Drawing.Size(128, 23);
+            this.lblWorkName.TabIndex = 21;
+            this.lblWorkName.Text = "WorkName";
+            // 
+            // btnSave
+            // 
+            this.btnSave.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold);
+            this.btnSave.ForeColor = System.Drawing.Color.Black;
+            this.btnSave.Location = new System.Drawing.Point(12, 558);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(504, 54);
+            this.btnSave.TabIndex = 16;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
+            // 
+            // pctClose
+            // 
+            this.pctClose.Image = global::InHouseInteriorsApplication.Properties.Resources.close2;
+            this.pctClose.Location = new System.Drawing.Point(1560, 2);
+            this.pctClose.Name = "pctClose";
+            this.pctClose.Size = new System.Drawing.Size(50, 50);
+            this.pctClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pctClose.TabIndex = 14;
+            this.pctClose.TabStop = false;
+            this.pctClose.Click += new System.EventHandler(this.PctClose_Click);
             // 
             // WorkDetailMaster
             // 

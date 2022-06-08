@@ -143,7 +143,6 @@ namespace InHouseInteriorsApplication
         {
             try
             {
-                MessageBox.Show("Reset Successfully");
                 Clear();
             }
             catch (Exception ex)

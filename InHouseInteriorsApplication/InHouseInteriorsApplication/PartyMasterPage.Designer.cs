@@ -30,6 +30,7 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.grpDescription = new System.Windows.Forms.GroupBox();
+            this.btnClear = new System.Windows.Forms.Button();
             this.txtParty_id = new System.Windows.Forms.TextBox();
             this.dgvParty = new System.Windows.Forms.DataGridView();
             this.btnDelete = new System.Windows.Forms.Button();
@@ -47,7 +48,6 @@
             this.lblAddress1 = new System.Windows.Forms.Label();
             this.lblPartName = new System.Windows.Forms.Label();
             this.pctClose = new System.Windows.Forms.PictureBox();
-            this.btnClear = new System.Windows.Forms.Button();
             this.grpDescription.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvParty)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctClose)).BeginInit();
@@ -58,7 +58,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(327, 10);
+            this.label1.Location = new System.Drawing.Point(658, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(289, 45);
             this.label1.TabIndex = 13;
@@ -92,6 +92,18 @@
             this.grpDescription.TabStop = false;
             this.grpDescription.Text = "Party Master";
             // 
+            // btnClear
+            // 
+            this.btnClear.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold);
+            this.btnClear.ForeColor = System.Drawing.Color.Black;
+            this.btnClear.Location = new System.Drawing.Point(362, 561);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(151, 54);
+            this.btnClear.TabIndex = 29;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.BtnReset_Click);
+            // 
             // txtParty_id
             // 
             this.txtParty_id.Location = new System.Drawing.Point(414, 25);
@@ -107,12 +119,12 @@
             this.dgvParty.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dgvParty.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvParty.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvParty.Location = new System.Drawing.Point(537, 62);
+            this.dgvParty.Location = new System.Drawing.Point(532, 28);
             this.dgvParty.Name = "dgvParty";
             this.dgvParty.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dgvParty.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgvParty.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
-            this.dgvParty.Size = new System.Drawing.Size(1048, 504);
+            this.dgvParty.Size = new System.Drawing.Size(1048, 591);
             this.dgvParty.TabIndex = 26;
             this.dgvParty.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvParty_CellClick);
             // 
@@ -120,7 +132,7 @@
             // 
             this.btnDelete.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold);
             this.btnDelete.ForeColor = System.Drawing.Color.Black;
-            this.btnDelete.Location = new System.Drawing.Point(186, 512);
+            this.btnDelete.Location = new System.Drawing.Point(186, 561);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(151, 54);
             this.btnDelete.TabIndex = 22;
@@ -136,7 +148,7 @@
             "--Select--",
             "Vendor",
             "Supplier"});
-            this.cmbPartyType.Location = new System.Drawing.Point(164, 123);
+            this.cmbPartyType.Location = new System.Drawing.Point(164, 122);
             this.cmbPartyType.Name = "cmbPartyType";
             this.cmbPartyType.Size = new System.Drawing.Size(350, 31);
             this.cmbPartyType.TabIndex = 11;
@@ -146,7 +158,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(6, 123);
+            this.label2.Location = new System.Drawing.Point(6, 122);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(118, 23);
             this.label2.TabIndex = 21;
@@ -155,7 +167,7 @@
             // txtMobileNo2
             // 
             this.txtMobileNo2.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMobileNo2.Location = new System.Drawing.Point(164, 447);
+            this.txtMobileNo2.Location = new System.Drawing.Point(164, 498);
             this.txtMobileNo2.MaxLength = 12;
             this.txtMobileNo2.Name = "txtMobileNo2";
             this.txtMobileNo2.Size = new System.Drawing.Size(350, 31);
@@ -167,7 +179,7 @@
             this.lblMobileNo2.AutoSize = true;
             this.lblMobileNo2.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold);
             this.lblMobileNo2.ForeColor = System.Drawing.Color.White;
-            this.lblMobileNo2.Location = new System.Drawing.Point(6, 447);
+            this.lblMobileNo2.Location = new System.Drawing.Point(6, 498);
             this.lblMobileNo2.Name = "lblMobileNo2";
             this.lblMobileNo2.Size = new System.Drawing.Size(124, 23);
             this.lblMobileNo2.TabIndex = 19;
@@ -176,7 +188,7 @@
             // txtMobileNo1
             // 
             this.txtMobileNo1.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMobileNo1.Location = new System.Drawing.Point(164, 386);
+            this.txtMobileNo1.Location = new System.Drawing.Point(164, 438);
             this.txtMobileNo1.MaxLength = 12;
             this.txtMobileNo1.Name = "txtMobileNo1";
             this.txtMobileNo1.Size = new System.Drawing.Size(350, 31);
@@ -188,7 +200,7 @@
             this.lblMobileNo1.AutoSize = true;
             this.lblMobileNo1.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold);
             this.lblMobileNo1.ForeColor = System.Drawing.Color.White;
-            this.lblMobileNo1.Location = new System.Drawing.Point(6, 386);
+            this.lblMobileNo1.Location = new System.Drawing.Point(6, 438);
             this.lblMobileNo1.Name = "lblMobileNo1";
             this.lblMobileNo1.Size = new System.Drawing.Size(124, 23);
             this.lblMobileNo1.TabIndex = 17;
@@ -197,10 +209,10 @@
             // txtAddress2
             // 
             this.txtAddress2.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAddress2.Location = new System.Drawing.Point(164, 285);
+            this.txtAddress2.Location = new System.Drawing.Point(164, 310);
             this.txtAddress2.Multiline = true;
             this.txtAddress2.Name = "txtAddress2";
-            this.txtAddress2.Size = new System.Drawing.Size(350, 71);
+            this.txtAddress2.Size = new System.Drawing.Size(350, 99);
             this.txtAddress2.TabIndex = 13;
             // 
             // lblAddress2
@@ -208,7 +220,7 @@
             this.lblAddress2.AutoSize = true;
             this.lblAddress2.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold);
             this.lblAddress2.ForeColor = System.Drawing.Color.White;
-            this.lblAddress2.Location = new System.Drawing.Point(6, 285);
+            this.lblAddress2.Location = new System.Drawing.Point(6, 310);
             this.lblAddress2.Name = "lblAddress2";
             this.lblAddress2.Size = new System.Drawing.Size(109, 23);
             this.lblAddress2.TabIndex = 15;
@@ -218,7 +230,7 @@
             // 
             this.btnSave.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold);
             this.btnSave.ForeColor = System.Drawing.Color.Black;
-            this.btnSave.Location = new System.Drawing.Point(10, 512);
+            this.btnSave.Location = new System.Drawing.Point(10, 561);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(151, 54);
             this.btnSave.TabIndex = 16;
@@ -229,10 +241,10 @@
             // txtAddress1
             // 
             this.txtAddress1.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAddress1.Location = new System.Drawing.Point(164, 184);
+            this.txtAddress1.Location = new System.Drawing.Point(164, 182);
             this.txtAddress1.Multiline = true;
             this.txtAddress1.Name = "txtAddress1";
-            this.txtAddress1.Size = new System.Drawing.Size(350, 71);
+            this.txtAddress1.Size = new System.Drawing.Size(350, 99);
             this.txtAddress1.TabIndex = 12;
             // 
             // txtPartyName
@@ -248,7 +260,7 @@
             this.lblAddress1.AutoSize = true;
             this.lblAddress1.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold);
             this.lblAddress1.ForeColor = System.Drawing.Color.White;
-            this.lblAddress1.Location = new System.Drawing.Point(6, 184);
+            this.lblAddress1.Location = new System.Drawing.Point(6, 182);
             this.lblAddress1.Name = "lblAddress1";
             this.lblAddress1.Size = new System.Drawing.Size(109, 23);
             this.lblAddress1.TabIndex = 9;
@@ -275,18 +287,6 @@
             this.pctClose.TabIndex = 11;
             this.pctClose.TabStop = false;
             this.pctClose.Click += new System.EventHandler(this.PctClose_Click);
-            // 
-            // btnClear
-            // 
-            this.btnClear.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold);
-            this.btnClear.ForeColor = System.Drawing.Color.Black;
-            this.btnClear.Location = new System.Drawing.Point(362, 512);
-            this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(151, 54);
-            this.btnClear.TabIndex = 29;
-            this.btnClear.Text = "Clear";
-            this.btnClear.UseVisualStyleBackColor = true;
-            this.btnClear.Click += new System.EventHandler(this.BtnReset_Click);
             // 
             // PartyMasterPage
             // 

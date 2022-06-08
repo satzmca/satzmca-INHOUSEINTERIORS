@@ -165,8 +165,7 @@ namespace InHouseInteriorsApplication
         private void BtnReset_Click(object sender, EventArgs e)
         {
             try
-            {
-                MessageBox.Show("Reset Successfully");
+            {                
                 Clear();
             }
             catch (Exception ex)

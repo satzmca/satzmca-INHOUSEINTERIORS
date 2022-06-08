@@ -91,5 +91,25 @@ namespace InHouseInteriorsApplication
                 cls.WriteException("MainPage : WorkDetailMasterToolStripMenuItem_Click" + ex.ToString());
             }
         }
+
+        private void Lblusername_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LblDate_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LblTime_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PicTime_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

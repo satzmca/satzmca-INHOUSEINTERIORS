@@ -1,0 +1,17 @@
+D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\bin\Release\InHouseInteriorsApplication.exe.config
+D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\bin\Release\InHouseInteriorsApplication.exe
+D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\bin\Release\InHouseInteriorsApplication.pdb
+D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\bin\Release\Newtonsoft.Json.dll
+D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\obj\Release\InHouseInteriorsApplication.csprojAssemblyReference.cache
+D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\obj\Release\InHouseInteriorsApplication.DescriptionMasterPage.resources
+D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\obj\Release\InHouseInteriorsApplication.LoginPage.resources
+D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\obj\Release\InHouseInteriorsApplication.MainPage.resources
+D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\obj\Release\InHouseInteriorsApplication.PartyMasterPage.resources
+D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\obj\Release\InHouseInteriorsApplication.Properties.Resources.resources
+D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\obj\Release\InHouseInteriorsApplication.WorkDetailMaster.resources
+D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\obj\Release\InHouseInteriorsApplication.WorkMasterPage.resources
+D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\obj\Release\InHouseInteriorsApplication.csproj.GenerateResource.cache
+D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\obj\Release\InHouseInteriorsApplication.csproj.CoreCompileInputs.cache
+D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\obj\Release\InHouseInteriorsApplication.csproj.CopyComplete
+D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\obj\Release\InHouseInteriorsApplication.exe
+D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\obj\Release\InHouseInteriorsApplication.pdb

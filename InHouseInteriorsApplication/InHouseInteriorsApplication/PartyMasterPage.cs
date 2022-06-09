@@ -19,6 +19,10 @@ namespace InHouseInteriorsApplication
         public PartyMasterPage()
         {
             InitializeComponent();
+
+            int style = ClassConfig.NativeWinAPI.GetWindowLong(this.Handle, ClassConfig.NativeWinAPI.GWL_EXSTYLE);
+            style |= ClassConfig.NativeWinAPI.WS_EX_COMPOSITED;
+            ClassConfig.NativeWinAPI.SetWindowLong(this.Handle, ClassConfig.NativeWinAPI.GWL_EXSTYLE, style);
         }
 
         private void PctClose_Click(object sender, EventArgs e)

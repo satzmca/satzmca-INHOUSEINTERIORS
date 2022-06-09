@@ -42,6 +42,8 @@
             this.lblDate = new System.Windows.Forms.Label();
             this.lblTime = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.transactionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.workTransactionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picTime)).BeginInit();
             this.SuspendLayout();
@@ -62,6 +64,7 @@
             this.fileToolStripMenuItem.BackColor = System.Drawing.Color.Transparent;
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem1,
+            this.transactionToolStripMenuItem,
             this.logOutToolStripMenuItem});
             this.fileToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Italic);
             this.fileToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
@@ -77,7 +80,7 @@
             this.partyMasterToolStripMenuItem,
             this.workDetailMasterToolStripMenuItem});
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(128, 24);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(180, 24);
             this.toolStripMenuItem1.Text = "Master";
             // 
             // descriptionMasterToolStripMenuItem
@@ -111,7 +114,7 @@
             // logOutToolStripMenuItem
             // 
             this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
-            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(128, 24);
+            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.logOutToolStripMenuItem.Text = "Log Out";
             this.logOutToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click);
             // 
@@ -126,7 +129,6 @@
             this.lblusername.Size = new System.Drawing.Size(158, 45);
             this.lblusername.TabIndex = 1;
             this.lblusername.Text = "Welcome";
-            this.lblusername.Click += new System.EventHandler(this.Lblusername_Click);
             // 
             // picTime
             // 
@@ -138,7 +140,6 @@
             this.picTime.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picTime.TabIndex = 9;
             this.picTime.TabStop = false;
-            this.picTime.Click += new System.EventHandler(this.PicTime_Click);
             // 
             // lblDate
             // 
@@ -151,7 +152,6 @@
             this.lblDate.Size = new System.Drawing.Size(62, 30);
             this.lblDate.TabIndex = 8;
             this.lblDate.Text = "Date";
-            this.lblDate.Click += new System.EventHandler(this.LblDate_Click);
             // 
             // lblTime
             // 
@@ -164,11 +164,25 @@
             this.lblTime.Size = new System.Drawing.Size(64, 30);
             this.lblTime.TabIndex = 7;
             this.lblTime.Text = "Time";
-            this.lblTime.Click += new System.EventHandler(this.LblTime_Click);
             // 
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
+            // 
+            // transactionToolStripMenuItem
+            // 
+            this.transactionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.workTransactionToolStripMenuItem});
+            this.transactionToolStripMenuItem.Name = "transactionToolStripMenuItem";
+            this.transactionToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.transactionToolStripMenuItem.Text = "Transaction";
+            // 
+            // workTransactionToolStripMenuItem
+            // 
+            this.workTransactionToolStripMenuItem.Name = "workTransactionToolStripMenuItem";
+            this.workTransactionToolStripMenuItem.Size = new System.Drawing.Size(188, 24);
+            this.workTransactionToolStripMenuItem.Text = "Work Transaction";
+            this.workTransactionToolStripMenuItem.Click += new System.EventHandler(this.WorkTransactionToolStripMenuItem_Click);
             // 
             // MainPage
             // 
@@ -211,5 +225,7 @@
         private System.Windows.Forms.Label lblTime;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.ToolStripMenuItem workDetailMasterToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem transactionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem workTransactionToolStripMenuItem;
     }
 }

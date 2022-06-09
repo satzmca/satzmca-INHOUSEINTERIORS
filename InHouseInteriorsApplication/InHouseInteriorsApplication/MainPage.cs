@@ -17,7 +17,11 @@ namespace InHouseInteriorsApplication
         public MainPage()
         {
             InitializeComponent();
-        }
+
+            int style = ClassConfig.NativeWinAPI.GetWindowLong(this.Handle, ClassConfig.NativeWinAPI.GWL_EXSTYLE);
+            style |= ClassConfig.NativeWinAPI.WS_EX_COMPOSITED;
+            ClassConfig.NativeWinAPI.SetWindowLong(this.Handle, ClassConfig.NativeWinAPI.GWL_EXSTYLE, style);
+        }       
 
         private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -92,24 +96,18 @@ namespace InHouseInteriorsApplication
             }
         }
 
-        private void Lblusername_Click(object sender, EventArgs e)
+        private void WorkTransactionToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void LblDate_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void LblTime_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void PicTime_Click(object sender, EventArgs e)
-        {
-
+            try
+            {
+                WorkTransactionPage WorkTransaction = new WorkTransactionPage();
+                WorkTransaction.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error");
+                cls.WriteException("MainPage : WorkTransactionToolStripMenuItem_Click" + ex.ToString());
+            }
         }
     }
 }

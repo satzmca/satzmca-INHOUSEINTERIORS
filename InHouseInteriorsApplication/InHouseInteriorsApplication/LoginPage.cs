@@ -19,6 +19,9 @@ namespace InHouseInteriorsApplication
         public LoginPage()
         {
             InitializeComponent();
+            int style = ClassConfig.NativeWinAPI.GetWindowLong(this.Handle, ClassConfig.NativeWinAPI.GWL_EXSTYLE);
+            style |= ClassConfig.NativeWinAPI.WS_EX_COMPOSITED;
+            ClassConfig.NativeWinAPI.SetWindowLong(this.Handle, ClassConfig.NativeWinAPI.GWL_EXSTYLE, style);
         }
       
         private void LoginPage_Load(object sender, EventArgs e)

@@ -289,3 +289,423 @@ ClientConnectionId:89cc28d5-2e7c-4a04-b9e3-23c6a1cb94a7
 Error Number:8114,State:1,Class:16
 PartyMasterPage : BtnSave_ClickSystem.NullReferenceException: Object reference not set to an instance of an object.
    at InHouseInteriorsApplication.WorkDetailMaster.BtnSave_Click(Object sender, EventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkDetailMaster.cs:line 111
+WorkTransactionPage : LastColumnComboSelectionChangedSystem.IndexOutOfRangeException: There is no row at position 2.
+   at System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   at System.Data.DataRowCollection.get_Item(Int32 index)
+   at InHouseInteriorsApplication.WorkTransactionPage.LastColumnComboSelectionChanged(Object sender, EventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 425
+WorkTransactionPage : LastColumnComboSelectionChangedSystem.NullReferenceException: Object reference not set to an instance of an object.
+   at InHouseInteriorsApplication.WorkTransactionPage.LastColumnComboSelectionChanged(Object sender, EventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 418
+WorkTransactionPage : LastColumnComboSelectionChangedSystem.Data.EvaluateException: Cannot find column [System.Data.DataRowView].
+   at System.Data.NameNode.Bind(DataTable table, List`1 list)
+   at System.Data.BinaryNode.Bind(DataTable table, List`1 list)
+   at System.Data.DataExpression.Bind(DataTable table)
+   at System.Data.DataExpression..ctor(DataTable table, String expression, Type type)
+   at System.Data.DataTable.Select(String filterExpression)
+   at InHouseInteriorsApplication.WorkTransactionPage.LastColumnComboSelectionChanged(Object sender, EventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 418
+WorkTransactionPage : LastColumnComboSelectionChangedSystem.Data.EvaluateException: Cannot find column [System.Data.DataRowView].
+   at System.Data.NameNode.Bind(DataTable table, List`1 list)
+   at System.Data.BinaryNode.Bind(DataTable table, List`1 list)
+   at System.Data.DataExpression.Bind(DataTable table)
+   at System.Data.DataExpression..ctor(DataTable table, String expression, Type type)
+   at System.Data.DataTable.Select(String filterExpression)
+   at InHouseInteriorsApplication.WorkTransactionPage.LastColumnComboSelectionChanged(Object sender, EventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 418
+WorkTransactionPage : LastColumnComboSelectionChangedSystem.NullReferenceException: Object reference not set to an instance of an object.
+   at InHouseInteriorsApplication.WorkTransactionPage.LastColumnComboSelectionChanged(Object sender, EventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 418
+WorkTransactionPage : LastColumnComboSelectionChangedSystem.Data.EvaluateException: Cannot find column [System.Data.DataRowView].
+   at System.Data.NameNode.Bind(DataTable table, List`1 list)
+   at System.Data.BinaryNode.Bind(DataTable table, List`1 list)
+   at System.Data.DataExpression.Bind(DataTable table)
+   at System.Data.DataExpression..ctor(DataTable table, String expression, Type type)
+   at System.Data.DataTable.Select(String filterExpression)
+   at InHouseInteriorsApplication.WorkTransactionPage.LastColumnComboSelectionChanged(Object sender, EventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 418
+WorkTransactionPage : LastColumnComboSelectionChangedSystem.Data.EvaluateException: Cannot find column [System.Data.DataRowView].
+   at System.Data.NameNode.Bind(DataTable table, List`1 list)
+   at System.Data.BinaryNode.Bind(DataTable table, List`1 list)
+   at System.Data.DataExpression.Bind(DataTable table)
+   at System.Data.DataExpression..ctor(DataTable table, String expression, Type type)
+   at System.Data.DataTable.Select(String filterExpression)
+   at InHouseInteriorsApplication.WorkTransactionPage.LastColumnComboSelectionChanged(Object sender, EventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 418
+WorkTransactionPage : LastColumnComboSelectionChangedSystem.NullReferenceException: Object reference not set to an instance of an object.
+   at InHouseInteriorsApplication.WorkTransactionPage.LastColumnComboSelectionChanged(Object sender, EventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 418
+WorkTransactionPage : LastColumnComboSelectionChangedSystem.Data.EvaluateException: Cannot find column [System.Data.DataRowView].
+   at System.Data.NameNode.Bind(DataTable table, List`1 list)
+   at System.Data.BinaryNode.Bind(DataTable table, List`1 list)
+   at System.Data.DataExpression.Bind(DataTable table)
+   at System.Data.DataExpression..ctor(DataTable table, String expression, Type type)
+   at System.Data.DataTable.Select(String filterExpression)
+   at InHouseInteriorsApplication.WorkTransactionPage.LastColumnComboSelectionChanged(Object sender, EventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 418
+WorkTransactionPage : LastColumnComboSelectionChangedSystem.Data.EvaluateException: Cannot find column [System.Data.DataRowView].
+   at System.Data.NameNode.Bind(DataTable table, List`1 list)
+   at System.Data.BinaryNode.Bind(DataTable table, List`1 list)
+   at System.Data.DataExpression.Bind(DataTable table)
+   at System.Data.DataExpression..ctor(DataTable table, String expression, Type type)
+   at System.Data.DataTable.Select(String filterExpression)
+   at InHouseInteriorsApplication.WorkTransactionPage.LastColumnComboSelectionChanged(Object sender, EventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 418
+WorkTransactionPage : LastColumnComboSelectionChangedSystem.NullReferenceException: Object reference not set to an instance of an object.
+   at InHouseInteriorsApplication.WorkTransactionPage.LastColumnComboSelectionChanged(Object sender, EventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 418
+WorkTransactionPage : LastColumnComboSelectionChangedSystem.Data.EvaluateException: Cannot find column [System.Data.DataRowView].
+   at System.Data.NameNode.Bind(DataTable table, List`1 list)
+   at System.Data.BinaryNode.Bind(DataTable table, List`1 list)
+   at System.Data.DataExpression.Bind(DataTable table)
+   at System.Data.DataExpression..ctor(DataTable table, String expression, Type type)
+   at System.Data.DataTable.Select(String filterExpression)
+   at InHouseInteriorsApplication.WorkTransactionPage.LastColumnComboSelectionChanged(Object sender, EventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 418
+WorkTransactionPage : LastColumnComboSelectionChangedSystem.Data.EvaluateException: Cannot find column [System.Data.DataRowView].
+   at System.Data.NameNode.Bind(DataTable table, List`1 list)
+   at System.Data.BinaryNode.Bind(DataTable table, List`1 list)
+   at System.Data.DataExpression.Bind(DataTable table)
+   at System.Data.DataExpression..ctor(DataTable table, String expression, Type type)
+   at System.Data.DataTable.Select(String filterExpression)
+   at InHouseInteriorsApplication.WorkTransactionPage.LastColumnComboSelectionChanged(Object sender, EventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 418
+WorkTransactionPage : LastColumnComboSelectionChangedSystem.Data.EvaluateException: Cannot find column [System.Data.DataRowView].
+   at System.Data.NameNode.Bind(DataTable table, List`1 list)
+   at System.Data.BinaryNode.Bind(DataTable table, List`1 list)
+   at System.Data.DataExpression.Bind(DataTable table)
+   at System.Data.DataExpression..ctor(DataTable table, String expression, Type type)
+   at System.Data.DataTable.Select(String filterExpression)
+   at InHouseInteriorsApplication.WorkTransactionPage.LastColumnComboSelectionChanged(Object sender, EventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 420
+WorkTransactionPage : LastColumnComboSelectionChangedSystem.Data.EvaluateException: Cannot find column [System.Data.DataRowView].
+   at System.Data.NameNode.Bind(DataTable table, List`1 list)
+   at System.Data.BinaryNode.Bind(DataTable table, List`1 list)
+   at System.Data.DataExpression.Bind(DataTable table)
+   at System.Data.DataExpression..ctor(DataTable table, String expression, Type type)
+   at System.Data.DataTable.Select(String filterExpression)
+   at InHouseInteriorsApplication.WorkTransactionPage.LastColumnComboSelectionChanged(Object sender, EventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 420
+WorkTransactionPage : LastColumnComboSelectionChangedSystem.NullReferenceException: Object reference not set to an instance of an object.
+   at InHouseInteriorsApplication.WorkTransactionPage.LastColumnComboSelectionChanged(Object sender, EventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 419
+WorkTransactionPage : LastColumnComboSelectionChangedSystem.Data.EvaluateException: Cannot find column [System.Data.DataRowView].
+   at System.Data.NameNode.Bind(DataTable table, List`1 list)
+   at System.Data.BinaryNode.Bind(DataTable table, List`1 list)
+   at System.Data.DataExpression.Bind(DataTable table)
+   at System.Data.DataExpression..ctor(DataTable table, String expression, Type type)
+   at System.Data.DataTable.Select(String filterExpression)
+   at InHouseInteriorsApplication.WorkTransactionPage.LastColumnComboSelectionChanged(Object sender, EventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 421
+WorkTransactionPage : LastColumnComboSelectionChangedSystem.Data.EvaluateException: Cannot find column [System.Data.DataRowView].
+   at System.Data.NameNode.Bind(DataTable table, List`1 list)
+   at System.Data.BinaryNode.Bind(DataTable table, List`1 list)
+   at System.Data.DataExpression.Bind(DataTable table)
+   at System.Data.DataExpression..ctor(DataTable table, String expression, Type type)
+   at System.Data.DataTable.Select(String filterExpression)
+   at InHouseInteriorsApplication.WorkTransactionPage.LastColumnComboSelectionChanged(Object sender, EventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 421
+WorkTransactionPage : LastColumnComboSelectionChangedSystem.NullReferenceException: Object reference not set to an instance of an object.
+   at InHouseInteriorsApplication.WorkTransactionPage.LastColumnComboSelectionChanged(Object sender, EventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 419
+WorkTransactionPage : LastColumnComboSelectionChangedSystem.Data.EvaluateException: Cannot find column [System.Data.DataRowView].
+   at System.Data.NameNode.Bind(DataTable table, List`1 list)
+   at System.Data.BinaryNode.Bind(DataTable table, List`1 list)
+   at System.Data.DataExpression.Bind(DataTable table)
+   at System.Data.DataExpression..ctor(DataTable table, String expression, Type type)
+   at System.Data.DataTable.Select(String filterExpression)
+   at InHouseInteriorsApplication.WorkTransactionPage.LastColumnComboSelectionChanged(Object sender, EventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 421
+WorkTransactionPage : LastColumnComboSelectionChangedSystem.Data.EvaluateException: Cannot find column [System.Data.DataRowView].
+   at System.Data.NameNode.Bind(DataTable table, List`1 list)
+   at System.Data.BinaryNode.Bind(DataTable table, List`1 list)
+   at System.Data.DataExpression.Bind(DataTable table)
+   at System.Data.DataExpression..ctor(DataTable table, String expression, Type type)
+   at System.Data.DataTable.Select(String filterExpression)
+   at InHouseInteriorsApplication.WorkTransactionPage.LastColumnComboSelectionChanged(Object sender, EventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 421
+WorkTransactionPage : LastColumnComboSelectionChangedSystem.NullReferenceException: Object reference not set to an instance of an object.
+   at InHouseInteriorsApplication.WorkTransactionPage.LastColumnComboSelectionChanged(Object sender, EventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 419
+WorkTransactionPage : LastColumnComboSelectionChangedSystem.Data.EvaluateException: Cannot find column [System.Data.DataRowView].
+   at System.Data.NameNode.Bind(DataTable table, List`1 list)
+   at System.Data.BinaryNode.Bind(DataTable table, List`1 list)
+   at System.Data.DataExpression.Bind(DataTable table)
+   at System.Data.DataExpression..ctor(DataTable table, String expression, Type type)
+   at System.Data.DataTable.Select(String filterExpression)
+   at InHouseInteriorsApplication.WorkTransactionPage.LastColumnComboSelectionChanged(Object sender, EventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 421
+WorkTransactionPage : LastColumnComboSelectionChangedSystem.Data.EvaluateException: Cannot find column [System.Data.DataRowView].
+   at System.Data.NameNode.Bind(DataTable table, List`1 list)
+   at System.Data.BinaryNode.Bind(DataTable table, List`1 list)
+   at System.Data.DataExpression.Bind(DataTable table)
+   at System.Data.DataExpression..ctor(DataTable table, String expression, Type type)
+   at System.Data.DataTable.Select(String filterExpression)
+   at InHouseInteriorsApplication.WorkTransactionPage.LastColumnComboSelectionChanged(Object sender, EventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 421
+WorkTransactionPage : LastColumnComboSelectionChangedSystem.Data.EvaluateException: Cannot find column [System.Data.DataRowView].
+   at System.Data.NameNode.Bind(DataTable table, List`1 list)
+   at System.Data.BinaryNode.Bind(DataTable table, List`1 list)
+   at System.Data.DataExpression.Bind(DataTable table)
+   at System.Data.DataExpression..ctor(DataTable table, String expression, Type type)
+   at System.Data.DataTable.Select(String filterExpression)
+   at InHouseInteriorsApplication.WorkTransactionPage.LastColumnComboSelectionChanged(Object sender, EventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 421
+WorkTransactionPage : LastColumnComboSelectionChangedSystem.Data.EvaluateException: Cannot find column [System.Data.DataRowView].
+   at System.Data.NameNode.Bind(DataTable table, List`1 list)
+   at System.Data.BinaryNode.Bind(DataTable table, List`1 list)
+   at System.Data.DataExpression.Bind(DataTable table)
+   at System.Data.DataExpression..ctor(DataTable table, String expression, Type type)
+   at System.Data.DataTable.Select(String filterExpression)
+   at InHouseInteriorsApplication.WorkTransactionPage.LastColumnComboSelectionChanged(Object sender, EventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 421
+WorkTransactionPage : LastColumnComboSelectionChangedSystem.Data.EvaluateException: Cannot find column [System.Data.DataRowView].
+   at System.Data.NameNode.Bind(DataTable table, List`1 list)
+   at System.Data.BinaryNode.Bind(DataTable table, List`1 list)
+   at System.Data.DataExpression.Bind(DataTable table)
+   at System.Data.DataExpression..ctor(DataTable table, String expression, Type type)
+   at System.Data.DataTable.Select(String filterExpression)
+   at InHouseInteriorsApplication.WorkTransactionPage.LastColumnComboSelectionChanged(Object sender, EventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 421
+WorkTransactionPage : LastColumnComboSelectionChangedSystem.Data.EvaluateException: Cannot find column [System.Data.DataRowView].
+   at System.Data.NameNode.Bind(DataTable table, List`1 list)
+   at System.Data.BinaryNode.Bind(DataTable table, List`1 list)
+   at System.Data.DataExpression.Bind(DataTable table)
+   at System.Data.DataExpression..ctor(DataTable table, String expression, Type type)
+   at System.Data.DataTable.Select(String filterExpression)
+   at InHouseInteriorsApplication.WorkTransactionPage.LastColumnComboSelectionChanged(Object sender, EventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 421
+WorkTransactionPage : LastColumnComboSelectionChangedSystem.Data.EvaluateException: Cannot find column [System.Data.DataRowView].
+   at System.Data.NameNode.Bind(DataTable table, List`1 list)
+   at System.Data.BinaryNode.Bind(DataTable table, List`1 list)
+   at System.Data.DataExpression.Bind(DataTable table)
+   at System.Data.DataExpression..ctor(DataTable table, String expression, Type type)
+   at System.Data.DataTable.Select(String filterExpression)
+   at InHouseInteriorsApplication.WorkTransactionPage.LastColumnComboSelectionChanged(Object sender, EventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 419
+WorkTransactionPage : LastColumnComboSelectionChangedSystem.Data.EvaluateException: Cannot find column [System.Data.DataRowView].
+   at System.Data.NameNode.Bind(DataTable table, List`1 list)
+   at System.Data.BinaryNode.Bind(DataTable table, List`1 list)
+   at System.Data.DataExpression.Bind(DataTable table)
+   at System.Data.DataExpression..ctor(DataTable table, String expression, Type type)
+   at System.Data.DataTable.Select(String filterExpression)
+   at InHouseInteriorsApplication.WorkTransactionPage.LastColumnComboSelectionChanged(Object sender, EventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 419
+WorkTransactionPage : LastColumnComboSelectionChangedSystem.Data.EvaluateException: Cannot find column [System.Data.DataRowView].
+   at System.Data.NameNode.Bind(DataTable table, List`1 list)
+   at System.Data.BinaryNode.Bind(DataTable table, List`1 list)
+   at System.Data.DataExpression.Bind(DataTable table)
+   at System.Data.DataExpression..ctor(DataTable table, String expression, Type type)
+   at System.Data.DataTable.Select(String filterExpression)
+   at InHouseInteriorsApplication.WorkTransactionPage.LastColumnComboSelectionChanged(Object sender, EventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 419
+WorkTransactionPage : LastColumnComboSelectionChangedSystem.Data.EvaluateException: Cannot find column [System.Data.DataRowView].
+   at System.Data.NameNode.Bind(DataTable table, List`1 list)
+   at System.Data.BinaryNode.Bind(DataTable table, List`1 list)
+   at System.Data.DataExpression.Bind(DataTable table)
+   at System.Data.DataExpression..ctor(DataTable table, String expression, Type type)
+   at System.Data.DataTable.Select(String filterExpression)
+   at InHouseInteriorsApplication.WorkTransactionPage.LastColumnComboSelectionChanged(Object sender, EventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 419
+WorkTransactionPage : LastColumnComboSelectionChangedSystem.Data.EvaluateException: Cannot find column [System.Data.DataRowView].
+   at System.Data.NameNode.Bind(DataTable table, List`1 list)
+   at System.Data.BinaryNode.Bind(DataTable table, List`1 list)
+   at System.Data.DataExpression.Bind(DataTable table)
+   at System.Data.DataExpression..ctor(DataTable table, String expression, Type type)
+   at System.Data.DataTable.Select(String filterExpression)
+   at InHouseInteriorsApplication.WorkTransactionPage.LastColumnComboSelectionChanged(Object sender, EventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 420
+WorkTransactionPage : LastColumnComboSelectionChangedSystem.Data.EvaluateException: Cannot find column [System.Data.DataRowView].
+   at System.Data.NameNode.Bind(DataTable table, List`1 list)
+   at System.Data.BinaryNode.Bind(DataTable table, List`1 list)
+   at System.Data.DataExpression.Bind(DataTable table)
+   at System.Data.DataExpression..ctor(DataTable table, String expression, Type type)
+   at System.Data.DataTable.Select(String filterExpression)
+   at InHouseInteriorsApplication.WorkTransactionPage.LastColumnComboSelectionChanged(Object sender, EventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 420
+WorkTransactionPage : LastColumnComboSelectionChangedSystem.Data.EvaluateException: Cannot find column [System.Data.DataRowView].
+   at System.Data.NameNode.Bind(DataTable table, List`1 list)
+   at System.Data.BinaryNode.Bind(DataTable table, List`1 list)
+   at System.Data.DataExpression.Bind(DataTable table)
+   at System.Data.DataExpression..ctor(DataTable table, String expression, Type type)
+   at System.Data.DataTable.Select(String filterExpression)
+   at InHouseInteriorsApplication.WorkTransactionPage.LastColumnComboSelectionChanged(Object sender, EventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 421
+WorkTransactionPage : LastColumnComboSelectionChangedSystem.Data.EvaluateException: Cannot find column [System.Data.DataRowView].
+   at System.Data.NameNode.Bind(DataTable table, List`1 list)
+   at System.Data.BinaryNode.Bind(DataTable table, List`1 list)
+   at System.Data.DataExpression.Bind(DataTable table)
+   at System.Data.DataExpression..ctor(DataTable table, String expression, Type type)
+   at System.Data.DataTable.Select(String filterExpression)
+   at InHouseInteriorsApplication.WorkTransactionPage.LastColumnComboSelectionChanged(Object sender, EventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 421
+WorkTransactionPage : LastColumnComboSelectionChangedSystem.Data.EvaluateException: Cannot find column [System.Data.DataRowView].
+   at System.Data.NameNode.Bind(DataTable table, List`1 list)
+   at System.Data.BinaryNode.Bind(DataTable table, List`1 list)
+   at System.Data.DataExpression.Bind(DataTable table)
+   at System.Data.DataExpression..ctor(DataTable table, String expression, Type type)
+   at System.Data.DataTable.Select(String filterExpression)
+   at InHouseInteriorsApplication.WorkTransactionPage.LastColumnComboSelectionChanged(Object sender, EventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 421
+WorkTransactionPage : LastColumnComboSelectionChangedSystem.Data.EvaluateException: Cannot find column [System.Data.DataRowView].
+   at System.Data.NameNode.Bind(DataTable table, List`1 list)
+   at System.Data.BinaryNode.Bind(DataTable table, List`1 list)
+   at System.Data.DataExpression.Bind(DataTable table)
+   at System.Data.DataExpression..ctor(DataTable table, String expression, Type type)
+   at System.Data.DataTable.Select(String filterExpression)
+   at InHouseInteriorsApplication.WorkTransactionPage.LastColumnComboSelectionChanged(Object sender, EventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 421
+WorkTransactionPage : LastColumnComboSelectionChangedSystem.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index
+   at System.Collections.ArrayList.get_Item(Int32 index)
+   at System.Windows.Forms.DataGridViewRowCollection.SharedRow(Int32 rowIndex)
+   at System.Windows.Forms.DataGridViewRowCollection.get_Item(Int32 index)
+   at InHouseInteriorsApplication.WorkTransactionPage.LastColumnComboSelectionChanged(Object sender, EventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 436
+WorkTransactionPage : LastColumnComboSelectionChangedSystem.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index
+   at System.Collections.ArrayList.get_Item(Int32 index)
+   at System.Windows.Forms.DataGridViewRowCollection.SharedRow(Int32 rowIndex)
+   at System.Windows.Forms.DataGridViewRowCollection.get_Item(Int32 index)
+   at InHouseInteriorsApplication.WorkTransactionPage.LastColumnComboSelectionChanged(Object sender, EventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 436
+WorkTransactionPage : LastColumnComboSelectionChangedSystem.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index
+   at System.Collections.ArrayList.get_Item(Int32 index)
+   at System.Windows.Forms.DataGridViewRowCollection.SharedRow(Int32 rowIndex)
+   at System.Windows.Forms.DataGridViewRowCollection.get_Item(Int32 index)
+   at InHouseInteriorsApplication.WorkTransactionPage.LastColumnComboSelectionChanged(Object sender, EventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 439
+WorkTransactionPage : LastColumnComboSelectionChangedSystem.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index
+   at System.Collections.ArrayList.get_Item(Int32 index)
+   at System.Windows.Forms.DataGridViewRowCollection.SharedRow(Int32 rowIndex)
+   at System.Windows.Forms.DataGridViewRowCollection.get_Item(Int32 index)
+   at InHouseInteriorsApplication.WorkTransactionPage.LastColumnComboSelectionChanged(Object sender, EventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 439
+WorkTransactionPage : LastColumnComboSelectionChangedSystem.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index
+   at System.Collections.ArrayList.get_Item(Int32 index)
+   at System.Windows.Forms.DataGridViewRowCollection.SharedRow(Int32 rowIndex)
+   at System.Windows.Forms.DataGridViewRowCollection.get_Item(Int32 index)
+   at InHouseInteriorsApplication.WorkTransactionPage.LastColumnComboSelectionChanged(Object sender, EventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 439
+WorkTransactionPage : LastColumnComboSelectionChangedSystem.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index
+   at System.Collections.ArrayList.get_Item(Int32 index)
+   at System.Windows.Forms.DataGridViewRowCollection.SharedRow(Int32 rowIndex)
+   at System.Windows.Forms.DataGridViewRowCollection.get_Item(Int32 index)
+   at InHouseInteriorsApplication.WorkTransactionPage.LastColumnComboSelectionChanged(Object sender, EventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 440
+WorkTransactionPage : LastColumnComboSelectionChangedSystem.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index
+   at System.Collections.ArrayList.get_Item(Int32 index)
+   at System.Windows.Forms.DataGridViewRowCollection.SharedRow(Int32 rowIndex)
+   at System.Windows.Forms.DataGridViewRowCollection.get_Item(Int32 index)
+   at InHouseInteriorsApplication.WorkTransactionPage.LastColumnComboSelectionChanged(Object sender, EventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 439
+WorkTransactionPage : CmbWorkName_SelectedIndexChangedSystem.NullReferenceException: Object reference not set to an instance of an object.
+   at InHouseInteriorsApplication.WorkTransactionPage.DgvWork_CellEnter(Object sender, DataGridViewCellEventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 471
+   at System.Windows.Forms.DataGridView.OnCellEnter(DataGridViewCellEventArgs e)
+   at System.Windows.Forms.DataGridView.OnCellEnter(DataGridViewCell& dataGridViewCell, Int32 columnIndex, Int32 rowIndex)
+   at System.Windows.Forms.DataGridView.SetCurrentCellAddressCore(Int32 columnIndex, Int32 rowIndex, Boolean setAnchorCellAddress, Boolean validateCurrentCell, Boolean throughMouseClick)
+   at System.Windows.Forms.DataGridView.SetAndSelectCurrentCellAddress(Int32 columnIndex, Int32 rowIndex, Boolean setAnchorCellAddress, Boolean validateCurrentCell, Boolean throughMouseClick, Boolean clearSelection, Boolean forceCurrentCellSelection)
+   at System.Windows.Forms.DataGridView.MakeFirstDisplayedCellCurrentCell(Boolean includeNewRow)
+   at System.Windows.Forms.DataGridView.OnRowCollectionChanged_PostNotification(Boolean recreateNewRow, Boolean allowSettingCurrentCell, CollectionChangeAction cca, DataGridViewRow dataGridViewRow, Int32 rowIndex)
+   at System.Windows.Forms.DataGridViewRowCollection.OnCollectionChanged_PostNotification(CollectionChangeAction cca, Int32 rowIndex, Int32 rowCount, DataGridViewRow dataGridViewRow, Boolean changeIsDeletion, Boolean changeIsInsertion, Boolean recreateNewRow, Point newCurrentCell)
+   at System.Windows.Forms.DataGridViewRowCollection.OnCollectionChanged(CollectionChangeEventArgs e, Int32 rowIndex, Int32 rowCount, Boolean changeIsDeletion, Boolean changeIsInsertion, Boolean recreateNewRow, Point newCurrentCell)
+   at System.Windows.Forms.DataGridViewRowCollection.InsertInternal(Int32 rowIndex, DataGridViewRow dataGridViewRow, Boolean force)
+   at System.Windows.Forms.DataGridViewRowCollection.InsertInternal(Int32 rowIndex, DataGridViewRow dataGridViewRow)
+   at System.Windows.Forms.DataGridViewRowCollection.AddInternal(DataGridViewRow dataGridViewRow)
+   at System.Windows.Forms.DataGridView.RefreshRows(Boolean scrollIntoView)
+   at System.Windows.Forms.DataGridView.RefreshColumnsAndRows()
+   at System.Windows.Forms.DataGridView.OnDataSourceChanged(EventArgs e)
+   at System.Windows.Forms.DataGridView.set_DataSource(Object value)
+   at InHouseInteriorsApplication.WorkTransactionPage.bind() in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 117
+   at InHouseInteriorsApplication.WorkTransactionPage.CmbWorkName_SelectedIndexChanged(Object sender, EventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 96
+WorkTransactionPage : CmbWorkName_SelectedIndexChangedSystem.NullReferenceException: Object reference not set to an instance of an object.
+   at InHouseInteriorsApplication.WorkTransactionPage.DgvWork_CellEnter(Object sender, DataGridViewCellEventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 471
+   at System.Windows.Forms.DataGridView.OnCellEnter(DataGridViewCellEventArgs e)
+   at System.Windows.Forms.DataGridView.OnCellEnter(DataGridViewCell& dataGridViewCell, Int32 columnIndex, Int32 rowIndex)
+   at System.Windows.Forms.DataGridView.SetCurrentCellAddressCore(Int32 columnIndex, Int32 rowIndex, Boolean setAnchorCellAddress, Boolean validateCurrentCell, Boolean throughMouseClick)
+   at System.Windows.Forms.DataGridView.SetAndSelectCurrentCellAddress(Int32 columnIndex, Int32 rowIndex, Boolean setAnchorCellAddress, Boolean validateCurrentCell, Boolean throughMouseClick, Boolean clearSelection, Boolean forceCurrentCellSelection)
+   at System.Windows.Forms.DataGridView.MakeFirstDisplayedCellCurrentCell(Boolean includeNewRow)
+   at System.Windows.Forms.DataGridView.OnRowCollectionChanged_PostNotification(Boolean recreateNewRow, Boolean allowSettingCurrentCell, CollectionChangeAction cca, DataGridViewRow dataGridViewRow, Int32 rowIndex)
+   at System.Windows.Forms.DataGridViewRowCollection.OnCollectionChanged_PostNotification(CollectionChangeAction cca, Int32 rowIndex, Int32 rowCount, DataGridViewRow dataGridViewRow, Boolean changeIsDeletion, Boolean changeIsInsertion, Boolean recreateNewRow, Point newCurrentCell)
+   at System.Windows.Forms.DataGridViewRowCollection.OnCollectionChanged(CollectionChangeEventArgs e, Int32 rowIndex, Int32 rowCount, Boolean changeIsDeletion, Boolean changeIsInsertion, Boolean recreateNewRow, Point newCurrentCell)
+   at System.Windows.Forms.DataGridViewRowCollection.InsertInternal(Int32 rowIndex, DataGridViewRow dataGridViewRow, Boolean force)
+   at System.Windows.Forms.DataGridViewRowCollection.InsertInternal(Int32 rowIndex, DataGridViewRow dataGridViewRow)
+   at System.Windows.Forms.DataGridViewRowCollection.AddInternal(DataGridViewRow dataGridViewRow)
+   at System.Windows.Forms.DataGridView.RefreshRows(Boolean scrollIntoView)
+   at System.Windows.Forms.DataGridView.RefreshColumnsAndRows()
+   at System.Windows.Forms.DataGridView.OnDataSourceChanged(EventArgs e)
+   at System.Windows.Forms.DataGridView.set_DataSource(Object value)
+   at InHouseInteriorsApplication.WorkTransactionPage.bind() in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 117
+   at InHouseInteriorsApplication.WorkTransactionPage.CmbWorkName_SelectedIndexChanged(Object sender, EventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 96
+WorkTransactionPage : CmbWorkName_SelectedIndexChangedSystem.NullReferenceException: Object reference not set to an instance of an object.
+   at InHouseInteriorsApplication.WorkTransactionPage.DgvWork_CellEnter(Object sender, DataGridViewCellEventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 471
+   at System.Windows.Forms.DataGridView.OnCellEnter(DataGridViewCellEventArgs e)
+   at System.Windows.Forms.DataGridView.OnCellEnter(DataGridViewCell& dataGridViewCell, Int32 columnIndex, Int32 rowIndex)
+   at System.Windows.Forms.DataGridView.SetCurrentCellAddressCore(Int32 columnIndex, Int32 rowIndex, Boolean setAnchorCellAddress, Boolean validateCurrentCell, Boolean throughMouseClick)
+   at System.Windows.Forms.DataGridView.SetAndSelectCurrentCellAddress(Int32 columnIndex, Int32 rowIndex, Boolean setAnchorCellAddress, Boolean validateCurrentCell, Boolean throughMouseClick, Boolean clearSelection, Boolean forceCurrentCellSelection)
+   at System.Windows.Forms.DataGridView.MakeFirstDisplayedCellCurrentCell(Boolean includeNewRow)
+   at System.Windows.Forms.DataGridView.OnRowCollectionChanged_PostNotification(Boolean recreateNewRow, Boolean allowSettingCurrentCell, CollectionChangeAction cca, DataGridViewRow dataGridViewRow, Int32 rowIndex)
+   at System.Windows.Forms.DataGridViewRowCollection.OnCollectionChanged_PostNotification(CollectionChangeAction cca, Int32 rowIndex, Int32 rowCount, DataGridViewRow dataGridViewRow, Boolean changeIsDeletion, Boolean changeIsInsertion, Boolean recreateNewRow, Point newCurrentCell)
+   at System.Windows.Forms.DataGridViewRowCollection.OnCollectionChanged(CollectionChangeEventArgs e, Int32 rowIndex, Int32 rowCount, Boolean changeIsDeletion, Boolean changeIsInsertion, Boolean recreateNewRow, Point newCurrentCell)
+   at System.Windows.Forms.DataGridViewRowCollection.InsertInternal(Int32 rowIndex, DataGridViewRow dataGridViewRow, Boolean force)
+   at System.Windows.Forms.DataGridViewRowCollection.InsertInternal(Int32 rowIndex, DataGridViewRow dataGridViewRow)
+   at System.Windows.Forms.DataGridViewRowCollection.AddInternal(DataGridViewRow dataGridViewRow)
+   at System.Windows.Forms.DataGridView.RefreshRows(Boolean scrollIntoView)
+   at System.Windows.Forms.DataGridView.RefreshColumnsAndRows()
+   at System.Windows.Forms.DataGridView.OnDataSourceChanged(EventArgs e)
+   at System.Windows.Forms.DataGridView.set_DataSource(Object value)
+   at InHouseInteriorsApplication.WorkTransactionPage.bind() in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 117
+   at InHouseInteriorsApplication.WorkTransactionPage.CmbWorkName_SelectedIndexChanged(Object sender, EventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 96
+WorkTransactionPage : CmbWorkName_SelectedIndexChangedSystem.NullReferenceException: Object reference not set to an instance of an object.
+   at InHouseInteriorsApplication.WorkTransactionPage.DgvWork_CellEnter(Object sender, DataGridViewCellEventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 471
+   at System.Windows.Forms.DataGridView.OnCellEnter(DataGridViewCellEventArgs e)
+   at System.Windows.Forms.DataGridView.OnCellEnter(DataGridViewCell& dataGridViewCell, Int32 columnIndex, Int32 rowIndex)
+   at System.Windows.Forms.DataGridView.SetCurrentCellAddressCore(Int32 columnIndex, Int32 rowIndex, Boolean setAnchorCellAddress, Boolean validateCurrentCell, Boolean throughMouseClick)
+   at System.Windows.Forms.DataGridView.SetAndSelectCurrentCellAddress(Int32 columnIndex, Int32 rowIndex, Boolean setAnchorCellAddress, Boolean validateCurrentCell, Boolean throughMouseClick, Boolean clearSelection, Boolean forceCurrentCellSelection)
+   at System.Windows.Forms.DataGridView.MakeFirstDisplayedCellCurrentCell(Boolean includeNewRow)
+   at System.Windows.Forms.DataGridView.OnRowCollectionChanged_PostNotification(Boolean recreateNewRow, Boolean allowSettingCurrentCell, CollectionChangeAction cca, DataGridViewRow dataGridViewRow, Int32 rowIndex)
+   at System.Windows.Forms.DataGridViewRowCollection.OnCollectionChanged_PostNotification(CollectionChangeAction cca, Int32 rowIndex, Int32 rowCount, DataGridViewRow dataGridViewRow, Boolean changeIsDeletion, Boolean changeIsInsertion, Boolean recreateNewRow, Point newCurrentCell)
+   at System.Windows.Forms.DataGridViewRowCollection.OnCollectionChanged(CollectionChangeEventArgs e, Int32 rowIndex, Int32 rowCount, Boolean changeIsDeletion, Boolean changeIsInsertion, Boolean recreateNewRow, Point newCurrentCell)
+   at System.Windows.Forms.DataGridViewRowCollection.InsertInternal(Int32 rowIndex, DataGridViewRow dataGridViewRow, Boolean force)
+   at System.Windows.Forms.DataGridViewRowCollection.InsertInternal(Int32 rowIndex, DataGridViewRow dataGridViewRow)
+   at System.Windows.Forms.DataGridViewRowCollection.AddInternal(DataGridViewRow dataGridViewRow)
+   at System.Windows.Forms.DataGridView.RefreshRows(Boolean scrollIntoView)
+   at System.Windows.Forms.DataGridView.RefreshColumnsAndRows()
+   at System.Windows.Forms.DataGridView.OnDataSourceChanged(EventArgs e)
+   at System.Windows.Forms.DataGridView.set_DataSource(Object value)
+   at InHouseInteriorsApplication.WorkTransactionPage.bind() in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 117
+   at InHouseInteriorsApplication.WorkTransactionPage.CmbWorkName_SelectedIndexChanged(Object sender, EventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 96
+WorkTransactionPage : CmbWorkName_SelectedIndexChangedSystem.NullReferenceException: Object reference not set to an instance of an object.
+   at InHouseInteriorsApplication.WorkTransactionPage.DgvWork_CellEnter(Object sender, DataGridViewCellEventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 471
+   at System.Windows.Forms.DataGridView.OnCellEnter(DataGridViewCellEventArgs e)
+   at System.Windows.Forms.DataGridView.OnCellEnter(DataGridViewCell& dataGridViewCell, Int32 columnIndex, Int32 rowIndex)
+   at System.Windows.Forms.DataGridView.SetCurrentCellAddressCore(Int32 columnIndex, Int32 rowIndex, Boolean setAnchorCellAddress, Boolean validateCurrentCell, Boolean throughMouseClick)
+   at System.Windows.Forms.DataGridView.SetAndSelectCurrentCellAddress(Int32 columnIndex, Int32 rowIndex, Boolean setAnchorCellAddress, Boolean validateCurrentCell, Boolean throughMouseClick, Boolean clearSelection, Boolean forceCurrentCellSelection)
+   at System.Windows.Forms.DataGridView.MakeFirstDisplayedCellCurrentCell(Boolean includeNewRow)
+   at System.Windows.Forms.DataGridView.OnRowCollectionChanged_PostNotification(Boolean recreateNewRow, Boolean allowSettingCurrentCell, CollectionChangeAction cca, DataGridViewRow dataGridViewRow, Int32 rowIndex)
+   at System.Windows.Forms.DataGridViewRowCollection.OnCollectionChanged_PostNotification(CollectionChangeAction cca, Int32 rowIndex, Int32 rowCount, DataGridViewRow dataGridViewRow, Boolean changeIsDeletion, Boolean changeIsInsertion, Boolean recreateNewRow, Point newCurrentCell)
+   at System.Windows.Forms.DataGridViewRowCollection.OnCollectionChanged(CollectionChangeEventArgs e, Int32 rowIndex, Int32 rowCount, Boolean changeIsDeletion, Boolean changeIsInsertion, Boolean recreateNewRow, Point newCurrentCell)
+   at System.Windows.Forms.DataGridViewRowCollection.InsertInternal(Int32 rowIndex, DataGridViewRow dataGridViewRow, Boolean force)
+   at System.Windows.Forms.DataGridViewRowCollection.InsertInternal(Int32 rowIndex, DataGridViewRow dataGridViewRow)
+   at System.Windows.Forms.DataGridViewRowCollection.AddInternal(DataGridViewRow dataGridViewRow)
+   at System.Windows.Forms.DataGridView.RefreshRows(Boolean scrollIntoView)
+   at System.Windows.Forms.DataGridView.RefreshColumnsAndRows()
+   at System.Windows.Forms.DataGridView.OnDataSourceChanged(EventArgs e)
+   at System.Windows.Forms.DataGridView.set_DataSource(Object value)
+   at InHouseInteriorsApplication.WorkTransactionPage.bind() in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 117
+   at InHouseInteriorsApplication.WorkTransactionPage.CmbWorkName_SelectedIndexChanged(Object sender, EventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 96
+WorkTransactionPage : PartyMasterPage_LoadSystem.NotSupportedException: Only the value AutoCompleteMode.None can be used when DropDownStyle is ComboBoxStyle.DropDownList and AutoCompleteSource is not AutoCompleteSource.ListItems.
+   at System.Windows.Forms.ComboBox.set_AutoCompleteMode(AutoCompleteMode value)
+   at InHouseInteriorsApplication.WorkTransactionPage.bindWork() in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 62
+   at InHouseInteriorsApplication.WorkTransactionPage.WorkTransactionPage_Load(Object sender, EventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 47
+MainPage : WorkTransactionToolStripMenuItem_ClickSystem.InvalidCastException: Unable to cast object of type 'System.Windows.Forms.MouseEventArgs' to type 'System.Windows.Forms.HandledMouseEventArgs'.
+   at InHouseInteriorsApplication.WorkTransactionPage.CmbWorkName_MouseMove(Object sender, MouseEventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 494
+   at System.Windows.Forms.Control.OnMouseMove(MouseEventArgs e)
+   at System.Windows.Forms.ComboBox.ChildWndProc(Message& m)
+   at System.Windows.Forms.ComboBox.ComboBoxChildNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.RunDialog(Form form)
+   at System.Windows.Forms.Form.ShowDialog(IWin32Window owner)
+   at System.Windows.Forms.Form.ShowDialog()
+   at InHouseInteriorsApplication.MainPage.WorkTransactionToolStripMenuItem_Click(Object sender, EventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\MainPage.cs:line 104
+MainPage : WorkTransactionToolStripMenuItem_ClickSystem.InvalidCastException: Unable to cast object of type 'System.Windows.Forms.MouseEventArgs' to type 'System.Windows.Forms.HandledMouseEventArgs'.
+   at InHouseInteriorsApplication.WorkTransactionPage.CmbWorkName_MouseMove(Object sender, MouseEventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 494
+   at System.Windows.Forms.Control.OnMouseMove(MouseEventArgs e)
+   at System.Windows.Forms.Control.WmMouseMove(Message& m)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ComboBox.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.RunDialog(Form form)
+   at System.Windows.Forms.Form.ShowDialog(IWin32Window owner)
+   at System.Windows.Forms.Form.ShowDialog()
+   at InHouseInteriorsApplication.MainPage.WorkTransactionToolStripMenuItem_Click(Object sender, EventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\MainPage.cs:line 104
+MainPage : WorkTransactionToolStripMenuItem_ClickSystem.InvalidCastException: Unable to cast object of type 'System.Windows.Forms.MouseEventArgs' to type 'System.Windows.Forms.HandledMouseEventArgs'.
+   at InHouseInteriorsApplication.WorkTransactionPage.CmbWorkName_MouseMove(Object sender, MouseEventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 494
+   at System.Windows.Forms.Control.OnMouseMove(MouseEventArgs e)
+   at System.Windows.Forms.Control.WmMouseMove(Message& m)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ComboBox.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.RunDialog(Form form)
+   at System.Windows.Forms.Form.ShowDialog(IWin32Window owner)
+   at System.Windows.Forms.Form.ShowDialog()
+   at InHouseInteriorsApplication.MainPage.WorkTransactionToolStripMenuItem_Click(Object sender, EventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\MainPage.cs:line 104
+WorkTransactionPage : TxtHeight_TextChangedSystem.NullReferenceException: Object reference not set to an instance of an object.
+   at InHouseInteriorsApplication.WorkTransactionPage.DataBind() in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 508
+   at InHouseInteriorsApplication.WorkTransactionPage.TxtHeight_TextChanged(Object sender, EventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 155

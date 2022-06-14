@@ -32,22 +32,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.grpDescription = new System.Windows.Forms.GroupBox();
             this.dgvWork = new System.Windows.Forms.DataGridView();
-            this.Work_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DgvCbDescription = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.Size = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SqftCoatingPlain = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RatePlain = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TotalPlainCoating = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TotalPlain = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SqftWoodCoating = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RateWoodCoating = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TotalWoodCoating = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TotalWood = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BtnRemove = new System.Windows.Forms.DataGridViewImageColumn();
             this.grpBoxSize = new System.Windows.Forms.GroupBox();
             this.txtWidth = new System.Windows.Forms.TextBox();
             this.lblWidth = new System.Windows.Forms.Label();
@@ -67,6 +51,24 @@
             this.lblWorkName = new System.Windows.Forms.Label();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.pctClose = new System.Windows.Forms.PictureBox();
+            this.Work_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DgvCbDescription = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Size = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SqftCoatingPlain = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RatePlain = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TotalPlainCoating = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TotalPlain = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SqftWoodCoating = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RateWoodCoating = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TotalWoodCoating = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TotalWood = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BtnRemove = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Size_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Total_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grpDescription.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvWork)).BeginInit();
             this.grpBoxSize.SuspendLayout();
@@ -121,7 +123,9 @@
             this.RateWoodCoating,
             this.TotalWoodCoating,
             this.TotalWood,
-            this.BtnRemove});
+            this.BtnRemove,
+            this.Size_id,
+            this.Total_id});
             this.dgvWork.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
             this.dgvWork.GridColor = System.Drawing.Color.Black;
             this.dgvWork.Location = new System.Drawing.Point(6, 241);
@@ -137,113 +141,6 @@
             this.dgvWork.CurrentCellDirtyStateChanged += new System.EventHandler(this.DgvWork_CurrentCellDirtyStateChanged);
             this.dgvWork.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.DgvWork_EditingControlShowing);
             this.dgvWork.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.DgvWork_RowPostPaint);
-            // 
-            // Work_id
-            // 
-            this.Work_id.DataPropertyName = "Work_id";
-            this.Work_id.HeaderText = "Work_id";
-            this.Work_id.Name = "Work_id";
-            this.Work_id.Visible = false;
-            this.Work_id.Width = 5;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "Description_id";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Description_id";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.Visible = false;
-            this.dataGridViewTextBoxColumn1.Width = 5;
-            // 
-            // DgvCbDescription
-            // 
-            this.DgvCbDescription.DataPropertyName = "Description_id";
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.DgvCbDescription.DefaultCellStyle = dataGridViewCellStyle1;
-            this.DgvCbDescription.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox;
-            this.DgvCbDescription.HeaderText = "Description";
-            this.DgvCbDescription.Name = "DgvCbDescription";
-            this.DgvCbDescription.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.DgvCbDescription.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.DgvCbDescription.Width = 180;
-            // 
-            // Size
-            // 
-            this.Size.HeaderText = "Size";
-            this.Size.Name = "Size";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "Weight";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Weight";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "Rate";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Rate";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // Total
-            // 
-            this.Total.HeaderText = "Total";
-            this.Total.Name = "Total";
-            // 
-            // SqftCoatingPlain
-            // 
-            this.SqftCoatingPlain.HeaderText = "Sqft(Plain)";
-            this.SqftCoatingPlain.Name = "SqftCoatingPlain";
-            this.SqftCoatingPlain.Width = 130;
-            // 
-            // RatePlain
-            // 
-            this.RatePlain.HeaderText = "Rate(Plain)";
-            this.RatePlain.Name = "RatePlain";
-            this.RatePlain.Width = 130;
-            // 
-            // TotalPlainCoating
-            // 
-            this.TotalPlainCoating.HeaderText = "Total(Plain)";
-            this.TotalPlainCoating.Name = "TotalPlainCoating";
-            this.TotalPlainCoating.Width = 130;
-            // 
-            // TotalPlain
-            // 
-            this.TotalPlain.HeaderText = "Total";
-            this.TotalPlain.Name = "TotalPlain";
-            this.TotalPlain.Width = 120;
-            // 
-            // SqftWoodCoating
-            // 
-            this.SqftWoodCoating.HeaderText = "Sqft.(Wood)";
-            this.SqftWoodCoating.Name = "SqftWoodCoating";
-            this.SqftWoodCoating.Width = 130;
-            // 
-            // RateWoodCoating
-            // 
-            this.RateWoodCoating.HeaderText = "Rate(Wood)";
-            this.RateWoodCoating.Name = "RateWoodCoating";
-            this.RateWoodCoating.Width = 130;
-            // 
-            // TotalWoodCoating
-            // 
-            this.TotalWoodCoating.HeaderText = "Total(Wood)";
-            this.TotalWoodCoating.Name = "TotalWoodCoating";
-            this.TotalWoodCoating.Width = 130;
-            // 
-            // TotalWood
-            // 
-            this.TotalWood.HeaderText = "Total";
-            this.TotalWood.Name = "TotalWood";
-            // 
-            // BtnRemove
-            // 
-            this.BtnRemove.HeaderText = "";
-            this.BtnRemove.Image = global::InHouseInteriorsApplication.Properties.Resources.delete;
-            this.BtnRemove.Name = "BtnRemove";
-            this.BtnRemove.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.BtnRemove.Width = 20;
             // 
             // grpBoxSize
             // 
@@ -464,6 +361,127 @@
             this.pctClose.TabStop = false;
             this.pctClose.Click += new System.EventHandler(this.PctClose_Click);
             // 
+            // Work_id
+            // 
+            this.Work_id.DataPropertyName = "Work_id";
+            this.Work_id.HeaderText = "Work_id";
+            this.Work_id.Name = "Work_id";
+            this.Work_id.Visible = false;
+            this.Work_id.Width = 5;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "Description_id";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Description_id";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.Visible = false;
+            this.dataGridViewTextBoxColumn1.Width = 5;
+            // 
+            // DgvCbDescription
+            // 
+            this.DgvCbDescription.DataPropertyName = "Description_id";
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.DgvCbDescription.DefaultCellStyle = dataGridViewCellStyle1;
+            this.DgvCbDescription.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox;
+            this.DgvCbDescription.HeaderText = "Description";
+            this.DgvCbDescription.Name = "DgvCbDescription";
+            this.DgvCbDescription.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.DgvCbDescription.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.DgvCbDescription.Width = 180;
+            // 
+            // Size
+            // 
+            this.Size.HeaderText = "Size";
+            this.Size.Name = "Size";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "Weight";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Weight";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "Rate";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Rate";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // Total
+            // 
+            this.Total.HeaderText = "Total";
+            this.Total.Name = "Total";
+            // 
+            // SqftCoatingPlain
+            // 
+            this.SqftCoatingPlain.HeaderText = "Sqft(Plain)";
+            this.SqftCoatingPlain.Name = "SqftCoatingPlain";
+            this.SqftCoatingPlain.Width = 130;
+            // 
+            // RatePlain
+            // 
+            this.RatePlain.HeaderText = "Rate(Plain)";
+            this.RatePlain.Name = "RatePlain";
+            this.RatePlain.Width = 130;
+            // 
+            // TotalPlainCoating
+            // 
+            this.TotalPlainCoating.HeaderText = "Total(Plain)";
+            this.TotalPlainCoating.Name = "TotalPlainCoating";
+            this.TotalPlainCoating.Width = 130;
+            // 
+            // TotalPlain
+            // 
+            this.TotalPlain.HeaderText = "Total";
+            this.TotalPlain.Name = "TotalPlain";
+            this.TotalPlain.Width = 120;
+            // 
+            // SqftWoodCoating
+            // 
+            this.SqftWoodCoating.HeaderText = "Sqft.(Wood)";
+            this.SqftWoodCoating.Name = "SqftWoodCoating";
+            this.SqftWoodCoating.Width = 130;
+            // 
+            // RateWoodCoating
+            // 
+            this.RateWoodCoating.HeaderText = "Rate(Wood)";
+            this.RateWoodCoating.Name = "RateWoodCoating";
+            this.RateWoodCoating.Width = 130;
+            // 
+            // TotalWoodCoating
+            // 
+            this.TotalWoodCoating.HeaderText = "Total(Wood)";
+            this.TotalWoodCoating.Name = "TotalWoodCoating";
+            this.TotalWoodCoating.Width = 130;
+            // 
+            // TotalWood
+            // 
+            this.TotalWood.HeaderText = "Total";
+            this.TotalWood.Name = "TotalWood";
+            // 
+            // BtnRemove
+            // 
+            this.BtnRemove.HeaderText = "";
+            this.BtnRemove.Image = global::InHouseInteriorsApplication.Properties.Resources.delete;
+            this.BtnRemove.Name = "BtnRemove";
+            this.BtnRemove.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.BtnRemove.Width = 20;
+            // 
+            // Size_id
+            // 
+            this.Size_id.DataPropertyName = "Size_id";
+            this.Size_id.HeaderText = "Size_id";
+            this.Size_id.Name = "Size_id";
+            this.Size_id.Visible = false;
+            // 
+            // Total_id
+            // 
+            this.Total_id.DataPropertyName = "Total_id";
+            this.Total_id.HeaderText = "Total_id";
+            this.Total_id.Name = "Total_id";
+            this.Total_id.Visible = false;
+            // 
             // WorkTransactionPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -529,5 +547,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn TotalWoodCoating;
         private System.Windows.Forms.DataGridViewTextBoxColumn TotalWood;
         private System.Windows.Forms.DataGridViewImageColumn BtnRemove;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Size_id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Total_id;
     }
 }

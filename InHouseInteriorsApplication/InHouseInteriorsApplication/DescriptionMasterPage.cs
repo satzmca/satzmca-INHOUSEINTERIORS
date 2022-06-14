@@ -67,12 +67,12 @@ namespace InHouseInteriorsApplication
                     string res = "";
                     if (txtDes_id.Text !="")
                     {
-                        var dict = JObject.Parse(@"{'Description':'" + txtDescription.Text + "', 'Weight':'" + txtWeight.Text + "', 'Rate':'" + txtRate.Text + "', 'Description_id':'" + txtDes_id.Text + "'}");
+                        var dict = JObject.Parse(@"{'Description':'" + txtDescription.Text + "', 'Weight':'" + txtWeight.Text + "', 'Rate':'" + txtRate.Text + "', 'Description_id':'" + txtDes_id.Text + "', 'Size_id':'" + cmbSizeFormula.SelectedValue + "', 'Total_id':'" + cmbTotalFormula.SelectedValue + "'}");
                         res = cls.InsertData(SpName: "USP_Description_Insert", ReqType: "UPDATE_DESCRIPTION", dict: dict);
                     }
                     else
                     {
-                        var dict = JObject.Parse(@"{'Description':'" + txtDescription.Text + "', 'Weight':'" + txtWeight.Text + "', 'Rate':'" + txtRate.Text + "'}");
+                        var dict = JObject.Parse(@"{'Description':'" + txtDescription.Text + "', 'Weight':'" + txtWeight.Text + "', 'Rate':'" + txtRate.Text + "', Size_id':'" + cmbSizeFormula.SelectedValue + "', Total_id':'" + cmbTotalFormula.SelectedValue + "'}");
                         res = cls.InsertData(SpName: "USP_Description_Insert", ReqType: "INSERT_DESCRIPTION", dict: dict);
                     }
                    
@@ -95,7 +95,7 @@ namespace InHouseInteriorsApplication
             catch (Exception ex)
             {
                 MessageBox.Show("Error");
-                cls.WriteException("DescriptionMasterPage : PartyMasterToolStripMenuItem_Click" + ex.ToString());
+                cls.WriteException("DescriptionMasterPage : BtnSave_Click" + ex.ToString());
             }
         }
 
@@ -116,7 +116,23 @@ namespace InHouseInteriorsApplication
         {
             DataTable dt = new DataTable();
             dt = cls.FetchData(SpName: "USP_Description_Insert", ReqType: "SELECT_DESCRIPTION");
-            dgvDescription.DataSource = dt;            
+            dgvDescription.AutoGenerateColumns = false;
+            dgvDescription.DataSource = dt;
+
+
+            DataTable dt1 = new DataTable();
+            dt1 = cls.FetchData(SpName: "USP_Description_Insert", ReqType: "SELECT_FORMULA");
+            cmbSizeFormula.DisplayMember = "Formula";
+            cmbSizeFormula.ValueMember = "Formula_id";
+            cmbSizeFormula.DataSource = dt1;
+            cmbSizeFormula.SelectedValue = 0;
+
+            DataTable dt2 = new DataTable();
+            dt2 = cls.FetchData(SpName: "USP_Description_Insert", ReqType: "SELECT_FORMULA");
+            cmbTotalFormula.DisplayMember = "Formula";
+            cmbTotalFormula.ValueMember = "Formula_id";
+            cmbTotalFormula.DataSource = dt2;
+            cmbTotalFormula.SelectedValue = 0;
         }
 
         private void DgvDescription_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -130,6 +146,8 @@ namespace InHouseInteriorsApplication
                     txtDescription.Text = row.Cells[1].Value.ToString();
                     txtWeight.Text = row.Cells[2].Value.ToString();
                     txtRate.Text = row.Cells[3].Value.ToString();
+                    cmbSizeFormula.SelectedValue = row.Cells[4].Value;
+                    cmbTotalFormula.SelectedValue = row.Cells[5].Value;
                 }
             }
             catch (Exception ex)
@@ -185,6 +203,13 @@ namespace InHouseInteriorsApplication
             txtWeight.Text = "";
             txtRate.Text = "";
             txtDes_id.Text = "";
+            cmbSizeFormula.SelectedValue = 0;
+            cmbTotalFormula.SelectedValue = 0;
+        }
+
+        private void TxtWeight_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

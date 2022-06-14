@@ -60,6 +60,12 @@
     <Compile Include="DescriptionMasterPage.Designer.cs">
       <DependentUpon>DescriptionMasterPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormulaMasterPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormulaMasterPage.Designer.cs">
+      <DependentUpon>FormulaMasterPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +106,9 @@
     </Compile>
     <EmbeddedResource Include="DescriptionMasterPage.resx">
       <DependentUpon>DescriptionMasterPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormulaMasterPage.resx">
+      <DependentUpon>FormulaMasterPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginPage.resx">
       <DependentUpon>LoginPage.cs</DependentUpon>

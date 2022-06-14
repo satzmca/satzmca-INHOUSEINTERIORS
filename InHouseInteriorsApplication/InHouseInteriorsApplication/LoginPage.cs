@@ -5,10 +5,13 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.XPath;
 
 namespace InHouseInteriorsApplication
 {
@@ -26,10 +29,32 @@ namespace InHouseInteriorsApplication
       
         private void LoginPage_Load(object sender, EventArgs e)
         {
+            //String math = "(10+4)*2";
+            //string value = new DataTable().Compute(math, null).ToString();
+
+            //double r = Math.Round(Convert.ToDouble(value),5);
+            //double result = Math.Round(Evaluate(math),5);
+
             timer1.Start();
             //var dict = JObject.Parse(@"{'UserName':'"+txtUserName.Text+"'}");            
             ClassConfig.UserTable = cls.FetchData(SpName: "USP_UsersSelect", ReqType: "SELECT_USER");
         }
+
+        //public static double Evaluate(string expression)
+        //{
+        //    var xsltExpression =
+        //        string.Format("number({0})",
+        //            new Regex(@"([\+\-\*])").Replace(expression, " ${1} ")
+        //                                    .Replace("/", " div ")
+        //                                    .Replace("%", " mod "));
+
+        //    // ReSharper disable PossibleNullReferenceException
+        //    return (double)new XPathDocument
+        //        (new StringReader("<r/>"))
+        //            .CreateNavigator()
+        //            .Evaluate(xsltExpression);
+        //    // ReSharper restore PossibleNullReferenceException
+        //}
 
         private void btnLogin_Click(object sender, EventArgs e)
         {

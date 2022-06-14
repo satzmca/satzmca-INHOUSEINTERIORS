@@ -109,5 +109,19 @@ namespace InHouseInteriorsApplication
                 cls.WriteException("MainPage : WorkTransactionToolStripMenuItem_Click" + ex.ToString());
             }
         }
+
+        private void FormulaMasterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                FormulaMasterPage FormulaMasterPage = new FormulaMasterPage();
+                FormulaMasterPage.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error");
+                cls.WriteException("MainPage : FormulaMasterToolStripMenuItem_Click" + ex.ToString());
+            }
+        }
     }
 }

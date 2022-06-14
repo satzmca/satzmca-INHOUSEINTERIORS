@@ -5,11 +5,13 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.XPath;
 
 namespace InHouseInteriorsApplication
 {
@@ -17,6 +19,7 @@ namespace InHouseInteriorsApplication
     {
         ClassConfig cls = new ClassConfig();
         DataTable des_dt = new DataTable();
+        DataTable formula_dt = new DataTable();
 
         public WorkTransactionPage()
         {
@@ -41,16 +44,39 @@ namespace InHouseInteriorsApplication
         }
 
         private void WorkTransactionPage_Load(object sender, EventArgs e)
-        {
+        {            
+            //String math = "(460*700/92900)+(565*700/92900)*2+(565*460/92900)*2";
+            //string value = new DataTable().Compute(math, null).ToString();
+
+            //double r = Math.Round(Convert.ToDouble(value), 5);
+            //double result = Math.Round(Evaluate(math), 5);            
+
             try
-            {
+            {                
                 bindWork();
+                dgvWork.DataSource = null;
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error");
                 cls.WriteException("WorkTransactionPage : PartyMasterPage_Load" + ex.ToString());
             }
+        }
+
+        public static double Evaluate(string expression)
+        {
+            var xsltExpression =
+                string.Format("number({0})",
+                    new Regex(@"([\+\-\*])").Replace(expression, " ${1} ")
+                                            .Replace("/", " div ")
+                                            .Replace("%", " mod "));
+
+            // ReSharper disable PossibleNullReferenceException
+            return (double)new XPathDocument
+                (new StringReader("<r/>"))
+                    .CreateNavigator()
+                    .Evaluate(xsltExpression);
+            // ReSharper restore PossibleNullReferenceException
         }
 
         public void bindWork()
@@ -84,7 +110,10 @@ namespace InHouseInteriorsApplication
 
             DataGridViewImageColumn BtnRemove = (DataGridViewImageColumn)(dgvWork.Columns["BtnRemove"]);
             BtnRemove.Width = 35;
-            BtnRemove.ImageLayout = DataGridViewImageCellLayout.Zoom;            
+            BtnRemove.ImageLayout = DataGridViewImageCellLayout.Zoom;
+
+            
+            formula_dt = cls.FetchData(SpName: "USP_FormulaTypeInsert", ReqType: "SELECT_FORMULA");
 
             //BtnRemove.Backg
 
@@ -435,8 +464,8 @@ namespace InHouseInteriorsApplication
             {
                 var currentcell = dgvWork.CurrentCellAddress;
                 var sendingCB = sender as DataGridViewComboBoxEditingControl;
-                sendingCB.ForeColor = Color.Black;
-                sendingCB.BackColor = Color.White;
+                //sendingCB.ForeColor = Color.Black;
+                //sendingCB.BackColor = Color.White;
 
                 if (sendingCB.SelectedValue != null)
                 {
@@ -452,11 +481,13 @@ namespace InHouseInteriorsApplication
                                 DataGridViewTextBoxCell weight_cel = (DataGridViewTextBoxCell)dgvWork.Rows[currentcell.Y].Cells[4];
                                 DataGridViewTextBoxCell rate_cel = (DataGridViewTextBoxCell)dgvWork.Rows[currentcell.Y].Cells[5];
                                 weight_cel.Value = dt.Rows[0]["Weight"].ToString();
-                                rate_cel.Value = dt.Rows[0]["Rate"].ToString();
+                                rate_cel.Value = dt.Rows[0]["Rate"].ToString();                                
                             }
                         }
                     }                    
                 }
+
+                //DataBind();
             }
             catch (Exception ex)
             {
@@ -494,12 +525,25 @@ namespace InHouseInteriorsApplication
         private void DgvWork_CurrentCellDirtyStateChanged(object sender, EventArgs e)
         {
             //dgvWork.CommitEdit(DataGridViewDataErrorContexts.Commit);
+            if (dgvWork.IsCurrentCellDirty)
+            {
+                // This fires the cell value changed handler below
+                dgvWork.CommitEdit(DataGridViewDataErrorContexts.Commit);
+            }
         }
 
+
+
+     
         public void DataBind()
         {
             int columIndex2 = 2;
             int columIndex3 = 3;
+            int columIndex4 = 4;
+            int columIndex5 = 5;
+            int columIndex6 = 6;
+            int columIndex16 = 16;
+            int columIndex17 = 17;
 
             foreach (DataGridViewRow row in dgvWork.Rows)
             {
@@ -509,20 +553,88 @@ namespace InHouseInteriorsApplication
                 {
                     if(DescriptionCell.Value.ToString() != "" && DescriptionCell.Value.ToString() != "--Select--")
                     {
-                        DataGridViewTextBoxCell cell = row.Cells[columIndex3] as DataGridViewTextBoxCell;
-                        if (cell.ColumnIndex == columIndex3)
+                        DataGridViewTextBoxCell sizecell = row.Cells[columIndex3] as DataGridViewTextBoxCell;
+                        DataGridViewTextBoxCell weightcell = row.Cells[columIndex4] as DataGridViewTextBoxCell;
+                        DataGridViewTextBoxCell ratecell = row.Cells[columIndex5] as DataGridViewTextBoxCell;
+                        DataGridViewTextBoxCell totalcell = row.Cells[columIndex6] as DataGridViewTextBoxCell;
+
+                        DataGridViewTextBoxCell size_idcell = row.Cells[columIndex16] as DataGridViewTextBoxCell;
+                        DataGridViewTextBoxCell total_idcell = row.Cells[columIndex17] as DataGridViewTextBoxCell;
+
+                        if (sizecell.ColumnIndex == columIndex3)
                         {
                             if(txtWidth.Text !="" && txtHeight.Text != "")
                             {
-                                double sizeVal = (Convert.ToDouble(txtWidth.Text) + Convert.ToDouble(txtHeight.Text)) * 2;
-                                cell.Value = Math.Round(sizeVal, 2);
+                                //double sizeVal = (Convert.ToDouble(txtWidth.Text) + Convert.ToDouble(txtHeight.Text)) * 2;
+                                //sizecell.Value = Math.Round(sizeVal, 2);
+                                sizecell.Value = getFormulaCalculation(formula_id: size_idcell.Value != null ? size_idcell.Value.ToString() : "0", sizeval: sizecell.Value != null ? sizecell.Value.ToString() : "0", weightval: weightcell.Value != null ? weightcell.Value.ToString() : "0", rateval: ratecell.Value != null ? ratecell.Value.ToString() : "0").ToString();
+                                totalcell.Value = getFormulaCalculation(formula_id: total_idcell.Value != null ? total_idcell.Value.ToString() : "0", sizeval: sizecell.Value != null ? sizecell.Value.ToString() : "0", weightval: weightcell.Value != null ? weightcell.Value.ToString() : "0", rateval: ratecell.Value != null ? ratecell.Value.ToString() : "0").ToString();
+                                //double totalVal = Convert.ToDouble(ratecell.Value) * sizeVal;
+                                //totalcell.Value = Math.Round(totalVal, 2);
+
                             }
                         }
                     }
-                }
-
-                
+                }                
             }
         }
+
+        public double getFormulaCalculation(string formula_id = null, string sizeval = null, string weightval = null, string rateval = null)
+        {
+            DataRow[] rslt = formula_dt.Select("Formula_id=" + formula_id);
+            if (rslt.Length > 0)
+            {
+                DataTable dt = rslt.CopyToDataTable();
+
+                if (dt.Rows.Count > 0)
+                {
+                    string str = dt.Rows[0]["Formula"].ToString();
+                    var arr = str.Split('_');
+
+                    string combinedFormula = "";
+                    foreach (string element in arr)
+                    {
+                        if (element == "Width")
+                            combinedFormula += txtWidth.Text.ToString();
+                        else if (element == "Height")
+                            combinedFormula += txtHeight.Text.ToString();
+                        else if (element == "Depth")
+                            combinedFormula += txtDepth.Text.ToString();
+                        else if (element == "ShelfQty")
+                            combinedFormula += txtShelfQty.Text.ToString();
+                        else if (element == "ShutterQty")
+                            combinedFormula += txtShutterQty.Text.ToString();
+                        else if (element == "BoxSqFt")
+                            combinedFormula += txtBoxQty.Text.ToString();
+                        else if (element == "Size")
+                            combinedFormula += sizeval;
+                        else if (element == "Weight")
+                            combinedFormula += weightval;
+                        else if (element == "Rate")
+                            combinedFormula += rateval;
+                        else
+                            combinedFormula += element;
+                        // body of foreach loop
+                    }
+
+                    //string result = new DataTable().Compute(combinedFormula, null).ToString();
+
+                    double result = Math.Round(Evaluate(combinedFormula), 2);
+                    return result;
+                }
+                else
+                {
+                    return 0;
+                }
+            }
+            else
+            {
+                return 0;
+            }
+
+            //string str = "(_Width_+_Height_)_*_2";            
+
+        }
+
     }
 }

@@ -43,11 +43,11 @@
             this.cmbOperators = new System.Windows.Forms.ComboBox();
             this.cmbTypeName = new System.Windows.Forms.ComboBox();
             this.dgvFormula = new System.Windows.Forms.DataGridView();
+            this.Formula_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Formula = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnAdd1 = new System.Windows.Forms.Button();
             this.lbOperators = new System.Windows.Forms.Label();
             this.lblFType = new System.Windows.Forms.Label();
-            this.Formula_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Formula = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pctClose)).BeginInit();
             this.grpDescription.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFormula)).BeginInit();
@@ -235,13 +235,29 @@
             this.dgvFormula.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Formula_id,
             this.Formula});
-            this.dgvFormula.Location = new System.Drawing.Point(210, 404);
+            this.dgvFormula.Location = new System.Drawing.Point(6, 399);
             this.dgvFormula.Name = "dgvFormula";
             this.dgvFormula.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgvFormula.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
-            this.dgvFormula.Size = new System.Drawing.Size(945, 281);
+            this.dgvFormula.Size = new System.Drawing.Size(1333, 306);
             this.dgvFormula.TabIndex = 15;
             this.dgvFormula.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvDescription_CellClick);
+            // 
+            // Formula_id
+            // 
+            this.Formula_id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Formula_id.DataPropertyName = "Formula_id";
+            this.Formula_id.FillWeight = 101.5228F;
+            this.Formula_id.HeaderText = "Formula_id";
+            this.Formula_id.Name = "Formula_id";
+            this.Formula_id.Width = 150;
+            // 
+            // Formula
+            // 
+            this.Formula.DataPropertyName = "Formula";
+            this.Formula.FillWeight = 98.47716F;
+            this.Formula.HeaderText = "Formula";
+            this.Formula.Name = "Formula";
             // 
             // btnAdd1
             // 
@@ -276,22 +292,6 @@
             this.lblFType.Size = new System.Drawing.Size(149, 23);
             this.lblFType.TabIndex = 8;
             this.lblFType.Text = "FormulaType";
-            // 
-            // Formula_id
-            // 
-            this.Formula_id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Formula_id.DataPropertyName = "Formula_id";
-            this.Formula_id.FillWeight = 101.5228F;
-            this.Formula_id.HeaderText = "Formula_id";
-            this.Formula_id.Name = "Formula_id";
-            this.Formula_id.Width = 150;
-            // 
-            // Formula
-            // 
-            this.Formula.DataPropertyName = "Formula";
-            this.Formula.FillWeight = 98.47716F;
-            this.Formula.HeaderText = "Formula";
-            this.Formula.Name = "Formula";
             // 
             // FormulaMasterPage
             // 
@@ -332,11 +332,11 @@
         private System.Windows.Forms.TextBox txtFormula;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.TextBox txtFormula_id;
         private System.Windows.Forms.TextBox txtNumbers;
         private System.Windows.Forms.Label lblNumbers;
         private System.Windows.Forms.Button btnAdd3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Formula_id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Formula;
+        private System.Windows.Forms.TextBox txtFormula_id;
     }
 }

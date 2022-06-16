@@ -110,6 +110,7 @@ namespace InHouseInteriorsApplication
 
         private void BtnClear_Click(object sender, EventArgs e)
         {
+            txtFormula_id.Text = "";
             txtFormula.Text = "";
         }
 

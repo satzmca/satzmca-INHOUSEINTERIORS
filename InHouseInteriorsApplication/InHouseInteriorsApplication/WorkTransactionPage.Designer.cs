@@ -67,8 +67,8 @@
             this.TotalWoodCoating = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TotalWood = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BtnRemove = new System.Windows.Forms.DataGridViewImageColumn();
-            this.Size_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Total_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FSize_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FTotal_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grpDescription.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvWork)).BeginInit();
             this.grpBoxSize.SuspendLayout();
@@ -124,8 +124,8 @@
             this.TotalWoodCoating,
             this.TotalWood,
             this.BtnRemove,
-            this.Size_id,
-            this.Total_id});
+            this.FSize_id,
+            this.FTotal_id});
             this.dgvWork.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
             this.dgvWork.GridColor = System.Drawing.Color.Black;
             this.dgvWork.Location = new System.Drawing.Point(6, 241);
@@ -468,19 +468,19 @@
             this.BtnRemove.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.BtnRemove.Width = 20;
             // 
-            // Size_id
+            // FSize_id
             // 
-            this.Size_id.DataPropertyName = "Size_id";
-            this.Size_id.HeaderText = "Size_id";
-            this.Size_id.Name = "Size_id";
-            this.Size_id.Visible = false;
+            this.FSize_id.DataPropertyName = "FSize_id";
+            this.FSize_id.HeaderText = "FSize_id";
+            this.FSize_id.Name = "FSize_id";
+            this.FSize_id.Visible = false;
             // 
-            // Total_id
+            // FTotal_id
             // 
-            this.Total_id.DataPropertyName = "Total_id";
-            this.Total_id.HeaderText = "Total_id";
-            this.Total_id.Name = "Total_id";
-            this.Total_id.Visible = false;
+            this.FTotal_id.DataPropertyName = "FTotal_id";
+            this.FTotal_id.HeaderText = "FTotal_id";
+            this.FTotal_id.Name = "FTotal_id";
+            this.FTotal_id.Visible = false;
             // 
             // WorkTransactionPage
             // 
@@ -547,7 +547,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn TotalWoodCoating;
         private System.Windows.Forms.DataGridViewTextBoxColumn TotalWood;
         private System.Windows.Forms.DataGridViewImageColumn BtnRemove;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Size_id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Total_id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FSize_id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FTotal_id;
     }
 }

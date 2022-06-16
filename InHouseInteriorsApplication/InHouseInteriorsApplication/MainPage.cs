@@ -123,5 +123,19 @@ namespace InHouseInteriorsApplication
                 cls.WriteException("MainPage : FormulaMasterToolStripMenuItem_Click" + ex.ToString());
             }
         }
+
+        private void FormulaAssignMasterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                FormulaAssignMasterPage FormulaAssignMasterPage = new FormulaAssignMasterPage();
+                FormulaAssignMasterPage.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error");
+                cls.WriteException("MainPage : FormulaAssignMasterToolStripMenuItem_Click" + ex.ToString());
+            }
+        }
     }
 }

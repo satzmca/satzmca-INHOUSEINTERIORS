@@ -30,7 +30,6 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.grpWorkDetail = new System.Windows.Forms.GroupBox();
-            this.txtParty_id = new System.Windows.Forms.TextBox();
             this.dgvWorkDetail = new System.Windows.Forms.DataGridView();
             this.IsCheckDescription = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.WorkDetail_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -60,27 +59,18 @@
             // 
             // grpWorkDetail
             // 
-            this.grpWorkDetail.Controls.Add(this.txtParty_id);
             this.grpWorkDetail.Controls.Add(this.dgvWorkDetail);
             this.grpWorkDetail.Controls.Add(this.cmbWorkName);
             this.grpWorkDetail.Controls.Add(this.lblWorkName);
             this.grpWorkDetail.Controls.Add(this.btnSave);
             this.grpWorkDetail.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold);
             this.grpWorkDetail.ForeColor = System.Drawing.Color.White;
-            this.grpWorkDetail.Location = new System.Drawing.Point(12, 56);
+            this.grpWorkDetail.Location = new System.Drawing.Point(14, 56);
             this.grpWorkDetail.Name = "grpWorkDetail";
-            this.grpWorkDetail.Size = new System.Drawing.Size(1591, 634);
+            this.grpWorkDetail.Size = new System.Drawing.Size(1588, 634);
             this.grpWorkDetail.TabIndex = 15;
             this.grpWorkDetail.TabStop = false;
             this.grpWorkDetail.Text = "Work Detail Master";
-            // 
-            // txtParty_id
-            // 
-            this.txtParty_id.Location = new System.Drawing.Point(416, 25);
-            this.txtParty_id.Name = "txtParty_id";
-            this.txtParty_id.Size = new System.Drawing.Size(100, 31);
-            this.txtParty_id.TabIndex = 27;
-            this.txtParty_id.Visible = false;
             // 
             // dgvWorkDetail
             // 
@@ -96,12 +86,12 @@
             this.Description,
             this.Weight,
             this.Rate});
-            this.dgvWorkDetail.Location = new System.Drawing.Point(537, 25);
+            this.dgvWorkDetail.Location = new System.Drawing.Point(23, 80);
             this.dgvWorkDetail.Name = "dgvWorkDetail";
             this.dgvWorkDetail.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dgvWorkDetail.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgvWorkDetail.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
-            this.dgvWorkDetail.Size = new System.Drawing.Size(1048, 603);
+            this.dgvWorkDetail.Size = new System.Drawing.Size(1551, 473);
             this.dgvWorkDetail.TabIndex = 26;
             this.dgvWorkDetail.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvWorkDetail_CellClick);
             this.dgvWorkDetail.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.DgvWorkDetail_CellFormatting);
@@ -150,7 +140,7 @@
             this.cmbWorkName.FormattingEnabled = true;
             this.cmbWorkName.Items.AddRange(new object[] {
             "--Select--"});
-            this.cmbWorkName.Location = new System.Drawing.Point(166, 65);
+            this.cmbWorkName.Location = new System.Drawing.Point(689, 30);
             this.cmbWorkName.Name = "cmbWorkName";
             this.cmbWorkName.Size = new System.Drawing.Size(350, 31);
             this.cmbWorkName.TabIndex = 11;
@@ -161,7 +151,7 @@
             this.lblWorkName.AutoSize = true;
             this.lblWorkName.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold);
             this.lblWorkName.ForeColor = System.Drawing.Color.White;
-            this.lblWorkName.Location = new System.Drawing.Point(8, 65);
+            this.lblWorkName.Location = new System.Drawing.Point(551, 33);
             this.lblWorkName.Name = "lblWorkName";
             this.lblWorkName.Size = new System.Drawing.Size(128, 23);
             this.lblWorkName.TabIndex = 21;
@@ -171,7 +161,7 @@
             // 
             this.btnSave.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold);
             this.btnSave.ForeColor = System.Drawing.Color.Black;
-            this.btnSave.Location = new System.Drawing.Point(12, 558);
+            this.btnSave.Location = new System.Drawing.Point(555, 574);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(504, 54);
             this.btnSave.TabIndex = 16;
@@ -217,7 +207,6 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox grpWorkDetail;
-        private System.Windows.Forms.TextBox txtParty_id;
         private System.Windows.Forms.DataGridView dgvWorkDetail;
         private System.Windows.Forms.ComboBox cmbWorkName;
         private System.Windows.Forms.Label lblWorkName;

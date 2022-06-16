@@ -199,7 +199,7 @@ namespace InHouseInteriorsApplication
             {
                 if (txtDepth.Text != "")
                 {
-
+                    DataBind();
                 }
             }
             catch (Exception ex)
@@ -215,7 +215,7 @@ namespace InHouseInteriorsApplication
             {
                 if (txtShelfQty.Text != "")
                 {
-
+                    DataBind();
                 }
             }
             catch (Exception ex)
@@ -231,7 +231,7 @@ namespace InHouseInteriorsApplication
             {
                 if (txtShutterQty.Text != "")
                 {
-
+                    DataBind();
                 }
             }
             catch (Exception ex)
@@ -247,7 +247,7 @@ namespace InHouseInteriorsApplication
             {
                 if (txtBoxQty.Text != "")
                 {
-
+                    DataBind();
                 }
             }
             catch (Exception ex)
@@ -263,7 +263,7 @@ namespace InHouseInteriorsApplication
             {
                 if (txtBoxSqFt.Text != "")
                 {
-
+                    DataBind();
                 }
             }
             catch (Exception ex)
@@ -620,7 +620,10 @@ namespace InHouseInteriorsApplication
                     //string result = new DataTable().Compute(combinedFormula, null).ToString();
 
                     double result = Math.Round(Evaluate(combinedFormula), 2);
-                    return result;
+                    if(result.ToString() == "NaN")                   
+                        return 0;                    
+                    else                                        
+                        return result;
                 }
                 else
                 {

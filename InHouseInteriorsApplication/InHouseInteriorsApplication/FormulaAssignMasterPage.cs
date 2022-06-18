@@ -75,12 +75,47 @@ namespace InHouseInteriorsApplication
             cmbSizeFormula.DataSource = dt1;
             cmbSizeFormula.SelectedValue = 0;
 
-            DataTable dt2 = new DataTable();
-            dt2 = cls.FetchData(SpName: "USP_Description_Insert", ReqType: "SELECT_FORMULA");
+            DataTable dt2 = dt1.Copy();            
             cmbTotalFormula.DisplayMember = "Formula";
             cmbTotalFormula.ValueMember = "Formula_id";
             cmbTotalFormula.DataSource = dt2;
             cmbTotalFormula.SelectedValue = 0;
+
+            DataTable dt3 = dt1.Copy();            
+            cmbSqftCoatingPlain.DisplayMember = "Formula";
+            cmbSqftCoatingPlain.ValueMember = "Formula_id";
+            cmbSqftCoatingPlain.DataSource = dt3;
+            cmbSqftCoatingPlain.SelectedValue = 0;
+
+            DataTable dt4 = dt1.Copy();
+            cmbTotalPlainCoating.DisplayMember = "Formula";
+            cmbTotalPlainCoating.ValueMember = "Formula_id";
+            cmbTotalPlainCoating.DataSource = dt4;
+            cmbTotalPlainCoating.SelectedValue = 0;
+
+            DataTable dt5 = dt1.Copy();
+            cmbTotalPlain.DisplayMember = "Formula";
+            cmbTotalPlain.ValueMember = "Formula_id";
+            cmbTotalPlain.DataSource = dt5;
+            cmbTotalPlain.SelectedValue = 0;
+
+            DataTable dt6 = dt1.Copy();
+            cmbSqftWoodCoating.DisplayMember = "Formula";
+            cmbSqftWoodCoating.ValueMember = "Formula_id";
+            cmbSqftWoodCoating.DataSource = dt6;
+            cmbSqftWoodCoating.SelectedValue = 0;
+
+            DataTable dt7 = dt1.Copy();
+            cmbTotalWoodCoating.DisplayMember = "Formula";
+            cmbTotalWoodCoating.ValueMember = "Formula_id";
+            cmbTotalWoodCoating.DataSource = dt7;
+            cmbTotalWoodCoating.SelectedValue = 0;
+
+            DataTable dt8 = dt1.Copy();
+            cmbTotalWood.DisplayMember = "Formula";
+            cmbTotalWood.ValueMember = "Formula_id";
+            cmbTotalWood.DataSource = dt8;
+            cmbTotalWood.SelectedValue = 0;
 
             bindwork();
         }
@@ -94,12 +129,12 @@ namespace InHouseInteriorsApplication
                     string res = "";
                     if (txtFAssign_id.Text != "")
                     {
-                        var dict = JObject.Parse(@"{'Work_id':'" + cmbWorkName.SelectedValue.ToString() + "', 'Description_id':'" + cmbDescription.SelectedValue.ToString() + "', 'FSize_id':'" + cmbSizeFormula.SelectedValue.ToString() + "', 'FTotal_id':'" + cmbTotalFormula.SelectedValue.ToString() + "', 'FAssign_id':'" + txtFAssign_id.Text + "'}");
+                        var dict = JObject.Parse(@"{'Work_id':'" + cmbWorkName.SelectedValue.ToString() + "', 'Description_id':'" + cmbDescription.SelectedValue.ToString() + "', 'FSize_id':'" + cmbSizeFormula.SelectedValue.ToString() + "', 'FTotal_id':'" + cmbTotalFormula.SelectedValue.ToString() + "', 'FSqftPlainCoating_id':'" + cmbSqftCoatingPlain.SelectedValue.ToString() + "', 'FTotalPlainCoating_id':'" + cmbTotalPlainCoating.SelectedValue.ToString() + "', 'FTotalPlain_id':'" + cmbTotalPlain.SelectedValue.ToString() + "', 'FSqftWoodCoating_id':'" + cmbSqftWoodCoating.SelectedValue.ToString() + "', 'FTotalWoodCoating_id':'" + cmbTotalWoodCoating.SelectedValue.ToString() + "', 'FTotalWood_id':'" + cmbTotalWood.SelectedValue.ToString() + "', 'FAssign_id':'" + txtFAssign_id.Text + "'}");
                         res = cls.InsertData(SpName: "USP_FormulaAssign_Insert", ReqType: "UPDATE_ASSIGNFORMULA", dict: dict);
                     }
                     else
                     {
-                        var dict = JObject.Parse(@"{'Work_id':'" + cmbWorkName.SelectedValue.ToString() + "', 'Description_id':'" + cmbDescription.SelectedValue.ToString() + "', 'FSize_id':'" + cmbSizeFormula.SelectedValue.ToString() + "', 'FTotal_id':'" + cmbTotalFormula.SelectedValue.ToString() + "'}");
+                        var dict = JObject.Parse(@"{'Work_id':'" + cmbWorkName.SelectedValue.ToString() + "', 'Description_id':'" + cmbDescription.SelectedValue.ToString() + "', 'FSize_id':'" + cmbSizeFormula.SelectedValue.ToString() + "', 'FTotal_id':'" + cmbTotalFormula.SelectedValue.ToString() + "', 'FSqftPlainCoating_id':'" + cmbSqftCoatingPlain.SelectedValue.ToString() + "', 'FTotalPlainCoating_id':'" + cmbTotalPlainCoating.SelectedValue.ToString() + "', 'FTotalPlain_id':'" + cmbTotalPlain.SelectedValue.ToString() + "', 'FSqftWoodCoating_id':'" + cmbSqftWoodCoating.SelectedValue.ToString() + "', 'FTotalWoodCoating_id':'" + cmbTotalWoodCoating.SelectedValue.ToString() + "', 'FTotalWood_id':'" + cmbTotalWood.SelectedValue.ToString() + "'}");
                         res = cls.InsertData(SpName: "USP_FormulaAssign_Insert", ReqType: "INSERT_ASSIGNFORMULA", dict: dict);
                     }
 
@@ -133,6 +168,14 @@ namespace InHouseInteriorsApplication
             cmbDescription.SelectedValue = 0;
             cmbSizeFormula.SelectedValue = 0;
             cmbTotalFormula.SelectedValue = 0;
+
+            cmbSqftCoatingPlain.SelectedValue = 0;
+            cmbTotalPlainCoating.SelectedValue = 0;
+            cmbTotalPlain.SelectedValue = 0;
+
+            cmbSqftWoodCoating.SelectedValue = 0;
+            cmbTotalWoodCoating.SelectedValue = 0;
+            cmbTotalWood.SelectedValue = 0;
         }
 
         private void BtnDelete_Click(object sender, EventArgs e)
@@ -186,8 +229,17 @@ namespace InHouseInteriorsApplication
                     txtFAssign_id.Text = row.Cells[0].Value.ToString();
                     cmbWorkName.SelectedValue = row.Cells[1].Value.ToString();
                     cmbDescription.SelectedValue = row.Cells[2].Value.ToString();
+
                     cmbSizeFormula.SelectedValue = row.Cells[5].Value.ToString();
                     cmbTotalFormula.SelectedValue = row.Cells[6].Value.ToString();
+
+                    cmbSqftCoatingPlain.SelectedValue = row.Cells[7].Value.ToString(); ;
+                    cmbTotalPlainCoating.SelectedValue = row.Cells[8].Value.ToString(); ;
+                    cmbTotalPlain.SelectedValue = row.Cells[9].Value.ToString(); ;
+
+                    cmbSqftWoodCoating.SelectedValue = row.Cells[10].Value.ToString(); ;
+                    cmbTotalWoodCoating.SelectedValue = row.Cells[11].Value.ToString(); ;
+                    cmbTotalWood.SelectedValue = row.Cells[12].Value.ToString(); ;
                 }
             }
             catch (Exception ex)

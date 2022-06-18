@@ -20,7 +20,12 @@ namespace InHouseInteriorsApplication
         ClassConfig cls = new ClassConfig();
         DataTable des_dt = new DataTable();
         DataTable formula_dt = new DataTable();
-
+        int columIndex2 = 2, columIndex3 = 3, columIndex4 = 4, columIndex5 = 5,
+                columIndex6 = 6, columIndex7 = 7, columIndex8 = 8, columIndex9 = 9,
+                columIndex10 = 10, columIndex11 = 11, columIndex12 = 12, columIndex13 = 13,
+                columIndex14 = 14, columIndex16 = 16, columIndex17 = 17, columIndex18 = 18,
+                columIndex19 = 19, columIndex20 = 20, columIndex21 = 21, columIndex22 = 22,
+                columIndex23 = 23;
         public WorkTransactionPage()
         {
             InitializeComponent();
@@ -238,6 +243,33 @@ namespace InHouseInteriorsApplication
             {
                 MessageBox.Show("Error");
                 cls.WriteException("WorkTransactionPage : TxtShutterQty_TextChanged" + ex.ToString());
+            }
+        }
+
+        private void DgvWork_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            
+        }
+
+        private void DgvWork_CellValuePushed(object sender, DataGridViewCellValueEventArgs e)
+        {
+            
+        }
+
+        private void DgvWork_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {                
+                if (e.ColumnIndex == columIndex5 || e.ColumnIndex == columIndex8 || e.ColumnIndex == columIndex12)
+                {
+                    DataBind();
+                }
+               
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error");
+                cls.WriteException("WorkTransactionPage : DgvWork_CellValueChanged" + ex.ToString());
             }
         }
 
@@ -478,8 +510,9 @@ namespace InHouseInteriorsApplication
 
                             if (dt.Rows.Count > 0)
                             {
-                                DataGridViewTextBoxCell weight_cel = (DataGridViewTextBoxCell)dgvWork.Rows[currentcell.Y].Cells[4];
-                                DataGridViewTextBoxCell rate_cel = (DataGridViewTextBoxCell)dgvWork.Rows[currentcell.Y].Cells[5];
+                                DataGridViewTextBoxCell weight_cel = (DataGridViewTextBoxCell)dgvWork.Rows[currentcell.Y].Cells[columIndex4];
+                                DataGridViewTextBoxCell rate_cel = (DataGridViewTextBoxCell)dgvWork.Rows[currentcell.Y].Cells[columIndex5];
+                                //DataGridViewTextBoxCell rate_cel = (DataGridViewTextBoxCell)dgvWork.Rows[currentcell.Y].Cells[columIndex5];
                                 weight_cel.Value = dt.Rows[0]["Weight"].ToString();
                                 rate_cel.Value = dt.Rows[0]["Rate"].ToString();                                
                             }
@@ -537,13 +570,7 @@ namespace InHouseInteriorsApplication
      
         public void DataBind()
         {
-            int columIndex2 = 2;
-            int columIndex3 = 3;
-            int columIndex4 = 4;
-            int columIndex5 = 5;
-            int columIndex6 = 6;
-            int columIndex16 = 16;
-            int columIndex17 = 17;
+            
 
             foreach (DataGridViewRow row in dgvWork.Rows)
             {
@@ -558,20 +585,145 @@ namespace InHouseInteriorsApplication
                         DataGridViewTextBoxCell ratecell = row.Cells[columIndex5] as DataGridViewTextBoxCell;
                         DataGridViewTextBoxCell totalcell = row.Cells[columIndex6] as DataGridViewTextBoxCell;
 
+
+                        DataGridViewTextBoxCell sqftPlainCoatingCell = row.Cells[columIndex7] as DataGridViewTextBoxCell;
+                        DataGridViewTextBoxCell ratePlainCoatingCell = row.Cells[columIndex8] as DataGridViewTextBoxCell;
+                        DataGridViewTextBoxCell totalPlainCoatingCell = row.Cells[columIndex9] as DataGridViewTextBoxCell;
+                        DataGridViewTextBoxCell totalPlainCell = row.Cells[columIndex10] as DataGridViewTextBoxCell;
+
+                        DataGridViewTextBoxCell sqftWoodCoatingCell = row.Cells[columIndex11] as DataGridViewTextBoxCell;
+                        DataGridViewTextBoxCell rateWoodCoatingCell = row.Cells[columIndex12] as DataGridViewTextBoxCell;
+                        DataGridViewTextBoxCell totalWoodCoatingCell = row.Cells[columIndex13] as DataGridViewTextBoxCell;
+                        DataGridViewTextBoxCell totalWoodCell = row.Cells[columIndex14] as DataGridViewTextBoxCell;
+
                         DataGridViewTextBoxCell size_idcell = row.Cells[columIndex16] as DataGridViewTextBoxCell;
                         DataGridViewTextBoxCell total_idcell = row.Cells[columIndex17] as DataGridViewTextBoxCell;
+
+                        DataGridViewTextBoxCell sqftPlainCoating_idcell = row.Cells[columIndex18] as DataGridViewTextBoxCell;
+                        DataGridViewTextBoxCell totalPlainCoating_idcell = row.Cells[columIndex19] as DataGridViewTextBoxCell;
+                        DataGridViewTextBoxCell totalPlain_idcell = row.Cells[columIndex20] as DataGridViewTextBoxCell;
+
+                        DataGridViewTextBoxCell sqftWoodCoating_idcell = row.Cells[columIndex21] as DataGridViewTextBoxCell;
+                        DataGridViewTextBoxCell totalWoodCoating_idcell = row.Cells[columIndex22] as DataGridViewTextBoxCell;
+                        DataGridViewTextBoxCell totalWood_idcell = row.Cells[columIndex23] as DataGridViewTextBoxCell;
 
                         if (sizecell.ColumnIndex == columIndex3)
                         {
                             if(txtWidth.Text !="" && txtHeight.Text != "")
                             {
-                                //double sizeVal = (Convert.ToDouble(txtWidth.Text) + Convert.ToDouble(txtHeight.Text)) * 2;
-                                //sizecell.Value = Math.Round(sizeVal, 2);
-                                sizecell.Value = getFormulaCalculation(formula_id: size_idcell.Value != null ? size_idcell.Value.ToString() : "0", sizeval: sizecell.Value != null ? sizecell.Value.ToString() : "0", weightval: weightcell.Value != null ? weightcell.Value.ToString() : "0", rateval: ratecell.Value != null ? ratecell.Value.ToString() : "0").ToString();
-                                totalcell.Value = getFormulaCalculation(formula_id: total_idcell.Value != null ? total_idcell.Value.ToString() : "0", sizeval: sizecell.Value != null ? sizecell.Value.ToString() : "0", weightval: weightcell.Value != null ? weightcell.Value.ToString() : "0", rateval: ratecell.Value != null ? ratecell.Value.ToString() : "0").ToString();
-                                //double totalVal = Convert.ToDouble(ratecell.Value) * sizeVal;
-                                //totalcell.Value = Math.Round(totalVal, 2);
+                                sizecell.Value = getFormulaCalculation(formula_id: size_idcell.Value != null ? size_idcell.Value.ToString() : "0", 
+                                    sizeval: sizecell.Value != null ? sizecell.Value.ToString() : "0", 
+                                    weightval: weightcell.Value != null ? weightcell.Value.ToString() : "0", 
+                                    rateval: ratecell.Value != null ? ratecell.Value.ToString() : "0",
+                                    totalval: totalcell.Value != null ? totalcell.Value.ToString() : "0",
+                                    sqftplaincoatingval: sqftPlainCoatingCell.Value != null ? sqftPlainCoatingCell.Value.ToString() : "0", 
+                                    plainrateval: ratePlainCoatingCell.Value != null ? ratePlainCoatingCell.Value.ToString() : "0", 
+                                    totalplaincoatingval: totalPlainCoatingCell.Value != null ? totalPlainCoatingCell.Value.ToString() : "0", 
+                                    totalplainval: totalPlainCell.Value != null ? totalPlainCell.Value.ToString() : "0", 
+                                    sqftwoodcoatingval: sqftWoodCoatingCell.Value != null ? sqftWoodCoatingCell.Value.ToString() : "0",
+                                    woodrateval: rateWoodCoatingCell.Value !=null ? rateWoodCoatingCell.Value.ToString() : "0",
+                                    totalwoodcoatingval: totalWoodCoatingCell.Value != null ? totalWoodCoatingCell.Value.ToString() : "0", 
+                                    totalwoodval: totalWoodCell.Value != null ? totalWoodCell.Value.ToString() : "0").ToString();
 
+                                totalcell.Value = getFormulaCalculation(formula_id: total_idcell.Value != null ? total_idcell.Value.ToString() : "0",
+                                    sizeval: sizecell.Value != null ? sizecell.Value.ToString() : "0",
+                                    weightval: weightcell.Value != null ? weightcell.Value.ToString() : "0",
+                                    rateval: ratecell.Value != null ? ratecell.Value.ToString() : "0",
+                                    totalval: totalcell.Value != null ? totalcell.Value.ToString() : "0",
+                                    sqftplaincoatingval: sqftPlainCoatingCell.Value != null ? sqftPlainCoatingCell.Value.ToString() : "0",
+                                    plainrateval: ratePlainCoatingCell.Value != null ? ratePlainCoatingCell.Value.ToString() : "0",
+                                    totalplaincoatingval: totalPlainCoatingCell.Value != null ? totalPlainCoatingCell.Value.ToString() : "0",
+                                    totalplainval: totalPlainCell.Value != null ? totalPlainCell.Value.ToString() : "0",
+                                    sqftwoodcoatingval: sqftWoodCoatingCell.Value != null ? sqftWoodCoatingCell.Value.ToString() : "0",
+                                    woodrateval: rateWoodCoatingCell.Value != null ? rateWoodCoatingCell.Value.ToString() : "0",
+                                    totalwoodcoatingval: totalWoodCoatingCell.Value != null ? totalWoodCoatingCell.Value.ToString() : "0",
+                                    totalwoodval: totalWoodCell.Value != null ? totalWoodCell.Value.ToString() : "0").ToString();
+                                
+
+                                sqftPlainCoatingCell.Value = getFormulaCalculation(formula_id: sqftPlainCoating_idcell.Value != null ? sqftPlainCoating_idcell.Value.ToString() : "0",
+                                    sizeval: sizecell.Value != null ? sizecell.Value.ToString() : "0",
+                                    weightval: weightcell.Value != null ? weightcell.Value.ToString() : "0",
+                                    rateval: ratecell.Value != null ? ratecell.Value.ToString() : "0",
+                                    totalval: totalcell.Value != null ? totalcell.Value.ToString() : "0",
+                                    sqftplaincoatingval: sqftPlainCoatingCell.Value != null ? sqftPlainCoatingCell.Value.ToString() : "0",
+                                    plainrateval: ratePlainCoatingCell.Value != null ? ratePlainCoatingCell.Value.ToString() : "0",
+                                    totalplaincoatingval: totalPlainCoatingCell.Value != null ? totalPlainCoatingCell.Value.ToString() : "0",
+                                    totalplainval: totalPlainCell.Value != null ? totalPlainCell.Value.ToString() : "0",
+                                    sqftwoodcoatingval: sqftWoodCoatingCell.Value != null ? sqftWoodCoatingCell.Value.ToString() : "0",
+                                    woodrateval: rateWoodCoatingCell.Value != null ? rateWoodCoatingCell.Value.ToString() : "0",
+                                    totalwoodcoatingval: totalWoodCoatingCell.Value != null ? totalWoodCoatingCell.Value.ToString() : "0",
+                                    totalwoodval: totalWoodCell.Value != null ? totalWoodCell.Value.ToString() : "0").ToString();
+
+                                totalPlainCoatingCell.Value = getFormulaCalculation(formula_id: totalPlainCoating_idcell.Value != null ? totalPlainCoating_idcell.Value.ToString() : "0",
+                                    sizeval: sizecell.Value != null ? sizecell.Value.ToString() : "0",
+                                    weightval: weightcell.Value != null ? weightcell.Value.ToString() : "0",
+                                    rateval: ratecell.Value != null ? ratecell.Value.ToString() : "0",
+                                    totalval: totalcell.Value != null ? totalcell.Value.ToString() : "0",
+                                    sqftplaincoatingval: sqftPlainCoatingCell.Value != null ? sqftPlainCoatingCell.Value.ToString() : "0",
+                                    plainrateval: ratePlainCoatingCell.Value != null ? ratePlainCoatingCell.Value.ToString() : "0",
+                                    totalplaincoatingval: totalPlainCoatingCell.Value != null ? totalPlainCoatingCell.Value.ToString() : "0",
+                                    totalplainval: totalPlainCell.Value != null ? totalPlainCell.Value.ToString() : "0",
+                                    sqftwoodcoatingval: sqftWoodCoatingCell.Value != null ? sqftWoodCoatingCell.Value.ToString() : "0",
+                                    woodrateval: rateWoodCoatingCell.Value != null ? rateWoodCoatingCell.Value.ToString() : "0",
+                                    totalwoodcoatingval: totalWoodCoatingCell.Value != null ? totalWoodCoatingCell.Value.ToString() : "0",
+                                    totalwoodval: totalWoodCell.Value != null ? totalWoodCell.Value.ToString() : "0").ToString();
+
+
+                                totalPlainCell.Value = getFormulaCalculation(formula_id: totalPlain_idcell.Value != null ? totalPlain_idcell.Value.ToString() : "0",
+                                    sizeval: sizecell.Value != null ? sizecell.Value.ToString() : "0",
+                                    weightval: weightcell.Value != null ? weightcell.Value.ToString() : "0",
+                                    rateval: ratecell.Value != null ? ratecell.Value.ToString() : "0",
+                                    totalval: totalcell.Value != null ? totalcell.Value.ToString() : "0",
+                                    sqftplaincoatingval: sqftPlainCoatingCell.Value != null ? sqftPlainCoatingCell.Value.ToString() : "0",
+                                    plainrateval: ratePlainCoatingCell.Value != null ? ratePlainCoatingCell.Value.ToString() : "0",
+                                    totalplaincoatingval: totalPlainCoatingCell.Value != null ? totalPlainCoatingCell.Value.ToString() : "0",
+                                    totalplainval: totalPlainCell.Value != null ? totalPlainCell.Value.ToString() : "0",
+                                    sqftwoodcoatingval: sqftWoodCoatingCell.Value != null ? sqftWoodCoatingCell.Value.ToString() : "0",
+                                    woodrateval: rateWoodCoatingCell.Value != null ? rateWoodCoatingCell.Value.ToString() : "0",
+                                    totalwoodcoatingval: totalWoodCoatingCell.Value != null ? totalWoodCoatingCell.Value.ToString() : "0",
+                                    totalwoodval: totalWoodCell.Value != null ? totalWoodCell.Value.ToString() : "0").ToString();
+
+                                sqftWoodCoatingCell.Value = getFormulaCalculation(formula_id: sqftWoodCoating_idcell.Value != null ? sqftWoodCoating_idcell.Value.ToString() : "0",
+                                    sizeval: sizecell.Value != null ? sizecell.Value.ToString() : "0",
+                                    weightval: weightcell.Value != null ? weightcell.Value.ToString() : "0",
+                                    rateval: ratecell.Value != null ? ratecell.Value.ToString() : "0",
+                                    totalval: totalcell.Value != null ? totalcell.Value.ToString() : "0",
+                                    sqftplaincoatingval: sqftPlainCoatingCell.Value != null ? sqftPlainCoatingCell.Value.ToString() : "0",
+                                    plainrateval: ratePlainCoatingCell.Value != null ? ratePlainCoatingCell.Value.ToString() : "0",
+                                    totalplaincoatingval: totalPlainCoatingCell.Value != null ? totalPlainCoatingCell.Value.ToString() : "0",
+                                    totalplainval: totalPlainCell.Value != null ? totalPlainCell.Value.ToString() : "0",
+                                    sqftwoodcoatingval: sqftWoodCoatingCell.Value != null ? sqftWoodCoatingCell.Value.ToString() : "0",
+                                    woodrateval: rateWoodCoatingCell.Value != null ? rateWoodCoatingCell.Value.ToString() : "0",
+                                    totalwoodcoatingval: totalWoodCoatingCell.Value != null ? totalWoodCoatingCell.Value.ToString() : "0",
+                                    totalwoodval: totalWoodCell.Value != null ? totalWoodCell.Value.ToString() : "0").ToString();
+
+                                totalWoodCoatingCell.Value = getFormulaCalculation(formula_id: totalWoodCoating_idcell.Value != null ? totalWoodCoating_idcell.Value.ToString() : "0",
+                                    sizeval: sizecell.Value != null ? sizecell.Value.ToString() : "0",
+                                    weightval: weightcell.Value != null ? weightcell.Value.ToString() : "0",
+                                    rateval: ratecell.Value != null ? ratecell.Value.ToString() : "0",
+                                    totalval: totalcell.Value != null ? totalcell.Value.ToString() : "0",
+                                    sqftplaincoatingval: sqftPlainCoatingCell.Value != null ? sqftPlainCoatingCell.Value.ToString() : "0",
+                                    plainrateval: ratePlainCoatingCell.Value != null ? ratePlainCoatingCell.Value.ToString() : "0",
+                                    totalplaincoatingval: totalPlainCoatingCell.Value != null ? totalPlainCoatingCell.Value.ToString() : "0",
+                                    totalplainval: totalPlainCell.Value != null ? totalPlainCell.Value.ToString() : "0",
+                                    sqftwoodcoatingval: sqftWoodCoatingCell.Value != null ? sqftWoodCoatingCell.Value.ToString() : "0",
+                                    woodrateval: rateWoodCoatingCell.Value != null ? rateWoodCoatingCell.Value.ToString() : "0",
+                                    totalwoodcoatingval: totalWoodCoatingCell.Value != null ? totalWoodCoatingCell.Value.ToString() : "0",
+                                    totalwoodval: totalWoodCell.Value != null ? totalWoodCell.Value.ToString() : "0").ToString();
+
+                                totalWoodCell.Value = getFormulaCalculation(formula_id: totalWood_idcell.Value != null ? totalWood_idcell.Value.ToString() : "0",
+                                    sizeval: sizecell.Value != null ? sizecell.Value.ToString() : "0",
+                                    weightval: weightcell.Value != null ? weightcell.Value.ToString() : "0",
+                                    rateval: ratecell.Value != null ? ratecell.Value.ToString() : "0",
+                                    totalval: totalcell.Value != null ? totalcell.Value.ToString() : "0",
+                                    sqftplaincoatingval: sqftPlainCoatingCell.Value != null ? sqftPlainCoatingCell.Value.ToString() : "0",
+                                    plainrateval: ratePlainCoatingCell.Value != null ? ratePlainCoatingCell.Value.ToString() : "0",
+                                    totalplaincoatingval: totalPlainCoatingCell.Value != null ? totalPlainCoatingCell.Value.ToString() : "0",
+                                    totalplainval: totalPlainCell.Value != null ? totalPlainCell.Value.ToString() : "0",
+                                    sqftwoodcoatingval: sqftWoodCoatingCell.Value != null ? sqftWoodCoatingCell.Value.ToString() : "0",
+                                    woodrateval: rateWoodCoatingCell.Value != null ? rateWoodCoatingCell.Value.ToString() : "0",
+                                    totalwoodcoatingval: totalWoodCoatingCell.Value != null ? totalWoodCoatingCell.Value.ToString() : "0",
+                                    totalwoodval: totalWoodCell.Value != null ? totalWoodCell.Value.ToString() : "0").ToString();
                             }
                         }
                     }
@@ -579,8 +731,13 @@ namespace InHouseInteriorsApplication
             }
         }
 
-        public double getFormulaCalculation(string formula_id = null, string sizeval = null, string weightval = null, string rateval = null)
+        public double getFormulaCalculation(string formula_id = null, string sizeval = null, string weightval = null, string rateval = null, string totalval=null, string sqftplaincoatingval = null, string plainrateval=null, string totalplaincoatingval = null, string totalplainval = null, string sqftwoodcoatingval = null, string woodrateval = null, string totalwoodcoatingval = null, string totalwoodval = null)
         {
+            if(formula_id == "")
+            {
+                formula_id = "0";
+            }
+
             DataRow[] rslt = formula_dt.Select("Formula_id=" + formula_id);
             if (rslt.Length > 0)
             {
@@ -612,6 +769,24 @@ namespace InHouseInteriorsApplication
                             combinedFormula += weightval;
                         else if (element == "Rate")
                             combinedFormula += rateval;
+                        else if (element == "Total")
+                            combinedFormula += totalval;
+                        else if (element == "SqftPlainCoating")
+                            combinedFormula += sqftplaincoatingval;
+                        else if(element == "RatePlain")
+                            combinedFormula += plainrateval;
+                        else if (element == "TotalPlainCoating")
+                            combinedFormula += totalplaincoatingval;
+                        else if (element == "TotalPlain")
+                            combinedFormula += totalplainval;
+                        else if (element == "SqftWoodCoating")
+                            combinedFormula += sqftwoodcoatingval;
+                        else if (element == "RateWood")
+                            combinedFormula += woodrateval;
+                        else if (element == "TotalWoodCoating")
+                            combinedFormula += totalwoodcoatingval;
+                        else if (element == "TotalWood")
+                            combinedFormula += totalwoodval;                       
                         else
                             combinedFormula += element;
                         // body of foreach loop

@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.grpDescription = new System.Windows.Forms.GroupBox();
             this.dgvWork = new System.Windows.Forms.DataGridView();
@@ -69,6 +69,12 @@
             this.BtnRemove = new System.Windows.Forms.DataGridViewImageColumn();
             this.FSize_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FTotal_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FSqftPlainCoating_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FTotalPlainCoating_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FTotalPlain_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FSqftWoodCoating_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FTotalWoodCoating_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FTotalWood_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grpDescription.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvWork)).BeginInit();
             this.grpBoxSize.SuspendLayout();
@@ -125,7 +131,13 @@
             this.TotalWood,
             this.BtnRemove,
             this.FSize_id,
-            this.FTotal_id});
+            this.FTotal_id,
+            this.FSqftPlainCoating_id,
+            this.FTotalPlainCoating_id,
+            this.FTotalPlain_id,
+            this.FSqftWoodCoating_id,
+            this.FTotalWoodCoating_id,
+            this.FTotalWood_id});
             this.dgvWork.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
             this.dgvWork.GridColor = System.Drawing.Color.Black;
             this.dgvWork.Location = new System.Drawing.Point(6, 241);
@@ -136,8 +148,11 @@
             this.dgvWork.Size = new System.Drawing.Size(1678, 553);
             this.dgvWork.TabIndex = 39;
             this.dgvWork.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvWork_CellClick);
+            this.dgvWork.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvWork_CellEndEdit);
             this.dgvWork.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvWork_CellEnter);
             this.dgvWork.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.DgvWork_CellFormatting);
+            this.dgvWork.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvWork_CellValueChanged);
+            this.dgvWork.CellValuePushed += new System.Windows.Forms.DataGridViewCellValueEventHandler(this.DgvWork_CellValuePushed);
             this.dgvWork.CurrentCellDirtyStateChanged += new System.EventHandler(this.DgvWork_CurrentCellDirtyStateChanged);
             this.dgvWork.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.DgvWork_EditingControlShowing);
             this.dgvWork.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.DgvWork_RowPostPaint);
@@ -380,10 +395,10 @@
             // DgvCbDescription
             // 
             this.DgvCbDescription.DataPropertyName = "Description_id";
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.DgvCbDescription.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.DgvCbDescription.DefaultCellStyle = dataGridViewCellStyle4;
             this.DgvCbDescription.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox;
             this.DgvCbDescription.HeaderText = "Description";
             this.DgvCbDescription.Name = "DgvCbDescription";
@@ -482,6 +497,48 @@
             this.FTotal_id.Name = "FTotal_id";
             this.FTotal_id.Visible = false;
             // 
+            // FSqftPlainCoating_id
+            // 
+            this.FSqftPlainCoating_id.DataPropertyName = "FSqftPlainCoating_id";
+            this.FSqftPlainCoating_id.HeaderText = "FSqftPlainCoating_id";
+            this.FSqftPlainCoating_id.Name = "FSqftPlainCoating_id";
+            this.FSqftPlainCoating_id.Visible = false;
+            // 
+            // FTotalPlainCoating_id
+            // 
+            this.FTotalPlainCoating_id.DataPropertyName = "FTotalPlainCoating_id";
+            this.FTotalPlainCoating_id.HeaderText = "FTotalPlainCoating_id";
+            this.FTotalPlainCoating_id.Name = "FTotalPlainCoating_id";
+            this.FTotalPlainCoating_id.Visible = false;
+            // 
+            // FTotalPlain_id
+            // 
+            this.FTotalPlain_id.DataPropertyName = "FTotalPlain_id";
+            this.FTotalPlain_id.HeaderText = "FTotalPlain_id";
+            this.FTotalPlain_id.Name = "FTotalPlain_id";
+            this.FTotalPlain_id.Visible = false;
+            // 
+            // FSqftWoodCoating_id
+            // 
+            this.FSqftWoodCoating_id.DataPropertyName = "FSqftWoodCoating_id";
+            this.FSqftWoodCoating_id.HeaderText = "FSqftWoodCoating_id";
+            this.FSqftWoodCoating_id.Name = "FSqftWoodCoating_id";
+            this.FSqftWoodCoating_id.Visible = false;
+            // 
+            // FTotalWoodCoating_id
+            // 
+            this.FTotalWoodCoating_id.DataPropertyName = "FTotalWoodCoating_id";
+            this.FTotalWoodCoating_id.HeaderText = "FTotalWoodCoating_id";
+            this.FTotalWoodCoating_id.Name = "FTotalWoodCoating_id";
+            this.FTotalWoodCoating_id.Visible = false;
+            // 
+            // FTotalWood_id
+            // 
+            this.FTotalWood_id.DataPropertyName = "FTotalWood_id";
+            this.FTotalWood_id.HeaderText = "FTotalWood_id";
+            this.FTotalWood_id.Name = "FTotalWood_id";
+            this.FTotalWood_id.Visible = false;
+            // 
             // WorkTransactionPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -549,5 +606,11 @@
         private System.Windows.Forms.DataGridViewImageColumn BtnRemove;
         private System.Windows.Forms.DataGridViewTextBoxColumn FSize_id;
         private System.Windows.Forms.DataGridViewTextBoxColumn FTotal_id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FSqftPlainCoating_id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FTotalPlainCoating_id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FTotalPlain_id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FSqftWoodCoating_id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FTotalWoodCoating_id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FTotalWood_id;
     }
 }

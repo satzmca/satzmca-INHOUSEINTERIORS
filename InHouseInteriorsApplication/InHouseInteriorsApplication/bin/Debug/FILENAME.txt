@@ -1014,3 +1014,147 @@ WorkTransactionPage : CmbWorkName_SelectedIndexChangedSystem.Xml.XPath.XPathExce
    at InHouseInteriorsApplication.WorkTransactionPage.DataBind() in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 570
    at InHouseInteriorsApplication.WorkTransactionPage.bind() in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 149
    at InHouseInteriorsApplication.WorkTransactionPage.CmbWorkName_SelectedIndexChanged(Object sender, EventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 126
+FormulaAssignMasterPage : DgvFormulaAssign_CellClickSystem.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.String.System.IConvertible.ToInt32(IFormatProvider provider)
+   at System.Data.Common.Int32Storage.ConvertValue(Object value)
+   at System.Data.Index.FindNodeByKey(Object originalKey)
+   at System.Data.DataView.System.ComponentModel.IBindingList.Find(PropertyDescriptor property, Object key)
+   at System.Windows.Forms.CurrencyManager.Find(PropertyDescriptor property, Object key, Boolean keepIndex)
+   at System.Windows.Forms.ListControl.set_SelectedValue(Object value)
+   at InHouseInteriorsApplication.FormulaAssignMasterPage.DgvFormulaAssign_CellClick(Object sender, DataGridViewCellEventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\FormulaAssignMasterPage.cs:line 236
+FormulaAssignMasterPage : DgvFormulaAssign_CellClickSystem.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.String.System.IConvertible.ToInt32(IFormatProvider provider)
+   at System.Data.Common.Int32Storage.ConvertValue(Object value)
+   at System.Data.Index.FindNodeByKey(Object originalKey)
+   at System.Data.DataView.System.ComponentModel.IBindingList.Find(PropertyDescriptor property, Object key)
+   at System.Windows.Forms.CurrencyManager.Find(PropertyDescriptor property, Object key, Boolean keepIndex)
+   at System.Windows.Forms.ListControl.set_SelectedValue(Object value)
+   at InHouseInteriorsApplication.FormulaAssignMasterPage.DgvFormulaAssign_CellClick(Object sender, DataGridViewCellEventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\FormulaAssignMasterPage.cs:line 236
+FormulaAssignMasterPage : DgvFormulaAssign_CellClickSystem.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.String.System.IConvertible.ToInt32(IFormatProvider provider)
+   at System.Data.Common.Int32Storage.ConvertValue(Object value)
+   at System.Data.Index.FindNodeByKey(Object originalKey)
+   at System.Data.DataView.System.ComponentModel.IBindingList.Find(PropertyDescriptor property, Object key)
+   at System.Windows.Forms.CurrencyManager.Find(PropertyDescriptor property, Object key, Boolean keepIndex)
+   at System.Windows.Forms.ListControl.set_SelectedValue(Object value)
+   at InHouseInteriorsApplication.FormulaAssignMasterPage.DgvFormulaAssign_CellClick(Object sender, DataGridViewCellEventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\FormulaAssignMasterPage.cs:line 236
+WorkTransactionPage : CmbWorkName_SelectedIndexChangedSystem.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index
+   at System.Collections.ArrayList.get_Item(Int32 index)
+   at System.Windows.Forms.DataGridViewCellCollection.get_Item(Int32 index)
+   at InHouseInteriorsApplication.WorkTransactionPage.DataBind() in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 574
+   at InHouseInteriorsApplication.WorkTransactionPage.bind() in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 149
+   at InHouseInteriorsApplication.WorkTransactionPage.CmbWorkName_SelectedIndexChanged(Object sender, EventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 126
+WorkTransactionPage : CmbWorkName_SelectedIndexChangedSystem.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index
+   at System.Collections.ArrayList.get_Item(Int32 index)
+   at System.Windows.Forms.DataGridViewCellCollection.get_Item(Int32 index)
+   at InHouseInteriorsApplication.WorkTransactionPage.DataBind() in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 574
+   at InHouseInteriorsApplication.WorkTransactionPage.bind() in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 149
+   at InHouseInteriorsApplication.WorkTransactionPage.CmbWorkName_SelectedIndexChanged(Object sender, EventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 126
+WorkTransactionPage : CmbWorkName_SelectedIndexChangedSystem.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index
+   at System.Collections.ArrayList.get_Item(Int32 index)
+   at System.Windows.Forms.DataGridViewCellCollection.get_Item(Int32 index)
+   at InHouseInteriorsApplication.WorkTransactionPage.DataBind() in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 574
+   at InHouseInteriorsApplication.WorkTransactionPage.bind() in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 149
+   at InHouseInteriorsApplication.WorkTransactionPage.CmbWorkName_SelectedIndexChanged(Object sender, EventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 126
+WorkTransactionPage : CmbWorkName_SelectedIndexChangedSystem.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index
+   at System.Collections.ArrayList.get_Item(Int32 index)
+   at System.Windows.Forms.DataGridViewCellCollection.get_Item(Int32 index)
+   at InHouseInteriorsApplication.WorkTransactionPage.DataBind() in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 574
+   at InHouseInteriorsApplication.WorkTransactionPage.bind() in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 149
+   at InHouseInteriorsApplication.WorkTransactionPage.CmbWorkName_SelectedIndexChanged(Object sender, EventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 126
+WorkTransactionPage : TxtShutterQty_TextChangedSystem.Data.SyntaxErrorException: Syntax error: Missing operand after '=' operator.
+   at System.Data.ExpressionParser.Parse()
+   at System.Data.DataExpression..ctor(DataTable table, String expression, Type type)
+   at System.Data.DataTable.Select(String filterExpression)
+   at InHouseInteriorsApplication.WorkTransactionPage.getFormulaCalculation(String formula_id, String sizeval, String weightval, String rateval, String sqftplaincoatingval, String totalplaincoatingval, String totalplainval, String sqftwoodcoatingval, String totalwoodcoatingval, String totalwoodval) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 605
+   at InHouseInteriorsApplication.WorkTransactionPage.DataBind() in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 586
+   at InHouseInteriorsApplication.WorkTransactionPage.TxtShutterQty_TextChanged(Object sender, EventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 234
+WorkTransactionPage : TxtShutterQty_TextChangedSystem.Data.SyntaxErrorException: Syntax error: Missing operand after '=' operator.
+   at System.Data.ExpressionParser.Parse()
+   at System.Data.DataExpression..ctor(DataTable table, String expression, Type type)
+   at System.Data.DataTable.Select(String filterExpression)
+   at InHouseInteriorsApplication.WorkTransactionPage.getFormulaCalculation(String formula_id, String sizeval, String weightval, String rateval, String sqftplaincoatingval, String totalplaincoatingval, String totalplainval, String sqftwoodcoatingval, String totalwoodcoatingval, String totalwoodval) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 605
+   at InHouseInteriorsApplication.WorkTransactionPage.DataBind() in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 586
+   at InHouseInteriorsApplication.WorkTransactionPage.TxtShutterQty_TextChanged(Object sender, EventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 234
+WorkTransactionPage : TxtShutterQty_TextChangedSystem.Data.SyntaxErrorException: Syntax error: Missing operand after '=' operator.
+   at System.Data.ExpressionParser.Parse()
+   at System.Data.DataExpression..ctor(DataTable table, String expression, Type type)
+   at System.Data.DataTable.Select(String filterExpression)
+   at InHouseInteriorsApplication.WorkTransactionPage.getFormulaCalculation(String formula_id, String sizeval, String weightval, String rateval, String sqftplaincoatingval, String totalplaincoatingval, String totalplainval, String sqftwoodcoatingval, String totalwoodcoatingval, String totalwoodval) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 605
+   at InHouseInteriorsApplication.WorkTransactionPage.DataBind() in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 586
+   at InHouseInteriorsApplication.WorkTransactionPage.TxtShutterQty_TextChanged(Object sender, EventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 234
+WorkTransactionPage : TxtShutterQty_TextChangedSystem.Data.SyntaxErrorException: Syntax error: Missing operand after '=' operator.
+   at System.Data.ExpressionParser.Parse()
+   at System.Data.DataExpression..ctor(DataTable table, String expression, Type type)
+   at System.Data.DataTable.Select(String filterExpression)
+   at InHouseInteriorsApplication.WorkTransactionPage.getFormulaCalculation(String formula_id, String sizeval, String weightval, String rateval, String sqftplaincoatingval, String totalplaincoatingval, String totalplainval, String sqftwoodcoatingval, String totalwoodcoatingval, String totalwoodval) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 605
+   at InHouseInteriorsApplication.WorkTransactionPage.DataBind() in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 586
+   at InHouseInteriorsApplication.WorkTransactionPage.TxtShutterQty_TextChanged(Object sender, EventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 234
+WorkTransactionPage : TxtShutterQty_TextChangedSystem.Data.SyntaxErrorException: Syntax error: Missing operand after '=' operator.
+   at System.Data.ExpressionParser.Parse()
+   at System.Data.DataExpression..ctor(DataTable table, String expression, Type type)
+   at System.Data.DataTable.Select(String filterExpression)
+   at InHouseInteriorsApplication.WorkTransactionPage.getFormulaCalculation(String formula_id, String sizeval, String weightval, String rateval, String sqftplaincoatingval, String totalplaincoatingval, String totalplainval, String sqftwoodcoatingval, String totalwoodcoatingval, String totalwoodval) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 605
+   at InHouseInteriorsApplication.WorkTransactionPage.DataBind() in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 586
+   at InHouseInteriorsApplication.WorkTransactionPage.TxtShutterQty_TextChanged(Object sender, EventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 234
+WorkTransactionPage : TxtShutterQty_TextChangedSystem.Data.SyntaxErrorException: Syntax error: Missing operand after '=' operator.
+   at System.Data.ExpressionParser.Parse()
+   at System.Data.DataExpression..ctor(DataTable table, String expression, Type type)
+   at System.Data.DataTable.Select(String filterExpression)
+   at InHouseInteriorsApplication.WorkTransactionPage.getFormulaCalculation(String formula_id, String sizeval, String weightval, String rateval, String sqftplaincoatingval, String totalplaincoatingval, String totalplainval, String sqftwoodcoatingval, String totalwoodcoatingval, String totalwoodval) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 605
+   at InHouseInteriorsApplication.WorkTransactionPage.DataBind() in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 586
+   at InHouseInteriorsApplication.WorkTransactionPage.TxtShutterQty_TextChanged(Object sender, EventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 234
+WorkTransactionPage : DgvWork_CellValueChangedSystem.Xml.XPath.XPathException: 'number(565y * 1.05)' has an invalid token.
+   at MS.Internal.Xml.XPath.XPathParser.CheckToken(LexKind t)
+   at MS.Internal.Xml.XPath.XPathParser.ParseMethod(AstNode qyInput)
+   at MS.Internal.Xml.XPath.XPathParser.ParsePrimaryExpr(AstNode qyInput)
+   at MS.Internal.Xml.XPath.XPathParser.ParseFilterExpr(AstNode qyInput)
+   at MS.Internal.Xml.XPath.XPathParser.ParsePathExpr(AstNode qyInput)
+   at MS.Internal.Xml.XPath.XPathParser.ParseUnionExpr(AstNode qyInput)
+   at MS.Internal.Xml.XPath.XPathParser.ParseUnaryExpr(AstNode qyInput)
+   at MS.Internal.Xml.XPath.XPathParser.ParseMultiplicativeExpr(AstNode qyInput)
+   at MS.Internal.Xml.XPath.XPathParser.ParseAdditiveExpr(AstNode qyInput)
+   at MS.Internal.Xml.XPath.XPathParser.ParseRelationalExpr(AstNode qyInput)
+   at MS.Internal.Xml.XPath.XPathParser.ParseEqualityExpr(AstNode qyInput)
+   at MS.Internal.Xml.XPath.XPathParser.ParseAndExpr(AstNode qyInput)
+   at MS.Internal.Xml.XPath.XPathParser.ParseOrExpr(AstNode qyInput)
+   at MS.Internal.Xml.XPath.XPathParser.ParseExpresion(AstNode qyInput)
+   at MS.Internal.Xml.XPath.XPathParser.ParseXPathExpresion(String xpathExpresion)
+   at System.Xml.XPath.XPathExpression.Compile(String xpath, IXmlNamespaceResolver nsResolver)
+   at System.Xml.XPath.XPathNavigator.Evaluate(String xpath)
+   at InHouseInteriorsApplication.WorkTransactionPage.Evaluate(String expression) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 80
+   at InHouseInteriorsApplication.WorkTransactionPage.getFormulaCalculation(String formula_id, String sizeval, String weightval, String rateval, String totalval, String sqftplaincoatingval, String plainrateval, String totalplaincoatingval, String totalplainval, String sqftwoodcoatingval, String woodrateval, String totalwoodcoatingval, String totalwoodval) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 797
+   at InHouseInteriorsApplication.WorkTransactionPage.DataBind() in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 657
+   at InHouseInteriorsApplication.WorkTransactionPage.DgvWork_CellValueChanged(Object sender, DataGridViewCellEventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 265
+WorkTransactionPage : DgvWork_CellValueChangedSystem.Xml.XPath.XPathException: 'number(34h * 1.05)' has an invalid token.
+   at MS.Internal.Xml.XPath.XPathParser.CheckToken(LexKind t)
+   at MS.Internal.Xml.XPath.XPathParser.ParseMethod(AstNode qyInput)
+   at MS.Internal.Xml.XPath.XPathParser.ParsePrimaryExpr(AstNode qyInput)
+   at MS.Internal.Xml.XPath.XPathParser.ParseFilterExpr(AstNode qyInput)
+   at MS.Internal.Xml.XPath.XPathParser.ParsePathExpr(AstNode qyInput)
+   at MS.Internal.Xml.XPath.XPathParser.ParseUnionExpr(AstNode qyInput)
+   at MS.Internal.Xml.XPath.XPathParser.ParseUnaryExpr(AstNode qyInput)
+   at MS.Internal.Xml.XPath.XPathParser.ParseMultiplicativeExpr(AstNode qyInput)
+   at MS.Internal.Xml.XPath.XPathParser.ParseAdditiveExpr(AstNode qyInput)
+   at MS.Internal.Xml.XPath.XPathParser.ParseRelationalExpr(AstNode qyInput)
+   at MS.Internal.Xml.XPath.XPathParser.ParseEqualityExpr(AstNode qyInput)
+   at MS.Internal.Xml.XPath.XPathParser.ParseAndExpr(AstNode qyInput)
+   at MS.Internal.Xml.XPath.XPathParser.ParseOrExpr(AstNode qyInput)
+   at MS.Internal.Xml.XPath.XPathParser.ParseExpresion(AstNode qyInput)
+   at MS.Internal.Xml.XPath.XPathParser.ParseXPathExpresion(String xpathExpresion)
+   at System.Xml.XPath.XPathExpression.Compile(String xpath, IXmlNamespaceResolver nsResolver)
+   at System.Xml.XPath.XPathNavigator.Evaluate(String xpath)
+   at InHouseInteriorsApplication.WorkTransactionPage.Evaluate(String expression) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 80
+   at InHouseInteriorsApplication.WorkTransactionPage.getFormulaCalculation(String formula_id, String sizeval, String weightval, String rateval, String totalval, String sqftplaincoatingval, String plainrateval, String totalplaincoatingval, String totalplainval, String sqftwoodcoatingval, String woodrateval, String totalwoodcoatingval, String totalwoodval) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 797
+   at InHouseInteriorsApplication.WorkTransactionPage.DataBind() in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 657
+   at InHouseInteriorsApplication.WorkTransactionPage.DgvWork_CellValueChanged(Object sender, DataGridViewCellEventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 265

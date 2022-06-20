@@ -37,6 +37,7 @@
             this.partyMasterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.workDetailMasterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.formulaMasterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.formulaAssignMasterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.transactionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.workTransactionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -45,7 +46,6 @@
             this.lblDate = new System.Windows.Forms.Label();
             this.lblTime = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.formulaAssignMasterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picTime)).BeginInit();
             this.SuspendLayout();
@@ -57,7 +57,7 @@
             this.fileToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1503, 27);
+            this.menuStrip1.Size = new System.Drawing.Size(1696, 27);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -84,7 +84,7 @@
             this.formulaMasterToolStripMenuItem,
             this.formulaAssignMasterToolStripMenuItem});
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(180, 24);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(151, 24);
             this.toolStripMenuItem1.Text = "Master";
             // 
             // descriptionMasterToolStripMenuItem
@@ -122,12 +122,19 @@
             this.formulaMasterToolStripMenuItem.Text = "Formula Master";
             this.formulaMasterToolStripMenuItem.Click += new System.EventHandler(this.FormulaMasterToolStripMenuItem_Click);
             // 
+            // formulaAssignMasterToolStripMenuItem
+            // 
+            this.formulaAssignMasterToolStripMenuItem.Name = "formulaAssignMasterToolStripMenuItem";
+            this.formulaAssignMasterToolStripMenuItem.Size = new System.Drawing.Size(221, 24);
+            this.formulaAssignMasterToolStripMenuItem.Text = "Formula Assign Master";
+            this.formulaAssignMasterToolStripMenuItem.Click += new System.EventHandler(this.FormulaAssignMasterToolStripMenuItem_Click);
+            // 
             // transactionToolStripMenuItem
             // 
             this.transactionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.workTransactionToolStripMenuItem});
             this.transactionToolStripMenuItem.Name = "transactionToolStripMenuItem";
-            this.transactionToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.transactionToolStripMenuItem.Size = new System.Drawing.Size(151, 24);
             this.transactionToolStripMenuItem.Text = "Transaction";
             // 
             // workTransactionToolStripMenuItem
@@ -140,7 +147,7 @@
             // logOutToolStripMenuItem
             // 
             this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
-            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(151, 24);
             this.logOutToolStripMenuItem.Text = "Log Out";
             this.logOutToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click);
             // 
@@ -195,20 +202,13 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
             // 
-            // formulaAssignMasterToolStripMenuItem
-            // 
-            this.formulaAssignMasterToolStripMenuItem.Name = "formulaAssignMasterToolStripMenuItem";
-            this.formulaAssignMasterToolStripMenuItem.Size = new System.Drawing.Size(221, 24);
-            this.formulaAssignMasterToolStripMenuItem.Text = "Formula Assign Master";
-            this.formulaAssignMasterToolStripMenuItem.Click += new System.EventHandler(this.FormulaAssignMasterToolStripMenuItem_Click);
-            // 
             // MainPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::InHouseInteriorsApplication.Properties.Resources.InHouseBackGround;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1503, 796);
+            this.ClientSize = new System.Drawing.Size(1696, 891);
             this.Controls.Add(this.picTime);
             this.Controls.Add(this.lblDate);
             this.Controls.Add(this.lblTime);
@@ -217,6 +217,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainPage";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainPage";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.MainPage_Load);

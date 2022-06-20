@@ -1158,3 +1158,83 @@ WorkTransactionPage : DgvWork_CellValueChangedSystem.Xml.XPath.XPathException: '
    at InHouseInteriorsApplication.WorkTransactionPage.getFormulaCalculation(String formula_id, String sizeval, String weightval, String rateval, String totalval, String sqftplaincoatingval, String plainrateval, String totalplaincoatingval, String totalplainval, String sqftwoodcoatingval, String woodrateval, String totalwoodcoatingval, String totalwoodval) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 797
    at InHouseInteriorsApplication.WorkTransactionPage.DataBind() in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 657
    at InHouseInteriorsApplication.WorkTransactionPage.DgvWork_CellValueChanged(Object sender, DataGridViewCellEventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 265
+WorkTransactionPage : DgvWork_CellValueChangedSystem.Xml.XPath.XPathException: 'number(34d * 8.13)' has an invalid token.
+   at MS.Internal.Xml.XPath.XPathParser.CheckToken(LexKind t)
+   at MS.Internal.Xml.XPath.XPathParser.ParseMethod(AstNode qyInput)
+   at MS.Internal.Xml.XPath.XPathParser.ParsePrimaryExpr(AstNode qyInput)
+   at MS.Internal.Xml.XPath.XPathParser.ParseFilterExpr(AstNode qyInput)
+   at MS.Internal.Xml.XPath.XPathParser.ParsePathExpr(AstNode qyInput)
+   at MS.Internal.Xml.XPath.XPathParser.ParseUnionExpr(AstNode qyInput)
+   at MS.Internal.Xml.XPath.XPathParser.ParseUnaryExpr(AstNode qyInput)
+   at MS.Internal.Xml.XPath.XPathParser.ParseMultiplicativeExpr(AstNode qyInput)
+   at MS.Internal.Xml.XPath.XPathParser.ParseAdditiveExpr(AstNode qyInput)
+   at MS.Internal.Xml.XPath.XPathParser.ParseRelationalExpr(AstNode qyInput)
+   at MS.Internal.Xml.XPath.XPathParser.ParseEqualityExpr(AstNode qyInput)
+   at MS.Internal.Xml.XPath.XPathParser.ParseAndExpr(AstNode qyInput)
+   at MS.Internal.Xml.XPath.XPathParser.ParseOrExpr(AstNode qyInput)
+   at MS.Internal.Xml.XPath.XPathParser.ParseExpresion(AstNode qyInput)
+   at MS.Internal.Xml.XPath.XPathParser.ParseXPathExpresion(String xpathExpresion)
+   at System.Xml.XPath.XPathExpression.Compile(String xpath, IXmlNamespaceResolver nsResolver)
+   at System.Xml.XPath.XPathNavigator.Evaluate(String xpath)
+   at InHouseInteriorsApplication.WorkTransactionPage.Evaluate(String expression) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 80
+   at InHouseInteriorsApplication.WorkTransactionPage.getFormulaCalculation(String formula_id, String sizeval, String weightval, String rateval, String totalval, String sqftplaincoatingval, String plainrateval, String totalplaincoatingval, String totalplainval, String sqftwoodcoatingval, String woodrateval, String totalwoodcoatingval, String totalwoodval) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 816
+   at InHouseInteriorsApplication.WorkTransactionPage.DataBind() in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 676
+   at InHouseInteriorsApplication.WorkTransactionPage.DgvWork_CellValueChanged(Object sender, DataGridViewCellEventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 265
+WorkTransactionPage : DgvWork_CellValueChangedSystem.Xml.XPath.XPathException: 'number(34dd * 8.13)' has an invalid token.
+   at MS.Internal.Xml.XPath.XPathParser.CheckToken(LexKind t)
+   at MS.Internal.Xml.XPath.XPathParser.ParseMethod(AstNode qyInput)
+   at MS.Internal.Xml.XPath.XPathParser.ParsePrimaryExpr(AstNode qyInput)
+   at MS.Internal.Xml.XPath.XPathParser.ParseFilterExpr(AstNode qyInput)
+   at MS.Internal.Xml.XPath.XPathParser.ParsePathExpr(AstNode qyInput)
+   at MS.Internal.Xml.XPath.XPathParser.ParseUnionExpr(AstNode qyInput)
+   at MS.Internal.Xml.XPath.XPathParser.ParseUnaryExpr(AstNode qyInput)
+   at MS.Internal.Xml.XPath.XPathParser.ParseMultiplicativeExpr(AstNode qyInput)
+   at MS.Internal.Xml.XPath.XPathParser.ParseAdditiveExpr(AstNode qyInput)
+   at MS.Internal.Xml.XPath.XPathParser.ParseRelationalExpr(AstNode qyInput)
+   at MS.Internal.Xml.XPath.XPathParser.ParseEqualityExpr(AstNode qyInput)
+   at MS.Internal.Xml.XPath.XPathParser.ParseAndExpr(AstNode qyInput)
+   at MS.Internal.Xml.XPath.XPathParser.ParseOrExpr(AstNode qyInput)
+   at MS.Internal.Xml.XPath.XPathParser.ParseExpresion(AstNode qyInput)
+   at MS.Internal.Xml.XPath.XPathParser.ParseXPathExpresion(String xpathExpresion)
+   at System.Xml.XPath.XPathExpression.Compile(String xpath, IXmlNamespaceResolver nsResolver)
+   at System.Xml.XPath.XPathNavigator.Evaluate(String xpath)
+   at InHouseInteriorsApplication.WorkTransactionPage.Evaluate(String expression) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 80
+   at InHouseInteriorsApplication.WorkTransactionPage.getFormulaCalculation(String formula_id, String sizeval, String weightval, String rateval, String totalval, String sqftplaincoatingval, String plainrateval, String totalplaincoatingval, String totalplainval, String sqftwoodcoatingval, String woodrateval, String totalwoodcoatingval, String totalwoodval) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 816
+   at InHouseInteriorsApplication.WorkTransactionPage.DataBind() in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 676
+   at InHouseInteriorsApplication.WorkTransactionPage.DgvWork_CellValueChanged(Object sender, DataGridViewCellEventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 265
+WorkTransactionPage : DgvWork_CellValueChangedSystem.Xml.XPath.XPathException: 'number(34ddd * 8.13)' has an invalid token.
+   at MS.Internal.Xml.XPath.XPathParser.CheckToken(LexKind t)
+   at MS.Internal.Xml.XPath.XPathParser.ParseMethod(AstNode qyInput)
+   at MS.Internal.Xml.XPath.XPathParser.ParsePrimaryExpr(AstNode qyInput)
+   at MS.Internal.Xml.XPath.XPathParser.ParseFilterExpr(AstNode qyInput)
+   at MS.Internal.Xml.XPath.XPathParser.ParsePathExpr(AstNode qyInput)
+   at MS.Internal.Xml.XPath.XPathParser.ParseUnionExpr(AstNode qyInput)
+   at MS.Internal.Xml.XPath.XPathParser.ParseUnaryExpr(AstNode qyInput)
+   at MS.Internal.Xml.XPath.XPathParser.ParseMultiplicativeExpr(AstNode qyInput)
+   at MS.Internal.Xml.XPath.XPathParser.ParseAdditiveExpr(AstNode qyInput)
+   at MS.Internal.Xml.XPath.XPathParser.ParseRelationalExpr(AstNode qyInput)
+   at MS.Internal.Xml.XPath.XPathParser.ParseEqualityExpr(AstNode qyInput)
+   at MS.Internal.Xml.XPath.XPathParser.ParseAndExpr(AstNode qyInput)
+   at MS.Internal.Xml.XPath.XPathParser.ParseOrExpr(AstNode qyInput)
+   at MS.Internal.Xml.XPath.XPathParser.ParseExpresion(AstNode qyInput)
+   at MS.Internal.Xml.XPath.XPathParser.ParseXPathExpresion(String xpathExpresion)
+   at System.Xml.XPath.XPathExpression.Compile(String xpath, IXmlNamespaceResolver nsResolver)
+   at System.Xml.XPath.XPathNavigator.Evaluate(String xpath)
+   at InHouseInteriorsApplication.WorkTransactionPage.Evaluate(String expression) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 80
+   at InHouseInteriorsApplication.WorkTransactionPage.getFormulaCalculation(String formula_id, String sizeval, String weightval, String rateval, String totalval, String sqftplaincoatingval, String plainrateval, String totalplaincoatingval, String totalplainval, String sqftwoodcoatingval, String woodrateval, String totalwoodcoatingval, String totalwoodval) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 816
+   at InHouseInteriorsApplication.WorkTransactionPage.DataBind() in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 676
+   at InHouseInteriorsApplication.WorkTransactionPage.DgvWork_CellValueChanged(Object sender, DataGridViewCellEventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 265
+WorkTransactionPage : LastColumnComboSelectionChangedSystem.IndexOutOfRangeException: Cannot find column Description_id=1.
+   at System.Data.DataTable.ParseSortString(String sortString)
+   at System.Data.Select..ctor(DataTable table, String filterExpression, String sort, DataViewRowState recordStates)
+   at System.Data.DataTable.Select(String filterExpression, String sort)
+   at InHouseInteriorsApplication.WorkTransactionPage.LastColumnComboSelectionChanged(Object sender, EventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 525
+WorkTransactionPage : LastColumnComboSelectionChangedSystem.IndexOutOfRangeException: Cannot find column Description_id=3.
+   at System.Data.DataTable.ParseSortString(String sortString)
+   at System.Data.Select..ctor(DataTable table, String filterExpression, String sort, DataViewRowState recordStates)
+   at System.Data.DataTable.Select(String filterExpression, String sort)
+   at InHouseInteriorsApplication.WorkTransactionPage.LastColumnComboSelectionChanged(Object sender, EventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 525
+WorkTransactionPage : LastColumnComboSelectionChangedSystem.ArgumentException: Column 'FSize_id' does not belong to table .
+   at System.Data.DataRow.GetDataColumn(String columnName)
+   at System.Data.DataRow.get_Item(String columnName)
+   at InHouseInteriorsApplication.WorkTransactionPage.LastColumnComboSelectionChanged(Object sender, EventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 544

@@ -57,6 +57,8 @@ namespace InHouseInteriorsApplication
 
             cmbWorkName.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
             cmbWorkName.AutoCompleteSource = AutoCompleteSource.ListItems;
+            cmbWorkName.MouseWheel -= new MouseEventHandler(ctl_MouseWheel);
+            cmbWorkName.MouseWheel += new MouseEventHandler(ctl_MouseWheel);
 
             var dict = JObject.Parse(@"{'IsWorkSelect':'Y'}");
             workdt = cls.FetchData(SpName: "USP_Work_Insert", ReqType: "SELECT_WORK", dict);
@@ -69,6 +71,11 @@ namespace InHouseInteriorsApplication
             cmbWorkName.DataSource = workdt;
 
         }
+        private void ctl_MouseWheel(object sender, MouseEventArgs e)
+        {
+            ((HandledMouseEventArgs)e).Handled = true;
+        }
+
 
         public void bind()
         {

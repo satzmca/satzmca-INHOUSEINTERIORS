@@ -16,3 +16,5 @@ D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\I
 D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\obj\Release\InHouseInteriorsApplication.pdb
 D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\obj\Release\InHouseInteriorsApplication.csprojAssemblyReference.cache
 D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\obj\Release\InHouseInteriorsApplication.WorkTransactionPage.resources
+D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\obj\Release\InHouseInteriorsApplication.FormulaAssignMasterPage.resources
+D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\obj\Release\InHouseInteriorsApplication.FormulaMasterPage.resources

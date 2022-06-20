@@ -57,16 +57,7 @@ namespace InHouseInteriorsApplication
             cmbWorkName.DisplayMember = "WorkName";
             cmbWorkName.ValueMember = "Work_id";
             cmbWorkName.DataSource = workdt;
-
-
-            cmbDescription.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
-            cmbDescription.AutoCompleteSource = AutoCompleteSource.ListItems;
-            DataTable descdt = new DataTable();
-            var dict1 = JObject.Parse(@"{'IsDescriptionSelect':'Y'}");
-            descdt = cls.FetchData(SpName: "USP_Description_Insert", ReqType: "SELECT_DESCRIPTION", dict1);
-            cmbDescription.DisplayMember = "Description";
-            cmbDescription.ValueMember = "Description_id";
-            cmbDescription.DataSource = descdt;
+           
 
             DataTable dt1 = new DataTable();
             dt1 = cls.FetchData(SpName: "USP_Description_Insert", ReqType: "SELECT_FORMULA");
@@ -271,6 +262,16 @@ namespace InHouseInteriorsApplication
                 dt = cls.FetchData(SpName: "USP_FormulaAssign_Insert", ReqType: "SELECT_ASSIGNFORMULA", dict: dict);
                 dgvFormulaAssign.AutoGenerateColumns = false;
                 dgvFormulaAssign.DataSource = dt;
+
+
+                cmbDescription.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                cmbDescription.AutoCompleteSource = AutoCompleteSource.ListItems;
+                DataTable descdt = new DataTable();
+                var dict1 = JObject.Parse(@"{'Work_id':'" + cmbWorkName.SelectedValue.ToString() + "'}");
+                descdt = cls.FetchData(SpName: "USP_Description_Insert", ReqType: "SELECT_DESCRIPTIONBASEDWORK", dict1);
+                cmbDescription.DisplayMember = "Description";
+                cmbDescription.ValueMember = "Description_id";
+                cmbDescription.DataSource = descdt;
             }
         }
     }

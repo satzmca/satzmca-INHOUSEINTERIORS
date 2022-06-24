@@ -28,17 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.grpDescription = new System.Windows.Forms.GroupBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dgvQuotation = new System.Windows.Forms.DataGridView();
+            this.btnAdd = new System.Windows.Forms.Button();
             this.cmbQdesc = new System.Windows.Forms.ComboBox();
             this.lblwoodtotal1 = new System.Windows.Forms.Label();
             this.lblDesc = new System.Windows.Forms.Label();
             this.lblwoodtotal = new System.Windows.Forms.Label();
             this.lblWorkName = new System.Windows.Forms.Label();
             this.lbltotalplain1 = new System.Windows.Forms.Label();
-            this.txtDesc = new System.Windows.Forms.TextBox();
+            this.txtRemark = new System.Windows.Forms.TextBox();
             this.lbltotalplain = new System.Windows.Forms.Label();
             this.cmbWorkName = new System.Windows.Forms.ComboBox();
             this.lblTotal = new System.Windows.Forms.Label();
@@ -59,9 +61,7 @@
             this.lblBoxQty = new System.Windows.Forms.Label();
             this.txtHeight = new System.Windows.Forms.TextBox();
             this.lblDepth = new System.Windows.Forms.Label();
-            this.dgvWork = new System.Windows.Forms.DataGridView();
-            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.pctClose = new System.Windows.Forms.PictureBox();
+            this.DgvWork = new System.Windows.Forms.DataGridView();
             this.Work_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DgvCbDescription = new System.Windows.Forms.DataGridViewComboBoxColumn();
@@ -86,15 +86,29 @@
             this.FSqftWoodCoating_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FTotalWoodCoating_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FTotalWood_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.dgvQuotation = new System.Windows.Forms.DataGridView();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.pctClose = new System.Windows.Forms.PictureBox();
+            this.BtnSave = new System.Windows.Forms.Button();
+            this.btnClear = new System.Windows.Forms.Button();
+            this.Quotation_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.QNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.QDesc_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.QDesc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GWork_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.WorkName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Remark = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Width = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Depth = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Height = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GTotalPlain = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GTotalWood = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GimageRemove = new System.Windows.Forms.DataGridViewImageColumn();
             this.grpDescription.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.grpBoxSize.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvWork)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pctClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvQuotation)).BeginInit();
+            this.grpBoxSize.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvWork)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctClose)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -123,6 +137,8 @@
             // panel1
             // 
             this.panel1.AutoScroll = true;
+            this.panel1.Controls.Add(this.btnClear);
+            this.panel1.Controls.Add(this.BtnSave);
             this.panel1.Controls.Add(this.dgvQuotation);
             this.panel1.Controls.Add(this.btnAdd);
             this.panel1.Controls.Add(this.cmbQdesc);
@@ -131,18 +147,56 @@
             this.panel1.Controls.Add(this.lblwoodtotal);
             this.panel1.Controls.Add(this.lblWorkName);
             this.panel1.Controls.Add(this.lbltotalplain1);
-            this.panel1.Controls.Add(this.txtDesc);
+            this.panel1.Controls.Add(this.txtRemark);
             this.panel1.Controls.Add(this.lbltotalplain);
             this.panel1.Controls.Add(this.cmbWorkName);
             this.panel1.Controls.Add(this.lblTotal);
             this.panel1.Controls.Add(this.lblQdesc);
             this.panel1.Controls.Add(this.lblTotalsum);
             this.panel1.Controls.Add(this.grpBoxSize);
-            this.panel1.Controls.Add(this.dgvWork);
+            this.panel1.Controls.Add(this.DgvWork);
             this.panel1.Location = new System.Drawing.Point(12, 27);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1792, 841);
             this.panel1.TabIndex = 55;
+            // 
+            // dgvQuotation
+            // 
+            this.dgvQuotation.AllowUserToAddRows = false;
+            this.dgvQuotation.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvQuotation.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Quotation_id,
+            this.QNo,
+            this.QDesc_id,
+            this.QDesc,
+            this.GWork_id,
+            this.WorkName,
+            this.Remark,
+            this.Width,
+            this.Depth,
+            this.Height,
+            this.GTotalPlain,
+            this.GTotalWood,
+            this.GimageRemove});
+            this.dgvQuotation.Location = new System.Drawing.Point(6, 616);
+            this.dgvQuotation.Name = "dgvQuotation";
+            this.dgvQuotation.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvQuotation.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
+            this.dgvQuotation.Size = new System.Drawing.Size(1306, 212);
+            this.dgvQuotation.TabIndex = 56;
+            this.dgvQuotation.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvQuotation_CellClick);
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold);
+            this.btnAdd.ForeColor = System.Drawing.Color.Black;
+            this.btnAdd.Location = new System.Drawing.Point(1327, 616);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(428, 46);
+            this.btnAdd.TabIndex = 55;
+            this.btnAdd.Text = "Add";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
             // 
             // cmbQdesc
             // 
@@ -171,9 +225,9 @@
             this.lblDesc.ForeColor = System.Drawing.Color.White;
             this.lblDesc.Location = new System.Drawing.Point(19, 75);
             this.lblDesc.Name = "lblDesc";
-            this.lblDesc.Size = new System.Drawing.Size(61, 23);
+            this.lblDesc.Size = new System.Drawing.Size(93, 23);
             this.lblDesc.TabIndex = 54;
-            this.lblDesc.Text = "Desc";
+            this.lblDesc.Text = "Remark";
             // 
             // lblwoodtotal
             // 
@@ -208,13 +262,13 @@
             this.lbltotalplain1.TabIndex = 48;
             this.lbltotalplain1.Text = "0";
             // 
-            // txtDesc
+            // txtRemark
             // 
-            this.txtDesc.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDesc.Location = new System.Drawing.Point(165, 75);
-            this.txtDesc.Name = "txtDesc";
-            this.txtDesc.Size = new System.Drawing.Size(1277, 31);
-            this.txtDesc.TabIndex = 53;
+            this.txtRemark.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRemark.Location = new System.Drawing.Point(165, 75);
+            this.txtRemark.Name = "txtRemark";
+            this.txtRemark.Size = new System.Drawing.Size(1277, 31);
+            this.txtRemark.TabIndex = 53;
             // 
             // lbltotalplain
             // 
@@ -449,13 +503,13 @@
             this.lblDepth.TabIndex = 28;
             this.lblDepth.Text = "Depth";
             // 
-            // dgvWork
+            // DgvWork
             // 
-            this.dgvWork.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
-            this.dgvWork.BackgroundColor = System.Drawing.Color.White;
-            this.dgvWork.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dgvWork.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvWork.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.DgvWork.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.DgvWork.BackgroundColor = System.Drawing.Color.White;
+            this.DgvWork.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.DgvWork.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgvWork.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Work_id,
             this.dataGridViewTextBoxColumn1,
             this.DgvCbDescription,
@@ -480,44 +534,25 @@
             this.FSqftWoodCoating_id,
             this.FTotalWoodCoating_id,
             this.FTotalWood_id});
-            this.dgvWork.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
-            this.dgvWork.GridColor = System.Drawing.Color.Black;
-            this.dgvWork.Location = new System.Drawing.Point(6, 217);
-            this.dgvWork.MultiSelect = false;
-            this.dgvWork.Name = "dgvWork";
-            this.dgvWork.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvWork.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
-            this.dgvWork.Size = new System.Drawing.Size(1749, 365);
-            this.dgvWork.TabIndex = 39;
-            this.dgvWork.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvWork_CellClick);
-            this.dgvWork.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvWork_CellEndEdit);
-            this.dgvWork.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvWork_CellEnter);
-            this.dgvWork.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.DgvWork_CellFormatting);
-            this.dgvWork.CellValidated += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvWork_CellValidated);
-            this.dgvWork.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvWork_CellValueChanged);
-            this.dgvWork.CellValuePushed += new System.Windows.Forms.DataGridViewCellValueEventHandler(this.DgvWork_CellValuePushed);
-            this.dgvWork.CurrentCellDirtyStateChanged += new System.EventHandler(this.DgvWork_CurrentCellDirtyStateChanged);
-            this.dgvWork.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.DgvWork_EditingControlShowing);
-            this.dgvWork.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.DgvWork_RowPostPaint);
-            // 
-            // dataGridViewImageColumn1
-            // 
-            this.dataGridViewImageColumn1.HeaderText = "";
-            this.dataGridViewImageColumn1.Image = global::InHouseInteriorsApplication.Properties.Resources.delete;
-            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
-            this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewImageColumn1.Width = 20;
-            // 
-            // pctClose
-            // 
-            this.pctClose.Image = global::InHouseInteriorsApplication.Properties.Resources.close2;
-            this.pctClose.Location = new System.Drawing.Point(1785, 1);
-            this.pctClose.Name = "pctClose";
-            this.pctClose.Size = new System.Drawing.Size(50, 50);
-            this.pctClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pctClose.TabIndex = 11;
-            this.pctClose.TabStop = false;
-            this.pctClose.Click += new System.EventHandler(this.PctClose_Click);
+            this.DgvWork.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
+            this.DgvWork.GridColor = System.Drawing.Color.Black;
+            this.DgvWork.Location = new System.Drawing.Point(6, 217);
+            this.DgvWork.MultiSelect = false;
+            this.DgvWork.Name = "DgvWork";
+            this.DgvWork.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DgvWork.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
+            this.DgvWork.Size = new System.Drawing.Size(1749, 365);
+            this.DgvWork.TabIndex = 39;
+            this.DgvWork.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvWork_CellClick);
+            this.DgvWork.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvWork_CellEndEdit);
+            this.DgvWork.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvWork_CellEnter);
+            this.DgvWork.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.DgvWork_CellFormatting);
+            this.DgvWork.CellValidated += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvWork_CellValidated);
+            this.DgvWork.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvWork_CellValueChanged);
+            this.DgvWork.CellValuePushed += new System.Windows.Forms.DataGridViewCellValueEventHandler(this.DgvWork_CellValuePushed);
+            this.DgvWork.CurrentCellDirtyStateChanged += new System.EventHandler(this.DgvWork_CurrentCellDirtyStateChanged);
+            this.DgvWork.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.DgvWork_EditingControlShowing);
+            this.DgvWork.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.DgvWork_RowPostPaint);
             // 
             // Work_id
             // 
@@ -539,10 +574,10 @@
             // 
             this.DgvCbDescription.AutoComplete = false;
             this.DgvCbDescription.DataPropertyName = "Description_id";
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.DgvCbDescription.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.DgvCbDescription.DefaultCellStyle = dataGridViewCellStyle2;
             this.DgvCbDescription.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox;
             this.DgvCbDescription.HeaderText = "Description";
             this.DgvCbDescription.Name = "DgvCbDescription";
@@ -698,34 +733,147 @@
             this.FTotalWood_id.Name = "FTotalWood_id";
             this.FTotalWood_id.Visible = false;
             // 
-            // button1
+            // dataGridViewImageColumn1
             // 
-            this.button1.Location = new System.Drawing.Point(411, 32);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 14;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.dataGridViewImageColumn1.HeaderText = "";
+            this.dataGridViewImageColumn1.Image = global::InHouseInteriorsApplication.Properties.Resources.delete;
+            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewImageColumn1.Width = 20;
             // 
-            // btnAdd
+            // pctClose
             // 
-            this.btnAdd.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold);
-            this.btnAdd.ForeColor = System.Drawing.Color.Black;
-            this.btnAdd.Location = new System.Drawing.Point(1509, 13);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(235, 46);
-            this.btnAdd.TabIndex = 55;
-            this.btnAdd.Text = "Add";
-            this.btnAdd.UseVisualStyleBackColor = true;
-            this.btnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
+            this.pctClose.Image = global::InHouseInteriorsApplication.Properties.Resources.close2;
+            this.pctClose.Location = new System.Drawing.Point(1785, 1);
+            this.pctClose.Name = "pctClose";
+            this.pctClose.Size = new System.Drawing.Size(50, 50);
+            this.pctClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pctClose.TabIndex = 11;
+            this.pctClose.TabStop = false;
+            this.pctClose.Click += new System.EventHandler(this.PctClose_Click);
             // 
-            // dgvQuotation
+            // BtnSave
             // 
-            this.dgvQuotation.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvQuotation.Location = new System.Drawing.Point(6, 616);
-            this.dgvQuotation.Name = "dgvQuotation";
-            this.dgvQuotation.Size = new System.Drawing.Size(1749, 212);
-            this.dgvQuotation.TabIndex = 56;
+            this.BtnSave.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold);
+            this.BtnSave.ForeColor = System.Drawing.Color.Black;
+            this.BtnSave.Location = new System.Drawing.Point(1327, 699);
+            this.BtnSave.Name = "BtnSave";
+            this.BtnSave.Size = new System.Drawing.Size(428, 46);
+            this.BtnSave.TabIndex = 57;
+            this.BtnSave.Text = "Save";
+            this.BtnSave.UseVisualStyleBackColor = true;
+            this.BtnSave.Click += new System.EventHandler(this.BtnSave_Click);
+            // 
+            // btnClear
+            // 
+            this.btnClear.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold);
+            this.btnClear.ForeColor = System.Drawing.Color.Black;
+            this.btnClear.Location = new System.Drawing.Point(1327, 782);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(428, 46);
+            this.btnClear.TabIndex = 58;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.BtnClear_Click);
+            // 
+            // Quotation_id
+            // 
+            this.Quotation_id.DataPropertyName = "Quotation_id";
+            this.Quotation_id.HeaderText = "Quotation_id";
+            this.Quotation_id.Name = "Quotation_id";
+            this.Quotation_id.Visible = false;
+            // 
+            // QNo
+            // 
+            this.QNo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.QNo.DataPropertyName = "QNo";
+            this.QNo.HeaderText = "QNo";
+            this.QNo.Name = "QNo";
+            // 
+            // QDesc_id
+            // 
+            this.QDesc_id.DataPropertyName = "QDesc_id";
+            this.QDesc_id.HeaderText = "QDesc_id";
+            this.QDesc_id.Name = "QDesc_id";
+            this.QDesc_id.Visible = false;
+            // 
+            // QDesc
+            // 
+            this.QDesc.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.QDesc.DataPropertyName = "QDesc";
+            this.QDesc.HeaderText = "QDesc";
+            this.QDesc.Name = "QDesc";
+            this.QDesc.Width = 150;
+            // 
+            // GWork_id
+            // 
+            this.GWork_id.DataPropertyName = "GWork_id";
+            this.GWork_id.HeaderText = "GWork_id";
+            this.GWork_id.Name = "GWork_id";
+            this.GWork_id.Visible = false;
+            // 
+            // WorkName
+            // 
+            this.WorkName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.WorkName.DataPropertyName = "WorkName";
+            this.WorkName.HeaderText = "WorkName";
+            this.WorkName.Name = "WorkName";
+            this.WorkName.Width = 200;
+            // 
+            // Remark
+            // 
+            this.Remark.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Remark.DataPropertyName = "Remark";
+            this.Remark.HeaderText = "Remark";
+            this.Remark.Name = "Remark";
+            this.Remark.Width = 300;
+            // 
+            // Width
+            // 
+            this.Width.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Width.DataPropertyName = "Width";
+            this.Width.HeaderText = "Width";
+            this.Width.Name = "Width";
+            // 
+            // Depth
+            // 
+            this.Depth.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Depth.DataPropertyName = "Depth";
+            this.Depth.HeaderText = "Depth";
+            this.Depth.Name = "Depth";
+            // 
+            // Height
+            // 
+            this.Height.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Height.DataPropertyName = "Height";
+            this.Height.HeaderText = "Height";
+            this.Height.Name = "Height";
+            // 
+            // GTotalPlain
+            // 
+            this.GTotalPlain.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.GTotalPlain.DataPropertyName = "GTotalPlain";
+            this.GTotalPlain.HeaderText = "TotalPlain";
+            this.GTotalPlain.Name = "GTotalPlain";
+            this.GTotalPlain.Width = 120;
+            // 
+            // GTotalWood
+            // 
+            this.GTotalWood.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.GTotalWood.DataPropertyName = "GTotalWood";
+            this.GTotalWood.HeaderText = "TotalWood";
+            this.GTotalWood.Name = "GTotalWood";
+            this.GTotalWood.Width = 120;
+            // 
+            // GimageRemove
+            // 
+            this.GimageRemove.HeaderText = "";
+            this.GimageRemove.Image = global::InHouseInteriorsApplication.Properties.Resources.delete;
+            this.GimageRemove.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.GimageRemove.Name = "GimageRemove";
+            this.GimageRemove.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.GimageRemove.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.GimageRemove.Width = 20;
             // 
             // WorkTransactionPage
             // 
@@ -733,7 +881,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Red;
             this.ClientSize = new System.Drawing.Size(1834, 933);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.grpDescription);
             this.Controls.Add(this.pctClose);
@@ -745,11 +892,11 @@
             this.grpDescription.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvQuotation)).EndInit();
             this.grpBoxSize.ResumeLayout(false);
             this.grpBoxSize.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvWork)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvWork)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctClose)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvQuotation)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -777,7 +924,7 @@
         private System.Windows.Forms.Label lblWidth;
         private System.Windows.Forms.GroupBox grpBoxSize;
         private System.Windows.Forms.TextBox txtWidth;
-        private System.Windows.Forms.DataGridView dgvWork;
+        private System.Windows.Forms.DataGridView DgvWork;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
         private System.Windows.Forms.Label lblTotalsum;
         private System.Windows.Forms.Label lblTotal;
@@ -788,7 +935,7 @@
         private System.Windows.Forms.ComboBox cmbQdesc;
         private System.Windows.Forms.Label lblQdesc;
         private System.Windows.Forms.Label lblDesc;
-        private System.Windows.Forms.TextBox txtDesc;
+        private System.Windows.Forms.TextBox txtRemark;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Work_id;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
@@ -814,8 +961,22 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn FSqftWoodCoating_id;
         private System.Windows.Forms.DataGridViewTextBoxColumn FTotalWoodCoating_id;
         private System.Windows.Forms.DataGridViewTextBoxColumn FTotalWood_id;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.DataGridView dgvQuotation;
+        private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.Button BtnSave;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Quotation_id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn QNo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn QDesc_id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn QDesc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GWork_id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn WorkName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Remark;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Width;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Depth;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Height;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GTotalPlain;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GTotalWood;
+        private System.Windows.Forms.DataGridViewImageColumn GimageRemove;
     }
 }

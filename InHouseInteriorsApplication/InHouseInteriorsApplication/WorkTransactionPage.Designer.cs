@@ -28,10 +28,40 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.grpDescription = new System.Windows.Forms.GroupBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.cmbQdesc = new System.Windows.Forms.ComboBox();
+            this.lblwoodtotal1 = new System.Windows.Forms.Label();
+            this.lblDesc = new System.Windows.Forms.Label();
+            this.lblwoodtotal = new System.Windows.Forms.Label();
+            this.lblWorkName = new System.Windows.Forms.Label();
+            this.lbltotalplain1 = new System.Windows.Forms.Label();
+            this.txtDesc = new System.Windows.Forms.TextBox();
+            this.lbltotalplain = new System.Windows.Forms.Label();
+            this.cmbWorkName = new System.Windows.Forms.ComboBox();
+            this.lblTotal = new System.Windows.Forms.Label();
+            this.lblQdesc = new System.Windows.Forms.Label();
+            this.lblTotalsum = new System.Windows.Forms.Label();
+            this.grpBoxSize = new System.Windows.Forms.GroupBox();
+            this.txtWidth = new System.Windows.Forms.TextBox();
+            this.lblWidth = new System.Windows.Forms.Label();
+            this.txtBoxSqFt = new System.Windows.Forms.TextBox();
+            this.lblShelfQty = new System.Windows.Forms.Label();
+            this.txtBoxQty = new System.Windows.Forms.TextBox();
+            this.lblBoxSqFt = new System.Windows.Forms.Label();
+            this.txtShutterQty = new System.Windows.Forms.TextBox();
+            this.lblHeight = new System.Windows.Forms.Label();
+            this.txtShelfQty = new System.Windows.Forms.TextBox();
+            this.lblShutterQty = new System.Windows.Forms.Label();
+            this.txtDepth = new System.Windows.Forms.TextBox();
+            this.lblBoxQty = new System.Windows.Forms.Label();
+            this.txtHeight = new System.Windows.Forms.TextBox();
+            this.lblDepth = new System.Windows.Forms.Label();
             this.dgvWork = new System.Windows.Forms.DataGridView();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.pctClose = new System.Windows.Forms.PictureBox();
             this.Work_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DgvCbDescription = new System.Windows.Forms.DataGridViewComboBoxColumn();
@@ -56,29 +86,15 @@
             this.FSqftWoodCoating_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FTotalWoodCoating_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FTotalWood_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.grpBoxSize = new System.Windows.Forms.GroupBox();
-            this.txtWidth = new System.Windows.Forms.TextBox();
-            this.lblWidth = new System.Windows.Forms.Label();
-            this.txtBoxSqFt = new System.Windows.Forms.TextBox();
-            this.lblShelfQty = new System.Windows.Forms.Label();
-            this.txtBoxQty = new System.Windows.Forms.TextBox();
-            this.lblBoxSqFt = new System.Windows.Forms.Label();
-            this.txtShutterQty = new System.Windows.Forms.TextBox();
-            this.lblHeight = new System.Windows.Forms.Label();
-            this.txtShelfQty = new System.Windows.Forms.TextBox();
-            this.lblShutterQty = new System.Windows.Forms.Label();
-            this.txtDepth = new System.Windows.Forms.TextBox();
-            this.lblBoxQty = new System.Windows.Forms.Label();
-            this.txtHeight = new System.Windows.Forms.TextBox();
-            this.lblDepth = new System.Windows.Forms.Label();
-            this.cmbWorkName = new System.Windows.Forms.ComboBox();
-            this.lblWorkName = new System.Windows.Forms.Label();
-            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.pctClose = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.dgvQuotation = new System.Windows.Forms.DataGridView();
             this.grpDescription.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvWork)).BeginInit();
+            this.panel1.SuspendLayout();
             this.grpBoxSize.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvWork)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctClose)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvQuotation)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -94,18 +110,344 @@
             // 
             // grpDescription
             // 
-            this.grpDescription.Controls.Add(this.dgvWork);
-            this.grpDescription.Controls.Add(this.grpBoxSize);
-            this.grpDescription.Controls.Add(this.cmbWorkName);
-            this.grpDescription.Controls.Add(this.lblWorkName);
-            this.grpDescription.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grpDescription.Controls.Add(this.panel1);
+            this.grpDescription.Font = new System.Drawing.Font("Verdana", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpDescription.ForeColor = System.Drawing.Color.White;
             this.grpDescription.Location = new System.Drawing.Point(12, 49);
             this.grpDescription.Name = "grpDescription";
-            this.grpDescription.Size = new System.Drawing.Size(1692, 853);
+            this.grpDescription.Size = new System.Drawing.Size(1810, 876);
             this.grpDescription.TabIndex = 12;
             this.grpDescription.TabStop = false;
             this.grpDescription.Text = "Work Transaction";
+            // 
+            // panel1
+            // 
+            this.panel1.AutoScroll = true;
+            this.panel1.Controls.Add(this.dgvQuotation);
+            this.panel1.Controls.Add(this.btnAdd);
+            this.panel1.Controls.Add(this.cmbQdesc);
+            this.panel1.Controls.Add(this.lblwoodtotal1);
+            this.panel1.Controls.Add(this.lblDesc);
+            this.panel1.Controls.Add(this.lblwoodtotal);
+            this.panel1.Controls.Add(this.lblWorkName);
+            this.panel1.Controls.Add(this.lbltotalplain1);
+            this.panel1.Controls.Add(this.txtDesc);
+            this.panel1.Controls.Add(this.lbltotalplain);
+            this.panel1.Controls.Add(this.cmbWorkName);
+            this.panel1.Controls.Add(this.lblTotal);
+            this.panel1.Controls.Add(this.lblQdesc);
+            this.panel1.Controls.Add(this.lblTotalsum);
+            this.panel1.Controls.Add(this.grpBoxSize);
+            this.panel1.Controls.Add(this.dgvWork);
+            this.panel1.Location = new System.Drawing.Point(12, 27);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1792, 841);
+            this.panel1.TabIndex = 55;
+            // 
+            // cmbQdesc
+            // 
+            this.cmbQdesc.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbQdesc.FormattingEnabled = true;
+            this.cmbQdesc.Location = new System.Drawing.Point(165, 13);
+            this.cmbQdesc.Name = "cmbQdesc";
+            this.cmbQdesc.Size = new System.Drawing.Size(541, 31);
+            this.cmbQdesc.TabIndex = 51;
+            // 
+            // lblwoodtotal1
+            // 
+            this.lblwoodtotal1.AutoSize = true;
+            this.lblwoodtotal1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblwoodtotal1.ForeColor = System.Drawing.Color.White;
+            this.lblwoodtotal1.Location = new System.Drawing.Point(1577, 587);
+            this.lblwoodtotal1.Name = "lblwoodtotal1";
+            this.lblwoodtotal1.Size = new System.Drawing.Size(19, 18);
+            this.lblwoodtotal1.TabIndex = 50;
+            this.lblwoodtotal1.Text = "0";
+            // 
+            // lblDesc
+            // 
+            this.lblDesc.AutoSize = true;
+            this.lblDesc.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold);
+            this.lblDesc.ForeColor = System.Drawing.Color.White;
+            this.lblDesc.Location = new System.Drawing.Point(19, 75);
+            this.lblDesc.Name = "lblDesc";
+            this.lblDesc.Size = new System.Drawing.Size(61, 23);
+            this.lblDesc.TabIndex = 54;
+            this.lblDesc.Text = "Desc";
+            // 
+            // lblwoodtotal
+            // 
+            this.lblwoodtotal.AutoSize = true;
+            this.lblwoodtotal.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblwoodtotal.ForeColor = System.Drawing.Color.White;
+            this.lblwoodtotal.Location = new System.Drawing.Point(1427, 587);
+            this.lblwoodtotal.Name = "lblwoodtotal";
+            this.lblwoodtotal.Size = new System.Drawing.Size(19, 18);
+            this.lblwoodtotal.TabIndex = 49;
+            this.lblwoodtotal.Text = "0";
+            // 
+            // lblWorkName
+            // 
+            this.lblWorkName.AutoSize = true;
+            this.lblWorkName.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold);
+            this.lblWorkName.ForeColor = System.Drawing.Color.White;
+            this.lblWorkName.Location = new System.Drawing.Point(754, 16);
+            this.lblWorkName.Name = "lblWorkName";
+            this.lblWorkName.Size = new System.Drawing.Size(128, 23);
+            this.lblWorkName.TabIndex = 23;
+            this.lblWorkName.Text = "WorkName";
+            // 
+            // lbltotalplain1
+            // 
+            this.lbltotalplain1.AutoSize = true;
+            this.lbltotalplain1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbltotalplain1.ForeColor = System.Drawing.Color.White;
+            this.lbltotalplain1.Location = new System.Drawing.Point(1065, 587);
+            this.lbltotalplain1.Name = "lbltotalplain1";
+            this.lbltotalplain1.Size = new System.Drawing.Size(19, 18);
+            this.lbltotalplain1.TabIndex = 48;
+            this.lbltotalplain1.Text = "0";
+            // 
+            // txtDesc
+            // 
+            this.txtDesc.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDesc.Location = new System.Drawing.Point(165, 75);
+            this.txtDesc.Name = "txtDesc";
+            this.txtDesc.Size = new System.Drawing.Size(1277, 31);
+            this.txtDesc.TabIndex = 53;
+            // 
+            // lbltotalplain
+            // 
+            this.lbltotalplain.AutoSize = true;
+            this.lbltotalplain.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbltotalplain.ForeColor = System.Drawing.Color.White;
+            this.lbltotalplain.Location = new System.Drawing.Point(919, 587);
+            this.lbltotalplain.Name = "lbltotalplain";
+            this.lbltotalplain.Size = new System.Drawing.Size(19, 18);
+            this.lbltotalplain.TabIndex = 47;
+            this.lbltotalplain.Text = "0";
+            // 
+            // cmbWorkName
+            // 
+            this.cmbWorkName.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbWorkName.FormattingEnabled = true;
+            this.cmbWorkName.Location = new System.Drawing.Point(901, 13);
+            this.cmbWorkName.Name = "cmbWorkName";
+            this.cmbWorkName.Size = new System.Drawing.Size(541, 31);
+            this.cmbWorkName.TabIndex = 1;
+            this.cmbWorkName.SelectedIndexChanged += new System.EventHandler(this.CmbWorkName_SelectedIndexChanged);
+            // 
+            // lblTotal
+            // 
+            this.lblTotal.AutoSize = true;
+            this.lblTotal.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotal.ForeColor = System.Drawing.Color.White;
+            this.lblTotal.Location = new System.Drawing.Point(553, 587);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(19, 18);
+            this.lblTotal.TabIndex = 41;
+            this.lblTotal.Text = "0";
+            // 
+            // lblQdesc
+            // 
+            this.lblQdesc.AutoSize = true;
+            this.lblQdesc.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold);
+            this.lblQdesc.ForeColor = System.Drawing.Color.White;
+            this.lblQdesc.Location = new System.Drawing.Point(19, 16);
+            this.lblQdesc.Name = "lblQdesc";
+            this.lblQdesc.Size = new System.Drawing.Size(84, 23);
+            this.lblQdesc.TabIndex = 52;
+            this.lblQdesc.Text = "Q.Desc";
+            // 
+            // lblTotalsum
+            // 
+            this.lblTotalsum.AutoSize = true;
+            this.lblTotalsum.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalsum.ForeColor = System.Drawing.Color.White;
+            this.lblTotalsum.Location = new System.Drawing.Point(412, 587);
+            this.lblTotalsum.Name = "lblTotalsum";
+            this.lblTotalsum.Size = new System.Drawing.Size(53, 18);
+            this.lblTotalsum.TabIndex = 40;
+            this.lblTotalsum.Text = "Total";
+            // 
+            // grpBoxSize
+            // 
+            this.grpBoxSize.Controls.Add(this.txtWidth);
+            this.grpBoxSize.Controls.Add(this.lblWidth);
+            this.grpBoxSize.Controls.Add(this.txtBoxSqFt);
+            this.grpBoxSize.Controls.Add(this.lblShelfQty);
+            this.grpBoxSize.Controls.Add(this.txtBoxQty);
+            this.grpBoxSize.Controls.Add(this.lblBoxSqFt);
+            this.grpBoxSize.Controls.Add(this.txtShutterQty);
+            this.grpBoxSize.Controls.Add(this.lblHeight);
+            this.grpBoxSize.Controls.Add(this.txtShelfQty);
+            this.grpBoxSize.Controls.Add(this.lblShutterQty);
+            this.grpBoxSize.Controls.Add(this.txtDepth);
+            this.grpBoxSize.Controls.Add(this.lblBoxQty);
+            this.grpBoxSize.Controls.Add(this.txtHeight);
+            this.grpBoxSize.Controls.Add(this.lblDepth);
+            this.grpBoxSize.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grpBoxSize.ForeColor = System.Drawing.Color.White;
+            this.grpBoxSize.Location = new System.Drawing.Point(6, 115);
+            this.grpBoxSize.Name = "grpBoxSize";
+            this.grpBoxSize.Size = new System.Drawing.Size(1749, 94);
+            this.grpBoxSize.TabIndex = 38;
+            this.grpBoxSize.TabStop = false;
+            this.grpBoxSize.Text = "Box Size";
+            // 
+            // txtWidth
+            // 
+            this.txtWidth.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtWidth.Location = new System.Drawing.Point(55, 53);
+            this.txtWidth.Name = "txtWidth";
+            this.txtWidth.Size = new System.Drawing.Size(214, 31);
+            this.txtWidth.TabIndex = 2;
+            this.txtWidth.Text = "0";
+            this.txtWidth.TextChanged += new System.EventHandler(this.TxtWidth_TextChanged);
+            this.txtWidth.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtWidth_KeyPress);
+            // 
+            // lblWidth
+            // 
+            this.lblWidth.AutoSize = true;
+            this.lblWidth.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold);
+            this.lblWidth.ForeColor = System.Drawing.Color.White;
+            this.lblWidth.Location = new System.Drawing.Point(51, 27);
+            this.lblWidth.Name = "lblWidth";
+            this.lblWidth.Size = new System.Drawing.Size(74, 23);
+            this.lblWidth.TabIndex = 24;
+            this.lblWidth.Text = "Width";
+            // 
+            // txtBoxSqFt
+            // 
+            this.txtBoxSqFt.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxSqFt.Location = new System.Drawing.Point(1483, 53);
+            this.txtBoxSqFt.Name = "txtBoxSqFt";
+            this.txtBoxSqFt.Size = new System.Drawing.Size(214, 31);
+            this.txtBoxSqFt.TabIndex = 8;
+            this.txtBoxSqFt.Text = "0";
+            this.txtBoxSqFt.TextChanged += new System.EventHandler(this.TxtBoxSqFt_TextChanged);
+            this.txtBoxSqFt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtBoxSqFt_KeyPress);
+            // 
+            // lblShelfQty
+            // 
+            this.lblShelfQty.AutoSize = true;
+            this.lblShelfQty.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold);
+            this.lblShelfQty.ForeColor = System.Drawing.Color.White;
+            this.lblShelfQty.Location = new System.Drawing.Point(765, 27);
+            this.lblShelfQty.Name = "lblShelfQty";
+            this.lblShelfQty.Size = new System.Drawing.Size(110, 23);
+            this.lblShelfQty.TabIndex = 30;
+            this.lblShelfQty.Text = "Shelf Qty";
+            // 
+            // txtBoxQty
+            // 
+            this.txtBoxQty.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxQty.Location = new System.Drawing.Point(1245, 53);
+            this.txtBoxQty.Name = "txtBoxQty";
+            this.txtBoxQty.Size = new System.Drawing.Size(214, 31);
+            this.txtBoxQty.TabIndex = 7;
+            this.txtBoxQty.Text = "0";
+            this.txtBoxQty.TextChanged += new System.EventHandler(this.TxtBoxQty_TextChanged);
+            this.txtBoxQty.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtBoxQty_KeyPress);
+            // 
+            // lblBoxSqFt
+            // 
+            this.lblBoxSqFt.AutoSize = true;
+            this.lblBoxSqFt.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold);
+            this.lblBoxSqFt.ForeColor = System.Drawing.Color.White;
+            this.lblBoxSqFt.Location = new System.Drawing.Point(1479, 27);
+            this.lblBoxSqFt.Name = "lblBoxSqFt";
+            this.lblBoxSqFt.Size = new System.Drawing.Size(108, 23);
+            this.lblBoxSqFt.TabIndex = 36;
+            this.lblBoxSqFt.Text = "Box Sq.ft";
+            // 
+            // txtShutterQty
+            // 
+            this.txtShutterQty.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtShutterQty.Location = new System.Drawing.Point(1007, 53);
+            this.txtShutterQty.Name = "txtShutterQty";
+            this.txtShutterQty.Size = new System.Drawing.Size(214, 31);
+            this.txtShutterQty.TabIndex = 6;
+            this.txtShutterQty.Text = "0";
+            this.txtShutterQty.TextChanged += new System.EventHandler(this.TxtShutterQty_TextChanged);
+            this.txtShutterQty.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtShutterQty_KeyPress);
+            // 
+            // lblHeight
+            // 
+            this.lblHeight.AutoSize = true;
+            this.lblHeight.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold);
+            this.lblHeight.ForeColor = System.Drawing.Color.White;
+            this.lblHeight.Location = new System.Drawing.Point(289, 27);
+            this.lblHeight.Name = "lblHeight";
+            this.lblHeight.Size = new System.Drawing.Size(82, 23);
+            this.lblHeight.TabIndex = 26;
+            this.lblHeight.Text = "Height";
+            // 
+            // txtShelfQty
+            // 
+            this.txtShelfQty.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtShelfQty.Location = new System.Drawing.Point(769, 53);
+            this.txtShelfQty.Name = "txtShelfQty";
+            this.txtShelfQty.Size = new System.Drawing.Size(214, 31);
+            this.txtShelfQty.TabIndex = 5;
+            this.txtShelfQty.Text = "0";
+            this.txtShelfQty.TextChanged += new System.EventHandler(this.TxtShelfQty_TextChanged);
+            this.txtShelfQty.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtShelfQty_KeyPress);
+            // 
+            // lblShutterQty
+            // 
+            this.lblShutterQty.AutoSize = true;
+            this.lblShutterQty.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold);
+            this.lblShutterQty.ForeColor = System.Drawing.Color.White;
+            this.lblShutterQty.Location = new System.Drawing.Point(1003, 27);
+            this.lblShutterQty.Name = "lblShutterQty";
+            this.lblShutterQty.Size = new System.Drawing.Size(136, 23);
+            this.lblShutterQty.TabIndex = 32;
+            this.lblShutterQty.Text = "Shutter Qty";
+            // 
+            // txtDepth
+            // 
+            this.txtDepth.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDepth.Location = new System.Drawing.Point(531, 53);
+            this.txtDepth.Name = "txtDepth";
+            this.txtDepth.Size = new System.Drawing.Size(214, 31);
+            this.txtDepth.TabIndex = 4;
+            this.txtDepth.Text = "0";
+            this.txtDepth.TextChanged += new System.EventHandler(this.TxtDepth_TextChanged);
+            this.txtDepth.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtDepth_KeyPress);
+            // 
+            // lblBoxQty
+            // 
+            this.lblBoxQty.AutoSize = true;
+            this.lblBoxQty.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold);
+            this.lblBoxQty.ForeColor = System.Drawing.Color.White;
+            this.lblBoxQty.Location = new System.Drawing.Point(1241, 27);
+            this.lblBoxQty.Name = "lblBoxQty";
+            this.lblBoxQty.Size = new System.Drawing.Size(94, 23);
+            this.lblBoxQty.TabIndex = 34;
+            this.lblBoxQty.Text = "Box Qty";
+            // 
+            // txtHeight
+            // 
+            this.txtHeight.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtHeight.Location = new System.Drawing.Point(293, 53);
+            this.txtHeight.Name = "txtHeight";
+            this.txtHeight.Size = new System.Drawing.Size(214, 31);
+            this.txtHeight.TabIndex = 3;
+            this.txtHeight.Text = "0";
+            this.txtHeight.TextChanged += new System.EventHandler(this.TxtHeight_TextChanged);
+            this.txtHeight.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtHeight_KeyPress);
+            // 
+            // lblDepth
+            // 
+            this.lblDepth.AutoSize = true;
+            this.lblDepth.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold);
+            this.lblDepth.ForeColor = System.Drawing.Color.White;
+            this.lblDepth.Location = new System.Drawing.Point(527, 27);
+            this.lblDepth.Name = "lblDepth";
+            this.lblDepth.Size = new System.Drawing.Size(75, 23);
+            this.lblDepth.TabIndex = 28;
+            this.lblDepth.Text = "Depth";
             // 
             // dgvWork
             // 
@@ -140,22 +482,42 @@
             this.FTotalWood_id});
             this.dgvWork.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
             this.dgvWork.GridColor = System.Drawing.Color.Black;
-            this.dgvWork.Location = new System.Drawing.Point(6, 241);
+            this.dgvWork.Location = new System.Drawing.Point(6, 217);
             this.dgvWork.MultiSelect = false;
             this.dgvWork.Name = "dgvWork";
             this.dgvWork.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgvWork.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
-            this.dgvWork.Size = new System.Drawing.Size(1678, 588);
+            this.dgvWork.Size = new System.Drawing.Size(1749, 365);
             this.dgvWork.TabIndex = 39;
             this.dgvWork.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvWork_CellClick);
             this.dgvWork.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvWork_CellEndEdit);
             this.dgvWork.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvWork_CellEnter);
             this.dgvWork.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.DgvWork_CellFormatting);
+            this.dgvWork.CellValidated += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvWork_CellValidated);
             this.dgvWork.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvWork_CellValueChanged);
             this.dgvWork.CellValuePushed += new System.Windows.Forms.DataGridViewCellValueEventHandler(this.DgvWork_CellValuePushed);
             this.dgvWork.CurrentCellDirtyStateChanged += new System.EventHandler(this.DgvWork_CurrentCellDirtyStateChanged);
             this.dgvWork.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.DgvWork_EditingControlShowing);
             this.dgvWork.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.DgvWork_RowPostPaint);
+            // 
+            // dataGridViewImageColumn1
+            // 
+            this.dataGridViewImageColumn1.HeaderText = "";
+            this.dataGridViewImageColumn1.Image = global::InHouseInteriorsApplication.Properties.Resources.delete;
+            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewImageColumn1.Width = 20;
+            // 
+            // pctClose
+            // 
+            this.pctClose.Image = global::InHouseInteriorsApplication.Properties.Resources.close2;
+            this.pctClose.Location = new System.Drawing.Point(1785, 1);
+            this.pctClose.Name = "pctClose";
+            this.pctClose.Size = new System.Drawing.Size(50, 50);
+            this.pctClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pctClose.TabIndex = 11;
+            this.pctClose.TabStop = false;
+            this.pctClose.Click += new System.EventHandler(this.PctClose_Click);
             // 
             // Work_id
             // 
@@ -175,17 +537,17 @@
             // 
             // DgvCbDescription
             // 
+            this.DgvCbDescription.AutoComplete = false;
             this.DgvCbDescription.DataPropertyName = "Description_id";
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.DgvCbDescription.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.DgvCbDescription.DefaultCellStyle = dataGridViewCellStyle1;
             this.DgvCbDescription.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox;
             this.DgvCbDescription.HeaderText = "Description";
             this.DgvCbDescription.Name = "DgvCbDescription";
             this.DgvCbDescription.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.DgvCbDescription.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.DgvCbDescription.Width = 180;
+            this.DgvCbDescription.Width = 240;
             // 
             // Size
             // 
@@ -199,6 +561,7 @@
             this.dataGridViewTextBoxColumn3.HeaderText = "Weight";
             this.dataGridViewTextBoxColumn3.MaxInputLength = 10;
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.Width = 90;
             // 
             // dataGridViewTextBoxColumn4
             // 
@@ -206,58 +569,60 @@
             this.dataGridViewTextBoxColumn4.HeaderText = "Rate";
             this.dataGridViewTextBoxColumn4.MaxInputLength = 10;
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.Width = 80;
             // 
             // Total
             // 
             this.Total.HeaderText = "Total";
             this.Total.MaxInputLength = 10;
             this.Total.Name = "Total";
+            this.Total.Width = 130;
             // 
             // SqftCoatingPlain
             // 
-            this.SqftCoatingPlain.HeaderText = "Sqft(Plain)";
+            this.SqftCoatingPlain.HeaderText = "Sqft(Pl)";
             this.SqftCoatingPlain.MaxInputLength = 10;
             this.SqftCoatingPlain.Name = "SqftCoatingPlain";
             this.SqftCoatingPlain.Width = 130;
             // 
             // RatePlain
             // 
-            this.RatePlain.HeaderText = "Rate(Plain)";
+            this.RatePlain.DataPropertyName = "PlainRate";
+            this.RatePlain.HeaderText = "Rate(Pl)";
             this.RatePlain.MaxInputLength = 10;
             this.RatePlain.Name = "RatePlain";
-            this.RatePlain.Width = 130;
             // 
             // TotalPlainCoating
             // 
-            this.TotalPlainCoating.HeaderText = "Total(Plain)";
+            this.TotalPlainCoating.HeaderText = "Total(Pl)";
             this.TotalPlainCoating.MaxInputLength = 10;
             this.TotalPlainCoating.Name = "TotalPlainCoating";
-            this.TotalPlainCoating.Width = 130;
+            this.TotalPlainCoating.Width = 150;
             // 
             // TotalPlain
             // 
             this.TotalPlain.HeaderText = "Total";
             this.TotalPlain.MaxInputLength = 10;
             this.TotalPlain.Name = "TotalPlain";
-            this.TotalPlain.Width = 120;
+            this.TotalPlain.Width = 150;
             // 
             // SqftWoodCoating
             // 
-            this.SqftWoodCoating.HeaderText = "Sqft.(Wood)";
+            this.SqftWoodCoating.HeaderText = "Sqft.(Wd)";
             this.SqftWoodCoating.MaxInputLength = 10;
             this.SqftWoodCoating.Name = "SqftWoodCoating";
-            this.SqftWoodCoating.Width = 130;
+            this.SqftWoodCoating.Width = 110;
             // 
             // RateWoodCoating
             // 
-            this.RateWoodCoating.HeaderText = "Rate(Wood)";
+            this.RateWoodCoating.DataPropertyName = "WoodRate";
+            this.RateWoodCoating.HeaderText = "Rate(Wd)";
             this.RateWoodCoating.MaxInputLength = 10;
             this.RateWoodCoating.Name = "RateWoodCoating";
-            this.RateWoodCoating.Width = 130;
             // 
             // TotalWoodCoating
             // 
-            this.TotalWoodCoating.HeaderText = "Total(Wood)";
+            this.TotalWoodCoating.HeaderText = "Total(Wd)";
             this.TotalWoodCoating.MaxInputLength = 10;
             this.TotalWoodCoating.Name = "TotalWoodCoating";
             this.TotalWoodCoating.Width = 130;
@@ -267,6 +632,7 @@
             this.TotalWood.HeaderText = "Total";
             this.TotalWood.MaxInputLength = 10;
             this.TotalWood.Name = "TotalWood";
+            this.TotalWood.Width = 130;
             // 
             // BtnRemove
             // 
@@ -332,231 +698,42 @@
             this.FTotalWood_id.Name = "FTotalWood_id";
             this.FTotalWood_id.Visible = false;
             // 
-            // grpBoxSize
+            // button1
             // 
-            this.grpBoxSize.Controls.Add(this.txtWidth);
-            this.grpBoxSize.Controls.Add(this.lblWidth);
-            this.grpBoxSize.Controls.Add(this.txtBoxSqFt);
-            this.grpBoxSize.Controls.Add(this.lblShelfQty);
-            this.grpBoxSize.Controls.Add(this.txtBoxQty);
-            this.grpBoxSize.Controls.Add(this.lblBoxSqFt);
-            this.grpBoxSize.Controls.Add(this.txtShutterQty);
-            this.grpBoxSize.Controls.Add(this.lblHeight);
-            this.grpBoxSize.Controls.Add(this.txtShelfQty);
-            this.grpBoxSize.Controls.Add(this.lblShutterQty);
-            this.grpBoxSize.Controls.Add(this.txtDepth);
-            this.grpBoxSize.Controls.Add(this.lblBoxQty);
-            this.grpBoxSize.Controls.Add(this.txtHeight);
-            this.grpBoxSize.Controls.Add(this.lblDepth);
-            this.grpBoxSize.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grpBoxSize.ForeColor = System.Drawing.Color.White;
-            this.grpBoxSize.Location = new System.Drawing.Point(6, 105);
-            this.grpBoxSize.Name = "grpBoxSize";
-            this.grpBoxSize.Size = new System.Drawing.Size(1680, 113);
-            this.grpBoxSize.TabIndex = 38;
-            this.grpBoxSize.TabStop = false;
-            this.grpBoxSize.Text = "Box Size";
+            this.button1.Location = new System.Drawing.Point(411, 32);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 14;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
             // 
-            // txtWidth
+            // btnAdd
             // 
-            this.txtWidth.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtWidth.Location = new System.Drawing.Point(19, 66);
-            this.txtWidth.Name = "txtWidth";
-            this.txtWidth.Size = new System.Drawing.Size(214, 31);
-            this.txtWidth.TabIndex = 2;
-            this.txtWidth.Text = "0";
-            this.txtWidth.TextChanged += new System.EventHandler(this.TxtWidth_TextChanged);
-            this.txtWidth.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtWidth_KeyPress);
+            this.btnAdd.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold);
+            this.btnAdd.ForeColor = System.Drawing.Color.Black;
+            this.btnAdd.Location = new System.Drawing.Point(1509, 13);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(235, 46);
+            this.btnAdd.TabIndex = 55;
+            this.btnAdd.Text = "Add";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
             // 
-            // lblWidth
+            // dgvQuotation
             // 
-            this.lblWidth.AutoSize = true;
-            this.lblWidth.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold);
-            this.lblWidth.ForeColor = System.Drawing.Color.White;
-            this.lblWidth.Location = new System.Drawing.Point(15, 40);
-            this.lblWidth.Name = "lblWidth";
-            this.lblWidth.Size = new System.Drawing.Size(74, 23);
-            this.lblWidth.TabIndex = 24;
-            this.lblWidth.Text = "Width";
-            // 
-            // txtBoxSqFt
-            // 
-            this.txtBoxSqFt.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBoxSqFt.Location = new System.Drawing.Point(1447, 66);
-            this.txtBoxSqFt.Name = "txtBoxSqFt";
-            this.txtBoxSqFt.Size = new System.Drawing.Size(214, 31);
-            this.txtBoxSqFt.TabIndex = 8;
-            this.txtBoxSqFt.Text = "0";
-            this.txtBoxSqFt.TextChanged += new System.EventHandler(this.TxtBoxSqFt_TextChanged);
-            this.txtBoxSqFt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtBoxSqFt_KeyPress);
-            // 
-            // lblShelfQty
-            // 
-            this.lblShelfQty.AutoSize = true;
-            this.lblShelfQty.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold);
-            this.lblShelfQty.ForeColor = System.Drawing.Color.White;
-            this.lblShelfQty.Location = new System.Drawing.Point(729, 40);
-            this.lblShelfQty.Name = "lblShelfQty";
-            this.lblShelfQty.Size = new System.Drawing.Size(110, 23);
-            this.lblShelfQty.TabIndex = 30;
-            this.lblShelfQty.Text = "Shelf Qty";
-            // 
-            // txtBoxQty
-            // 
-            this.txtBoxQty.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBoxQty.Location = new System.Drawing.Point(1209, 66);
-            this.txtBoxQty.Name = "txtBoxQty";
-            this.txtBoxQty.Size = new System.Drawing.Size(214, 31);
-            this.txtBoxQty.TabIndex = 7;
-            this.txtBoxQty.Text = "0";
-            this.txtBoxQty.TextChanged += new System.EventHandler(this.TxtBoxQty_TextChanged);
-            this.txtBoxQty.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtBoxQty_KeyPress);
-            // 
-            // lblBoxSqFt
-            // 
-            this.lblBoxSqFt.AutoSize = true;
-            this.lblBoxSqFt.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold);
-            this.lblBoxSqFt.ForeColor = System.Drawing.Color.White;
-            this.lblBoxSqFt.Location = new System.Drawing.Point(1443, 40);
-            this.lblBoxSqFt.Name = "lblBoxSqFt";
-            this.lblBoxSqFt.Size = new System.Drawing.Size(108, 23);
-            this.lblBoxSqFt.TabIndex = 36;
-            this.lblBoxSqFt.Text = "Box Sq.ft";
-            // 
-            // txtShutterQty
-            // 
-            this.txtShutterQty.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtShutterQty.Location = new System.Drawing.Point(971, 66);
-            this.txtShutterQty.Name = "txtShutterQty";
-            this.txtShutterQty.Size = new System.Drawing.Size(214, 31);
-            this.txtShutterQty.TabIndex = 6;
-            this.txtShutterQty.Text = "0";
-            this.txtShutterQty.TextChanged += new System.EventHandler(this.TxtShutterQty_TextChanged);
-            this.txtShutterQty.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtShutterQty_KeyPress);
-            // 
-            // lblHeight
-            // 
-            this.lblHeight.AutoSize = true;
-            this.lblHeight.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold);
-            this.lblHeight.ForeColor = System.Drawing.Color.White;
-            this.lblHeight.Location = new System.Drawing.Point(253, 40);
-            this.lblHeight.Name = "lblHeight";
-            this.lblHeight.Size = new System.Drawing.Size(82, 23);
-            this.lblHeight.TabIndex = 26;
-            this.lblHeight.Text = "Height";
-            // 
-            // txtShelfQty
-            // 
-            this.txtShelfQty.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtShelfQty.Location = new System.Drawing.Point(733, 66);
-            this.txtShelfQty.Name = "txtShelfQty";
-            this.txtShelfQty.Size = new System.Drawing.Size(214, 31);
-            this.txtShelfQty.TabIndex = 5;
-            this.txtShelfQty.Text = "0";
-            this.txtShelfQty.TextChanged += new System.EventHandler(this.TxtShelfQty_TextChanged);
-            this.txtShelfQty.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtShelfQty_KeyPress);
-            // 
-            // lblShutterQty
-            // 
-            this.lblShutterQty.AutoSize = true;
-            this.lblShutterQty.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold);
-            this.lblShutterQty.ForeColor = System.Drawing.Color.White;
-            this.lblShutterQty.Location = new System.Drawing.Point(967, 40);
-            this.lblShutterQty.Name = "lblShutterQty";
-            this.lblShutterQty.Size = new System.Drawing.Size(136, 23);
-            this.lblShutterQty.TabIndex = 32;
-            this.lblShutterQty.Text = "Shutter Qty";
-            // 
-            // txtDepth
-            // 
-            this.txtDepth.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDepth.Location = new System.Drawing.Point(495, 66);
-            this.txtDepth.Name = "txtDepth";
-            this.txtDepth.Size = new System.Drawing.Size(214, 31);
-            this.txtDepth.TabIndex = 4;
-            this.txtDepth.Text = "0";
-            this.txtDepth.TextChanged += new System.EventHandler(this.TxtDepth_TextChanged);
-            this.txtDepth.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtDepth_KeyPress);
-            // 
-            // lblBoxQty
-            // 
-            this.lblBoxQty.AutoSize = true;
-            this.lblBoxQty.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold);
-            this.lblBoxQty.ForeColor = System.Drawing.Color.White;
-            this.lblBoxQty.Location = new System.Drawing.Point(1205, 40);
-            this.lblBoxQty.Name = "lblBoxQty";
-            this.lblBoxQty.Size = new System.Drawing.Size(94, 23);
-            this.lblBoxQty.TabIndex = 34;
-            this.lblBoxQty.Text = "Box Qty";
-            // 
-            // txtHeight
-            // 
-            this.txtHeight.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHeight.Location = new System.Drawing.Point(257, 66);
-            this.txtHeight.Name = "txtHeight";
-            this.txtHeight.Size = new System.Drawing.Size(214, 31);
-            this.txtHeight.TabIndex = 3;
-            this.txtHeight.Text = "0";
-            this.txtHeight.TextChanged += new System.EventHandler(this.TxtHeight_TextChanged);
-            this.txtHeight.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtHeight_KeyPress);
-            // 
-            // lblDepth
-            // 
-            this.lblDepth.AutoSize = true;
-            this.lblDepth.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold);
-            this.lblDepth.ForeColor = System.Drawing.Color.White;
-            this.lblDepth.Location = new System.Drawing.Point(491, 40);
-            this.lblDepth.Name = "lblDepth";
-            this.lblDepth.Size = new System.Drawing.Size(75, 23);
-            this.lblDepth.TabIndex = 28;
-            this.lblDepth.Text = "Depth";
-            // 
-            // cmbWorkName
-            // 
-            this.cmbWorkName.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbWorkName.FormattingEnabled = true;
-            this.cmbWorkName.Location = new System.Drawing.Point(583, 54);
-            this.cmbWorkName.Name = "cmbWorkName";
-            this.cmbWorkName.Size = new System.Drawing.Size(541, 31);
-            this.cmbWorkName.TabIndex = 1;
-            this.cmbWorkName.SelectedIndexChanged += new System.EventHandler(this.CmbWorkName_SelectedIndexChanged);
-            // 
-            // lblWorkName
-            // 
-            this.lblWorkName.AutoSize = true;
-            this.lblWorkName.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold);
-            this.lblWorkName.ForeColor = System.Drawing.Color.White;
-            this.lblWorkName.Location = new System.Drawing.Point(794, 27);
-            this.lblWorkName.Name = "lblWorkName";
-            this.lblWorkName.Size = new System.Drawing.Size(128, 23);
-            this.lblWorkName.TabIndex = 23;
-            this.lblWorkName.Text = "WorkName";
-            // 
-            // dataGridViewImageColumn1
-            // 
-            this.dataGridViewImageColumn1.HeaderText = "";
-            this.dataGridViewImageColumn1.Image = global::InHouseInteriorsApplication.Properties.Resources.delete;
-            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
-            this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewImageColumn1.Width = 20;
-            // 
-            // pctClose
-            // 
-            this.pctClose.Image = global::InHouseInteriorsApplication.Properties.Resources.close2;
-            this.pctClose.Location = new System.Drawing.Point(1661, 3);
-            this.pctClose.Name = "pctClose";
-            this.pctClose.Size = new System.Drawing.Size(50, 50);
-            this.pctClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pctClose.TabIndex = 11;
-            this.pctClose.TabStop = false;
-            this.pctClose.Click += new System.EventHandler(this.PctClose_Click);
+            this.dgvQuotation.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvQuotation.Location = new System.Drawing.Point(6, 616);
+            this.dgvQuotation.Name = "dgvQuotation";
+            this.dgvQuotation.Size = new System.Drawing.Size(1749, 212);
+            this.dgvQuotation.TabIndex = 56;
             // 
             // WorkTransactionPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Red;
-            this.ClientSize = new System.Drawing.Size(1716, 914);
+            this.ClientSize = new System.Drawing.Size(1834, 933);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.grpDescription);
             this.Controls.Add(this.pctClose);
@@ -566,11 +743,13 @@
             this.Text = "WorkTransaction";
             this.Load += new System.EventHandler(this.WorkTransactionPage_Load);
             this.grpDescription.ResumeLayout(false);
-            this.grpDescription.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvWork)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.grpBoxSize.ResumeLayout(false);
             this.grpBoxSize.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvWork)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctClose)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvQuotation)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -600,6 +779,17 @@
         private System.Windows.Forms.TextBox txtWidth;
         private System.Windows.Forms.DataGridView dgvWork;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
+        private System.Windows.Forms.Label lblTotalsum;
+        private System.Windows.Forms.Label lblTotal;
+        private System.Windows.Forms.Label lblwoodtotal1;
+        private System.Windows.Forms.Label lblwoodtotal;
+        private System.Windows.Forms.Label lbltotalplain1;
+        private System.Windows.Forms.Label lbltotalplain;
+        private System.Windows.Forms.ComboBox cmbQdesc;
+        private System.Windows.Forms.Label lblQdesc;
+        private System.Windows.Forms.Label lblDesc;
+        private System.Windows.Forms.TextBox txtDesc;
+        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Work_id;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewComboBoxColumn DgvCbDescription;
@@ -624,5 +814,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn FSqftWoodCoating_id;
         private System.Windows.Forms.DataGridViewTextBoxColumn FTotalWoodCoating_id;
         private System.Windows.Forms.DataGridViewTextBoxColumn FTotalWood_id;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.DataGridView dgvQuotation;
     }
 }

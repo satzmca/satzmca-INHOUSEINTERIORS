@@ -67,12 +67,12 @@ namespace InHouseInteriorsApplication
                     string res = "";
                     if (txtDes_id.Text !="")
                     {
-                        var dict = JObject.Parse(@"{'Description':'" + txtDescription.Text + "', 'Weight':'" + txtWeight.Text + "', 'Rate':'" + txtRate.Text + "', 'Description_id':'" + txtDes_id.Text + "'}");
+                        var dict = JObject.Parse(@"{'Description':'" + txtDescription.Text + "', 'Weight':'" + txtWeight.Text + "', 'Rate':'" + txtRate.Text + "', 'PlainRate':'" + txtplainRate.Text + "', 'WoodRate':'" + txtWoodRate.Text + "', 'Description_id':'" + txtDes_id.Text + "'}");
                         res = cls.InsertData(SpName: "USP_Description_Insert", ReqType: "UPDATE_DESCRIPTION", dict: dict);
                     }
                     else
                     {
-                        var dict = JObject.Parse(@"{'Description':'" + txtDescription.Text + "', 'Weight':'" + txtWeight.Text + "', 'Rate':'" + txtRate.Text + "'}");
+                        var dict = JObject.Parse(@"{'Description':'" + txtDescription.Text + "', 'Weight':'" + txtWeight.Text + "', 'Rate':'" + txtRate.Text + "', 'PlainRate':'" + txtplainRate.Text + "', 'WoodRate':'" + txtWoodRate.Text + "'}");
                         res = cls.InsertData(SpName: "USP_Description_Insert", ReqType: "INSERT_DESCRIPTION", dict: dict);
                     }
                    
@@ -132,6 +132,8 @@ namespace InHouseInteriorsApplication
                     txtDescription.Text = row.Cells[1].Value.ToString();
                     txtWeight.Text = row.Cells[2].Value.ToString();
                     txtRate.Text = row.Cells[3].Value.ToString();
+                    txtplainRate.Text = row.Cells[4].Value.ToString();
+                    txtWoodRate.Text = row.Cells[5].Value.ToString();
                 }
             }
             catch (Exception ex)
@@ -187,11 +189,51 @@ namespace InHouseInteriorsApplication
             txtWeight.Text = "";
             txtRate.Text = "";
             txtDes_id.Text = "";
+            txtplainRate.Text = "";
+            txtWoodRate.Text = "";
         }
 
         private void TxtWeight_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void TxtplainRate_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+
+            if (Regex.IsMatch(txtplainRate.Text, @"\.\d\d\d\d"))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void TxtWoodRate_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+
+            if (Regex.IsMatch(txtWoodRate.Text, @"\.\d\d\d\d"))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

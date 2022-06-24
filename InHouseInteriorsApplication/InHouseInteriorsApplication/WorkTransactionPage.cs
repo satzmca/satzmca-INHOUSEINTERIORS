@@ -20,6 +20,7 @@ namespace InHouseInteriorsApplication
         ClassConfig cls = new ClassConfig();
         DataTable des_dt = new DataTable();
         DataTable desDetail_dt = new DataTable();
+        DataTable Quotation_dt = new DataTable();
 
         DataTable formula_dt = new DataTable();
         int columIndex2 = 2, columIndex3 = 3, columIndex4 = 4, columIndex5 = 5,
@@ -98,13 +99,16 @@ namespace InHouseInteriorsApplication
 
             var dict = JObject.Parse(@"{'IsWorkSelect':'Y'}");
             workdt = cls.FetchData(SpName: "USP_Work_Insert", ReqType: "SELECT_WORK", dict);
-            //DataRow dr = workdt.NewRow();
-            //dr["Work_id"] = 0;
-            //dr["WorkName"] = "--Select--";
-            //workdt.Rows.Add(dr);
             cmbWorkName.DisplayMember = "WorkName";
             cmbWorkName.ValueMember = "Work_id";
             cmbWorkName.DataSource = workdt;
+
+
+            DataTable qdesc = new DataTable();
+            qdesc = cls.FetchData(SpName: "USP_WorkDetail_Select", ReqType: "SELECT_QUOTATIONDESC");
+            cmbQdesc.DisplayMember = "Q_Description";
+            cmbQdesc.ValueMember = "Q_id";
+            cmbQdesc.DataSource = qdesc;
 
 
             var dict1 = JObject.Parse(@"{'IsDescriptionSelect':'Y'}");
@@ -292,6 +296,47 @@ namespace InHouseInteriorsApplication
                 MessageBox.Show("Error");
                 cls.WriteException("WorkTransactionPage : TxtBoxQty_TextChanged" + ex.ToString());
             }
+        }
+
+        private void DgvWork_CellValidated(object sender, DataGridViewCellEventArgs e)
+        {
+            //if(e.ColumnIndex == columIndex2 && dgvWork.CurrentCell.Value != null)
+            //{
+            //    foreach (DataGridViewRow row in this.dgvWork.Rows)
+            //    {
+            //        if (row.Index == this.dgvWork.CurrentCell.RowIndex)
+            //        {
+            //            continue;
+            //        }
+
+            //        if (this.dgvWork.CurrentCell.Value == null)
+            //        {
+            //            continue;
+            //        }
+
+            //        if (row.Cells[0].Value != null && row.Cells[0].Value.ToString() == dgvWork.CurrentCell.Value.ToString())
+            //        {
+            //            dgvWork.CurrentCell.Value = 0;
+            //        }
+            //    }
+            //}
+        }
+
+        private void BtnAdd_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        static DataRow MakeNewAlldaysRow(DataTable table)
+        {
+            DataRow row = table.NewRow();
+            row["Description_id"] = DBNull.Value;
+            row["Description"] = "";
+            row["Width"] = "";
+            row["Depth"] = "";
+            row["Height"] = "";
+
+            return row;
         }
 
         private void TxtBoxSqFt_TextChanged(object sender, EventArgs e)
@@ -482,10 +527,13 @@ namespace InHouseInteriorsApplication
                 ComboBox comboBox = e.Control as ComboBox;
                 if (comboBox != null)
                 {
+                    
                     comboBox.SelectedIndexChanged -= LastColumnComboSelectionChanged;
                     comboBox.SelectedIndexChanged += LastColumnComboSelectionChanged;
-                    comboBox.Enter -= new EventHandler(ctl_Enter);
-                    comboBox.Enter += new EventHandler(ctl_Enter);
+                    //comboBox.Enter -= new EventHandler(ctl_Enter);
+                    //comboBox.Enter += new EventHandler(ctl_Enter);
+
+
                     //comboBox.MouseWheel -= new MouseEventHandler();
                     //comboBox.MouseWheel += new MouseEventHandler(ctl_MouseWheel);
                     //comboBox.BackColor = Color.White;ctl_MouseWheel
@@ -536,56 +584,61 @@ namespace InHouseInteriorsApplication
                 //sendingCB.ForeColor = Color.Black;
                 //sendingCB.BackColor = Color.White;
 
-                if (sendingCB.SelectedValue != null)
+                if (sendingCB.SelectedValue != null && cmbWorkName.SelectedValue != null &&  cmbWorkName.SelectedValue.ToString() !="0")
                 {
                     if(sendingCB.SelectedValue.ToString() != "" && sendingCB.SelectedValue.ToString() != "System.Data.DataRowView")
                     {
-                        DataRow[] rslt = des_dt.Select("Description_id=" + sendingCB.SelectedValue.ToString());
-                        if (rslt.Length > 0)
-                        {
-                            DataTable dt = rslt.CopyToDataTable();
+                        //DataRow[] rslt = des_dt.Select("Description_id=" + sendingCB.SelectedValue.ToString());
+                        //if (rslt.Length > 0)
+                        //{
+                        //    DataTable dt = rslt.CopyToDataTable();
 
-                            if (dt.Rows.Count > 0)
-                            {
-                                DataGridViewTextBoxCell weight_cel = (DataGridViewTextBoxCell)dgvWork.Rows[currentcell.Y].Cells[columIndex4];
-                                DataGridViewTextBoxCell rate_cel = (DataGridViewTextBoxCell)dgvWork.Rows[currentcell.Y].Cells[columIndex5];
-                                //DataGridViewTextBoxCell rate_cel = (DataGridViewTextBoxCell)dgvWork.Rows[currentcell.Y].Cells[columIndex5];
-                                weight_cel.Value = dt.Rows[0]["Weight"].ToString();
-                                rate_cel.Value = dt.Rows[0]["Rate"].ToString();
+                        //    if (dt.Rows.Count > 0)
+                        //    {
+                                
 
 
                                 DataRow[] rslt2 = desDetail_dt.Select("Work_id=" + cmbWorkName.SelectedValue.ToString() + "And Description_id=" + sendingCB.SelectedValue.ToString());
-                                if (rslt2.Length > 0)
-                                {
-                                    DataTable dt_workdesc = rslt2.CopyToDataTable();
-                                    if (dt_workdesc.Rows.Count > 0)
-                                    {
+                        if (rslt2.Length > 0)
+                        {
+                            DataTable dt_workdesc = rslt2.CopyToDataTable();
+                            if (dt_workdesc.Rows.Count > 0)
+                            {
 
-                                        DataGridViewTextBoxCell size_idcell = (DataGridViewTextBoxCell)dgvWork.Rows[currentcell.Y].Cells[columIndex16];
-                                        DataGridViewTextBoxCell total_idcell = (DataGridViewTextBoxCell)dgvWork.Rows[currentcell.Y].Cells[columIndex17];
+                                DataGridViewTextBoxCell weight_cel = (DataGridViewTextBoxCell)dgvWork.Rows[currentcell.Y].Cells[columIndex4];
+                                DataGridViewTextBoxCell rate_cel = (DataGridViewTextBoxCell)dgvWork.Rows[currentcell.Y].Cells[columIndex5];
+                                DataGridViewTextBoxCell plainrate_cel = (DataGridViewTextBoxCell)dgvWork.Rows[currentcell.Y].Cells[columIndex8];
+                                DataGridViewTextBoxCell woodrate_cel = (DataGridViewTextBoxCell)dgvWork.Rows[currentcell.Y].Cells[columIndex12];
+                                weight_cel.Value = dt_workdesc.Rows[0]["Weight"].ToString();
+                                rate_cel.Value = dt_workdesc.Rows[0]["Rate"].ToString();
+                                plainrate_cel.Value = dt_workdesc.Rows[0]["PlainRate"].ToString();
+                                woodrate_cel.Value = dt_workdesc.Rows[0]["WoodRate"].ToString();
 
-                                        DataGridViewTextBoxCell sqftPlainCoating_idcell = (DataGridViewTextBoxCell)dgvWork.Rows[currentcell.Y].Cells[columIndex18];
-                                        DataGridViewTextBoxCell totalPlainCoating_idcell = (DataGridViewTextBoxCell)dgvWork.Rows[currentcell.Y].Cells[columIndex19];
-                                        DataGridViewTextBoxCell totalPlain_idcell = (DataGridViewTextBoxCell)dgvWork.Rows[currentcell.Y].Cells[columIndex20];
+                                DataGridViewTextBoxCell size_idcell = (DataGridViewTextBoxCell)dgvWork.Rows[currentcell.Y].Cells[columIndex16];
+                                DataGridViewTextBoxCell total_idcell = (DataGridViewTextBoxCell)dgvWork.Rows[currentcell.Y].Cells[columIndex17];
 
-                                        DataGridViewTextBoxCell sqftWoodCoating_idcell = (DataGridViewTextBoxCell)dgvWork.Rows[currentcell.Y].Cells[columIndex21];
-                                        DataGridViewTextBoxCell totalWoodCoating_idcell = (DataGridViewTextBoxCell)dgvWork.Rows[currentcell.Y].Cells[columIndex22];
-                                        DataGridViewTextBoxCell totalWood_idcell = (DataGridViewTextBoxCell)dgvWork.Rows[currentcell.Y].Cells[columIndex23];
+                                DataGridViewTextBoxCell sqftPlainCoating_idcell = (DataGridViewTextBoxCell)dgvWork.Rows[currentcell.Y].Cells[columIndex18];
+                                DataGridViewTextBoxCell totalPlainCoating_idcell = (DataGridViewTextBoxCell)dgvWork.Rows[currentcell.Y].Cells[columIndex19];
+                                DataGridViewTextBoxCell totalPlain_idcell = (DataGridViewTextBoxCell)dgvWork.Rows[currentcell.Y].Cells[columIndex20];
+
+                                DataGridViewTextBoxCell sqftWoodCoating_idcell = (DataGridViewTextBoxCell)dgvWork.Rows[currentcell.Y].Cells[columIndex21];
+                                DataGridViewTextBoxCell totalWoodCoating_idcell = (DataGridViewTextBoxCell)dgvWork.Rows[currentcell.Y].Cells[columIndex22];
+                                DataGridViewTextBoxCell totalWood_idcell = (DataGridViewTextBoxCell)dgvWork.Rows[currentcell.Y].Cells[columIndex23];
 
 
-                                        size_idcell.Value = dt_workdesc.Rows[0]["FSize_id"].ToString();
-                                        total_idcell.Value = dt_workdesc.Rows[0]["FTotal_id"].ToString();
+                                size_idcell.Value = dt_workdesc.Rows[0]["FSize_id"].ToString();
+                                total_idcell.Value = dt_workdesc.Rows[0]["FTotal_id"].ToString();
 
-                                        sqftPlainCoating_idcell.Value = dt_workdesc.Rows[0]["FSqftPlainCoating_id"].ToString();
-                                        totalPlainCoating_idcell.Value = dt_workdesc.Rows[0]["FTotalPlainCoating_id"].ToString();
-                                        totalPlain_idcell.Value = dt_workdesc.Rows[0]["FTotalPlain_id"].ToString();
+                                sqftPlainCoating_idcell.Value = dt_workdesc.Rows[0]["FSqftPlainCoating_id"].ToString();
+                                totalPlainCoating_idcell.Value = dt_workdesc.Rows[0]["FTotalPlainCoating_id"].ToString();
+                                totalPlain_idcell.Value = dt_workdesc.Rows[0]["FTotalPlain_id"].ToString();
 
-                                        sqftWoodCoating_idcell.Value = dt_workdesc.Rows[0]["FSqftWoodCoating_id"].ToString();
-                                        totalWoodCoating_idcell.Value = dt_workdesc.Rows[0]["FTotalWoodCoating_id"].ToString();
-                                        totalWood_idcell.Value = dt_workdesc.Rows[0]["FTotalWood_id"].ToString();
-                                    }
-                                }
+                                sqftWoodCoating_idcell.Value = dt_workdesc.Rows[0]["FSqftWoodCoating_id"].ToString();
+                                totalWoodCoating_idcell.Value = dt_workdesc.Rows[0]["FTotalWoodCoating_id"].ToString();
+                                totalWood_idcell.Value = dt_workdesc.Rows[0]["FTotalWood_id"].ToString();
                             }
+                            //    }
+                            //}
                         }
                     }                    
                 }
@@ -641,7 +694,6 @@ namespace InHouseInteriorsApplication
         public void DataBind()
         {
             
-
             foreach (DataGridViewRow row in dgvWork.Rows)
             {
                 DataGridViewComboBoxCell DescriptionCell = row.Cells[columIndex2] as DataGridViewComboBoxCell;
@@ -799,6 +851,28 @@ namespace InHouseInteriorsApplication
                     }
                 }                
             }
+
+
+            double total = 0;
+            double plaintotal = 0;
+            double plaintotal1 = 0;
+            double woodtotal = 0;
+            double woodtotal1 = 0;
+
+            for (int i = 0; i < dgvWork.Rows.Count; ++i)
+            {
+                total += Convert.ToDouble(dgvWork.Rows[i].Cells[columIndex6].Value);
+                plaintotal += Convert.ToDouble(dgvWork.Rows[i].Cells[columIndex9].Value);
+                plaintotal1 += Convert.ToDouble(dgvWork.Rows[i].Cells[columIndex10].Value);
+                woodtotal += Convert.ToDouble(dgvWork.Rows[i].Cells[columIndex13].Value);
+                woodtotal1 += Convert.ToDouble(dgvWork.Rows[i].Cells[columIndex14].Value);
+            }
+
+            lblTotal.Text = total.ToString();
+            lbltotalplain.Text = plaintotal.ToString();
+            lbltotalplain1.Text = plaintotal1.ToString();
+            lblwoodtotal.Text = woodtotal.ToString();
+            lblwoodtotal1.Text = woodtotal1.ToString();
         }
 
         public double getFormulaCalculation(string formula_id = null, string sizeval = null, string weightval = null, string rateval = null, string totalval=null, string sqftplaincoatingval = null, string plainrateval=null, string totalplaincoatingval = null, string totalplainval = null, string sqftwoodcoatingval = null, string woodrateval = null, string totalwoodcoatingval = null, string totalwoodval = null)
@@ -822,17 +896,19 @@ namespace InHouseInteriorsApplication
                     foreach (string element in arr)
                     {
                         if (element == "Width")
-                            combinedFormula += txtWidth.Text.ToString();
+                            combinedFormula += txtWidth.Text.ToString() == "" ? "0" : txtWidth.Text.ToString();
                         else if (element == "Height")
-                            combinedFormula += txtHeight.Text.ToString();
+                            combinedFormula += txtHeight.Text.ToString() == "" ? "0" : txtHeight.Text.ToString();
                         else if (element == "Depth")
-                            combinedFormula += txtDepth.Text.ToString();
+                            combinedFormula += txtDepth.Text.ToString() =="" ? "0" : txtDepth.Text.ToString();
                         else if (element == "ShelfQty")
-                            combinedFormula += txtShelfQty.Text.ToString();
+                            combinedFormula += txtShelfQty.Text.ToString() == "" ? "0" : txtShelfQty.Text.ToString();
                         else if (element == "ShutterQty")
-                            combinedFormula += txtShutterQty.Text.ToString();
+                            combinedFormula += txtShutterQty.Text.ToString() == "" ? "0" : txtShutterQty.Text.ToString();
+                        else if (element == "BoxQty")
+                            combinedFormula += txtBoxQty.Text.ToString() == "" ? "0" : txtBoxQty.Text.ToString();
                         else if (element == "BoxSqFt")
-                            combinedFormula += txtBoxQty.Text.ToString();
+                            combinedFormula += txtBoxSqFt.Text.ToString() == "" ? "0" : txtBoxSqFt.Text.ToString();
                         else if (element == "Size")
                             combinedFormula += sizeval;
                         else if (element == "Weight")

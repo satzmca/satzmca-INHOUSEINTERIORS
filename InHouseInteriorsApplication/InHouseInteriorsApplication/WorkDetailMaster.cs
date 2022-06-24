@@ -127,7 +127,7 @@ namespace InHouseInteriorsApplication
                         foreach (DataGridViewRow Myrow in dgvWorkDetail.Rows)
                         {            //Here 2 cell is target value and 1 cell is Volume
 
-                            bool achecked = Convert.ToBoolean(Myrow.Cells[0].Value);
+                            bool achecked = Convert.ToBoolean(Myrow.Cells[0].Value.ToString() == "" ? 0 : Myrow.Cells[0].Value);
 
                             if (achecked)
                             {
@@ -204,20 +204,30 @@ namespace InHouseInteriorsApplication
         {
             try
             {
-                if (e.ColumnIndex == 0)
+                if (e.ColumnIndex == 0 && e.RowIndex > 0)
                 {
-                    DataGridViewCheckBoxCell checkCell = (DataGridViewCheckBoxCell)dgvWorkDetail.Rows[e.RowIndex].Cells[e.ColumnIndex];
-                    if (checkCell.Value != null && checkCell.Value.ToString() != "")
+                    if (cmbWorkName.SelectedValue != null)
                     {
-                        bool achecked = Convert.ToBoolean(checkCell.Value);
-                        if (achecked)
-                            checkCell.Value = false;
-                        else
-                            checkCell.Value = true;
-                        dgvWorkDetail.EndEdit();
+                        if (cmbWorkName.SelectedValue.ToString() != "0" && cmbWorkName.SelectedValue.ToString() != "")
+                        {
+                            DataGridViewCheckBoxCell checkCell = (DataGridViewCheckBoxCell)dgvWorkDetail.Rows[e.RowIndex].Cells[e.ColumnIndex];
+                            if (checkCell.Value != null && checkCell.Value.ToString() != "")
+                            {
+                                bool achecked = Convert.ToBoolean(checkCell.Value);
+                                if (achecked)
+                                    checkCell.Value = false;
+                                else
+                                    checkCell.Value = true;
+                                dgvWorkDetail.EndEdit();
 
-                    }                                                                                       
-                }                                    
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Choose Work Name");
+                        }
+                    }
+                }
             }
             catch (Exception ex)
             {

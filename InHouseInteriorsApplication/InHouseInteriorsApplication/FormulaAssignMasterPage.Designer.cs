@@ -30,6 +30,18 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.grpDescription = new System.Windows.Forms.GroupBox();
+            this.cmbTotalWood = new System.Windows.Forms.ComboBox();
+            this.lblTotalWood = new System.Windows.Forms.Label();
+            this.cmbTotalWoodCoating = new System.Windows.Forms.ComboBox();
+            this.lblTotalWoodCoating = new System.Windows.Forms.Label();
+            this.cmbSqftWoodCoating = new System.Windows.Forms.ComboBox();
+            this.lblSqftWoodCoating = new System.Windows.Forms.Label();
+            this.cmbTotalPlain = new System.Windows.Forms.ComboBox();
+            this.lblTotalPlain = new System.Windows.Forms.Label();
+            this.cmbTotalPlainCoating = new System.Windows.Forms.ComboBox();
+            this.lblTotalPlainCoating = new System.Windows.Forms.Label();
+            this.cmbSqftCoatingPlain = new System.Windows.Forms.ComboBox();
+            this.lblSqftCoatingPlain = new System.Windows.Forms.Label();
             this.txtFAssign_id = new System.Windows.Forms.TextBox();
             this.cmbDescription = new System.Windows.Forms.ComboBox();
             this.lblDescription = new System.Windows.Forms.Label();
@@ -42,20 +54,6 @@
             this.btnClear = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.dgvFormulaAssign = new System.Windows.Forms.DataGridView();
-            this.btnSave = new System.Windows.Forms.Button();
-            this.pctClose = new System.Windows.Forms.PictureBox();
-            this.cmbSqftCoatingPlain = new System.Windows.Forms.ComboBox();
-            this.lblSqftCoatingPlain = new System.Windows.Forms.Label();
-            this.cmbTotalPlainCoating = new System.Windows.Forms.ComboBox();
-            this.lblTotalPlainCoating = new System.Windows.Forms.Label();
-            this.cmbTotalPlain = new System.Windows.Forms.ComboBox();
-            this.lblTotalPlain = new System.Windows.Forms.Label();
-            this.cmbSqftWoodCoating = new System.Windows.Forms.ComboBox();
-            this.lblSqftWoodCoating = new System.Windows.Forms.Label();
-            this.cmbTotalWoodCoating = new System.Windows.Forms.ComboBox();
-            this.lblTotalWoodCoating = new System.Windows.Forms.Label();
-            this.cmbTotalWood = new System.Windows.Forms.ComboBox();
-            this.lblTotalWood = new System.Windows.Forms.Label();
             this.FAssign_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Work_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Description_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -69,6 +67,8 @@
             this.FSqftWoodCoating_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FTotalWoodCoating_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FTotalWood_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.pctClose = new System.Windows.Forms.PictureBox();
             this.grpDescription.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFormulaAssign)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctClose)).BeginInit();
@@ -90,6 +90,7 @@
             this.grpDescription.Controls.Add(this.cmbTotalWood);
             this.grpDescription.Controls.Add(this.lblTotalWood);
             this.grpDescription.Controls.Add(this.cmbTotalWoodCoating);
+            this.grpDescription.Controls.Add(this.txtFAssign_id);
             this.grpDescription.Controls.Add(this.lblTotalWoodCoating);
             this.grpDescription.Controls.Add(this.cmbSqftWoodCoating);
             this.grpDescription.Controls.Add(this.lblSqftWoodCoating);
@@ -99,7 +100,6 @@
             this.grpDescription.Controls.Add(this.lblTotalPlainCoating);
             this.grpDescription.Controls.Add(this.cmbSqftCoatingPlain);
             this.grpDescription.Controls.Add(this.lblSqftCoatingPlain);
-            this.grpDescription.Controls.Add(this.txtFAssign_id);
             this.grpDescription.Controls.Add(this.cmbDescription);
             this.grpDescription.Controls.Add(this.lblDescription);
             this.grpDescription.Controls.Add(this.cmbWorkName);
@@ -121,9 +121,129 @@
             this.grpDescription.TabStop = false;
             this.grpDescription.Text = "Formula Assign Master";
             // 
+            // cmbTotalWood
+            // 
+            this.cmbTotalWood.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbTotalWood.FormattingEnabled = true;
+            this.cmbTotalWood.Location = new System.Drawing.Point(1028, 344);
+            this.cmbTotalWood.Name = "cmbTotalWood";
+            this.cmbTotalWood.Size = new System.Drawing.Size(497, 31);
+            this.cmbTotalWood.TabIndex = 40;
+            // 
+            // lblTotalWood
+            // 
+            this.lblTotalWood.AutoSize = true;
+            this.lblTotalWood.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalWood.ForeColor = System.Drawing.Color.White;
+            this.lblTotalWood.Location = new System.Drawing.Point(792, 352);
+            this.lblTotalWood.Name = "lblTotalWood";
+            this.lblTotalWood.Size = new System.Drawing.Size(132, 23);
+            this.lblTotalWood.TabIndex = 39;
+            this.lblTotalWood.Text = "Total Wood";
+            // 
+            // cmbTotalWoodCoating
+            // 
+            this.cmbTotalWoodCoating.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbTotalWoodCoating.FormattingEnabled = true;
+            this.cmbTotalWoodCoating.Location = new System.Drawing.Point(1028, 270);
+            this.cmbTotalWoodCoating.Name = "cmbTotalWoodCoating";
+            this.cmbTotalWoodCoating.Size = new System.Drawing.Size(497, 31);
+            this.cmbTotalWoodCoating.TabIndex = 38;
+            // 
+            // lblTotalWoodCoating
+            // 
+            this.lblTotalWoodCoating.AutoSize = true;
+            this.lblTotalWoodCoating.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalWoodCoating.ForeColor = System.Drawing.Color.White;
+            this.lblTotalWoodCoating.Location = new System.Drawing.Point(792, 276);
+            this.lblTotalWoodCoating.Name = "lblTotalWoodCoating";
+            this.lblTotalWoodCoating.Size = new System.Drawing.Size(235, 23);
+            this.lblTotalWoodCoating.TabIndex = 37;
+            this.lblTotalWoodCoating.Text = "Total(Wood Coating)";
+            // 
+            // cmbSqftWoodCoating
+            // 
+            this.cmbSqftWoodCoating.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbSqftWoodCoating.FormattingEnabled = true;
+            this.cmbSqftWoodCoating.Location = new System.Drawing.Point(1028, 196);
+            this.cmbSqftWoodCoating.Name = "cmbSqftWoodCoating";
+            this.cmbSqftWoodCoating.Size = new System.Drawing.Size(497, 31);
+            this.cmbSqftWoodCoating.TabIndex = 36;
+            // 
+            // lblSqftWoodCoating
+            // 
+            this.lblSqftWoodCoating.AutoSize = true;
+            this.lblSqftWoodCoating.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSqftWoodCoating.ForeColor = System.Drawing.Color.White;
+            this.lblSqftWoodCoating.Location = new System.Drawing.Point(792, 200);
+            this.lblSqftWoodCoating.Name = "lblSqftWoodCoating";
+            this.lblSqftWoodCoating.Size = new System.Drawing.Size(224, 23);
+            this.lblSqftWoodCoating.TabIndex = 35;
+            this.lblSqftWoodCoating.Text = "Sqft(Wood Coating)";
+            // 
+            // cmbTotalPlain
+            // 
+            this.cmbTotalPlain.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbTotalPlain.FormattingEnabled = true;
+            this.cmbTotalPlain.Location = new System.Drawing.Point(1028, 122);
+            this.cmbTotalPlain.Name = "cmbTotalPlain";
+            this.cmbTotalPlain.Size = new System.Drawing.Size(497, 31);
+            this.cmbTotalPlain.TabIndex = 34;
+            // 
+            // lblTotalPlain
+            // 
+            this.lblTotalPlain.AutoSize = true;
+            this.lblTotalPlain.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalPlain.ForeColor = System.Drawing.Color.White;
+            this.lblTotalPlain.Location = new System.Drawing.Point(792, 124);
+            this.lblTotalPlain.Name = "lblTotalPlain";
+            this.lblTotalPlain.Size = new System.Drawing.Size(127, 23);
+            this.lblTotalPlain.TabIndex = 33;
+            this.lblTotalPlain.Text = "Total Plain";
+            // 
+            // cmbTotalPlainCoating
+            // 
+            this.cmbTotalPlainCoating.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbTotalPlainCoating.FormattingEnabled = true;
+            this.cmbTotalPlainCoating.Location = new System.Drawing.Point(1028, 48);
+            this.cmbTotalPlainCoating.Name = "cmbTotalPlainCoating";
+            this.cmbTotalPlainCoating.Size = new System.Drawing.Size(497, 31);
+            this.cmbTotalPlainCoating.TabIndex = 32;
+            // 
+            // lblTotalPlainCoating
+            // 
+            this.lblTotalPlainCoating.AutoSize = true;
+            this.lblTotalPlainCoating.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalPlainCoating.ForeColor = System.Drawing.Color.White;
+            this.lblTotalPlainCoating.Location = new System.Drawing.Point(792, 51);
+            this.lblTotalPlainCoating.Name = "lblTotalPlainCoating";
+            this.lblTotalPlainCoating.Size = new System.Drawing.Size(230, 23);
+            this.lblTotalPlainCoating.TabIndex = 31;
+            this.lblTotalPlainCoating.Text = "Total(Plain Coating)";
+            // 
+            // cmbSqftCoatingPlain
+            // 
+            this.cmbSqftCoatingPlain.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbSqftCoatingPlain.FormattingEnabled = true;
+            this.cmbSqftCoatingPlain.Location = new System.Drawing.Point(271, 347);
+            this.cmbSqftCoatingPlain.Name = "cmbSqftCoatingPlain";
+            this.cmbSqftCoatingPlain.Size = new System.Drawing.Size(497, 31);
+            this.cmbSqftCoatingPlain.TabIndex = 30;
+            // 
+            // lblSqftCoatingPlain
+            // 
+            this.lblSqftCoatingPlain.AutoSize = true;
+            this.lblSqftCoatingPlain.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSqftCoatingPlain.ForeColor = System.Drawing.Color.White;
+            this.lblSqftCoatingPlain.Location = new System.Drawing.Point(39, 355);
+            this.lblSqftCoatingPlain.Name = "lblSqftCoatingPlain";
+            this.lblSqftCoatingPlain.Size = new System.Drawing.Size(219, 23);
+            this.lblSqftCoatingPlain.TabIndex = 29;
+            this.lblSqftCoatingPlain.Text = "Sqft(Plain Coating)";
+            // 
             // txtFAssign_id
             // 
-            this.txtFAssign_id.Location = new System.Drawing.Point(46, 48);
+            this.txtFAssign_id.Location = new System.Drawing.Point(459, 427);
             this.txtFAssign_id.Name = "txtFAssign_id";
             this.txtFAssign_id.Size = new System.Drawing.Size(100, 31);
             this.txtFAssign_id.TabIndex = 28;
@@ -133,17 +253,18 @@
             // 
             this.cmbDescription.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbDescription.FormattingEnabled = true;
-            this.cmbDescription.Location = new System.Drawing.Point(413, 122);
+            this.cmbDescription.Location = new System.Drawing.Point(271, 125);
             this.cmbDescription.Name = "cmbDescription";
-            this.cmbDescription.Size = new System.Drawing.Size(350, 31);
+            this.cmbDescription.Size = new System.Drawing.Size(497, 31);
             this.cmbDescription.TabIndex = 26;
+            this.cmbDescription.SelectedIndexChanged += new System.EventHandler(this.CmbDescription_SelectedIndexChanged);
             // 
             // lblDescription
             // 
             this.lblDescription.AutoSize = true;
             this.lblDescription.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDescription.ForeColor = System.Drawing.Color.White;
-            this.lblDescription.Location = new System.Drawing.Point(181, 124);
+            this.lblDescription.Location = new System.Drawing.Point(39, 127);
             this.lblDescription.Name = "lblDescription";
             this.lblDescription.Size = new System.Drawing.Size(133, 23);
             this.lblDescription.TabIndex = 25;
@@ -155,9 +276,9 @@
             this.cmbWorkName.FormattingEnabled = true;
             this.cmbWorkName.Items.AddRange(new object[] {
             "--Select--"});
-            this.cmbWorkName.Location = new System.Drawing.Point(413, 48);
+            this.cmbWorkName.Location = new System.Drawing.Point(271, 51);
             this.cmbWorkName.Name = "cmbWorkName";
-            this.cmbWorkName.Size = new System.Drawing.Size(350, 31);
+            this.cmbWorkName.Size = new System.Drawing.Size(497, 31);
             this.cmbWorkName.TabIndex = 23;
             this.cmbWorkName.SelectedIndexChanged += new System.EventHandler(this.CmbWorkName_SelectedIndexChanged);
             // 
@@ -166,7 +287,7 @@
             this.lblWorkName.AutoSize = true;
             this.lblWorkName.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold);
             this.lblWorkName.ForeColor = System.Drawing.Color.White;
-            this.lblWorkName.Location = new System.Drawing.Point(181, 48);
+            this.lblWorkName.Location = new System.Drawing.Point(39, 51);
             this.lblWorkName.Name = "lblWorkName";
             this.lblWorkName.Size = new System.Drawing.Size(128, 23);
             this.lblWorkName.TabIndex = 24;
@@ -176,9 +297,9 @@
             // 
             this.cmbTotalFormula.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbTotalFormula.FormattingEnabled = true;
-            this.cmbTotalFormula.Location = new System.Drawing.Point(413, 270);
+            this.cmbTotalFormula.Location = new System.Drawing.Point(271, 273);
             this.cmbTotalFormula.Name = "cmbTotalFormula";
-            this.cmbTotalFormula.Size = new System.Drawing.Size(350, 31);
+            this.cmbTotalFormula.Size = new System.Drawing.Size(497, 31);
             this.cmbTotalFormula.TabIndex = 22;
             // 
             // lblTotalFormula
@@ -186,7 +307,7 @@
             this.lblTotalFormula.AutoSize = true;
             this.lblTotalFormula.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotalFormula.ForeColor = System.Drawing.Color.White;
-            this.lblTotalFormula.Location = new System.Drawing.Point(181, 276);
+            this.lblTotalFormula.Location = new System.Drawing.Point(39, 279);
             this.lblTotalFormula.Name = "lblTotalFormula";
             this.lblTotalFormula.Size = new System.Drawing.Size(160, 23);
             this.lblTotalFormula.TabIndex = 21;
@@ -196,9 +317,9 @@
             // 
             this.cmbSizeFormula.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbSizeFormula.FormattingEnabled = true;
-            this.cmbSizeFormula.Location = new System.Drawing.Point(413, 196);
+            this.cmbSizeFormula.Location = new System.Drawing.Point(271, 199);
             this.cmbSizeFormula.Name = "cmbSizeFormula";
-            this.cmbSizeFormula.Size = new System.Drawing.Size(350, 31);
+            this.cmbSizeFormula.Size = new System.Drawing.Size(497, 31);
             this.cmbSizeFormula.TabIndex = 20;
             // 
             // lblSizeFormula
@@ -206,7 +327,7 @@
             this.lblSizeFormula.AutoSize = true;
             this.lblSizeFormula.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSizeFormula.ForeColor = System.Drawing.Color.White;
-            this.lblSizeFormula.Location = new System.Drawing.Point(181, 200);
+            this.lblSizeFormula.Location = new System.Drawing.Point(39, 203);
             this.lblSizeFormula.Name = "lblSizeFormula";
             this.lblSizeFormula.Size = new System.Drawing.Size(150, 23);
             this.lblSizeFormula.TabIndex = 19;
@@ -264,149 +385,6 @@
             this.dgvFormulaAssign.Size = new System.Drawing.Size(1614, 341);
             this.dgvFormulaAssign.TabIndex = 15;
             this.dgvFormulaAssign.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvFormulaAssign_CellClick);
-            // 
-            // btnSave
-            // 
-            this.btnSave.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold);
-            this.btnSave.ForeColor = System.Drawing.Color.Black;
-            this.btnSave.Location = new System.Drawing.Point(580, 420);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(150, 42);
-            this.btnSave.TabIndex = 12;
-            this.btnSave.Text = "Save";
-            this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
-            // 
-            // pctClose
-            // 
-            this.pctClose.Image = global::InHouseInteriorsApplication.Properties.Resources.close2;
-            this.pctClose.Location = new System.Drawing.Point(1596, 1);
-            this.pctClose.Name = "pctClose";
-            this.pctClose.Size = new System.Drawing.Size(50, 50);
-            this.pctClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pctClose.TabIndex = 15;
-            this.pctClose.TabStop = false;
-            this.pctClose.Click += new System.EventHandler(this.PctClose_Click);
-            // 
-            // cmbSqftCoatingPlain
-            // 
-            this.cmbSqftCoatingPlain.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbSqftCoatingPlain.FormattingEnabled = true;
-            this.cmbSqftCoatingPlain.Location = new System.Drawing.Point(413, 344);
-            this.cmbSqftCoatingPlain.Name = "cmbSqftCoatingPlain";
-            this.cmbSqftCoatingPlain.Size = new System.Drawing.Size(350, 31);
-            this.cmbSqftCoatingPlain.TabIndex = 30;
-            // 
-            // lblSqftCoatingPlain
-            // 
-            this.lblSqftCoatingPlain.AutoSize = true;
-            this.lblSqftCoatingPlain.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSqftCoatingPlain.ForeColor = System.Drawing.Color.White;
-            this.lblSqftCoatingPlain.Location = new System.Drawing.Point(181, 352);
-            this.lblSqftCoatingPlain.Name = "lblSqftCoatingPlain";
-            this.lblSqftCoatingPlain.Size = new System.Drawing.Size(219, 23);
-            this.lblSqftCoatingPlain.TabIndex = 29;
-            this.lblSqftCoatingPlain.Text = "Sqft(Plain Coating)";
-            // 
-            // cmbTotalPlainCoating
-            // 
-            this.cmbTotalPlainCoating.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbTotalPlainCoating.FormattingEnabled = true;
-            this.cmbTotalPlainCoating.Location = new System.Drawing.Point(1028, 48);
-            this.cmbTotalPlainCoating.Name = "cmbTotalPlainCoating";
-            this.cmbTotalPlainCoating.Size = new System.Drawing.Size(350, 31);
-            this.cmbTotalPlainCoating.TabIndex = 32;
-            // 
-            // lblTotalPlainCoating
-            // 
-            this.lblTotalPlainCoating.AutoSize = true;
-            this.lblTotalPlainCoating.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalPlainCoating.ForeColor = System.Drawing.Color.White;
-            this.lblTotalPlainCoating.Location = new System.Drawing.Point(792, 51);
-            this.lblTotalPlainCoating.Name = "lblTotalPlainCoating";
-            this.lblTotalPlainCoating.Size = new System.Drawing.Size(230, 23);
-            this.lblTotalPlainCoating.TabIndex = 31;
-            this.lblTotalPlainCoating.Text = "Total(Plain Coating)";
-            // 
-            // cmbTotalPlain
-            // 
-            this.cmbTotalPlain.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbTotalPlain.FormattingEnabled = true;
-            this.cmbTotalPlain.Location = new System.Drawing.Point(1028, 122);
-            this.cmbTotalPlain.Name = "cmbTotalPlain";
-            this.cmbTotalPlain.Size = new System.Drawing.Size(350, 31);
-            this.cmbTotalPlain.TabIndex = 34;
-            // 
-            // lblTotalPlain
-            // 
-            this.lblTotalPlain.AutoSize = true;
-            this.lblTotalPlain.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalPlain.ForeColor = System.Drawing.Color.White;
-            this.lblTotalPlain.Location = new System.Drawing.Point(792, 124);
-            this.lblTotalPlain.Name = "lblTotalPlain";
-            this.lblTotalPlain.Size = new System.Drawing.Size(127, 23);
-            this.lblTotalPlain.TabIndex = 33;
-            this.lblTotalPlain.Text = "Total Plain";
-            // 
-            // cmbSqftWoodCoating
-            // 
-            this.cmbSqftWoodCoating.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbSqftWoodCoating.FormattingEnabled = true;
-            this.cmbSqftWoodCoating.Location = new System.Drawing.Point(1028, 196);
-            this.cmbSqftWoodCoating.Name = "cmbSqftWoodCoating";
-            this.cmbSqftWoodCoating.Size = new System.Drawing.Size(350, 31);
-            this.cmbSqftWoodCoating.TabIndex = 36;
-            // 
-            // lblSqftWoodCoating
-            // 
-            this.lblSqftWoodCoating.AutoSize = true;
-            this.lblSqftWoodCoating.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSqftWoodCoating.ForeColor = System.Drawing.Color.White;
-            this.lblSqftWoodCoating.Location = new System.Drawing.Point(792, 200);
-            this.lblSqftWoodCoating.Name = "lblSqftWoodCoating";
-            this.lblSqftWoodCoating.Size = new System.Drawing.Size(224, 23);
-            this.lblSqftWoodCoating.TabIndex = 35;
-            this.lblSqftWoodCoating.Text = "Sqft(Wood Coating)";
-            // 
-            // cmbTotalWoodCoating
-            // 
-            this.cmbTotalWoodCoating.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbTotalWoodCoating.FormattingEnabled = true;
-            this.cmbTotalWoodCoating.Location = new System.Drawing.Point(1028, 270);
-            this.cmbTotalWoodCoating.Name = "cmbTotalWoodCoating";
-            this.cmbTotalWoodCoating.Size = new System.Drawing.Size(350, 31);
-            this.cmbTotalWoodCoating.TabIndex = 38;
-            // 
-            // lblTotalWoodCoating
-            // 
-            this.lblTotalWoodCoating.AutoSize = true;
-            this.lblTotalWoodCoating.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalWoodCoating.ForeColor = System.Drawing.Color.White;
-            this.lblTotalWoodCoating.Location = new System.Drawing.Point(792, 276);
-            this.lblTotalWoodCoating.Name = "lblTotalWoodCoating";
-            this.lblTotalWoodCoating.Size = new System.Drawing.Size(235, 23);
-            this.lblTotalWoodCoating.TabIndex = 37;
-            this.lblTotalWoodCoating.Text = "Total(Wood Coating)";
-            // 
-            // cmbTotalWood
-            // 
-            this.cmbTotalWood.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbTotalWood.FormattingEnabled = true;
-            this.cmbTotalWood.Location = new System.Drawing.Point(1028, 344);
-            this.cmbTotalWood.Name = "cmbTotalWood";
-            this.cmbTotalWood.Size = new System.Drawing.Size(350, 31);
-            this.cmbTotalWood.TabIndex = 40;
-            // 
-            // lblTotalWood
-            // 
-            this.lblTotalWood.AutoSize = true;
-            this.lblTotalWood.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalWood.ForeColor = System.Drawing.Color.White;
-            this.lblTotalWood.Location = new System.Drawing.Point(792, 352);
-            this.lblTotalWood.Name = "lblTotalWood";
-            this.lblTotalWood.Size = new System.Drawing.Size(132, 23);
-            this.lblTotalWood.TabIndex = 39;
-            this.lblTotalWood.Text = "Total Wood";
             // 
             // FAssign_id
             // 
@@ -503,6 +481,29 @@
             this.FTotalWood_id.DataPropertyName = "FTotalWood_id";
             this.FTotalWood_id.HeaderText = "Total";
             this.FTotalWood_id.Name = "FTotalWood_id";
+            // 
+            // btnSave
+            // 
+            this.btnSave.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold);
+            this.btnSave.ForeColor = System.Drawing.Color.Black;
+            this.btnSave.Location = new System.Drawing.Point(580, 420);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(150, 42);
+            this.btnSave.TabIndex = 12;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
+            // 
+            // pctClose
+            // 
+            this.pctClose.Image = global::InHouseInteriorsApplication.Properties.Resources.close2;
+            this.pctClose.Location = new System.Drawing.Point(1596, 1);
+            this.pctClose.Name = "pctClose";
+            this.pctClose.Size = new System.Drawing.Size(50, 50);
+            this.pctClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pctClose.TabIndex = 15;
+            this.pctClose.TabStop = false;
+            this.pctClose.Click += new System.EventHandler(this.PctClose_Click);
             // 
             // FormulaAssignMasterPage
             // 

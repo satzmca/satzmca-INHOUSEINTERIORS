@@ -31,16 +31,16 @@
             this.label1 = new System.Windows.Forms.Label();
             this.grpWorkDetail = new System.Windows.Forms.GroupBox();
             this.dgvWorkDetail = new System.Windows.Forms.DataGridView();
+            this.cmbWorkName = new System.Windows.Forms.ComboBox();
+            this.lblWorkName = new System.Windows.Forms.Label();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.pctClose = new System.Windows.Forms.PictureBox();
             this.IsCheckDescription = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.WorkDetail_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Description_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Weight = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Rate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cmbWorkName = new System.Windows.Forms.ComboBox();
-            this.lblWorkName = new System.Windows.Forms.Label();
-            this.btnSave = new System.Windows.Forms.Button();
-            this.pctClose = new System.Windows.Forms.PictureBox();
             this.grpWorkDetail.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvWorkDetail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctClose)).BeginInit();
@@ -96,44 +96,6 @@
             this.dgvWorkDetail.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvWorkDetail_CellClick);
             this.dgvWorkDetail.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.DgvWorkDetail_CellFormatting);
             // 
-            // IsCheckDescription
-            // 
-            this.IsCheckDescription.DataPropertyName = "IsCheckDescription";
-            this.IsCheckDescription.HeaderText = "Choose";
-            this.IsCheckDescription.Name = "IsCheckDescription";
-            // 
-            // WorkDetail_id
-            // 
-            this.WorkDetail_id.DataPropertyName = "WorkDetail_id";
-            this.WorkDetail_id.HeaderText = "WorkDetail_id";
-            this.WorkDetail_id.Name = "WorkDetail_id";
-            this.WorkDetail_id.Visible = false;
-            // 
-            // Description_id
-            // 
-            this.Description_id.DataPropertyName = "Description_id";
-            this.Description_id.HeaderText = "Description_id";
-            this.Description_id.Name = "Description_id";
-            this.Description_id.Visible = false;
-            // 
-            // Description
-            // 
-            this.Description.DataPropertyName = "Description";
-            this.Description.HeaderText = "Description";
-            this.Description.Name = "Description";
-            // 
-            // Weight
-            // 
-            this.Weight.DataPropertyName = "Weight";
-            this.Weight.HeaderText = "Weight";
-            this.Weight.Name = "Weight";
-            // 
-            // Rate
-            // 
-            this.Rate.DataPropertyName = "Rate";
-            this.Rate.HeaderText = "Rate";
-            this.Rate.Name = "Rate";
-            // 
             // cmbWorkName
             // 
             this.cmbWorkName.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -179,6 +141,47 @@
             this.pctClose.TabIndex = 14;
             this.pctClose.TabStop = false;
             this.pctClose.Click += new System.EventHandler(this.PctClose_Click);
+            // 
+            // IsCheckDescription
+            // 
+            this.IsCheckDescription.DataPropertyName = "IsCheckDescription";
+            this.IsCheckDescription.HeaderText = "Choose";
+            this.IsCheckDescription.Name = "IsCheckDescription";
+            // 
+            // WorkDetail_id
+            // 
+            this.WorkDetail_id.DataPropertyName = "WorkDetail_id";
+            this.WorkDetail_id.HeaderText = "WorkDetail_id";
+            this.WorkDetail_id.Name = "WorkDetail_id";
+            this.WorkDetail_id.Visible = false;
+            // 
+            // Description_id
+            // 
+            this.Description_id.DataPropertyName = "Description_id";
+            this.Description_id.HeaderText = "Description_id";
+            this.Description_id.Name = "Description_id";
+            this.Description_id.Visible = false;
+            // 
+            // Description
+            // 
+            this.Description.DataPropertyName = "Description";
+            this.Description.HeaderText = "Description";
+            this.Description.Name = "Description";
+            this.Description.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Weight
+            // 
+            this.Weight.DataPropertyName = "Weight";
+            this.Weight.HeaderText = "Weight";
+            this.Weight.Name = "Weight";
+            this.Weight.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Rate
+            // 
+            this.Rate.DataPropertyName = "Rate";
+            this.Rate.HeaderText = "Rate";
+            this.Rate.Name = "Rate";
+            this.Rate.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // WorkDetailMaster
             // 

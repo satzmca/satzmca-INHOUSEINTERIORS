@@ -134,6 +134,8 @@ namespace InHouseInteriorsApplication
                         MessageBox.Show("Saved Successfully");
                         Clear();
                         bindwork();
+
+                        cmbDescription.Focus();
                     }
                     else
                     {
@@ -156,7 +158,7 @@ namespace InHouseInteriorsApplication
         {
             txtFAssign_id.Text = "";
             //cmbWorkName.SelectedValue = 0;
-            cmbDescription.SelectedValue = 0;
+            //cmbDescription.SelectedValue = 0;
             cmbSizeFormula.SelectedValue = 0;
             cmbTotalFormula.SelectedValue = 0;
 
@@ -245,6 +247,18 @@ namespace InHouseInteriorsApplication
             try
             {
                 bindwork();
+
+                if (cmbWorkName.SelectedValue != null && cmbWorkName.SelectedValue.ToString() != "" && cmbWorkName.SelectedValue.ToString() != "0")
+                {
+                    cmbDescription.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                    cmbDescription.AutoCompleteSource = AutoCompleteSource.ListItems;
+                    DataTable descdt = new DataTable();
+                    var dict1 = JObject.Parse(@"{'Work_id':'" + cmbWorkName.SelectedValue.ToString() + "'}");
+                    descdt = cls.FetchData(SpName: "USP_Description_Insert", ReqType: "SELECT_DESCRIPTIONBASEDWORK", dict1);
+                    cmbDescription.DisplayMember = "Description";
+                    cmbDescription.ValueMember = "Description_id";
+                    cmbDescription.DataSource = descdt;
+                }
             }
             catch (Exception ex)
             {
@@ -261,18 +275,13 @@ namespace InHouseInteriorsApplication
                 var dict = JObject.Parse(@"{'Work_id':'" + cmbWorkName.SelectedValue.ToString() + "'}");
                 dt = cls.FetchData(SpName: "USP_FormulaAssign_Insert", ReqType: "SELECT_ASSIGNFORMULA", dict: dict);
                 dgvFormulaAssign.AutoGenerateColumns = false;
-                dgvFormulaAssign.DataSource = dt;
-
-
-                cmbDescription.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
-                cmbDescription.AutoCompleteSource = AutoCompleteSource.ListItems;
-                DataTable descdt = new DataTable();
-                var dict1 = JObject.Parse(@"{'Work_id':'" + cmbWorkName.SelectedValue.ToString() + "'}");
-                descdt = cls.FetchData(SpName: "USP_Description_Insert", ReqType: "SELECT_DESCRIPTIONBASEDWORK", dict1);
-                cmbDescription.DisplayMember = "Description";
-                cmbDescription.ValueMember = "Description_id";
-                cmbDescription.DataSource = descdt;
+                dgvFormulaAssign.DataSource = dt;                
             }
+        }
+
+        private void CmbDescription_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

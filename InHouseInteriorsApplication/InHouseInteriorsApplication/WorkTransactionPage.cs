@@ -325,6 +325,7 @@ namespace InHouseInteriorsApplication
         private void BtnAdd_Click(object sender, EventArgs e)
         {
 
+
         }
 
         static DataRow MakeNewAlldaysRow(DataTable table)

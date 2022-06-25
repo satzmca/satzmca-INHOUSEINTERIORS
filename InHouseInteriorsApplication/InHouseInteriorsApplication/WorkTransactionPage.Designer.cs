@@ -28,10 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.grpDescription = new System.Windows.Forms.GroupBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblquotationview = new System.Windows.Forms.Label();
+            this.cmbParty = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnClear = new System.Windows.Forms.Button();
+            this.BtnSave = new System.Windows.Forms.Button();
             this.dgvQuotation = new System.Windows.Forms.DataGridView();
             this.btnAdd = new System.Windows.Forms.Button();
             this.cmbQdesc = new System.Windows.Forms.ComboBox();
@@ -88,10 +93,10 @@
             this.FTotalWood_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.pctClose = new System.Windows.Forms.PictureBox();
-            this.BtnSave = new System.Windows.Forms.Button();
-            this.btnClear = new System.Windows.Forms.Button();
-            this.Quotation_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.QNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtQuotation_id = new System.Windows.Forms.TextBox();
+            this.cmbQuotation = new System.Windows.Forms.ComboBox();
+            this.Q_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.QDetail_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.QDesc_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.QDesc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GWork_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -103,6 +108,11 @@
             this.GTotalPlain = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GTotalWood = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GimageRemove = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Party_Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ShelfQty = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ShutterQty = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BoxQty = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BoxSqFt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grpDescription.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvQuotation)).BeginInit();
@@ -137,6 +147,9 @@
             // panel1
             // 
             this.panel1.AutoScroll = true;
+            this.panel1.Controls.Add(this.lblquotationview);
+            this.panel1.Controls.Add(this.cmbParty);
+            this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.btnClear);
             this.panel1.Controls.Add(this.BtnSave);
             this.panel1.Controls.Add(this.dgvQuotation);
@@ -160,13 +173,68 @@
             this.panel1.Size = new System.Drawing.Size(1792, 841);
             this.panel1.TabIndex = 55;
             // 
+            // lblquotationview
+            // 
+            this.lblquotationview.AutoSize = true;
+            this.lblquotationview.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold);
+            this.lblquotationview.ForeColor = System.Drawing.Color.White;
+            this.lblquotationview.Location = new System.Drawing.Point(15, 588);
+            this.lblquotationview.Name = "lblquotationview";
+            this.lblquotationview.Size = new System.Drawing.Size(118, 23);
+            this.lblquotationview.TabIndex = 61;
+            this.lblquotationview.Text = "Quotation";
+            // 
+            // cmbParty
+            // 
+            this.cmbParty.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbParty.FormattingEnabled = true;
+            this.cmbParty.Location = new System.Drawing.Point(165, 75);
+            this.cmbParty.Name = "cmbParty";
+            this.cmbParty.Size = new System.Drawing.Size(541, 31);
+            this.cmbParty.TabIndex = 59;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold);
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(19, 78);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(67, 23);
+            this.label2.TabIndex = 60;
+            this.label2.Text = "Party";
+            // 
+            // btnClear
+            // 
+            this.btnClear.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold);
+            this.btnClear.ForeColor = System.Drawing.Color.Black;
+            this.btnClear.Location = new System.Drawing.Point(1327, 780);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(428, 46);
+            this.btnClear.TabIndex = 58;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.BtnClear_Click);
+            // 
+            // BtnSave
+            // 
+            this.BtnSave.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold);
+            this.BtnSave.ForeColor = System.Drawing.Color.Black;
+            this.BtnSave.Location = new System.Drawing.Point(1327, 698);
+            this.BtnSave.Name = "BtnSave";
+            this.BtnSave.Size = new System.Drawing.Size(428, 46);
+            this.BtnSave.TabIndex = 57;
+            this.BtnSave.Text = "Save";
+            this.BtnSave.UseVisualStyleBackColor = true;
+            this.BtnSave.Click += new System.EventHandler(this.BtnSave_Click);
+            // 
             // dgvQuotation
             // 
             this.dgvQuotation.AllowUserToAddRows = false;
             this.dgvQuotation.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvQuotation.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Quotation_id,
-            this.QNo,
+            this.Q_id,
+            this.QDetail_id,
             this.QDesc_id,
             this.QDesc,
             this.GWork_id,
@@ -177,7 +245,12 @@
             this.Height,
             this.GTotalPlain,
             this.GTotalWood,
-            this.GimageRemove});
+            this.GimageRemove,
+            this.Party_Id,
+            this.ShelfQty,
+            this.ShutterQty,
+            this.BoxQty,
+            this.BoxSqFt});
             this.dgvQuotation.Location = new System.Drawing.Point(6, 616);
             this.dgvQuotation.Name = "dgvQuotation";
             this.dgvQuotation.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -223,7 +296,7 @@
             this.lblDesc.AutoSize = true;
             this.lblDesc.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold);
             this.lblDesc.ForeColor = System.Drawing.Color.White;
-            this.lblDesc.Location = new System.Drawing.Point(19, 75);
+            this.lblDesc.Location = new System.Drawing.Point(754, 78);
             this.lblDesc.Name = "lblDesc";
             this.lblDesc.Size = new System.Drawing.Size(93, 23);
             this.lblDesc.TabIndex = 54;
@@ -265,9 +338,9 @@
             // txtRemark
             // 
             this.txtRemark.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRemark.Location = new System.Drawing.Point(165, 75);
+            this.txtRemark.Location = new System.Drawing.Point(900, 78);
             this.txtRemark.Name = "txtRemark";
-            this.txtRemark.Size = new System.Drawing.Size(1277, 31);
+            this.txtRemark.Size = new System.Drawing.Size(541, 31);
             this.txtRemark.TabIndex = 53;
             // 
             // lbltotalplain
@@ -574,10 +647,10 @@
             // 
             this.DgvCbDescription.AutoComplete = false;
             this.DgvCbDescription.DataPropertyName = "Description_id";
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.DgvCbDescription.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.DgvCbDescription.DefaultCellStyle = dataGridViewCellStyle3;
             this.DgvCbDescription.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox;
             this.DgvCbDescription.HeaderText = "Description";
             this.DgvCbDescription.Name = "DgvCbDescription";
@@ -752,43 +825,37 @@
             this.pctClose.TabStop = false;
             this.pctClose.Click += new System.EventHandler(this.PctClose_Click);
             // 
-            // BtnSave
+            // txtQuotation_id
             // 
-            this.BtnSave.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold);
-            this.BtnSave.ForeColor = System.Drawing.Color.Black;
-            this.BtnSave.Location = new System.Drawing.Point(1327, 699);
-            this.BtnSave.Name = "BtnSave";
-            this.BtnSave.Size = new System.Drawing.Size(428, 46);
-            this.BtnSave.TabIndex = 57;
-            this.BtnSave.Text = "Save";
-            this.BtnSave.UseVisualStyleBackColor = true;
-            this.BtnSave.Click += new System.EventHandler(this.BtnSave_Click);
+            this.txtQuotation_id.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtQuotation_id.Location = new System.Drawing.Point(266, 25);
+            this.txtQuotation_id.Name = "txtQuotation_id";
+            this.txtQuotation_id.Size = new System.Drawing.Size(212, 31);
+            this.txtQuotation_id.TabIndex = 61;
             // 
-            // btnClear
+            // cmbQuotation
             // 
-            this.btnClear.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold);
-            this.btnClear.ForeColor = System.Drawing.Color.Black;
-            this.btnClear.Location = new System.Drawing.Point(1327, 782);
-            this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(428, 46);
-            this.btnClear.TabIndex = 58;
-            this.btnClear.Text = "Clear";
-            this.btnClear.UseVisualStyleBackColor = true;
-            this.btnClear.Click += new System.EventHandler(this.BtnClear_Click);
+            this.cmbQuotation.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbQuotation.FormattingEnabled = true;
+            this.cmbQuotation.Location = new System.Drawing.Point(1223, 12);
+            this.cmbQuotation.Name = "cmbQuotation";
+            this.cmbQuotation.Size = new System.Drawing.Size(541, 31);
+            this.cmbQuotation.TabIndex = 62;
+            this.cmbQuotation.SelectedIndexChanged += new System.EventHandler(this.CmbQuotation_SelectedIndexChanged);
             // 
-            // Quotation_id
+            // Q_id
             // 
-            this.Quotation_id.DataPropertyName = "Quotation_id";
-            this.Quotation_id.HeaderText = "Quotation_id";
-            this.Quotation_id.Name = "Quotation_id";
-            this.Quotation_id.Visible = false;
+            this.Q_id.DataPropertyName = "Q_id";
+            this.Q_id.HeaderText = "Q_id";
+            this.Q_id.Name = "Q_id";
+            this.Q_id.Visible = false;
             // 
-            // QNo
+            // QDetail_id
             // 
-            this.QNo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.QNo.DataPropertyName = "QNo";
-            this.QNo.HeaderText = "QNo";
-            this.QNo.Name = "QNo";
+            this.QDetail_id.DataPropertyName = "QDetail_id";
+            this.QDetail_id.HeaderText = "QDetail_id";
+            this.QDetail_id.Name = "QDetail_id";
+            this.QDetail_id.Visible = false;
             // 
             // QDesc_id
             // 
@@ -875,12 +942,49 @@
             this.GimageRemove.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.GimageRemove.Width = 20;
             // 
+            // Party_Id
+            // 
+            this.Party_Id.DataPropertyName = "Party_Id";
+            this.Party_Id.HeaderText = "Party_Id";
+            this.Party_Id.Name = "Party_Id";
+            this.Party_Id.Visible = false;
+            // 
+            // ShelfQty
+            // 
+            this.ShelfQty.DataPropertyName = "ShelfQty";
+            this.ShelfQty.HeaderText = "ShelfQty";
+            this.ShelfQty.Name = "ShelfQty";
+            this.ShelfQty.Visible = false;
+            // 
+            // ShutterQty
+            // 
+            this.ShutterQty.DataPropertyName = "ShutterQty";
+            this.ShutterQty.HeaderText = "ShutterQty";
+            this.ShutterQty.Name = "ShutterQty";
+            this.ShutterQty.Visible = false;
+            // 
+            // BoxQty
+            // 
+            this.BoxQty.DataPropertyName = "BoxQty";
+            this.BoxQty.HeaderText = "BoxQty";
+            this.BoxQty.Name = "BoxQty";
+            this.BoxQty.Visible = false;
+            // 
+            // BoxSqFt
+            // 
+            this.BoxSqFt.DataPropertyName = "BoxSqFt";
+            this.BoxSqFt.HeaderText = "BoxSqFt";
+            this.BoxSqFt.Name = "BoxSqFt";
+            this.BoxSqFt.Visible = false;
+            // 
             // WorkTransactionPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Red;
             this.ClientSize = new System.Drawing.Size(1834, 933);
+            this.Controls.Add(this.cmbQuotation);
+            this.Controls.Add(this.txtQuotation_id);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.grpDescription);
             this.Controls.Add(this.pctClose);
@@ -965,8 +1069,13 @@
         private System.Windows.Forms.DataGridView dgvQuotation;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button BtnSave;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Quotation_id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn QNo;
+        private System.Windows.Forms.ComboBox cmbParty;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtQuotation_id;
+        private System.Windows.Forms.Label lblquotationview;
+        private System.Windows.Forms.ComboBox cmbQuotation;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Q_id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn QDetail_id;
         private System.Windows.Forms.DataGridViewTextBoxColumn QDesc_id;
         private System.Windows.Forms.DataGridViewTextBoxColumn QDesc;
         private System.Windows.Forms.DataGridViewTextBoxColumn GWork_id;
@@ -978,5 +1087,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn GTotalPlain;
         private System.Windows.Forms.DataGridViewTextBoxColumn GTotalWood;
         private System.Windows.Forms.DataGridViewImageColumn GimageRemove;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Party_Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ShelfQty;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ShutterQty;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BoxQty;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BoxSqFt;
     }
 }

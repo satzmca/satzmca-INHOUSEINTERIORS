@@ -118,6 +118,38 @@ namespace InHouseInteriorsApplication.Class
             }            
         }
 
+        public int InsertDataWithId(string SpName, string ReqType, JObject dict = null)
+        {
+            try
+            {
+                int _res = 0;
+                opencon();
+                using (SqlCommand cmd = new SqlCommand(SpName, con))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@ReqType", ReqType);
+                    if (dict != null)
+                    {
+                        foreach (var kv in dict)
+                        {
+                            cmd.Parameters.AddWithValue("@" + kv.Key, kv.Value.ToString());
+                        }
+                    }
+                    cmd.Parameters.Add("@OUTPUT", SqlDbType.Int, 10).Direction = ParameterDirection.Output;
+                    cmd.ExecuteNonQuery();
+                    int val = Convert.ToInt32(cmd.Parameters["@OUTPUT"].Value);
+                    return val;
+                }
+                closecon();
+                return _res;
+            }
+            catch (Exception ex)
+            {
+                WriteException("ClassConfig : InsertDataWithId" + ex.ToString());
+                return 0;
+            }
+        }
+
         public void WriteException(string str)
         {
             try

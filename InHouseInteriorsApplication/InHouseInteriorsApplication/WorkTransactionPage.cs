@@ -442,7 +442,28 @@ namespace InHouseInteriorsApplication
                 if (e.ColumnIndex == 12)
                 {
                     if (e.RowIndex < dgvQuotation.Rows.Count)
-                        dgvQuotation.Rows.RemoveAt(e.RowIndex);
+                    {
+                        DataGridViewRow row = this.dgvQuotation.Rows[e.RowIndex];
+                        string QDetail_id = row.Cells["QDetail_id"].Value.ToString();
+                        if(QDetail_id == "0")
+                        {
+                            dgvQuotation.Rows.RemoveAt(e.RowIndex);
+                        }
+                        else
+                        {
+                            dgvQuotation.Rows.RemoveAt(e.RowIndex);
+
+                            var dict = JObject.Parse(@"{'QDetail_id':'" + QDetail_id.ToString() + "'}");
+                            string res = cls.InsertData(SpName: "USP_Quotation_Insert", ReqType: "DELETE_QUOTATION_DETAIL", dict: dict);
+                            if (res == "1")
+                            {
+                                //Clear();
+                                //bind();
+                            }
+                        }
+                        
+                    }
+                        
                 }
                 else if(e.RowIndex >= 0 && cmbQuotation.SelectedValue.ToString()!="0")
                 {
@@ -604,10 +625,27 @@ namespace InHouseInteriorsApplication
             dt = cls.FetchData(SpName: "USP_Quotation_Insert", ReqType: "SELECT_QUOTATIONDETAIL", dict: dict);
             dgvQuotation.DataSource = null;
             dgvQuotation.AutoGenerateColumns = false;
-            dgvQuotation.DataSource = dt;
+            Quotation_dt = dt;
+            dgvQuotation.DataSource = Quotation_dt;
+
+            if(dgvQuotation.Rows.Count > 0)
+            {
+                cmbParty.SelectedValue = Quotation_dt.Rows[0]["Party_Id"].ToString();
+                cmbQdesc.SelectedValue = Quotation_dt.Rows[0]["QDesc_id"].ToString();
+                cmbWorkName.SelectedValue = Quotation_dt.Rows[0]["GWork_id"].ToString();
+                txtRemark.Text = Quotation_dt.Rows[0]["Remark"].ToString();
+            }
         }
 
+        private void CmbParty_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
+        }
+
+        private void Label2_Click(object sender, EventArgs e)
+        {
+
+        }
 
         private void TxtWidth_KeyPress(object sender, KeyPressEventArgs e)
         {

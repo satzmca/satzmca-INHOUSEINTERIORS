@@ -17,3 +17,5 @@ D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\I
 D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\obj\Debug\InHouseInteriorsApplication.WorkTransactionPage.resources
 D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\obj\Debug\InHouseInteriorsApplication.FormulaMasterPage.resources
 D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\obj\Debug\InHouseInteriorsApplication.FormulaAssignMasterPage.resources
+D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\bin\Debug\Telerik.Reporting.dll
+D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\obj\Debug\InHouseInteriorsApplication.Report.RptQuotation.resources

@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.grpDescription = new System.Windows.Forms.GroupBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -38,6 +38,24 @@
             this.btnClear = new System.Windows.Forms.Button();
             this.BtnSave = new System.Windows.Forms.Button();
             this.dgvQuotation = new System.Windows.Forms.DataGridView();
+            this.Q_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.QDetail_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.QDesc_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.QDesc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GWork_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.WorkName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Remark = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Width = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Depth = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Height = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GTotalPlain = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GTotalWood = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GimageRemove = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Party_Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ShelfQty = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ShutterQty = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BoxQty = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BoxSqFt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnAdd = new System.Windows.Forms.Button();
             this.cmbQdesc = new System.Windows.Forms.ComboBox();
             this.lblwoodtotal1 = new System.Windows.Forms.Label();
@@ -95,24 +113,6 @@
             this.pctClose = new System.Windows.Forms.PictureBox();
             this.txtQuotation_id = new System.Windows.Forms.TextBox();
             this.cmbQuotation = new System.Windows.Forms.ComboBox();
-            this.Q_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.QDetail_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.QDesc_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.QDesc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GWork_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.WorkName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Remark = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Width = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Depth = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Height = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GTotalPlain = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GTotalWood = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GimageRemove = new System.Windows.Forms.DataGridViewImageColumn();
-            this.Party_Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ShelfQty = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ShutterQty = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BoxQty = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BoxSqFt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grpDescription.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvQuotation)).BeginInit();
@@ -188,21 +188,23 @@
             // 
             this.cmbParty.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbParty.FormattingEnabled = true;
-            this.cmbParty.Location = new System.Drawing.Point(165, 75);
+            this.cmbParty.Location = new System.Drawing.Point(170, 12);
             this.cmbParty.Name = "cmbParty";
             this.cmbParty.Size = new System.Drawing.Size(541, 31);
             this.cmbParty.TabIndex = 59;
+            this.cmbParty.SelectedIndexChanged += new System.EventHandler(this.CmbParty_SelectedIndexChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(19, 78);
+            this.label2.Location = new System.Drawing.Point(24, 15);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(67, 23);
             this.label2.TabIndex = 60;
             this.label2.Text = "Party";
+            this.label2.Click += new System.EventHandler(this.Label2_Click);
             // 
             // btnClear
             // 
@@ -255,9 +257,144 @@
             this.dgvQuotation.Name = "dgvQuotation";
             this.dgvQuotation.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgvQuotation.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
+            this.dgvQuotation.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvQuotation.Size = new System.Drawing.Size(1306, 212);
             this.dgvQuotation.TabIndex = 56;
             this.dgvQuotation.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvQuotation_CellClick);
+            // 
+            // Q_id
+            // 
+            this.Q_id.DataPropertyName = "Q_id";
+            this.Q_id.HeaderText = "Q_id";
+            this.Q_id.Name = "Q_id";
+            this.Q_id.Visible = false;
+            // 
+            // QDetail_id
+            // 
+            this.QDetail_id.DataPropertyName = "QDetail_id";
+            this.QDetail_id.HeaderText = "QDetail_id";
+            this.QDetail_id.Name = "QDetail_id";
+            this.QDetail_id.Visible = false;
+            // 
+            // QDesc_id
+            // 
+            this.QDesc_id.DataPropertyName = "QDesc_id";
+            this.QDesc_id.HeaderText = "QDesc_id";
+            this.QDesc_id.Name = "QDesc_id";
+            this.QDesc_id.Visible = false;
+            // 
+            // QDesc
+            // 
+            this.QDesc.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.QDesc.DataPropertyName = "QDesc";
+            this.QDesc.HeaderText = "QDesc";
+            this.QDesc.Name = "QDesc";
+            this.QDesc.Width = 150;
+            // 
+            // GWork_id
+            // 
+            this.GWork_id.DataPropertyName = "GWork_id";
+            this.GWork_id.HeaderText = "GWork_id";
+            this.GWork_id.Name = "GWork_id";
+            this.GWork_id.Visible = false;
+            // 
+            // WorkName
+            // 
+            this.WorkName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.WorkName.DataPropertyName = "WorkName";
+            this.WorkName.HeaderText = "WorkName";
+            this.WorkName.Name = "WorkName";
+            this.WorkName.Width = 200;
+            // 
+            // Remark
+            // 
+            this.Remark.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Remark.DataPropertyName = "Remark";
+            this.Remark.HeaderText = "Remark";
+            this.Remark.Name = "Remark";
+            this.Remark.Width = 300;
+            // 
+            // Width
+            // 
+            this.Width.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Width.DataPropertyName = "Width";
+            this.Width.HeaderText = "Width";
+            this.Width.Name = "Width";
+            // 
+            // Depth
+            // 
+            this.Depth.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Depth.DataPropertyName = "Depth";
+            this.Depth.HeaderText = "Depth";
+            this.Depth.Name = "Depth";
+            // 
+            // Height
+            // 
+            this.Height.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Height.DataPropertyName = "Height";
+            this.Height.HeaderText = "Height";
+            this.Height.Name = "Height";
+            // 
+            // GTotalPlain
+            // 
+            this.GTotalPlain.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.GTotalPlain.DataPropertyName = "GTotalPlain";
+            this.GTotalPlain.HeaderText = "TotalPlain";
+            this.GTotalPlain.Name = "GTotalPlain";
+            this.GTotalPlain.Width = 120;
+            // 
+            // GTotalWood
+            // 
+            this.GTotalWood.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.GTotalWood.DataPropertyName = "GTotalWood";
+            this.GTotalWood.HeaderText = "TotalWood";
+            this.GTotalWood.Name = "GTotalWood";
+            this.GTotalWood.Width = 120;
+            // 
+            // GimageRemove
+            // 
+            this.GimageRemove.HeaderText = "";
+            this.GimageRemove.Image = global::InHouseInteriorsApplication.Properties.Resources.delete;
+            this.GimageRemove.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.GimageRemove.Name = "GimageRemove";
+            this.GimageRemove.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.GimageRemove.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.GimageRemove.Width = 20;
+            // 
+            // Party_Id
+            // 
+            this.Party_Id.DataPropertyName = "Party_Id";
+            this.Party_Id.HeaderText = "Party_Id";
+            this.Party_Id.Name = "Party_Id";
+            this.Party_Id.Visible = false;
+            // 
+            // ShelfQty
+            // 
+            this.ShelfQty.DataPropertyName = "ShelfQty";
+            this.ShelfQty.HeaderText = "ShelfQty";
+            this.ShelfQty.Name = "ShelfQty";
+            this.ShelfQty.Visible = false;
+            // 
+            // ShutterQty
+            // 
+            this.ShutterQty.DataPropertyName = "ShutterQty";
+            this.ShutterQty.HeaderText = "ShutterQty";
+            this.ShutterQty.Name = "ShutterQty";
+            this.ShutterQty.Visible = false;
+            // 
+            // BoxQty
+            // 
+            this.BoxQty.DataPropertyName = "BoxQty";
+            this.BoxQty.HeaderText = "BoxQty";
+            this.BoxQty.Name = "BoxQty";
+            this.BoxQty.Visible = false;
+            // 
+            // BoxSqFt
+            // 
+            this.BoxSqFt.DataPropertyName = "BoxSqFt";
+            this.BoxSqFt.HeaderText = "BoxSqFt";
+            this.BoxSqFt.Name = "BoxSqFt";
+            this.BoxSqFt.Visible = false;
             // 
             // btnAdd
             // 
@@ -275,7 +412,7 @@
             // 
             this.cmbQdesc.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbQdesc.FormattingEnabled = true;
-            this.cmbQdesc.Location = new System.Drawing.Point(165, 13);
+            this.cmbQdesc.Location = new System.Drawing.Point(900, 12);
             this.cmbQdesc.Name = "cmbQdesc";
             this.cmbQdesc.Size = new System.Drawing.Size(541, 31);
             this.cmbQdesc.TabIndex = 51;
@@ -318,7 +455,7 @@
             this.lblWorkName.AutoSize = true;
             this.lblWorkName.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold);
             this.lblWorkName.ForeColor = System.Drawing.Color.White;
-            this.lblWorkName.Location = new System.Drawing.Point(754, 16);
+            this.lblWorkName.Location = new System.Drawing.Point(23, 73);
             this.lblWorkName.Name = "lblWorkName";
             this.lblWorkName.Size = new System.Drawing.Size(128, 23);
             this.lblWorkName.TabIndex = 23;
@@ -358,7 +495,7 @@
             // 
             this.cmbWorkName.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbWorkName.FormattingEnabled = true;
-            this.cmbWorkName.Location = new System.Drawing.Point(901, 13);
+            this.cmbWorkName.Location = new System.Drawing.Point(170, 70);
             this.cmbWorkName.Name = "cmbWorkName";
             this.cmbWorkName.Size = new System.Drawing.Size(541, 31);
             this.cmbWorkName.TabIndex = 1;
@@ -380,7 +517,7 @@
             this.lblQdesc.AutoSize = true;
             this.lblQdesc.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold);
             this.lblQdesc.ForeColor = System.Drawing.Color.White;
-            this.lblQdesc.Location = new System.Drawing.Point(19, 16);
+            this.lblQdesc.Location = new System.Drawing.Point(754, 15);
             this.lblQdesc.Name = "lblQdesc";
             this.lblQdesc.Size = new System.Drawing.Size(84, 23);
             this.lblQdesc.TabIndex = 52;
@@ -647,10 +784,10 @@
             // 
             this.DgvCbDescription.AutoComplete = false;
             this.DgvCbDescription.DataPropertyName = "Description_id";
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.DgvCbDescription.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.DgvCbDescription.DefaultCellStyle = dataGridViewCellStyle4;
             this.DgvCbDescription.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox;
             this.DgvCbDescription.HeaderText = "Description";
             this.DgvCbDescription.Name = "DgvCbDescription";
@@ -832,6 +969,7 @@
             this.txtQuotation_id.Name = "txtQuotation_id";
             this.txtQuotation_id.Size = new System.Drawing.Size(212, 31);
             this.txtQuotation_id.TabIndex = 61;
+            this.txtQuotation_id.Visible = false;
             // 
             // cmbQuotation
             // 
@@ -842,140 +980,6 @@
             this.cmbQuotation.Size = new System.Drawing.Size(541, 31);
             this.cmbQuotation.TabIndex = 62;
             this.cmbQuotation.SelectedIndexChanged += new System.EventHandler(this.CmbQuotation_SelectedIndexChanged);
-            // 
-            // Q_id
-            // 
-            this.Q_id.DataPropertyName = "Q_id";
-            this.Q_id.HeaderText = "Q_id";
-            this.Q_id.Name = "Q_id";
-            this.Q_id.Visible = false;
-            // 
-            // QDetail_id
-            // 
-            this.QDetail_id.DataPropertyName = "QDetail_id";
-            this.QDetail_id.HeaderText = "QDetail_id";
-            this.QDetail_id.Name = "QDetail_id";
-            this.QDetail_id.Visible = false;
-            // 
-            // QDesc_id
-            // 
-            this.QDesc_id.DataPropertyName = "QDesc_id";
-            this.QDesc_id.HeaderText = "QDesc_id";
-            this.QDesc_id.Name = "QDesc_id";
-            this.QDesc_id.Visible = false;
-            // 
-            // QDesc
-            // 
-            this.QDesc.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.QDesc.DataPropertyName = "QDesc";
-            this.QDesc.HeaderText = "QDesc";
-            this.QDesc.Name = "QDesc";
-            this.QDesc.Width = 150;
-            // 
-            // GWork_id
-            // 
-            this.GWork_id.DataPropertyName = "GWork_id";
-            this.GWork_id.HeaderText = "GWork_id";
-            this.GWork_id.Name = "GWork_id";
-            this.GWork_id.Visible = false;
-            // 
-            // WorkName
-            // 
-            this.WorkName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.WorkName.DataPropertyName = "WorkName";
-            this.WorkName.HeaderText = "WorkName";
-            this.WorkName.Name = "WorkName";
-            this.WorkName.Width = 200;
-            // 
-            // Remark
-            // 
-            this.Remark.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Remark.DataPropertyName = "Remark";
-            this.Remark.HeaderText = "Remark";
-            this.Remark.Name = "Remark";
-            this.Remark.Width = 300;
-            // 
-            // Width
-            // 
-            this.Width.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Width.DataPropertyName = "Width";
-            this.Width.HeaderText = "Width";
-            this.Width.Name = "Width";
-            // 
-            // Depth
-            // 
-            this.Depth.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Depth.DataPropertyName = "Depth";
-            this.Depth.HeaderText = "Depth";
-            this.Depth.Name = "Depth";
-            // 
-            // Height
-            // 
-            this.Height.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Height.DataPropertyName = "Height";
-            this.Height.HeaderText = "Height";
-            this.Height.Name = "Height";
-            // 
-            // GTotalPlain
-            // 
-            this.GTotalPlain.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.GTotalPlain.DataPropertyName = "GTotalPlain";
-            this.GTotalPlain.HeaderText = "TotalPlain";
-            this.GTotalPlain.Name = "GTotalPlain";
-            this.GTotalPlain.Width = 120;
-            // 
-            // GTotalWood
-            // 
-            this.GTotalWood.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.GTotalWood.DataPropertyName = "GTotalWood";
-            this.GTotalWood.HeaderText = "TotalWood";
-            this.GTotalWood.Name = "GTotalWood";
-            this.GTotalWood.Width = 120;
-            // 
-            // GimageRemove
-            // 
-            this.GimageRemove.HeaderText = "";
-            this.GimageRemove.Image = global::InHouseInteriorsApplication.Properties.Resources.delete;
-            this.GimageRemove.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.GimageRemove.Name = "GimageRemove";
-            this.GimageRemove.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.GimageRemove.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.GimageRemove.Width = 20;
-            // 
-            // Party_Id
-            // 
-            this.Party_Id.DataPropertyName = "Party_Id";
-            this.Party_Id.HeaderText = "Party_Id";
-            this.Party_Id.Name = "Party_Id";
-            this.Party_Id.Visible = false;
-            // 
-            // ShelfQty
-            // 
-            this.ShelfQty.DataPropertyName = "ShelfQty";
-            this.ShelfQty.HeaderText = "ShelfQty";
-            this.ShelfQty.Name = "ShelfQty";
-            this.ShelfQty.Visible = false;
-            // 
-            // ShutterQty
-            // 
-            this.ShutterQty.DataPropertyName = "ShutterQty";
-            this.ShutterQty.HeaderText = "ShutterQty";
-            this.ShutterQty.Name = "ShutterQty";
-            this.ShutterQty.Visible = false;
-            // 
-            // BoxQty
-            // 
-            this.BoxQty.DataPropertyName = "BoxQty";
-            this.BoxQty.HeaderText = "BoxQty";
-            this.BoxQty.Name = "BoxQty";
-            this.BoxQty.Visible = false;
-            // 
-            // BoxSqFt
-            // 
-            this.BoxSqFt.DataPropertyName = "BoxSqFt";
-            this.BoxSqFt.HeaderText = "BoxSqFt";
-            this.BoxSqFt.Name = "BoxSqFt";
-            this.BoxSqFt.Visible = false;
             // 
             // WorkTransactionPage
             // 

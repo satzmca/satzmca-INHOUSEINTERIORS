@@ -34,9 +34,11 @@
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.descriptionMasterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.workMasterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.remarksMasterToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.partyMasterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.workDetailMasterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.formulaMasterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.remarksMasterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.formulaAssignMasterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.transactionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.workTransactionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -46,8 +48,7 @@
             this.lblDate = new System.Windows.Forms.Label();
             this.lblTime = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.remarksMasterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.remarksMasterToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.reportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picTime)).BeginInit();
             this.SuspendLayout();
@@ -59,7 +60,7 @@
             this.fileToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1696, 27);
+            this.menuStrip1.Size = new System.Drawing.Size(1620, 27);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -69,6 +70,7 @@
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem1,
             this.transactionToolStripMenuItem,
+            this.reportToolStripMenuItem,
             this.logOutToolStripMenuItem});
             this.fileToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Italic);
             this.fileToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
@@ -105,6 +107,13 @@
             this.workMasterToolStripMenuItem.Text = "Work Master";
             this.workMasterToolStripMenuItem.Click += new System.EventHandler(this.WorkMasterToolStripMenuItem_Click);
             // 
+            // remarksMasterToolStripMenuItem1
+            // 
+            this.remarksMasterToolStripMenuItem1.Name = "remarksMasterToolStripMenuItem1";
+            this.remarksMasterToolStripMenuItem1.Size = new System.Drawing.Size(221, 24);
+            this.remarksMasterToolStripMenuItem1.Text = "Remarks Master";
+            this.remarksMasterToolStripMenuItem1.Click += new System.EventHandler(this.RemarksMasterToolStripMenuItem1_Click);
+            // 
             // partyMasterToolStripMenuItem
             // 
             this.partyMasterToolStripMenuItem.Name = "partyMasterToolStripMenuItem";
@@ -125,6 +134,12 @@
             this.formulaMasterToolStripMenuItem.Size = new System.Drawing.Size(221, 24);
             this.formulaMasterToolStripMenuItem.Text = "Formula Master";
             this.formulaMasterToolStripMenuItem.Click += new System.EventHandler(this.FormulaMasterToolStripMenuItem_Click);
+            // 
+            // remarksMasterToolStripMenuItem
+            // 
+            this.remarksMasterToolStripMenuItem.Name = "remarksMasterToolStripMenuItem";
+            this.remarksMasterToolStripMenuItem.Size = new System.Drawing.Size(221, 24);
+            this.remarksMasterToolStripMenuItem.Text = "Remarks Master";
             // 
             // formulaAssignMasterToolStripMenuItem
             // 
@@ -206,18 +221,12 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
             // 
-            // remarksMasterToolStripMenuItem
+            // reportToolStripMenuItem
             // 
-            this.remarksMasterToolStripMenuItem.Name = "remarksMasterToolStripMenuItem";
-            this.remarksMasterToolStripMenuItem.Size = new System.Drawing.Size(221, 24);
-            this.remarksMasterToolStripMenuItem.Text = "Remarks Master";
-            // 
-            // remarksMasterToolStripMenuItem1
-            // 
-            this.remarksMasterToolStripMenuItem1.Name = "remarksMasterToolStripMenuItem1";
-            this.remarksMasterToolStripMenuItem1.Size = new System.Drawing.Size(221, 24);
-            this.remarksMasterToolStripMenuItem1.Text = "Remarks Master";
-            this.remarksMasterToolStripMenuItem1.Click += new System.EventHandler(this.RemarksMasterToolStripMenuItem1_Click);
+            this.reportToolStripMenuItem.Name = "reportToolStripMenuItem";
+            this.reportToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.reportToolStripMenuItem.Text = "Report";
+            this.reportToolStripMenuItem.Click += new System.EventHandler(this.reportToolStripMenuItem_Click);
             // 
             // MainPage
             // 
@@ -225,7 +234,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::InHouseInteriorsApplication.Properties.Resources.InHouseBackGround;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1696, 891);
+            this.ClientSize = new System.Drawing.Size(1620, 891);
             this.Controls.Add(this.picTime);
             this.Controls.Add(this.lblDate);
             this.Controls.Add(this.lblTime);
@@ -267,5 +276,6 @@
         private System.Windows.Forms.ToolStripMenuItem formulaAssignMasterToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem remarksMasterToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem remarksMasterToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reportToolStripMenuItem;
     }
 }

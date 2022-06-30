@@ -151,5 +151,12 @@ namespace InHouseInteriorsApplication
                 cls.WriteException("MainPage : RemarksMasterToolStripMenuItem1_Click" + ex.ToString());
             }
         }
+
+        private void reportToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmReport f = new FrmReport();
+            f.Show();
+
+        }
     }
 }

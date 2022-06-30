@@ -55,6 +55,7 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\ALCWPF\Telerik.Reporting.dll</HintPath>
     </Reference>
+    <Reference Include="Telerik.ReportViewer.WinForms, Version=9.0.15.225, Culture=neutral, PublicKeyToken=a9d7983dfcc261be, processorArchitecture=MSIL" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class\ClassConfig.cs" />
@@ -75,6 +76,12 @@
     </Compile>
     <Compile Include="FormulaMasterPage.Designer.cs">
       <DependentUpon>FormulaMasterPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmReport.Designer.cs">
+      <DependentUpon>FrmReport.cs</DependentUpon>
     </Compile>
     <Compile Include="LoginPage.cs">
       <SubType>Form</SubType>
@@ -135,6 +142,9 @@
     <EmbeddedResource Include="FormulaMasterPage.resx">
       <DependentUpon>FormulaMasterPage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmReport.resx">
+      <DependentUpon>FrmReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginPage.resx">
       <DependentUpon>LoginPage.cs</DependentUpon>
     </EmbeddedResource>
@@ -144,6 +154,7 @@
     <EmbeddedResource Include="PartyMasterPage.resx">
       <DependentUpon>PartyMasterPage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

@@ -48,3 +48,131 @@ Parameter name: index
    at InHouseInteriorsApplication.WorkTransactionPage.DgvQuotation_CellClick(Object sender, DataGridViewCellEventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 451
 DescriptionMasterPage : DgvDescription_CellClickSystem.NullReferenceException: Object reference not set to an instance of an object.
    at InHouseInteriorsApplication.WorkTransactionPage.DgvQuotation_CellClick(Object sender, DataGridViewCellEventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 454
+DescriptionMasterPage : DgvDescription_CellClickSystem.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.String.System.IConvertible.ToInt32(IFormatProvider provider)
+   at System.Data.Common.Int32Storage.ConvertValue(Object value)
+   at System.Data.Index.FindNodeByKey(Object originalKey)
+   at System.Data.DataView.System.ComponentModel.IBindingList.Find(PropertyDescriptor property, Object key)
+   at System.Windows.Forms.CurrencyManager.Find(PropertyDescriptor property, Object key, Boolean keepIndex)
+   at System.Windows.Forms.ListControl.set_SelectedValue(Object value)
+   at InHouseInteriorsApplication.WorkTransactionPage.DgvQuotation_CellClick(Object sender, DataGridViewCellEventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 474
+DescriptionMasterPage : DgvDescription_CellClickSystem.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.String.System.IConvertible.ToInt32(IFormatProvider provider)
+   at System.Data.Common.Int32Storage.ConvertValue(Object value)
+   at System.Data.Index.FindNodeByKey(Object originalKey)
+   at System.Data.DataView.System.ComponentModel.IBindingList.Find(PropertyDescriptor property, Object key)
+   at System.Windows.Forms.CurrencyManager.Find(PropertyDescriptor property, Object key, Boolean keepIndex)
+   at System.Windows.Forms.ListControl.set_SelectedValue(Object value)
+   at InHouseInteriorsApplication.WorkTransactionPage.DgvQuotation_CellClick(Object sender, DataGridViewCellEventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 474
+DescriptionMasterPage : DgvDescription_CellClickSystem.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.String.System.IConvertible.ToInt32(IFormatProvider provider)
+   at System.Data.Common.Int32Storage.ConvertValue(Object value)
+   at System.Data.Index.FindNodeByKey(Object originalKey)
+   at System.Data.DataView.System.ComponentModel.IBindingList.Find(PropertyDescriptor property, Object key)
+   at System.Windows.Forms.CurrencyManager.Find(PropertyDescriptor property, Object key, Boolean keepIndex)
+   at System.Windows.Forms.ListControl.set_SelectedValue(Object value)
+   at InHouseInteriorsApplication.WorkTransactionPage.DgvQuotation_CellClick(Object sender, DataGridViewCellEventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 474
+DescriptionMasterPage : DgvDescription_CellClickSystem.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.String.System.IConvertible.ToInt32(IFormatProvider provider)
+   at System.Data.Common.Int32Storage.ConvertValue(Object value)
+   at System.Data.Index.FindNodeByKey(Object originalKey)
+   at System.Data.DataView.System.ComponentModel.IBindingList.Find(PropertyDescriptor property, Object key)
+   at System.Windows.Forms.CurrencyManager.Find(PropertyDescriptor property, Object key, Boolean keepIndex)
+   at System.Windows.Forms.ListControl.set_SelectedValue(Object value)
+   at InHouseInteriorsApplication.WorkTransactionPage.DgvQuotation_CellClick(Object sender, DataGridViewCellEventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 474
+DescriptionMasterPage : DgvDescription_CellClickSystem.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.String.System.IConvertible.ToInt32(IFormatProvider provider)
+   at System.Data.Common.Int32Storage.ConvertValue(Object value)
+   at System.Data.Index.FindNodeByKey(Object originalKey)
+   at System.Data.DataView.System.ComponentModel.IBindingList.Find(PropertyDescriptor property, Object key)
+   at System.Windows.Forms.CurrencyManager.Find(PropertyDescriptor property, Object key, Boolean keepIndex)
+   at System.Windows.Forms.ListControl.set_SelectedValue(Object value)
+   at InHouseInteriorsApplication.WorkTransactionPage.DgvQuotation_CellClick(Object sender, DataGridViewCellEventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 474
+RemarksMasterPage : DgvRemark_CellClickSystem.NullReferenceException: Object reference not set to an instance of an object.
+   at InHouseInteriorsApplication.RemarksMasterPage.DgvRemark_CellClick(Object sender, DataGridViewCellEventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\RemarksMasterPage.cs:line 106
+RemarksMasterPage : DgvRemark_CellClickSystem.NullReferenceException: Object reference not set to an instance of an object.
+   at InHouseInteriorsApplication.RemarksMasterPage.DgvRemark_CellClick(Object sender, DataGridViewCellEventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\RemarksMasterPage.cs:line 110
+RemarksMasterPage : DgvRemark_CellClickSystem.NullReferenceException: Object reference not set to an instance of an object.
+   at InHouseInteriorsApplication.RemarksMasterPage.DgvRemark_CellClick(Object sender, DataGridViewCellEventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\RemarksMasterPage.cs:line 110
+RemarksMasterPage : DgvRemark_CellClickSystem.NullReferenceException: Object reference not set to an instance of an object.
+   at InHouseInteriorsApplication.RemarksMasterPage.DgvRemark_CellClick(Object sender, DataGridViewCellEventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\RemarksMasterPage.cs:line 110
+RemarksMasterPage : DgvRemark_CellClickSystem.NullReferenceException: Object reference not set to an instance of an object.
+   at InHouseInteriorsApplication.RemarksMasterPage.DgvRemark_CellClick(Object sender, DataGridViewCellEventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\RemarksMasterPage.cs:line 110
+ClassConfig : InsertDataSystem.Data.SqlClient.SqlException (0x80131904): @Remark is not a parameter for procedure USP_Quotation_Insert.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at InHouseInteriorsApplication.Class.ClassConfig.InsertData(String SpName, String ReqType, JObject dict) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\Class\ClassConfig.cs:line 105
+ClientConnectionId:0fc98782-7506-47de-b1b7-e71587f06e68
+Error Number:8145,State:1,Class:16
+ClassConfig : InsertDataSystem.Data.SqlClient.SqlException (0x80131904): @Remark is not a parameter for procedure USP_Quotation_Insert.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at InHouseInteriorsApplication.Class.ClassConfig.InsertData(String SpName, String ReqType, JObject dict) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\Class\ClassConfig.cs:line 105
+ClientConnectionId:0fc98782-7506-47de-b1b7-e71587f06e68
+Error Number:8145,State:1,Class:16
+MainPage : WorkTransactionToolStripMenuItem_ClickSystem.ArgumentException: Column 'Remark' does not belong to table .
+   at System.Data.DataRow.GetDataColumn(String columnName)
+   at System.Data.DataRow.set_Item(String columnName, Object value)
+   at InHouseInteriorsApplication.WorkTransactionPage.MakeNewAlldaysRow(DataTable table, String QId, String QDetail_id, String QDesc_id, String QDesc, String Work_id, String WorkName, String Remark, String Width, String Depth, String Height, String TotalPlain, String TotalWood, String Party_Id, String ShelfQty, String ShutterQty, String BoxQty, String BoxSqFt, String Remark_id) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 433
+   at InHouseInteriorsApplication.WorkTransactionPage.BtnAdd_Click(Object sender, EventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 382
+   at System.Windows.Forms.Control.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   at System.Windows.Forms.Button.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.RunDialog(Form form)
+   at System.Windows.Forms.Form.ShowDialog(IWin32Window owner)
+   at System.Windows.Forms.Form.ShowDialog()
+   at InHouseInteriorsApplication.MainPage.WorkTransactionToolStripMenuItem_Click(Object sender, EventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\MainPage.cs:line 104
+ClassConfig : InsertDataSystem.Data.SqlClient.SqlException (0x80131904): @Remark is not a parameter for procedure USP_Quotation_Insert.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at InHouseInteriorsApplication.Class.ClassConfig.InsertData(String SpName, String ReqType, JObject dict) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\Class\ClassConfig.cs:line 105
+ClientConnectionId:0fc98782-7506-47de-b1b7-e71587f06e68
+Error Number:8145,State:1,Class:16
+WorkTransactionPage : BtnSave_ClickSystem.NullReferenceException: Object reference not set to an instance of an object.
+   at InHouseInteriorsApplication.WorkTransactionPage.BtnSave_Click(Object sender, EventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 561
+WorkTransactionPage : BtnSave_ClickSystem.NullReferenceException: Object reference not set to an instance of an object.
+   at InHouseInteriorsApplication.WorkTransactionPage.BtnSave_Click(Object sender, EventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 561
+WorkTransactionPage : BtnSave_ClickSystem.NullReferenceException: Object reference not set to an instance of an object.
+   at InHouseInteriorsApplication.WorkTransactionPage.BtnSave_Click(Object sender, EventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 561

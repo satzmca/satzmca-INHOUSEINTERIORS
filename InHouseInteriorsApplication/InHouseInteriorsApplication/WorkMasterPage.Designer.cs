@@ -30,6 +30,7 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.grpWork = new System.Windows.Forms.GroupBox();
+            this.btnClear = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.txtWork_id = new System.Windows.Forms.TextBox();
             this.dgvWork = new System.Windows.Forms.DataGridView();
@@ -39,7 +40,6 @@
             this.txtWorkName = new System.Windows.Forms.TextBox();
             this.lblWorkName = new System.Windows.Forms.Label();
             this.pctClose = new System.Windows.Forms.PictureBox();
-            this.btnClear = new System.Windows.Forms.Button();
             this.grpWork.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvWork)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctClose)).BeginInit();
@@ -55,6 +55,7 @@
             this.label1.Size = new System.Drawing.Size(289, 45);
             this.label1.TabIndex = 13;
             this.label1.Text = "In-House Interiors";
+            this.label1.Click += new System.EventHandler(this.Label1_Click);
             // 
             // grpWork
             // 
@@ -73,6 +74,19 @@
             this.grpWork.TabIndex = 12;
             this.grpWork.TabStop = false;
             this.grpWork.Text = "Work Master";
+            this.grpWork.Enter += new System.EventHandler(this.GrpWork_Enter);
+            // 
+            // btnClear
+            // 
+            this.btnClear.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold);
+            this.btnClear.ForeColor = System.Drawing.Color.Black;
+            this.btnClear.Location = new System.Drawing.Point(624, 116);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(150, 42);
+            this.btnClear.TabIndex = 28;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.BtnReset_Click);
             // 
             // btnDelete
             // 
@@ -167,18 +181,6 @@
             this.pctClose.TabIndex = 11;
             this.pctClose.TabStop = false;
             this.pctClose.Click += new System.EventHandler(this.PctClose_Click);
-            // 
-            // btnClear
-            // 
-            this.btnClear.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold);
-            this.btnClear.ForeColor = System.Drawing.Color.Black;
-            this.btnClear.Location = new System.Drawing.Point(624, 116);
-            this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(150, 42);
-            this.btnClear.TabIndex = 28;
-            this.btnClear.Text = "Clear";
-            this.btnClear.UseVisualStyleBackColor = true;
-            this.btnClear.Click += new System.EventHandler(this.BtnReset_Click);
             // 
             // WorkMasterPage
             // 

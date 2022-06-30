@@ -127,7 +127,7 @@ namespace InHouseInteriorsApplication
                     var confirmResult = MessageBox.Show("Are you sure to delete '" + txtWorkName.Text + "' ??", "Confirm!!", MessageBoxButtons.YesNo);
                     if (confirmResult == DialogResult.Yes)
                     {
-                        var dict = JObject.Parse(@"{'Description_id':'" + txtWork_id.Text + "'}");
+                        var dict = JObject.Parse(@"{'Work_id':'" + txtWork_id.Text + "'}");
                         string res = cls.InsertData(SpName: "USP_Work_Insert", ReqType: "DELETE_WORK", dict: dict);
                         if (res == "1")
                         {                            
@@ -160,6 +160,16 @@ namespace InHouseInteriorsApplication
         {
             txtWorkName.Text = "";
             txtWork_id.Text = "";
+        }
+
+        private void Label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void GrpWork_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

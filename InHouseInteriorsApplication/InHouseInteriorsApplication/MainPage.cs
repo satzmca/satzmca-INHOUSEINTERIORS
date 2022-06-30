@@ -137,5 +137,19 @@ namespace InHouseInteriorsApplication
                 cls.WriteException("MainPage : FormulaAssignMasterToolStripMenuItem_Click" + ex.ToString());
             }
         }
+
+        private void RemarksMasterToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                RemarksMasterPage RemarksMasterPage = new RemarksMasterPage();
+                RemarksMasterPage.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error");
+                cls.WriteException("MainPage : RemarksMasterToolStripMenuItem1_Click" + ex.ToString());
+            }
+        }
     }
 }

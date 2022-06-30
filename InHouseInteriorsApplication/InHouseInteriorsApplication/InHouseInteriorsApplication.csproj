@@ -96,6 +96,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RemarksMasterPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RemarksMasterPage.Designer.cs">
+      <DependentUpon>RemarksMasterPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Report\RptQuotation.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -148,6 +154,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="RemarksMasterPage.resx">
+      <DependentUpon>RemarksMasterPage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Report\RptQuotation.resx">
       <DependentUpon>RptQuotation.cs</DependentUpon>
     </EmbeddedResource>

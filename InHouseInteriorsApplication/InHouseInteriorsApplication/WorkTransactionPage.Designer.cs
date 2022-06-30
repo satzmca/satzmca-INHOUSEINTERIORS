@@ -32,6 +32,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.grpDescription = new System.Windows.Forms.GroupBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblTransportation = new System.Windows.Forms.Label();
+            this.lblOverallTaxPer = new System.Windows.Forms.Label();
+            this.lblQDescTax = new System.Windows.Forms.Label();
+            this.txtTransportation = new System.Windows.Forms.TextBox();
+            this.txtOverallTaxPer = new System.Windows.Forms.TextBox();
+            this.txtQdescTaxPer = new System.Windows.Forms.TextBox();
             this.cmbRemarks = new System.Windows.Forms.ComboBox();
             this.lblquotationview = new System.Windows.Forms.Label();
             this.cmbParty = new System.Windows.Forms.ComboBox();
@@ -39,6 +45,28 @@
             this.btnClear = new System.Windows.Forms.Button();
             this.BtnSave = new System.Windows.Forms.Button();
             this.dgvQuotation = new System.Windows.Forms.DataGridView();
+            this.Q_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.QDetail_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.QDesc_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.QDesc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GWork_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.WorkName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Remark = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Width = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Depth = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Height = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GTotalPlain = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GTotalWood = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GimageRemove = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Party_Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ShelfQty = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ShutterQty = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BoxQty = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BoxSqFt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Remark_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TaxPer = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Transportation = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DescTaxPer = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnAdd = new System.Windows.Forms.Button();
             this.cmbQdesc = new System.Windows.Forms.ComboBox();
             this.lblwoodtotal1 = new System.Windows.Forms.Label();
@@ -96,34 +124,7 @@
             this.txtQuotation_id = new System.Windows.Forms.TextBox();
             this.cmbQuotation = new System.Windows.Forms.ComboBox();
             this.txt_QuotationRowIndex = new System.Windows.Forms.TextBox();
-            this.txtQdescTaxPer = new System.Windows.Forms.TextBox();
-            this.txtOverallTaxPer = new System.Windows.Forms.TextBox();
-            this.txtTransportation = new System.Windows.Forms.TextBox();
-            this.lblQDescTax = new System.Windows.Forms.Label();
-            this.lblOverallTaxPer = new System.Windows.Forms.Label();
-            this.lblTransportation = new System.Windows.Forms.Label();
-            this.Q_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.QDetail_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.QDesc_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.QDesc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GWork_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.WorkName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Remark = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Width = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Depth = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Height = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GTotalPlain = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GTotalWood = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GimageRemove = new System.Windows.Forms.DataGridViewImageColumn();
-            this.Party_Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ShelfQty = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ShutterQty = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BoxQty = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BoxSqFt = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Remark_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TaxPer = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Transportation = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DescTaxPer = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnClone = new System.Windows.Forms.Button();
             this.grpDescription.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvQuotation)).BeginInit();
@@ -158,6 +159,7 @@
             // panel1
             // 
             this.panel1.AutoScroll = true;
+            this.panel1.Controls.Add(this.btnClone);
             this.panel1.Controls.Add(this.lblTransportation);
             this.panel1.Controls.Add(this.lblOverallTaxPer);
             this.panel1.Controls.Add(this.lblQDescTax);
@@ -190,6 +192,70 @@
             this.panel1.Size = new System.Drawing.Size(1792, 841);
             this.panel1.TabIndex = 55;
             // 
+            // lblTransportation
+            // 
+            this.lblTransportation.AutoSize = true;
+            this.lblTransportation.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold);
+            this.lblTransportation.ForeColor = System.Drawing.Color.White;
+            this.lblTransportation.Location = new System.Drawing.Point(1333, 92);
+            this.lblTransportation.Name = "lblTransportation";
+            this.lblTransportation.Size = new System.Drawing.Size(170, 23);
+            this.lblTransportation.TabIndex = 68;
+            this.lblTransportation.Text = "Transportation";
+            // 
+            // lblOverallTaxPer
+            // 
+            this.lblOverallTaxPer.AutoSize = true;
+            this.lblOverallTaxPer.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold);
+            this.lblOverallTaxPer.ForeColor = System.Drawing.Color.White;
+            this.lblOverallTaxPer.Location = new System.Drawing.Point(1333, 49);
+            this.lblOverallTaxPer.Name = "lblOverallTaxPer";
+            this.lblOverallTaxPer.Size = new System.Drawing.Size(186, 23);
+            this.lblOverallTaxPer.TabIndex = 67;
+            this.lblOverallTaxPer.Text = "Over All Tax(%)";
+            // 
+            // lblQDescTax
+            // 
+            this.lblQDescTax.AutoSize = true;
+            this.lblQDescTax.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold);
+            this.lblQDescTax.ForeColor = System.Drawing.Color.White;
+            this.lblQDescTax.Location = new System.Drawing.Point(1333, 6);
+            this.lblQDescTax.Name = "lblQDescTax";
+            this.lblQDescTax.Size = new System.Drawing.Size(174, 23);
+            this.lblQDescTax.TabIndex = 66;
+            this.lblQDescTax.Text = "Q.Desc Tax(%)";
+            // 
+            // txtTransportation
+            // 
+            this.txtTransportation.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTransportation.Location = new System.Drawing.Point(1526, 89);
+            this.txtTransportation.Name = "txtTransportation";
+            this.txtTransportation.Size = new System.Drawing.Size(214, 31);
+            this.txtTransportation.TabIndex = 65;
+            this.txtTransportation.Text = "0";
+            this.txtTransportation.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtTransportation_KeyPress);
+            // 
+            // txtOverallTaxPer
+            // 
+            this.txtOverallTaxPer.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtOverallTaxPer.Location = new System.Drawing.Point(1526, 46);
+            this.txtOverallTaxPer.Name = "txtOverallTaxPer";
+            this.txtOverallTaxPer.Size = new System.Drawing.Size(214, 31);
+            this.txtOverallTaxPer.TabIndex = 64;
+            this.txtOverallTaxPer.Text = "0";
+            this.txtOverallTaxPer.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtOverallTaxPer_KeyPress);
+            // 
+            // txtQdescTaxPer
+            // 
+            this.txtQdescTaxPer.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtQdescTaxPer.Location = new System.Drawing.Point(1526, 3);
+            this.txtQdescTaxPer.Name = "txtQdescTaxPer";
+            this.txtQdescTaxPer.Size = new System.Drawing.Size(214, 31);
+            this.txtQdescTaxPer.TabIndex = 63;
+            this.txtQdescTaxPer.Text = "0";
+            this.txtQdescTaxPer.TextChanged += new System.EventHandler(this.TxtQdescTaxPer_TextChanged);
+            this.txtQdescTaxPer.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtQdescTaxPer_KeyPress);
+            // 
             // cmbRemarks
             // 
             this.cmbRemarks.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -198,6 +264,7 @@
             this.cmbRemarks.Name = "cmbRemarks";
             this.cmbRemarks.Size = new System.Drawing.Size(481, 31);
             this.cmbRemarks.TabIndex = 62;
+            this.cmbRemarks.SelectedIndexChanged += new System.EventHandler(this.CmbRemarks_SelectedIndexChanged);
             // 
             // lblquotationview
             // 
@@ -236,7 +303,7 @@
             // 
             this.btnClear.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold);
             this.btnClear.ForeColor = System.Drawing.Color.Black;
-            this.btnClear.Location = new System.Drawing.Point(1327, 780);
+            this.btnClear.Location = new System.Drawing.Point(1327, 781);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(428, 46);
             this.btnClear.TabIndex = 58;
@@ -248,7 +315,7 @@
             // 
             this.BtnSave.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold);
             this.BtnSave.ForeColor = System.Drawing.Color.Black;
-            this.BtnSave.Location = new System.Drawing.Point(1327, 698);
+            this.BtnSave.Location = new System.Drawing.Point(1327, 671);
             this.BtnSave.Name = "BtnSave";
             this.BtnSave.Size = new System.Drawing.Size(428, 46);
             this.BtnSave.TabIndex = 57;
@@ -293,6 +360,206 @@
             this.dgvQuotation.Size = new System.Drawing.Size(1306, 212);
             this.dgvQuotation.TabIndex = 56;
             this.dgvQuotation.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvQuotation_CellClick);
+            // 
+            // Q_id
+            // 
+            this.Q_id.DataPropertyName = "Q_id";
+            this.Q_id.HeaderText = "Q_id";
+            this.Q_id.Name = "Q_id";
+            this.Q_id.ReadOnly = true;
+            this.Q_id.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Q_id.Visible = false;
+            // 
+            // QDetail_id
+            // 
+            this.QDetail_id.DataPropertyName = "QDetail_id";
+            this.QDetail_id.HeaderText = "QDetail_id";
+            this.QDetail_id.Name = "QDetail_id";
+            this.QDetail_id.ReadOnly = true;
+            this.QDetail_id.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.QDetail_id.Visible = false;
+            // 
+            // QDesc_id
+            // 
+            this.QDesc_id.DataPropertyName = "QDesc_id";
+            this.QDesc_id.HeaderText = "QDesc_id";
+            this.QDesc_id.Name = "QDesc_id";
+            this.QDesc_id.ReadOnly = true;
+            this.QDesc_id.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.QDesc_id.Visible = false;
+            // 
+            // QDesc
+            // 
+            this.QDesc.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.QDesc.DataPropertyName = "QDesc";
+            this.QDesc.HeaderText = "QDesc";
+            this.QDesc.Name = "QDesc";
+            this.QDesc.ReadOnly = true;
+            this.QDesc.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.QDesc.Width = 150;
+            // 
+            // GWork_id
+            // 
+            this.GWork_id.DataPropertyName = "GWork_id";
+            this.GWork_id.HeaderText = "GWork_id";
+            this.GWork_id.Name = "GWork_id";
+            this.GWork_id.ReadOnly = true;
+            this.GWork_id.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.GWork_id.Visible = false;
+            // 
+            // WorkName
+            // 
+            this.WorkName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.WorkName.DataPropertyName = "WorkName";
+            this.WorkName.HeaderText = "WorkName";
+            this.WorkName.Name = "WorkName";
+            this.WorkName.ReadOnly = true;
+            this.WorkName.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.WorkName.Width = 200;
+            // 
+            // Remark
+            // 
+            this.Remark.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Remark.DataPropertyName = "Remark";
+            this.Remark.HeaderText = "Remark";
+            this.Remark.Name = "Remark";
+            this.Remark.ReadOnly = true;
+            this.Remark.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Remark.Width = 300;
+            // 
+            // Width
+            // 
+            this.Width.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Width.DataPropertyName = "Width";
+            this.Width.HeaderText = "Width";
+            this.Width.Name = "Width";
+            this.Width.ReadOnly = true;
+            this.Width.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Depth
+            // 
+            this.Depth.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Depth.DataPropertyName = "Depth";
+            this.Depth.HeaderText = "Depth";
+            this.Depth.Name = "Depth";
+            this.Depth.ReadOnly = true;
+            this.Depth.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Height
+            // 
+            this.Height.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Height.DataPropertyName = "Height";
+            this.Height.HeaderText = "Height";
+            this.Height.Name = "Height";
+            this.Height.ReadOnly = true;
+            this.Height.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // GTotalPlain
+            // 
+            this.GTotalPlain.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.GTotalPlain.DataPropertyName = "GTotalPlain";
+            this.GTotalPlain.HeaderText = "TotalPlain";
+            this.GTotalPlain.Name = "GTotalPlain";
+            this.GTotalPlain.ReadOnly = true;
+            this.GTotalPlain.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.GTotalPlain.Width = 120;
+            // 
+            // GTotalWood
+            // 
+            this.GTotalWood.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.GTotalWood.DataPropertyName = "GTotalWood";
+            this.GTotalWood.HeaderText = "TotalWood";
+            this.GTotalWood.Name = "GTotalWood";
+            this.GTotalWood.ReadOnly = true;
+            this.GTotalWood.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.GTotalWood.Width = 120;
+            // 
+            // GimageRemove
+            // 
+            this.GimageRemove.HeaderText = "";
+            this.GimageRemove.Image = global::InHouseInteriorsApplication.Properties.Resources.delete;
+            this.GimageRemove.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.GimageRemove.Name = "GimageRemove";
+            this.GimageRemove.ReadOnly = true;
+            this.GimageRemove.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.GimageRemove.Width = 20;
+            // 
+            // Party_Id
+            // 
+            this.Party_Id.DataPropertyName = "Party_Id";
+            this.Party_Id.HeaderText = "Party_Id";
+            this.Party_Id.Name = "Party_Id";
+            this.Party_Id.ReadOnly = true;
+            this.Party_Id.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Party_Id.Visible = false;
+            // 
+            // ShelfQty
+            // 
+            this.ShelfQty.DataPropertyName = "ShelfQty";
+            this.ShelfQty.HeaderText = "ShelfQty";
+            this.ShelfQty.Name = "ShelfQty";
+            this.ShelfQty.ReadOnly = true;
+            this.ShelfQty.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.ShelfQty.Visible = false;
+            // 
+            // ShutterQty
+            // 
+            this.ShutterQty.DataPropertyName = "ShutterQty";
+            this.ShutterQty.HeaderText = "ShutterQty";
+            this.ShutterQty.Name = "ShutterQty";
+            this.ShutterQty.ReadOnly = true;
+            this.ShutterQty.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.ShutterQty.Visible = false;
+            // 
+            // BoxQty
+            // 
+            this.BoxQty.DataPropertyName = "BoxQty";
+            this.BoxQty.HeaderText = "BoxQty";
+            this.BoxQty.Name = "BoxQty";
+            this.BoxQty.ReadOnly = true;
+            this.BoxQty.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.BoxQty.Visible = false;
+            // 
+            // BoxSqFt
+            // 
+            this.BoxSqFt.DataPropertyName = "BoxSqFt";
+            this.BoxSqFt.HeaderText = "BoxSqFt";
+            this.BoxSqFt.Name = "BoxSqFt";
+            this.BoxSqFt.ReadOnly = true;
+            this.BoxSqFt.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.BoxSqFt.Visible = false;
+            // 
+            // Remark_id
+            // 
+            this.Remark_id.DataPropertyName = "Remark_id";
+            this.Remark_id.HeaderText = "Remark_id";
+            this.Remark_id.Name = "Remark_id";
+            this.Remark_id.ReadOnly = true;
+            this.Remark_id.Visible = false;
+            // 
+            // TaxPer
+            // 
+            this.TaxPer.DataPropertyName = "TaxPer";
+            this.TaxPer.HeaderText = "TaxPer";
+            this.TaxPer.Name = "TaxPer";
+            this.TaxPer.ReadOnly = true;
+            this.TaxPer.Visible = false;
+            // 
+            // Transportation
+            // 
+            this.Transportation.DataPropertyName = "Transportation";
+            this.Transportation.HeaderText = "Transportation";
+            this.Transportation.Name = "Transportation";
+            this.Transportation.ReadOnly = true;
+            this.Transportation.Visible = false;
+            // 
+            // DescTaxPer
+            // 
+            this.DescTaxPer.DataPropertyName = "DescTaxPer";
+            this.DescTaxPer.HeaderText = "DescTaxPer";
+            this.DescTaxPer.Name = "DescTaxPer";
+            this.DescTaxPer.ReadOnly = true;
+            this.DescTaxPer.Visible = false;
             // 
             // btnAdd
             // 
@@ -881,265 +1148,17 @@
             this.txt_QuotationRowIndex.TabIndex = 63;
             this.txt_QuotationRowIndex.Visible = false;
             // 
-            // txtQdescTaxPer
+            // btnClone
             // 
-            this.txtQdescTaxPer.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtQdescTaxPer.Location = new System.Drawing.Point(1526, 3);
-            this.txtQdescTaxPer.Name = "txtQdescTaxPer";
-            this.txtQdescTaxPer.Size = new System.Drawing.Size(214, 31);
-            this.txtQdescTaxPer.TabIndex = 63;
-            this.txtQdescTaxPer.Text = "0";
-            // 
-            // txtOverallTaxPer
-            // 
-            this.txtOverallTaxPer.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtOverallTaxPer.Location = new System.Drawing.Point(1526, 46);
-            this.txtOverallTaxPer.Name = "txtOverallTaxPer";
-            this.txtOverallTaxPer.Size = new System.Drawing.Size(214, 31);
-            this.txtOverallTaxPer.TabIndex = 64;
-            this.txtOverallTaxPer.Text = "0";
-            // 
-            // txtTransportation
-            // 
-            this.txtTransportation.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTransportation.Location = new System.Drawing.Point(1526, 89);
-            this.txtTransportation.Name = "txtTransportation";
-            this.txtTransportation.Size = new System.Drawing.Size(214, 31);
-            this.txtTransportation.TabIndex = 65;
-            this.txtTransportation.Text = "0";
-            // 
-            // lblQDescTax
-            // 
-            this.lblQDescTax.AutoSize = true;
-            this.lblQDescTax.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold);
-            this.lblQDescTax.ForeColor = System.Drawing.Color.White;
-            this.lblQDescTax.Location = new System.Drawing.Point(1333, 6);
-            this.lblQDescTax.Name = "lblQDescTax";
-            this.lblQDescTax.Size = new System.Drawing.Size(174, 23);
-            this.lblQDescTax.TabIndex = 66;
-            this.lblQDescTax.Text = "Q.Desc Tax(%)";
-            // 
-            // lblOverallTaxPer
-            // 
-            this.lblOverallTaxPer.AutoSize = true;
-            this.lblOverallTaxPer.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold);
-            this.lblOverallTaxPer.ForeColor = System.Drawing.Color.White;
-            this.lblOverallTaxPer.Location = new System.Drawing.Point(1333, 49);
-            this.lblOverallTaxPer.Name = "lblOverallTaxPer";
-            this.lblOverallTaxPer.Size = new System.Drawing.Size(186, 23);
-            this.lblOverallTaxPer.TabIndex = 67;
-            this.lblOverallTaxPer.Text = "Over All Tax(%)";
-            // 
-            // lblTransportation
-            // 
-            this.lblTransportation.AutoSize = true;
-            this.lblTransportation.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold);
-            this.lblTransportation.ForeColor = System.Drawing.Color.White;
-            this.lblTransportation.Location = new System.Drawing.Point(1333, 92);
-            this.lblTransportation.Name = "lblTransportation";
-            this.lblTransportation.Size = new System.Drawing.Size(170, 23);
-            this.lblTransportation.TabIndex = 68;
-            this.lblTransportation.Text = "Transportation";
-            // 
-            // Q_id
-            // 
-            this.Q_id.DataPropertyName = "Q_id";
-            this.Q_id.HeaderText = "Q_id";
-            this.Q_id.Name = "Q_id";
-            this.Q_id.ReadOnly = true;
-            this.Q_id.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Q_id.Visible = false;
-            // 
-            // QDetail_id
-            // 
-            this.QDetail_id.DataPropertyName = "QDetail_id";
-            this.QDetail_id.HeaderText = "QDetail_id";
-            this.QDetail_id.Name = "QDetail_id";
-            this.QDetail_id.ReadOnly = true;
-            this.QDetail_id.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.QDetail_id.Visible = false;
-            // 
-            // QDesc_id
-            // 
-            this.QDesc_id.DataPropertyName = "QDesc_id";
-            this.QDesc_id.HeaderText = "QDesc_id";
-            this.QDesc_id.Name = "QDesc_id";
-            this.QDesc_id.ReadOnly = true;
-            this.QDesc_id.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.QDesc_id.Visible = false;
-            // 
-            // QDesc
-            // 
-            this.QDesc.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.QDesc.DataPropertyName = "QDesc";
-            this.QDesc.HeaderText = "QDesc";
-            this.QDesc.Name = "QDesc";
-            this.QDesc.ReadOnly = true;
-            this.QDesc.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.QDesc.Width = 150;
-            // 
-            // GWork_id
-            // 
-            this.GWork_id.DataPropertyName = "GWork_id";
-            this.GWork_id.HeaderText = "GWork_id";
-            this.GWork_id.Name = "GWork_id";
-            this.GWork_id.ReadOnly = true;
-            this.GWork_id.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.GWork_id.Visible = false;
-            // 
-            // WorkName
-            // 
-            this.WorkName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.WorkName.DataPropertyName = "WorkName";
-            this.WorkName.HeaderText = "WorkName";
-            this.WorkName.Name = "WorkName";
-            this.WorkName.ReadOnly = true;
-            this.WorkName.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.WorkName.Width = 200;
-            // 
-            // Remark
-            // 
-            this.Remark.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Remark.DataPropertyName = "Remark";
-            this.Remark.HeaderText = "Remark";
-            this.Remark.Name = "Remark";
-            this.Remark.ReadOnly = true;
-            this.Remark.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Remark.Width = 300;
-            // 
-            // Width
-            // 
-            this.Width.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Width.DataPropertyName = "Width";
-            this.Width.HeaderText = "Width";
-            this.Width.Name = "Width";
-            this.Width.ReadOnly = true;
-            this.Width.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Depth
-            // 
-            this.Depth.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Depth.DataPropertyName = "Depth";
-            this.Depth.HeaderText = "Depth";
-            this.Depth.Name = "Depth";
-            this.Depth.ReadOnly = true;
-            this.Depth.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Height
-            // 
-            this.Height.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Height.DataPropertyName = "Height";
-            this.Height.HeaderText = "Height";
-            this.Height.Name = "Height";
-            this.Height.ReadOnly = true;
-            this.Height.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // GTotalPlain
-            // 
-            this.GTotalPlain.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.GTotalPlain.DataPropertyName = "GTotalPlain";
-            this.GTotalPlain.HeaderText = "TotalPlain";
-            this.GTotalPlain.Name = "GTotalPlain";
-            this.GTotalPlain.ReadOnly = true;
-            this.GTotalPlain.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.GTotalPlain.Width = 120;
-            // 
-            // GTotalWood
-            // 
-            this.GTotalWood.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.GTotalWood.DataPropertyName = "GTotalWood";
-            this.GTotalWood.HeaderText = "TotalWood";
-            this.GTotalWood.Name = "GTotalWood";
-            this.GTotalWood.ReadOnly = true;
-            this.GTotalWood.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.GTotalWood.Width = 120;
-            // 
-            // GimageRemove
-            // 
-            this.GimageRemove.HeaderText = "";
-            this.GimageRemove.Image = global::InHouseInteriorsApplication.Properties.Resources.delete;
-            this.GimageRemove.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.GimageRemove.Name = "GimageRemove";
-            this.GimageRemove.ReadOnly = true;
-            this.GimageRemove.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.GimageRemove.Width = 20;
-            // 
-            // Party_Id
-            // 
-            this.Party_Id.DataPropertyName = "Party_Id";
-            this.Party_Id.HeaderText = "Party_Id";
-            this.Party_Id.Name = "Party_Id";
-            this.Party_Id.ReadOnly = true;
-            this.Party_Id.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Party_Id.Visible = false;
-            // 
-            // ShelfQty
-            // 
-            this.ShelfQty.DataPropertyName = "ShelfQty";
-            this.ShelfQty.HeaderText = "ShelfQty";
-            this.ShelfQty.Name = "ShelfQty";
-            this.ShelfQty.ReadOnly = true;
-            this.ShelfQty.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.ShelfQty.Visible = false;
-            // 
-            // ShutterQty
-            // 
-            this.ShutterQty.DataPropertyName = "ShutterQty";
-            this.ShutterQty.HeaderText = "ShutterQty";
-            this.ShutterQty.Name = "ShutterQty";
-            this.ShutterQty.ReadOnly = true;
-            this.ShutterQty.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.ShutterQty.Visible = false;
-            // 
-            // BoxQty
-            // 
-            this.BoxQty.DataPropertyName = "BoxQty";
-            this.BoxQty.HeaderText = "BoxQty";
-            this.BoxQty.Name = "BoxQty";
-            this.BoxQty.ReadOnly = true;
-            this.BoxQty.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.BoxQty.Visible = false;
-            // 
-            // BoxSqFt
-            // 
-            this.BoxSqFt.DataPropertyName = "BoxSqFt";
-            this.BoxSqFt.HeaderText = "BoxSqFt";
-            this.BoxSqFt.Name = "BoxSqFt";
-            this.BoxSqFt.ReadOnly = true;
-            this.BoxSqFt.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.BoxSqFt.Visible = false;
-            // 
-            // Remark_id
-            // 
-            this.Remark_id.DataPropertyName = "Remark_id";
-            this.Remark_id.HeaderText = "Remark_id";
-            this.Remark_id.Name = "Remark_id";
-            this.Remark_id.ReadOnly = true;
-            this.Remark_id.Visible = false;
-            // 
-            // TaxPer
-            // 
-            this.TaxPer.DataPropertyName = "TaxPer";
-            this.TaxPer.HeaderText = "TaxPer";
-            this.TaxPer.Name = "TaxPer";
-            this.TaxPer.ReadOnly = true;
-            this.TaxPer.Visible = false;
-            // 
-            // Transportation
-            // 
-            this.Transportation.DataPropertyName = "Transportation";
-            this.Transportation.HeaderText = "Transportation";
-            this.Transportation.Name = "Transportation";
-            this.Transportation.ReadOnly = true;
-            this.Transportation.Visible = false;
-            // 
-            // DescTaxPer
-            // 
-            this.DescTaxPer.DataPropertyName = "DescTaxPer";
-            this.DescTaxPer.HeaderText = "DescTaxPer";
-            this.DescTaxPer.Name = "DescTaxPer";
-            this.DescTaxPer.ReadOnly = true;
-            this.DescTaxPer.Visible = false;
+            this.btnClone.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold);
+            this.btnClone.ForeColor = System.Drawing.Color.Black;
+            this.btnClone.Location = new System.Drawing.Point(1327, 726);
+            this.btnClone.Name = "btnClone";
+            this.btnClone.Size = new System.Drawing.Size(428, 46);
+            this.btnClone.TabIndex = 69;
+            this.btnClone.Text = "Clone";
+            this.btnClone.UseVisualStyleBackColor = true;
+            this.btnClone.Click += new System.EventHandler(this.BtnClone_Click);
             // 
             // WorkTransactionPage
             // 
@@ -1268,5 +1287,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn TaxPer;
         private System.Windows.Forms.DataGridViewTextBoxColumn Transportation;
         private System.Windows.Forms.DataGridViewTextBoxColumn DescTaxPer;
+        private System.Windows.Forms.Button btnClone;
     }
 }

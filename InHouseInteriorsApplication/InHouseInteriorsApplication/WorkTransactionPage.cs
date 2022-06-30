@@ -22,6 +22,8 @@ namespace InHouseInteriorsApplication
         DataTable desDetail_dt = new DataTable();
         DataTable Quotation_dt = new DataTable();
 
+        bool isloadQuotation = false;
+
         DataTable formula_dt = new DataTable();
         int columIndex2 = 2, columIndex3 = 3, columIndex4 = 4, columIndex5 = 5,
                 columIndex6 = 6, columIndex7 = 7, columIndex8 = 8, columIndex9 = 9,
@@ -482,17 +484,18 @@ namespace InHouseInteriorsApplication
                     }
                         
                 }
-                else if(e.RowIndex >= 0 && cmbQuotation.SelectedValue.ToString()!="0")
+                else if(e.RowIndex >= 0 && dgvQuotation.Rows.Count > 0)
                 {
+                    isloadQuotation = false;
                     txt_QuotationRowIndex.Text = e.RowIndex.ToString();
                     DataGridViewRow row = this.dgvQuotation.Rows[e.RowIndex];
                     cmbQdesc.SelectedValue = row.Cells["QDesc_id"].Value.ToString();
                     cmbWorkName.SelectedValue = row.Cells["GWork_id"].Value.ToString();
-                    cmbParty.SelectedValue = row.Cells["Party_Id"].Value.ToString();
+                    //cmbParty.SelectedValue = row.Cells["Party_Id"].Value.ToString();
                     cmbRemarks.SelectedValue = row.Cells["Remark_id"].Value.ToString();
                     
-                    txtOverallTaxPer.Text = row.Cells["TaxPer"].Value.ToString();
-                    txtTransportation.Text = row.Cells["Transportation"].Value.ToString();
+                    //txtOverallTaxPer.Text = row.Cells["TaxPer"].Value.ToString();
+                    //txtTransportation.Text = row.Cells["Transportation"].Value.ToString();
                     txtQdescTaxPer.Text = row.Cells["DescTaxPer"].Value.ToString();
 
                     txtWidth.Text = row.Cells["Width"].Value.ToString();
@@ -502,6 +505,7 @@ namespace InHouseInteriorsApplication
                     txtShutterQty.Text = row.Cells["ShutterQty"].Value.ToString();
                     txtBoxQty.Text = row.Cells["BoxQty"].Value.ToString();
                     txtBoxSqFt.Text = row.Cells["BoxSqFt"].Value.ToString();
+                    isloadQuotation = true;
                 }
             }
             catch (Exception ex)
@@ -634,6 +638,7 @@ namespace InHouseInteriorsApplication
             {
                 if (cmbQuotation.SelectedValue.ToString() != "0" && cmbQuotation.SelectedValue.ToString() != "System.Data.DataRowView")
                 {
+                    isloadQuotation = false;
                     QuotationDetailBind();
                 }
             }
@@ -674,6 +679,8 @@ namespace InHouseInteriorsApplication
                 txtShutterQty.Text = Quotation_dt.Rows[0]["ShutterQty"].ToString();
                 txtBoxQty.Text = Quotation_dt.Rows[0]["BoxQty"].ToString();
                 txtBoxSqFt.Text = Quotation_dt.Rows[0]["BoxSqFt"].ToString();
+                isloadQuotation = true;
+
             }
         }
 
@@ -689,14 +696,80 @@ namespace InHouseInteriorsApplication
 
         private void CmbQdesc_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cmbQdesc.SelectedValue.ToString() != "0" && cmbQdesc.SelectedValue.ToString() != "System.Data.DataRowView")
+            try {
+                if (cmbQdesc.SelectedValue.ToString() != "0" && cmbQdesc.SelectedValue.ToString() != "System.Data.DataRowView")
+                {
+                    DataTable qremark = new DataTable();
+                    var dict = JObject.Parse(@"{'QDesc_id':'" + cmbQdesc.SelectedValue.ToString() + "', 'IsRemarkSelect':'Y'}");
+                    qremark = cls.FetchData(SpName: "USP_Remarks_Insert", ReqType: "SELECT_REMARKS", dict: dict);
+                    cmbRemarks.DataSource = qremark;
+                    cmbRemarks.DisplayMember = "Remarks";
+                    cmbRemarks.ValueMember = "Remarks_id";
+
+                    quotation_update();
+                }
+            }
+            catch (Exception ex)
             {
-                DataTable qremark = new DataTable();
-                var dict = JObject.Parse(@"{'QDesc_id':'" + cmbQdesc.SelectedValue.ToString() + "', 'IsRemarkSelect':'Y'}");
-                qremark = cls.FetchData(SpName: "USP_Remarks_Insert", ReqType: "SELECT_REMARKS", dict: dict);
-                cmbRemarks.DataSource = qremark;
-                cmbRemarks.DisplayMember = "Remarks";
-                cmbRemarks.ValueMember = "Remarks_id";
+                MessageBox.Show("Error");
+                cls.WriteException("WorkTransactionPage : CmbQdesc_SelectedIndexChanged" + ex.ToString());
+            }
+        }
+
+        private void TxtQdescTaxPer_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+
+            if (Regex.IsMatch(txtQdescTaxPer.Text, @"\.\d\d\d\d"))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void TxtOverallTaxPer_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+
+            if (Regex.IsMatch(txtOverallTaxPer.Text, @"\.\d\d\d\d"))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void TxtTransportation_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+
+            if (Regex.IsMatch(txtTransportation.Text, @"\.\d\d\d\d"))
+            {
+                e.Handled = true;
             }
         }
 
@@ -716,6 +789,99 @@ namespace InHouseInteriorsApplication
             if (Regex.IsMatch(txtWidth.Text, @"\.\d\d\d\d"))
             {
                 e.Handled = true;
+            }
+        }
+
+        private void CmbRemarks_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                quotation_update();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error");
+                cls.WriteException("WorkTransactionPage : CmbRemarks_SelectedIndexChanged" + ex.ToString());
+            }
+        }
+
+        private void TxtQdescTaxPer_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                quotation_update();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error");
+                cls.WriteException("WorkTransactionPage : TxtQdescTaxPer_TextChanged" + ex.ToString());
+            }
+        }
+
+        private void BtnClone_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var confirmResult = MessageBox.Show("Are you sure to Clone Quotation ??", "Confirm!!", MessageBoxButtons.YesNo);
+                if (confirmResult == DialogResult.Yes)
+                {
+                    if (dgvQuotation.Rows.Count > 0)
+                    {
+                        int res = 0;
+
+                        var qdict = JObject.Parse(@"{'Party_Id':'" + cmbParty.SelectedValue.ToString() + "', 'TaxPer':'" + txtOverallTaxPer.Text.ToString() + "' , 'Transportation':'" + txtTransportation.Text.ToString() + "'}");
+                        res = cls.InsertDataWithId(SpName: "USP_Quotation_Insert", ReqType: "INSERT_QUOTATION", dict: qdict);
+
+
+                        if (res > 0)
+                        {
+                            foreach (DataGridViewRow row in dgvQuotation.Rows)
+                            {
+                                DataGridViewTextBoxCell Q_id = row.Cells["Q_id"] as DataGridViewTextBoxCell;
+                                DataGridViewTextBoxCell QDetail_id = row.Cells["QDetail_id"] as DataGridViewTextBoxCell;
+                                DataGridViewTextBoxCell QDesc_id = row.Cells["QDesc_id"] as DataGridViewTextBoxCell;
+                                DataGridViewTextBoxCell QDesc = row.Cells["QDesc"] as DataGridViewTextBoxCell;
+                                DataGridViewTextBoxCell GWork_id = row.Cells["GWork_id"] as DataGridViewTextBoxCell;
+                                DataGridViewTextBoxCell WorkName = row.Cells["WorkName"] as DataGridViewTextBoxCell;
+                                DataGridViewTextBoxCell Remark = row.Cells["Remark"] as DataGridViewTextBoxCell;
+                                DataGridViewTextBoxCell Width = row.Cells["Width"] as DataGridViewTextBoxCell;
+                                DataGridViewTextBoxCell Depth = row.Cells["Depth"] as DataGridViewTextBoxCell;
+                                DataGridViewTextBoxCell Height = row.Cells["Height"] as DataGridViewTextBoxCell;
+                                DataGridViewTextBoxCell GTotalPlain = row.Cells["GTotalPlain"] as DataGridViewTextBoxCell;
+                                DataGridViewTextBoxCell GTotalWood = row.Cells["GTotalWood"] as DataGridViewTextBoxCell;
+
+                                DataGridViewTextBoxCell ShelfQty = row.Cells["ShelfQty"] as DataGridViewTextBoxCell;
+                                DataGridViewTextBoxCell ShutterQty = row.Cells["ShutterQty"] as DataGridViewTextBoxCell;
+                                DataGridViewTextBoxCell BoxQty = row.Cells["BoxQty"] as DataGridViewTextBoxCell;
+                                DataGridViewTextBoxCell BoxSqFt = row.Cells["BoxSqFt"] as DataGridViewTextBoxCell;
+                                DataGridViewTextBoxCell Remark_id = row.Cells["Remark_id"] as DataGridViewTextBoxCell;
+
+                                DataGridViewTextBoxCell TaxPer = row.Cells["TaxPer"] as DataGridViewTextBoxCell;
+                                DataGridViewTextBoxCell Transportation = row.Cells["Transportation"] as DataGridViewTextBoxCell;
+                                DataGridViewTextBoxCell DescTaxPer = row.Cells["DescTaxPer"] as DataGridViewTextBoxCell;
+
+
+                                if (Q_id.Value != null && QDetail_id.Value != null)
+                                {
+                                    string _resdetail = "0";
+                                    var dict = JObject.Parse(@"{'Q_id':'" + res.ToString() + "', 'QDesc_id':'" + QDesc_id.Value.ToString() + "', 'Work_id':'" + GWork_id.Value.ToString() + "', 'Remark_id':'" + Remark_id.Value.ToString() + "', 'Width':'" + Width.Value.ToString() + "', 'Depth':'" + Depth.Value.ToString() + "', 'Height':'" + Height.Value.ToString() + "', 'TotalPlain':'" + GTotalPlain.Value.ToString() + "', 'TotalWood':'" + GTotalWood.Value.ToString() + "', 'ShelfQty':'" + ShelfQty.Value.ToString() + "', 'ShutterQty':'" + ShutterQty.Value.ToString() + "', 'BoxQty':'" + BoxQty.Value.ToString() + "', 'BoxSqFt':'" + BoxSqFt.Value.ToString() + "', 'DescTaxPer':'" + DescTaxPer.Value.ToString() + "'}");
+                                    _resdetail = cls.InsertData(SpName: "USP_Quotation_Insert", ReqType: "INSERT_QUOTATION_DETAIL", dict: dict);
+                                }
+                            }
+                            Clear();
+                            MessageBox.Show("Quotation Clone Successfully");
+                        }
+                        else
+                        {
+                            MessageBox.Show("Error Geneate Quotation");
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error");
+                cls.WriteException("WorkTransactionPage : BtnClone_Click" + ex.ToString());
             }
         }
 
@@ -1217,7 +1383,9 @@ namespace InHouseInteriorsApplication
             lbltotalplain.Text = plaintotal.ToString();
             lbltotalplain1.Text = plaintotal1.ToString();
             lblwoodtotal.Text = woodtotal.ToString();
-            lblwoodtotal1.Text = woodtotal1.ToString();            
+            lblwoodtotal1.Text = woodtotal1.ToString();
+
+            quotation_update();
         }
 
         public double getFormulaCalculation(string formula_id = null, string sizeval = null, string weightval = null, string rateval = null, string totalval=null, string sqftplaincoatingval = null, string plainrateval=null, string totalplaincoatingval = null, string totalplainval = null, string sqftwoodcoatingval = null, string woodrateval = null, string totalwoodcoatingval = null, string totalwoodval = null)
@@ -1334,6 +1502,37 @@ namespace InHouseInteriorsApplication
             txtQdescTaxPer.Text = "0";
 
             bindquotation();
+        }
+
+        public void quotation_update()
+        {
+            if(Quotation_dt.Rows.Count > 0 && txt_QuotationRowIndex.Text != "" && isloadQuotation)
+            {
+                int rowindex = Convert.ToInt32(txt_QuotationRowIndex.Text.ToString());
+
+                Quotation_dt.Rows[rowindex]["QDesc_id"] = cmbQdesc.SelectedValue.ToString();
+                Quotation_dt.Rows[rowindex]["QDesc"] = cmbQdesc.Text.ToString();
+
+                Quotation_dt.Rows[rowindex]["GWork_id"] = cmbWorkName.SelectedValue.ToString();
+                Quotation_dt.Rows[rowindex]["WorkName"] = cmbWorkName.Text.ToString();
+
+                Quotation_dt.Rows[rowindex]["Remark_id"] = cmbRemarks.SelectedValue.ToString();
+                Quotation_dt.Rows[rowindex]["Remark"] = cmbRemarks.Text.ToString();
+
+                Quotation_dt.Rows[rowindex]["Width"] = txtWidth.Text.ToString();
+                Quotation_dt.Rows[rowindex]["Depth"] = txtDepth.Text.ToString();
+                Quotation_dt.Rows[rowindex]["Height"] = txtHeight.Text.ToString();
+                Quotation_dt.Rows[rowindex]["ShelfQty"] = txtShelfQty.Text.ToString();
+                Quotation_dt.Rows[rowindex]["ShutterQty"] = txtShutterQty.Text.ToString();
+                Quotation_dt.Rows[rowindex]["BoxQty"] = txtBoxQty.Text.ToString();
+                Quotation_dt.Rows[rowindex]["BoxSqFt"] = txtBoxSqFt.Text.ToString();
+
+                Quotation_dt.Rows[rowindex]["GTotalPlain"] = lbltotalplain1.Text.ToString();
+                Quotation_dt.Rows[rowindex]["GTotalWood"] = lblwoodtotal1.Text.ToString();
+
+                Quotation_dt.Rows[rowindex]["DescTaxPer"] = txtQdescTaxPer.Text.ToString();                
+
+            }
         }
 
     }

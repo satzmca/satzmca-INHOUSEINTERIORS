@@ -154,9 +154,17 @@ namespace InHouseInteriorsApplication
 
         private void reportToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmReport f = new FrmReport();
-            f.Show();
+            Form frm = Application.OpenForms["GenReport"];
+            if (frm == null)
+            {
+                InHouseInteriorsApplication.GenReport im = new InHouseInteriorsApplication.GenReport();
+                im.Show();
 
+            }
+            else
+            {
+                frm.Show();
+            }
         }
     }
 }

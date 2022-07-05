@@ -30,19 +30,19 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.grpRemark = new System.Windows.Forms.GroupBox();
+            this.cmbQdesc = new System.Windows.Forms.ComboBox();
+            this.lblQdesc = new System.Windows.Forms.Label();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.txtRemarks_id = new System.Windows.Forms.TextBox();
             this.dgvRemark = new System.Windows.Forms.DataGridView();
+            this.Work_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.QDesc_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Remarks = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnSave = new System.Windows.Forms.Button();
             this.txtRemarks = new System.Windows.Forms.TextBox();
             this.lblRemarks = new System.Windows.Forms.Label();
             this.pctClose = new System.Windows.Forms.PictureBox();
-            this.cmbQdesc = new System.Windows.Forms.ComboBox();
-            this.lblQdesc = new System.Windows.Forms.Label();
-            this.Work_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.QDesc_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Remarks = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grpRemark.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRemark)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctClose)).BeginInit();
@@ -79,11 +79,32 @@
             this.grpRemark.TabStop = false;
             this.grpRemark.Text = "Remarks Master";
             // 
+            // cmbQdesc
+            // 
+            this.cmbQdesc.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbQdesc.FormattingEnabled = true;
+            this.cmbQdesc.Location = new System.Drawing.Point(301, 55);
+            this.cmbQdesc.Name = "cmbQdesc";
+            this.cmbQdesc.Size = new System.Drawing.Size(523, 31);
+            this.cmbQdesc.TabIndex = 53;
+            this.cmbQdesc.SelectedIndexChanged += new System.EventHandler(this.CmbQdesc_SelectedIndexChanged);
+            // 
+            // lblQdesc
+            // 
+            this.lblQdesc.AutoSize = true;
+            this.lblQdesc.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold);
+            this.lblQdesc.ForeColor = System.Drawing.Color.White;
+            this.lblQdesc.Location = new System.Drawing.Point(155, 58);
+            this.lblQdesc.Name = "lblQdesc";
+            this.lblQdesc.Size = new System.Drawing.Size(84, 23);
+            this.lblQdesc.TabIndex = 54;
+            this.lblQdesc.Text = "Q.Desc";
+            // 
             // btnClear
             // 
             this.btnClear.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold);
             this.btnClear.ForeColor = System.Drawing.Color.Black;
-            this.btnClear.Location = new System.Drawing.Point(600, 182);
+            this.btnClear.Location = new System.Drawing.Point(612, 189);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(150, 42);
             this.btnClear.TabIndex = 28;
@@ -95,7 +116,7 @@
             // 
             this.btnDelete.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold);
             this.btnDelete.ForeColor = System.Drawing.Color.Black;
-            this.btnDelete.Location = new System.Drawing.Point(444, 182);
+            this.btnDelete.Location = new System.Drawing.Point(456, 189);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(150, 42);
             this.btnDelete.TabIndex = 27;
@@ -105,7 +126,7 @@
             // 
             // txtRemarks_id
             // 
-            this.txtRemarks_id.Location = new System.Drawing.Point(691, 117);
+            this.txtRemarks_id.Location = new System.Drawing.Point(845, 120);
             this.txtRemarks_id.Name = "txtRemarks_id";
             this.txtRemarks_id.Size = new System.Drawing.Size(100, 31);
             this.txtRemarks_id.TabIndex = 26;
@@ -121,76 +142,13 @@
             this.Work_id,
             this.QDesc_id,
             this.Remarks});
-            this.dgvRemark.Location = new System.Drawing.Point(16, 276);
+            this.dgvRemark.Location = new System.Drawing.Point(16, 260);
             this.dgvRemark.Name = "dgvRemark";
             this.dgvRemark.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgvRemark.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
-            this.dgvRemark.Size = new System.Drawing.Size(945, 288);
+            this.dgvRemark.Size = new System.Drawing.Size(945, 304);
             this.dgvRemark.TabIndex = 25;
             this.dgvRemark.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvRemark_CellClick);
-            // 
-            // btnSave
-            // 
-            this.btnSave.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold);
-            this.btnSave.ForeColor = System.Drawing.Color.Black;
-            this.btnSave.Location = new System.Drawing.Point(288, 182);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(150, 42);
-            this.btnSave.TabIndex = 22;
-            this.btnSave.Text = "Save";
-            this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
-            // 
-            // txtRemarks
-            // 
-            this.txtRemarks.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRemarks.Location = new System.Drawing.Point(364, 117);
-            this.txtRemarks.Name = "txtRemarks";
-            this.txtRemarks.Size = new System.Drawing.Size(321, 31);
-            this.txtRemarks.TabIndex = 20;
-            // 
-            // lblRemarks
-            // 
-            this.lblRemarks.AutoSize = true;
-            this.lblRemarks.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRemarks.ForeColor = System.Drawing.Color.White;
-            this.lblRemarks.Location = new System.Drawing.Point(220, 119);
-            this.lblRemarks.Name = "lblRemarks";
-            this.lblRemarks.Size = new System.Drawing.Size(104, 23);
-            this.lblRemarks.TabIndex = 18;
-            this.lblRemarks.Text = "Remarks";
-            // 
-            // pctClose
-            // 
-            this.pctClose.Image = global::InHouseInteriorsApplication.Properties.Resources.close2;
-            this.pctClose.Location = new System.Drawing.Point(950, -2);
-            this.pctClose.Name = "pctClose";
-            this.pctClose.Size = new System.Drawing.Size(50, 50);
-            this.pctClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pctClose.TabIndex = 14;
-            this.pctClose.TabStop = false;
-            this.pctClose.Click += new System.EventHandler(this.PctClose_Click);
-            // 
-            // cmbQdesc
-            // 
-            this.cmbQdesc.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbQdesc.FormattingEnabled = true;
-            this.cmbQdesc.Location = new System.Drawing.Point(364, 52);
-            this.cmbQdesc.Name = "cmbQdesc";
-            this.cmbQdesc.Size = new System.Drawing.Size(321, 31);
-            this.cmbQdesc.TabIndex = 53;
-            this.cmbQdesc.SelectedIndexChanged += new System.EventHandler(this.CmbQdesc_SelectedIndexChanged);
-            // 
-            // lblQdesc
-            // 
-            this.lblQdesc.AutoSize = true;
-            this.lblQdesc.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold);
-            this.lblQdesc.ForeColor = System.Drawing.Color.White;
-            this.lblQdesc.Location = new System.Drawing.Point(218, 55);
-            this.lblQdesc.Name = "lblQdesc";
-            this.lblQdesc.Size = new System.Drawing.Size(84, 23);
-            this.lblQdesc.TabIndex = 54;
-            this.lblQdesc.Text = "Q.Desc";
             // 
             // Work_id
             // 
@@ -216,6 +174,48 @@
             this.Remarks.HeaderText = "Remarks";
             this.Remarks.Name = "Remarks";
             this.Remarks.Width = 600;
+            // 
+            // btnSave
+            // 
+            this.btnSave.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold);
+            this.btnSave.ForeColor = System.Drawing.Color.Black;
+            this.btnSave.Location = new System.Drawing.Point(300, 189);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(150, 42);
+            this.btnSave.TabIndex = 22;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
+            // 
+            // txtRemarks
+            // 
+            this.txtRemarks.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRemarks.Location = new System.Drawing.Point(301, 120);
+            this.txtRemarks.Name = "txtRemarks";
+            this.txtRemarks.Size = new System.Drawing.Size(523, 31);
+            this.txtRemarks.TabIndex = 20;
+            // 
+            // lblRemarks
+            // 
+            this.lblRemarks.AutoSize = true;
+            this.lblRemarks.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRemarks.ForeColor = System.Drawing.Color.White;
+            this.lblRemarks.Location = new System.Drawing.Point(157, 122);
+            this.lblRemarks.Name = "lblRemarks";
+            this.lblRemarks.Size = new System.Drawing.Size(104, 23);
+            this.lblRemarks.TabIndex = 18;
+            this.lblRemarks.Text = "Remarks";
+            // 
+            // pctClose
+            // 
+            this.pctClose.Image = global::InHouseInteriorsApplication.Properties.Resources.close2;
+            this.pctClose.Location = new System.Drawing.Point(950, -2);
+            this.pctClose.Name = "pctClose";
+            this.pctClose.Size = new System.Drawing.Size(50, 50);
+            this.pctClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pctClose.TabIndex = 14;
+            this.pctClose.TabStop = false;
+            this.pctClose.Click += new System.EventHandler(this.PctClose_Click);
             // 
             // RemarksMasterPage
             // 

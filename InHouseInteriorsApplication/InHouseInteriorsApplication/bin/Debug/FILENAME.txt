@@ -1,8 +1,38 @@
-MainPage : WorkTransactionToolStripMenuItem_ClickSystem.ArgumentException: Column 'Remark' does not belong to table .
+WorkTransactionPage : CmbRemarks_SelectedIndexChangedSystem.NullReferenceException: Object reference not set to an instance of an object.
+   at InHouseInteriorsApplication.WorkTransactionPage.quotation_update() in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 1547
+   at InHouseInteriorsApplication.WorkTransactionPage.CmbRemarks_SelectedIndexChanged(Object sender, EventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 822
+WorkTransactionPage : CmbRemarks_SelectedIndexChangedSystem.NullReferenceException: Object reference not set to an instance of an object.
+   at InHouseInteriorsApplication.WorkTransactionPage.quotation_update() in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 1547
+   at InHouseInteriorsApplication.WorkTransactionPage.CmbRemarks_SelectedIndexChanged(Object sender, EventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 822
+WorkTransactionPage : CmbQdesc_SelectedIndexChangedSystem.NullReferenceException: Object reference not set to an instance of an object.
+   at InHouseInteriorsApplication.WorkTransactionPage.quotation_update() in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 1547
+   at InHouseInteriorsApplication.WorkTransactionPage.CmbQdesc_SelectedIndexChanged(Object sender, EventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 732
+WorkTransactionPage : CmbRemarks_SelectedIndexChangedSystem.NullReferenceException: Object reference not set to an instance of an object.
+   at InHouseInteriorsApplication.WorkTransactionPage.quotation_update() in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 1547
+   at InHouseInteriorsApplication.WorkTransactionPage.CmbRemarks_SelectedIndexChanged(Object sender, EventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 822
+WorkTransactionPage : CmbQdesc_SelectedIndexChangedSystem.NullReferenceException: Object reference not set to an instance of an object.
+   at InHouseInteriorsApplication.WorkTransactionPage.quotation_update() in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 1547
+   at InHouseInteriorsApplication.WorkTransactionPage.CmbQdesc_SelectedIndexChanged(Object sender, EventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 732
+WorkTransactionPage : CmbRemarks_SelectedIndexChangedSystem.NullReferenceException: Object reference not set to an instance of an object.
+   at InHouseInteriorsApplication.WorkTransactionPage.quotation_update() in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 1547
+   at InHouseInteriorsApplication.WorkTransactionPage.CmbRemarks_SelectedIndexChanged(Object sender, EventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 822
+WorkTransactionPage : CmbRemarks_SelectedIndexChangedSystem.NullReferenceException: Object reference not set to an instance of an object.
+   at InHouseInteriorsApplication.WorkTransactionPage.quotation_update() in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 1547
+   at InHouseInteriorsApplication.WorkTransactionPage.CmbRemarks_SelectedIndexChanged(Object sender, EventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 822
+WorkTransactionPage : CmbQdesc_SelectedIndexChangedSystem.NullReferenceException: Object reference not set to an instance of an object.
+   at InHouseInteriorsApplication.WorkTransactionPage.quotation_update() in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 1547
+   at InHouseInteriorsApplication.WorkTransactionPage.CmbQdesc_SelectedIndexChanged(Object sender, EventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 732
+WorkTransactionPage : CmbRemarks_SelectedIndexChangedSystem.NullReferenceException: Object reference not set to an instance of an object.
+   at InHouseInteriorsApplication.WorkTransactionPage.quotation_update() in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 1547
+   at InHouseInteriorsApplication.WorkTransactionPage.CmbRemarks_SelectedIndexChanged(Object sender, EventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 822
+WorkTransactionPage : CmbQdesc_SelectedIndexChangedSystem.NullReferenceException: Object reference not set to an instance of an object.
+   at InHouseInteriorsApplication.WorkTransactionPage.quotation_update() in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 1547
+   at InHouseInteriorsApplication.WorkTransactionPage.CmbQdesc_SelectedIndexChanged(Object sender, EventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 732
+MainPage : WorkTransactionToolStripMenuItem_ClickSystem.ArgumentException: Column 'Q_id' does not belong to table .
    at System.Data.DataRow.GetDataColumn(String columnName)
    at System.Data.DataRow.set_Item(String columnName, Object value)
-   at InHouseInteriorsApplication.WorkTransactionPage.MakeNewAlldaysRow(DataTable table, String QId, String QDetail_id, String QDesc_id, String QDesc, String Work_id, String WorkName, String Remark, String Width, String Depth, String Height, String TotalPlain, String TotalWood, String Party_Id, String ShelfQty, String ShutterQty, String BoxQty, String BoxSqFt, String Remark_id, String TaxPer, String Transportation, String DescTaxPer) in D:\senthil\Project\In-House\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 437
-   at InHouseInteriorsApplication.WorkTransactionPage.BtnAdd_Click(Object sender, EventArgs e) in D:\senthil\Project\In-House\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 382
+   at InHouseInteriorsApplication.WorkTransactionPage.MakeNewAlldaysRow(DataTable table, String QId, String QDetail_id, String QDesc_id, String QDesc, String Work_id, String WorkName, String Remark, String Width, String Depth, String Height, String TotalPlain, String TotalWood, String Party_Id, String ShelfQty, String ShutterQty, String BoxQty, String BoxSqFt, String Remark_id, String TaxPer, String Transportation, String DescTaxPer) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 400
+   at InHouseInteriorsApplication.WorkTransactionPage.BtnAdd_Click(Object sender, EventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 350
    at System.Windows.Forms.Control.OnClick(EventArgs e)
    at System.Windows.Forms.Button.OnClick(EventArgs e)
    at System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
@@ -20,12 +50,12 @@ MainPage : WorkTransactionToolStripMenuItem_ClickSystem.ArgumentException: Colum
    at System.Windows.Forms.Application.RunDialog(Form form)
    at System.Windows.Forms.Form.ShowDialog(IWin32Window owner)
    at System.Windows.Forms.Form.ShowDialog()
-   at InHouseInteriorsApplication.MainPage.WorkTransactionToolStripMenuItem_Click(Object sender, EventArgs e) in D:\senthil\Project\In-House\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\MainPage.cs:line 104
-MainPage : WorkTransactionToolStripMenuItem_ClickSystem.ArgumentException: Column 'Remark' does not belong to table .
+   at InHouseInteriorsApplication.MainPage.WorkTransactionToolStripMenuItem_Click(Object sender, EventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\MainPage.cs:line 104
+MainPage : WorkTransactionToolStripMenuItem_ClickSystem.ArgumentException: Column 'Q_id' does not belong to table .
    at System.Data.DataRow.GetDataColumn(String columnName)
    at System.Data.DataRow.set_Item(String columnName, Object value)
-   at InHouseInteriorsApplication.WorkTransactionPage.MakeNewAlldaysRow(DataTable table, String QId, String QDetail_id, String QDesc_id, String QDesc, String Work_id, String WorkName, String Remark, String Width, String Depth, String Height, String TotalPlain, String TotalWood, String Party_Id, String ShelfQty, String ShutterQty, String BoxQty, String BoxSqFt, String Remark_id, String TaxPer, String Transportation, String DescTaxPer) in D:\senthil\Project\In-House\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 437
-   at InHouseInteriorsApplication.WorkTransactionPage.BtnAdd_Click(Object sender, EventArgs e) in D:\senthil\Project\In-House\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 382
+   at InHouseInteriorsApplication.WorkTransactionPage.MakeNewAlldaysRow(DataTable table, String QId, String QDetail_id, String QDesc_id, String QDesc, String Work_id, String WorkName, String Remark, String Width, String Depth, String Height, String TotalPlain, String TotalWood, String Party_Id, String ShelfQty, String ShutterQty, String BoxQty, String BoxSqFt, String Remark_id, String TaxPer, String Transportation, String DescTaxPer) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 400
+   at InHouseInteriorsApplication.WorkTransactionPage.BtnAdd_Click(Object sender, EventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 350
    at System.Windows.Forms.Control.OnClick(EventArgs e)
    at System.Windows.Forms.Button.OnClick(EventArgs e)
    at System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
@@ -43,12 +73,12 @@ MainPage : WorkTransactionToolStripMenuItem_ClickSystem.ArgumentException: Colum
    at System.Windows.Forms.Application.RunDialog(Form form)
    at System.Windows.Forms.Form.ShowDialog(IWin32Window owner)
    at System.Windows.Forms.Form.ShowDialog()
-   at InHouseInteriorsApplication.MainPage.WorkTransactionToolStripMenuItem_Click(Object sender, EventArgs e) in D:\senthil\Project\In-House\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\MainPage.cs:line 104
-MainPage : WorkTransactionToolStripMenuItem_ClickSystem.ArgumentException: Column 'Remark' does not belong to table .
+   at InHouseInteriorsApplication.MainPage.WorkTransactionToolStripMenuItem_Click(Object sender, EventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\MainPage.cs:line 104
+MainPage : WorkTransactionToolStripMenuItem_ClickSystem.ArgumentException: Column 'Q_id' does not belong to table .
    at System.Data.DataRow.GetDataColumn(String columnName)
    at System.Data.DataRow.set_Item(String columnName, Object value)
-   at InHouseInteriorsApplication.WorkTransactionPage.MakeNewAlldaysRow(DataTable table, String QId, String QDetail_id, String QDesc_id, String QDesc, String Work_id, String WorkName, String Remark, String Width, String Depth, String Height, String TotalPlain, String TotalWood, String Party_Id, String ShelfQty, String ShutterQty, String BoxQty, String BoxSqFt, String Remark_id, String TaxPer, String Transportation, String DescTaxPer) in D:\senthil\Project\In-House\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 437
-   at InHouseInteriorsApplication.WorkTransactionPage.BtnAdd_Click(Object sender, EventArgs e) in D:\senthil\Project\In-House\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 382
+   at InHouseInteriorsApplication.WorkTransactionPage.MakeNewAlldaysRow(DataTable table, String QId, String QDetail_id, String QDesc_id, String QDesc, String Work_id, String WorkName, String Remark, String Width, String Depth, String Height, String TotalPlain, String TotalWood, String Party_Id, String ShelfQty, String ShutterQty, String BoxQty, String BoxSqFt, String Remark_id, String TaxPer, String Transportation, String DescTaxPer) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 400
+   at InHouseInteriorsApplication.WorkTransactionPage.BtnAdd_Click(Object sender, EventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 350
    at System.Windows.Forms.Control.OnClick(EventArgs e)
    at System.Windows.Forms.Button.OnClick(EventArgs e)
    at System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
@@ -66,24 +96,4 @@ MainPage : WorkTransactionToolStripMenuItem_ClickSystem.ArgumentException: Colum
    at System.Windows.Forms.Application.RunDialog(Form form)
    at System.Windows.Forms.Form.ShowDialog(IWin32Window owner)
    at System.Windows.Forms.Form.ShowDialog()
-   at InHouseInteriorsApplication.MainPage.WorkTransactionToolStripMenuItem_Click(Object sender, EventArgs e) in D:\senthil\Project\In-House\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\MainPage.cs:line 104
-WorkTransactionPage : CmbRemarks_SelectedIndexChangedSystem.IndexOutOfRangeException: There is no row at position 6.
-   at System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
-   at System.Data.DataRowCollection.get_Item(Int32 index)
-   at InHouseInteriorsApplication.WorkTransactionPage.quotation_update() in D:\senthil\New Project\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 1513
-   at InHouseInteriorsApplication.WorkTransactionPage.CmbRemarks_SelectedIndexChanged(Object sender, EventArgs e) in D:\senthil\New Project\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 799
-WorkTransactionPage : CmbQdesc_SelectedIndexChangedSystem.IndexOutOfRangeException: There is no row at position 6.
-   at System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
-   at System.Data.DataRowCollection.get_Item(Int32 index)
-   at InHouseInteriorsApplication.WorkTransactionPage.quotation_update() in D:\senthil\New Project\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 1513
-   at InHouseInteriorsApplication.WorkTransactionPage.CmbQdesc_SelectedIndexChanged(Object sender, EventArgs e) in D:\senthil\New Project\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 709
-WorkTransactionPage : CmbRemarks_SelectedIndexChangedSystem.IndexOutOfRangeException: There is no row at position 6.
-   at System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
-   at System.Data.DataRowCollection.get_Item(Int32 index)
-   at InHouseInteriorsApplication.WorkTransactionPage.quotation_update() in D:\senthil\New Project\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 1513
-   at InHouseInteriorsApplication.WorkTransactionPage.CmbRemarks_SelectedIndexChanged(Object sender, EventArgs e) in D:\senthil\New Project\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 799
-WorkTransactionPage : CmbQdesc_SelectedIndexChangedSystem.IndexOutOfRangeException: There is no row at position 6.
-   at System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
-   at System.Data.DataRowCollection.get_Item(Int32 index)
-   at InHouseInteriorsApplication.WorkTransactionPage.quotation_update() in D:\senthil\New Project\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 1513
-   at InHouseInteriorsApplication.WorkTransactionPage.CmbQdesc_SelectedIndexChanged(Object sender, EventArgs e) in D:\senthil\New Project\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 709
+   at InHouseInteriorsApplication.MainPage.WorkTransactionToolStripMenuItem_Click(Object sender, EventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\MainPage.cs:line 104

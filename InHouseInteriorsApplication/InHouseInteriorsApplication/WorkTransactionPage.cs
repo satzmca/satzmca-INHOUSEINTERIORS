@@ -1534,8 +1534,8 @@ namespace InHouseInteriorsApplication
             DgvWork.DataSource = null;
             dgvQuotation.DataSource = null;
 
-            Quotation_dt = null;
-            desDetail_dt = null;
+            Quotation_dt.Rows.Clear();
+            desDetail_dt.Rows.Clear();
 
 
             bindquotation();

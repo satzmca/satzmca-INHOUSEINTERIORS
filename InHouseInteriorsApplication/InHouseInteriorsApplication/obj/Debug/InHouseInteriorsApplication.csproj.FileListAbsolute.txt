@@ -80,3 +80,7 @@ D:\senthil\New Project\InHouseInteriorsApplication\InHouseInteriorsApplication\b
 D:\senthil\New Project\InHouseInteriorsApplication\InHouseInteriorsApplication\bin\Debug\Telerik.ReportViewer.Silverlight.pdb
 D:\senthil\New Project\InHouseInteriorsApplication\InHouseInteriorsApplication\bin\Debug\Telerik.ReportViewer.Silverlight.xml
 D:\senthil\New Project\InHouseInteriorsApplication\InHouseInteriorsApplication\obj\Debug\InHouseInteriorsApplication.GenReport.resources
+D:\senthil\Project\In-House\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\bin\Debug\Telerik.ReportViewer.Silverlight.dll
+D:\senthil\Project\In-House\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\bin\Debug\Telerik.ReportViewer.Silverlight.pdb
+D:\senthil\Project\In-House\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\bin\Debug\Telerik.ReportViewer.Silverlight.xml
+D:\senthil\Project\In-House\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\obj\Debug\InHouseInteriorsApplication.GenReport.resources

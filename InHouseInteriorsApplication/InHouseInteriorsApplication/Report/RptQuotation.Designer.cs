@@ -18,7 +18,6 @@ namespace InHouseInteriorsApplication.Report
             this.groupHeaderSection = new Telerik.Reporting.GroupHeaderSection();
             this.textBox81 = new Telerik.Reporting.TextBox();
             this.pageHeaderSection1 = new Telerik.Reporting.PageHeaderSection();
-            this.txtHeater1 = new Telerik.Reporting.TextBox();
             this.textBox3 = new Telerik.Reporting.TextBox();
             this.textBox2 = new Telerik.Reporting.TextBox();
             this.panel3 = new Telerik.Reporting.Panel();
@@ -43,9 +42,7 @@ namespace InHouseInteriorsApplication.Report
             this.reportHeaderSection1 = new Telerik.Reporting.ReportHeaderSection();
             this.panel1 = new Telerik.Reporting.Panel();
             this.textBox25 = new Telerik.Reporting.TextBox();
-            this.textBox21 = new Telerik.Reporting.TextBox();
             this.textBox27 = new Telerik.Reporting.TextBox();
-            this.textBox23 = new Telerik.Reporting.TextBox();
             this.panel2 = new Telerik.Reporting.Panel();
             this.textBox11 = new Telerik.Reporting.TextBox();
             this.textBox13 = new Telerik.Reporting.TextBox();
@@ -92,6 +89,9 @@ namespace InHouseInteriorsApplication.Report
             this.textBox36 = new Telerik.Reporting.TextBox();
             this.Quotation = new Telerik.Reporting.SqlDataSource();
             this.pictureBox1 = new Telerik.Reporting.PictureBox();
+            this.txtHeater1 = new Telerik.Reporting.TextBox();
+            this.textBox21 = new Telerik.Reporting.TextBox();
+            this.textBox23 = new Telerik.Reporting.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // groupFooterSection
@@ -136,26 +136,14 @@ namespace InHouseInteriorsApplication.Report
             this.pageHeaderSection1.Style.BorderStyle.Bottom = Telerik.Reporting.Drawing.BorderType.Solid;
             this.pageHeaderSection1.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Point(0.5D);
             // 
-            // txtHeater1
-            // 
-            this.txtHeater1.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(1.35D), Telerik.Reporting.Drawing.Unit.Inch(0.1D));
-            this.txtHeater1.Name = "txtHeater1";
-            this.txtHeater1.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(3.981D), Telerik.Reporting.Drawing.Unit.Inch(0.421D));
-            this.txtHeater1.Style.Font.Bold = true;
-            this.txtHeater1.Style.Font.Name = "Verdana";
-            this.txtHeater1.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(28D);
-            this.txtHeater1.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Left;
-            this.txtHeater1.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
-            this.txtHeater1.Value = "InHouse Interiors";
-            // 
             // textBox3
             // 
-            this.textBox3.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(1.35D), Telerik.Reporting.Drawing.Unit.Inch(0.62D));
+            this.textBox3.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(3.301D), Telerik.Reporting.Drawing.Unit.Inch(0.62D));
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(3.981D), Telerik.Reporting.Drawing.Unit.Inch(0.313D));
+            this.textBox3.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(2.03D), Telerik.Reporting.Drawing.Unit.Inch(0.313D));
             this.textBox3.Style.Font.Bold = true;
             this.textBox3.Style.Font.Name = "Verdana";
-            this.textBox3.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(20D);
+            this.textBox3.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(18D);
             this.textBox3.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Right;
             this.textBox3.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
             this.textBox3.Value = "QUOTATION";
@@ -163,9 +151,9 @@ namespace InHouseInteriorsApplication.Report
             // textBox2
             // 
             this.textBox2.Format = "{0:g}";
-            this.textBox2.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(7.104D), Telerik.Reporting.Drawing.Unit.Inch(0.1D));
+            this.textBox2.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(7.026D), Telerik.Reporting.Drawing.Unit.Inch(0.1D));
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.987D), Telerik.Reporting.Drawing.Unit.Inch(0.421D));
+            this.textBox2.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(2.065D), Telerik.Reporting.Drawing.Unit.Inch(0.421D));
             this.textBox2.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.None;
             this.textBox2.Style.BorderStyle.Left = Telerik.Reporting.Drawing.BorderType.None;
             this.textBox2.Style.BorderStyle.Right = Telerik.Reporting.Drawing.BorderType.None;
@@ -188,9 +176,9 @@ namespace InHouseInteriorsApplication.Report
             this.textBox55,
             this.textBox54,
             this.textBox53});
-            this.panel3.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(5.331D), Telerik.Reporting.Drawing.Unit.Inch(0.083D));
+            this.panel3.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(5.4D), Telerik.Reporting.Drawing.Unit.Inch(0.083D));
             this.panel3.Name = "panel3";
-            this.panel3.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(3.76D), Telerik.Reporting.Drawing.Unit.Inch(0.773D));
+            this.panel3.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(3.691D), Telerik.Reporting.Drawing.Unit.Inch(0.773D));
             this.panel3.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.Solid;
             this.panel3.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Point(0.5D);
             // 
@@ -198,7 +186,7 @@ namespace InHouseInteriorsApplication.Report
             // 
             this.textBox29.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(0D), Telerik.Reporting.Drawing.Unit.Inch(0D));
             this.textBox29.Name = "textBox29";
-            this.textBox29.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.536D), Telerik.Reporting.Drawing.Unit.Inch(0.251D));
+            this.textBox29.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.626D), Telerik.Reporting.Drawing.Unit.Inch(0.251D));
             this.textBox29.Style.BackgroundColor = System.Drawing.Color.Transparent;
             this.textBox29.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.None;
             this.textBox29.Style.BorderStyle.Left = Telerik.Reporting.Drawing.BorderType.None;
@@ -211,13 +199,13 @@ namespace InHouseInteriorsApplication.Report
             this.textBox29.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Left;
             this.textBox29.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
             this.textBox29.StyleName = "";
-            this.textBox29.Value = "Quotation No      :";
+            this.textBox29.Value = "Quotation No          :";
             // 
             // textBox31
             // 
             this.textBox31.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(0D), Telerik.Reporting.Drawing.Unit.Inch(0.251D));
             this.textBox31.Name = "textBox31";
-            this.textBox31.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.535D), Telerik.Reporting.Drawing.Unit.Inch(0.225D));
+            this.textBox31.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.626D), Telerik.Reporting.Drawing.Unit.Inch(0.225D));
             this.textBox31.Style.BackgroundColor = System.Drawing.Color.Transparent;
             this.textBox31.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.None;
             this.textBox31.Style.BorderStyle.Left = Telerik.Reporting.Drawing.BorderType.None;
@@ -230,14 +218,14 @@ namespace InHouseInteriorsApplication.Report
             this.textBox31.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Left;
             this.textBox31.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
             this.textBox31.StyleName = "";
-            this.textBox31.Value = "Date                    :";
+            this.textBox31.Value = "Date                        :";
             // 
             // textBox33
             // 
             this.textBox33.Bindings.Add(new Telerik.Reporting.Binding("Visible", "=IIF(Fields.RevisedCount > 0, true,false)"));
             this.textBox33.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(0D), Telerik.Reporting.Drawing.Unit.Inch(0.476D));
             this.textBox33.Name = "textBox33";
-            this.textBox33.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.535D), Telerik.Reporting.Drawing.Unit.Inch(0.235D));
+            this.textBox33.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.626D), Telerik.Reporting.Drawing.Unit.Inch(0.235D));
             this.textBox33.Style.BackgroundColor = System.Drawing.Color.Transparent;
             this.textBox33.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.None;
             this.textBox33.Style.BorderStyle.Left = Telerik.Reporting.Drawing.BorderType.None;
@@ -250,13 +238,13 @@ namespace InHouseInteriorsApplication.Report
             this.textBox33.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Left;
             this.textBox33.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
             this.textBox33.StyleName = "";
-            this.textBox33.Value = "Revision No        :";
+            this.textBox33.Value = "Revision No            :";
             // 
             // textBox55
             // 
-            this.textBox55.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(1.536D), Telerik.Reporting.Drawing.Unit.Inch(0D));
+            this.textBox55.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(1.626D), Telerik.Reporting.Drawing.Unit.Inch(0D));
             this.textBox55.Name = "textBox55";
-            this.textBox55.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(2.224D), Telerik.Reporting.Drawing.Unit.Inch(0.251D));
+            this.textBox55.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(2.065D), Telerik.Reporting.Drawing.Unit.Inch(0.251D));
             this.textBox55.Style.BackgroundColor = System.Drawing.Color.Transparent;
             this.textBox55.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.None;
             this.textBox55.Style.BorderStyle.Left = Telerik.Reporting.Drawing.BorderType.None;
@@ -273,9 +261,9 @@ namespace InHouseInteriorsApplication.Report
             // 
             // textBox54
             // 
-            this.textBox54.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(1.535D), Telerik.Reporting.Drawing.Unit.Inch(0.251D));
+            this.textBox54.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(1.626D), Telerik.Reporting.Drawing.Unit.Inch(0.251D));
             this.textBox54.Name = "textBox54";
-            this.textBox54.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(2.225D), Telerik.Reporting.Drawing.Unit.Inch(0.225D));
+            this.textBox54.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(2.065D), Telerik.Reporting.Drawing.Unit.Inch(0.225D));
             this.textBox54.Style.BackgroundColor = System.Drawing.Color.Transparent;
             this.textBox54.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.None;
             this.textBox54.Style.BorderStyle.Left = Telerik.Reporting.Drawing.BorderType.None;
@@ -293,9 +281,9 @@ namespace InHouseInteriorsApplication.Report
             // textBox53
             // 
             this.textBox53.Bindings.Add(new Telerik.Reporting.Binding("Visible", "=IIF(Fields.RevisedCount > 0, true,false)"));
-            this.textBox53.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(1.535D), Telerik.Reporting.Drawing.Unit.Inch(0.476D));
+            this.textBox53.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(1.626D), Telerik.Reporting.Drawing.Unit.Inch(0.476D));
             this.textBox53.Name = "textBox53";
-            this.textBox53.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(2.225D), Telerik.Reporting.Drawing.Unit.Inch(0.235D));
+            this.textBox53.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(2.065D), Telerik.Reporting.Drawing.Unit.Inch(0.235D));
             this.textBox53.Style.BackgroundColor = System.Drawing.Color.Transparent;
             this.textBox53.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.None;
             this.textBox53.Style.BorderStyle.Left = Telerik.Reporting.Drawing.BorderType.None;
@@ -337,7 +325,8 @@ namespace InHouseInteriorsApplication.Report
             this.textBox87.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Point(0.5D);
             this.textBox87.Style.Font.Name = "Verdana";
             this.textBox87.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(6.8D);
-            this.textBox87.Style.Padding.Left = Telerik.Reporting.Drawing.Unit.Point(3D);
+            this.textBox87.Style.Padding.Left = Telerik.Reporting.Drawing.Unit.Point(0D);
+            this.textBox87.Style.Padding.Right = Telerik.Reporting.Drawing.Unit.Point(5D);
             this.textBox87.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Right;
             this.textBox87.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
             this.textBox87.StyleName = "";
@@ -542,9 +531,9 @@ namespace InHouseInteriorsApplication.Report
             this.textBox21,
             this.textBox27,
             this.textBox23});
-            this.panel1.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(5.331D), Telerik.Reporting.Drawing.Unit.Inch(1.127D));
+            this.panel1.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(5.4D), Telerik.Reporting.Drawing.Unit.Inch(1.127D));
             this.panel1.Name = "panel1";
-            this.panel1.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(2.737D), Telerik.Reporting.Drawing.Unit.Inch(0.783D));
+            this.panel1.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(2.954D), Telerik.Reporting.Drawing.Unit.Inch(0.783D));
             this.panel1.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.Solid;
             this.panel1.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Point(0.5D);
             // 
@@ -552,7 +541,7 @@ namespace InHouseInteriorsApplication.Report
             // 
             this.textBox25.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(0D), Telerik.Reporting.Drawing.Unit.Inch(0D));
             this.textBox25.Name = "textBox25";
-            this.textBox25.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.152D), Telerik.Reporting.Drawing.Unit.Inch(0.261D));
+            this.textBox25.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.626D), Telerik.Reporting.Drawing.Unit.Inch(0.261D));
             this.textBox25.Style.BackgroundColor = System.Drawing.Color.Transparent;
             this.textBox25.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.None;
             this.textBox25.Style.BorderStyle.Left = Telerik.Reporting.Drawing.BorderType.None;
@@ -561,36 +550,17 @@ namespace InHouseInteriorsApplication.Report
             this.textBox25.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Point(0.5D);
             this.textBox25.Style.Font.Bold = true;
             this.textBox25.Style.Font.Name = "Verdana";
-            this.textBox25.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(9D);
+            this.textBox25.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(10D);
             this.textBox25.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Left;
             this.textBox25.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
             this.textBox25.StyleName = "";
-            this.textBox25.Value = "Project            :";
-            // 
-            // textBox21
-            // 
-            this.textBox21.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(0D), Telerik.Reporting.Drawing.Unit.Inch(0.522D));
-            this.textBox21.Name = "textBox21";
-            this.textBox21.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.152D), Telerik.Reporting.Drawing.Unit.Inch(0.261D));
-            this.textBox21.Style.BackgroundColor = System.Drawing.Color.Transparent;
-            this.textBox21.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.None;
-            this.textBox21.Style.BorderStyle.Left = Telerik.Reporting.Drawing.BorderType.None;
-            this.textBox21.Style.BorderStyle.Right = Telerik.Reporting.Drawing.BorderType.None;
-            this.textBox21.Style.BorderStyle.Top = Telerik.Reporting.Drawing.BorderType.None;
-            this.textBox21.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Point(0.5D);
-            this.textBox21.Style.Font.Bold = true;
-            this.textBox21.Style.Font.Name = "Verdana";
-            this.textBox21.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(9D);
-            this.textBox21.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Left;
-            this.textBox21.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
-            this.textBox21.StyleName = "";
-            this.textBox21.Value = "Shutter Type  :";
+            this.textBox25.Value = "Project                   :";
             // 
             // textBox27
             // 
-            this.textBox27.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(1.152D), Telerik.Reporting.Drawing.Unit.Inch(0D));
+            this.textBox27.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(1.626D), Telerik.Reporting.Drawing.Unit.Inch(0D));
             this.textBox27.Name = "textBox27";
-            this.textBox27.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.585D), Telerik.Reporting.Drawing.Unit.Inch(0.261D));
+            this.textBox27.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.321D), Telerik.Reporting.Drawing.Unit.Inch(0.261D));
             this.textBox27.Style.BackgroundColor = System.Drawing.Color.Transparent;
             this.textBox27.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.None;
             this.textBox27.Style.BorderStyle.Left = Telerik.Reporting.Drawing.BorderType.None;
@@ -599,30 +569,11 @@ namespace InHouseInteriorsApplication.Report
             this.textBox27.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Point(0.5D);
             this.textBox27.Style.Font.Bold = true;
             this.textBox27.Style.Font.Name = "Verdana";
-            this.textBox27.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(9D);
+            this.textBox27.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(10D);
             this.textBox27.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Left;
             this.textBox27.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
             this.textBox27.StyleName = "";
             this.textBox27.Value = "Wardrobe";
-            // 
-            // textBox23
-            // 
-            this.textBox23.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(1.152D), Telerik.Reporting.Drawing.Unit.Inch(0.522D));
-            this.textBox23.Name = "textBox23";
-            this.textBox23.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.585D), Telerik.Reporting.Drawing.Unit.Inch(0.261D));
-            this.textBox23.Style.BackgroundColor = System.Drawing.Color.Transparent;
-            this.textBox23.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.None;
-            this.textBox23.Style.BorderStyle.Left = Telerik.Reporting.Drawing.BorderType.None;
-            this.textBox23.Style.BorderStyle.Right = Telerik.Reporting.Drawing.BorderType.None;
-            this.textBox23.Style.BorderStyle.Top = Telerik.Reporting.Drawing.BorderType.None;
-            this.textBox23.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Point(0.5D);
-            this.textBox23.Style.Font.Bold = true;
-            this.textBox23.Style.Font.Name = "Verdana";
-            this.textBox23.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(9D);
-            this.textBox23.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Left;
-            this.textBox23.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
-            this.textBox23.StyleName = "";
-            this.textBox23.Value = "Classic Shutter";
             // 
             // panel2
             // 
@@ -1179,7 +1130,7 @@ namespace InHouseInteriorsApplication.Report
             this.textBox8});
             this.panel5.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(5.804D), Telerik.Reporting.Drawing.Unit.Inch(0.975D));
             this.panel5.Name = "panel5";
-            this.panel5.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(3.23D), Telerik.Reporting.Drawing.Unit.Inch(1.187D));
+            this.panel5.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(3.287D), Telerik.Reporting.Drawing.Unit.Inch(1.187D));
             this.panel5.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.Solid;
             this.panel5.Style.BorderStyle.Right = Telerik.Reporting.Drawing.BorderType.Solid;
             this.panel5.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Point(0.5D);
@@ -1207,7 +1158,7 @@ namespace InHouseInteriorsApplication.Report
             // 
             this.textBox8.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(0D), Telerik.Reporting.Drawing.Unit.Inch(0.936D));
             this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(2.862D), Telerik.Reporting.Drawing.Unit.Inch(0.251D));
+            this.textBox8.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(3.287D), Telerik.Reporting.Drawing.Unit.Inch(0.251D));
             this.textBox8.Style.BackgroundColor = System.Drawing.Color.Transparent;
             this.textBox8.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.None;
             this.textBox8.Style.BorderStyle.Left = Telerik.Reporting.Drawing.BorderType.None;
@@ -1239,7 +1190,7 @@ namespace InHouseInteriorsApplication.Report
             this.textBox1.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Right;
             this.textBox1.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
             this.textBox1.StyleName = "";
-            this.textBox1.Value = "TOTAL  :";
+            this.textBox1.Value = "TOTAL  ";
             // 
             // textBox5
             // 
@@ -1300,7 +1251,7 @@ namespace InHouseInteriorsApplication.Report
             this.textBox20.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Right;
             this.textBox20.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
             this.textBox20.StyleName = "";
-            this.textBox20.Value = "=\'Tax @ \' + Fields.TaxPer + \'.00 :\'";
+            this.textBox20.Value = "=\'Tax @ \' + Fields.TaxPer + \'.00 \'";
             // 
             // textBox14
             // 
@@ -1362,7 +1313,7 @@ namespace InHouseInteriorsApplication.Report
             this.textBox30.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Right;
             this.textBox30.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
             this.textBox30.StyleName = "";
-            this.textBox30.Value = "Transportation :";
+            this.textBox30.Value = "Transportation ";
             // 
             // textBox24
             // 
@@ -1419,11 +1370,11 @@ namespace InHouseInteriorsApplication.Report
             this.textBox40.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Point(0.5D);
             this.textBox40.Style.Font.Bold = true;
             this.textBox40.Style.Font.Name = "Verdana";
-            this.textBox40.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(8D);
+            this.textBox40.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(8.5D);
             this.textBox40.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Right;
             this.textBox40.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
             this.textBox40.StyleName = "";
-            this.textBox40.Value = "GRAND TOTAL  :";
+            this.textBox40.Value = "GRAND TOTAL ";
             // 
             // textBox34
             // 
@@ -1440,7 +1391,7 @@ namespace InHouseInteriorsApplication.Report
             this.textBox34.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Point(0.5D);
             this.textBox34.Style.Font.Bold = true;
             this.textBox34.Style.Font.Name = "Verdana";
-            this.textBox34.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(7D);
+            this.textBox34.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(8.5D);
             this.textBox34.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Right;
             this.textBox34.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
             this.textBox34.StyleName = "";
@@ -1461,7 +1412,7 @@ namespace InHouseInteriorsApplication.Report
             this.textBox36.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Point(0.5D);
             this.textBox36.Style.Font.Bold = true;
             this.textBox36.Style.Font.Name = "Verdana";
-            this.textBox36.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(7D);
+            this.textBox36.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(8.5D);
             this.textBox36.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Right;
             this.textBox36.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
             this.textBox36.StyleName = "";
@@ -1482,11 +1433,61 @@ namespace InHouseInteriorsApplication.Report
             this.pictureBox1.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0D), Telerik.Reporting.Drawing.Unit.Cm(0.254D));
             this.pictureBox1.MimeType = "image/png";
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(3.429D), Telerik.Reporting.Drawing.Unit.Cm(1.816D));
+            this.pictureBox1.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(4.964D), Telerik.Reporting.Drawing.Unit.Cm(2.116D));
             this.pictureBox1.Sizing = Telerik.Reporting.Drawing.ImageSizeMode.Stretch;
             this.pictureBox1.Style.Visible = true;
             this.pictureBox1.Value = ((object)(resources.GetObject("pictureBox1.Value")));
             this.pictureBox1.ItemDataBinding += new System.EventHandler(this.pictureBox1_ItemDataBinding);
+            // 
+            // txtHeater1
+            // 
+            this.txtHeater1.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(2.274D), Telerik.Reporting.Drawing.Unit.Inch(0.1D));
+            this.txtHeater1.Name = "txtHeater1";
+            this.txtHeater1.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(3.981D), Telerik.Reporting.Drawing.Unit.Inch(0.421D));
+            this.txtHeater1.Style.Font.Bold = true;
+            this.txtHeater1.Style.Font.Name = "Verdana";
+            this.txtHeater1.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(28D);
+            this.txtHeater1.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Left;
+            this.txtHeater1.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
+            this.txtHeater1.Value = "InHouse Interiors";
+            // 
+            // textBox21
+            // 
+            this.textBox21.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(0D), Telerik.Reporting.Drawing.Unit.Inch(0.522D));
+            this.textBox21.Name = "textBox21";
+            this.textBox21.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.626D), Telerik.Reporting.Drawing.Unit.Inch(0.261D));
+            this.textBox21.Style.BackgroundColor = System.Drawing.Color.Transparent;
+            this.textBox21.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.None;
+            this.textBox21.Style.BorderStyle.Left = Telerik.Reporting.Drawing.BorderType.None;
+            this.textBox21.Style.BorderStyle.Right = Telerik.Reporting.Drawing.BorderType.None;
+            this.textBox21.Style.BorderStyle.Top = Telerik.Reporting.Drawing.BorderType.None;
+            this.textBox21.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Point(0.5D);
+            this.textBox21.Style.Font.Bold = true;
+            this.textBox21.Style.Font.Name = "Verdana";
+            this.textBox21.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(10D);
+            this.textBox21.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Left;
+            this.textBox21.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
+            this.textBox21.StyleName = "";
+            this.textBox21.Value = "Shutter Type          :";
+            // 
+            // textBox23
+            // 
+            this.textBox23.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(1.626D), Telerik.Reporting.Drawing.Unit.Inch(0.522D));
+            this.textBox23.Name = "textBox23";
+            this.textBox23.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.321D), Telerik.Reporting.Drawing.Unit.Inch(0.261D));
+            this.textBox23.Style.BackgroundColor = System.Drawing.Color.Transparent;
+            this.textBox23.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.None;
+            this.textBox23.Style.BorderStyle.Left = Telerik.Reporting.Drawing.BorderType.None;
+            this.textBox23.Style.BorderStyle.Right = Telerik.Reporting.Drawing.BorderType.None;
+            this.textBox23.Style.BorderStyle.Top = Telerik.Reporting.Drawing.BorderType.None;
+            this.textBox23.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Point(0.5D);
+            this.textBox23.Style.Font.Bold = true;
+            this.textBox23.Style.Font.Name = "Verdana";
+            this.textBox23.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(10D);
+            this.textBox23.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Left;
+            this.textBox23.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
+            this.textBox23.StyleName = "";
+            this.textBox23.Value = "Classic Shutter";
             // 
             // RptQuotation
             // 
@@ -1527,7 +1528,7 @@ namespace InHouseInteriorsApplication.Report
             styleRule1.Style.Padding.Right = Telerik.Reporting.Drawing.Unit.Point(2D);
             this.StyleSheet.AddRange(new Telerik.Reporting.Drawing.StyleRule[] {
             styleRule1});
-            this.Width = Telerik.Reporting.Drawing.Unit.Inch(9.092D);
+            this.Width = Telerik.Reporting.Drawing.Unit.Inch(9.091D);
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
         }
@@ -1537,11 +1538,9 @@ namespace InHouseInteriorsApplication.Report
         private Telerik.Reporting.DetailSection detail;
         private Telerik.Reporting.PageFooterSection pageFooterSection1;
         private Telerik.Reporting.ReportHeaderSection reportHeaderSection1;
-        private Telerik.Reporting.TextBox txtHeater1;
         private Telerik.Reporting.TextBox textBox3;
         private Telerik.Reporting.Panel panel1;
         private Telerik.Reporting.TextBox textBox25;
-        private Telerik.Reporting.TextBox textBox21;
         private Telerik.Reporting.TextBox textBox27;
         private Telerik.Reporting.Panel panel2;
         private Telerik.Reporting.TextBox textBox11;
@@ -1551,8 +1550,6 @@ namespace InHouseInteriorsApplication.Report
         private Telerik.Reporting.TextBox textBox19;
         private Telerik.Reporting.TextBox textBox7;
         private Telerik.Reporting.TextBox textBox9;
-        public Telerik.Reporting.PictureBox pictureBox1;
-        private Telerik.Reporting.TextBox textBox23;
         private Telerik.Reporting.Panel panel3;
         private Telerik.Reporting.TextBox textBox29;
         private Telerik.Reporting.TextBox textBox31;
@@ -1611,5 +1608,9 @@ namespace InHouseInteriorsApplication.Report
         private Telerik.Reporting.TextBox textBox36;
         private Telerik.Reporting.TextBox textBox34;
         private Telerik.Reporting.TextBox textBox2;
+        private Telerik.Reporting.TextBox txtHeater1;
+        public Telerik.Reporting.PictureBox pictureBox1;
+        private Telerik.Reporting.TextBox textBox21;
+        private Telerik.Reporting.TextBox textBox23;
     }
 }

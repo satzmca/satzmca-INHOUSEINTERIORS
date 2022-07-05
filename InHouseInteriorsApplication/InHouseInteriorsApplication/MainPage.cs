@@ -140,30 +140,34 @@ namespace InHouseInteriorsApplication
 
         private void RemarksMasterToolStripMenuItem1_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void reportToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void QuotationReportToolStripMenuItem_Click(object sender, EventArgs e)
+        {
             try
             {
-                RemarksMasterPage RemarksMasterPage = new RemarksMasterPage();
-                RemarksMasterPage.ShowDialog();
+                Form frm = Application.OpenForms["GenReport"];
+                if (frm == null)
+                {
+                    InHouseInteriorsApplication.GenReport im = new InHouseInteriorsApplication.GenReport();
+                    im.ShowDialog();
+
+                }
+                else
+                {
+                    frm.ShowDialog();
+                }
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error");
                 cls.WriteException("MainPage : RemarksMasterToolStripMenuItem1_Click" + ex.ToString());
-            }
-        }
-
-        private void reportToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Form frm = Application.OpenForms["GenReport"];
-            if (frm == null)
-            {
-                InHouseInteriorsApplication.GenReport im = new InHouseInteriorsApplication.GenReport();
-                im.Show();
-
-            }
-            else
-            {
-                frm.Show();
             }
         }
     }

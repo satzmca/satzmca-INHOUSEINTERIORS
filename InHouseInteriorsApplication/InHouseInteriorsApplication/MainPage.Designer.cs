@@ -49,6 +49,7 @@
             this.lblDate = new System.Windows.Forms.Label();
             this.lblTime = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.quotationReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picTime)).BeginInit();
             this.SuspendLayout();
@@ -165,6 +166,8 @@
             // 
             // reportToolStripMenuItem
             // 
+            this.reportToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.quotationReportToolStripMenuItem});
             this.reportToolStripMenuItem.Name = "reportToolStripMenuItem";
             this.reportToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.reportToolStripMenuItem.Text = "Report";
@@ -228,6 +231,13 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
             // 
+            // quotationReportToolStripMenuItem
+            // 
+            this.quotationReportToolStripMenuItem.Name = "quotationReportToolStripMenuItem";
+            this.quotationReportToolStripMenuItem.Size = new System.Drawing.Size(188, 24);
+            this.quotationReportToolStripMenuItem.Text = "Quotation Report";
+            this.quotationReportToolStripMenuItem.Click += new System.EventHandler(this.QuotationReportToolStripMenuItem_Click);
+            // 
             // MainPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -277,5 +287,6 @@
         private System.Windows.Forms.ToolStripMenuItem remarksMasterToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem remarksMasterToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reportToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem quotationReportToolStripMenuItem;
     }
 }

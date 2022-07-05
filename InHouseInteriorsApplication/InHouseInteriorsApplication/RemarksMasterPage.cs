@@ -55,7 +55,7 @@ namespace InHouseInteriorsApplication
 
                     if (res == "1")
                     {
-                        MessageBox.Show("Saved Successfully");
+                        //MessageBox.Show("Saved Successfully");
                         Clear();
                         bindDetail();
                     }

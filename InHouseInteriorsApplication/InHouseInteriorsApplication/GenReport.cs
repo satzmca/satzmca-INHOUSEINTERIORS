@@ -16,7 +16,10 @@ namespace InHouseInteriorsApplication
 {
     public partial class GenReport : Form
     {
+
         ClassConfig cls = new ClassConfig();
+
+        public DataTable dtRepParam = new DataTable();
 
         DataSet ds = new DataSet();
 
@@ -74,23 +77,58 @@ namespace InHouseInteriorsApplication
             dtjo.Columns.Add("Q_Id");
 
             dtjo.Rows.Add("Quotation", cmbJobOrderNo.SelectedValue);
+            dtRepParam = dtjo;
 
 
-            Form frm = Application.OpenForms["FrmReport"];
-            if (frm == null)
+            var uriReportSource = new Telerik.Reporting.UriReportSource();
+
+            //Telerik.Reporting.ReportParameter reportParameter1 = new Telerik.Reporting.ReportParameter();
+
+            if (dtRepParam.Rows.Count > 0)
             {
-                FrmReport frmr = new FrmReport();
-                frmr.dtRepParam = dtjo;
-                frmr.Show();
+                if (dtRepParam.Rows[0]["ReqType"].ToString() == "Quotation")
+                {
+                    InHouseInteriorsApplication.Report.RptQuotation r = new InHouseInteriorsApplication.Report.RptQuotation();
 
+                    r.Report.ReportParameters["ReqType"].Value = dtRepParam.Rows[0]["ReqType"].ToString();
+
+                    if (dtRepParam.Rows[0]["Q_Id"].ToString() != "" && dtRepParam.Rows[0]["Q_Id"].ToString() != null)
+                        r.Report.ReportParameters["Q_Id"].Value = dtRepParam.Rows[0]["Q_Id"].ToString();
+
+
+                    this.reportViewer1.ReportSource = r;
+                    this.reportViewer1.RefreshReport();
+                }
             }
-            else
+
+            //Form frm = Application.OpenForms["FrmReport"];
+            //if (frm == null)
+            //{
+            //    FrmReport frmr = new FrmReport();
+            //    frmr.dtRepParam = dtjo;
+            //    frmr.Show();
+
+            //}
+            //else
+            //{
+            //    frm.Hide();
+            //    FrmReport frmr = new FrmReport();
+            //    frmr.dtRepParam = dtjo;
+            //    frmr.Show();
+            //}
+        }
+
+        private void PctClose_Click(object sender, EventArgs e)
+        {
+            try
             {
-                frm.Hide();
-                FrmReport frmr = new FrmReport();
-                frmr.dtRepParam = dtjo;
-                frmr.Show();
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error");
+                cls.WriteException("GenReport : PctClose_Click" + ex.ToString());
             }
         }
-}
+    }
 }

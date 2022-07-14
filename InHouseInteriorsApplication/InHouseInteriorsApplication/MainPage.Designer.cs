@@ -38,18 +38,17 @@
             this.partyMasterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.workDetailMasterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.formulaMasterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.remarksMasterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.formulaAssignMasterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.transactionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.workTransactionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.quotationReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblusername = new System.Windows.Forms.Label();
             this.picTime = new System.Windows.Forms.PictureBox();
             this.lblDate = new System.Windows.Forms.Label();
             this.lblTime = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.quotationReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picTime)).BeginInit();
             this.SuspendLayout();
@@ -88,7 +87,6 @@
             this.partyMasterToolStripMenuItem,
             this.workDetailMasterToolStripMenuItem,
             this.formulaMasterToolStripMenuItem,
-            this.remarksMasterToolStripMenuItem,
             this.formulaAssignMasterToolStripMenuItem});
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(180, 24);
@@ -136,12 +134,6 @@
             this.formulaMasterToolStripMenuItem.Text = "Formula Master";
             this.formulaMasterToolStripMenuItem.Click += new System.EventHandler(this.FormulaMasterToolStripMenuItem_Click);
             // 
-            // remarksMasterToolStripMenuItem
-            // 
-            this.remarksMasterToolStripMenuItem.Name = "remarksMasterToolStripMenuItem";
-            this.remarksMasterToolStripMenuItem.Size = new System.Drawing.Size(221, 24);
-            this.remarksMasterToolStripMenuItem.Text = "Remarks Master";
-            // 
             // formulaAssignMasterToolStripMenuItem
             // 
             this.formulaAssignMasterToolStripMenuItem.Name = "formulaAssignMasterToolStripMenuItem";
@@ -172,6 +164,13 @@
             this.reportToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.reportToolStripMenuItem.Text = "Report";
             this.reportToolStripMenuItem.Click += new System.EventHandler(this.reportToolStripMenuItem_Click);
+            // 
+            // quotationReportToolStripMenuItem
+            // 
+            this.quotationReportToolStripMenuItem.Name = "quotationReportToolStripMenuItem";
+            this.quotationReportToolStripMenuItem.Size = new System.Drawing.Size(188, 24);
+            this.quotationReportToolStripMenuItem.Text = "Quotation Report";
+            this.quotationReportToolStripMenuItem.Click += new System.EventHandler(this.QuotationReportToolStripMenuItem_Click);
             // 
             // logOutToolStripMenuItem
             // 
@@ -231,13 +230,6 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
             // 
-            // quotationReportToolStripMenuItem
-            // 
-            this.quotationReportToolStripMenuItem.Name = "quotationReportToolStripMenuItem";
-            this.quotationReportToolStripMenuItem.Size = new System.Drawing.Size(188, 24);
-            this.quotationReportToolStripMenuItem.Text = "Quotation Report";
-            this.quotationReportToolStripMenuItem.Click += new System.EventHandler(this.QuotationReportToolStripMenuItem_Click);
-            // 
             // MainPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -285,7 +277,6 @@
         private System.Windows.Forms.ToolStripMenuItem formulaMasterToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem formulaAssignMasterToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem remarksMasterToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem remarksMasterToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reportToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem quotationReportToolStripMenuItem;
     }

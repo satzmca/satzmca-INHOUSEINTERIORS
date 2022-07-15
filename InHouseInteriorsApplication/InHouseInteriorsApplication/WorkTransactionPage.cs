@@ -93,11 +93,21 @@ namespace InHouseInteriorsApplication
         public void bindWork()
         {
             DataTable workdt = new DataTable();
-            
+
+            cmbParty.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            cmbParty.AutoCompleteSource = AutoCompleteSource.ListItems;
+            cmbParty.MouseWheel -= new MouseEventHandler(ctl_MouseWheel);
+            cmbParty.MouseWheel += new MouseEventHandler(ctl_MouseWheel);
+
             cmbWorkName.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
             cmbWorkName.AutoCompleteSource = AutoCompleteSource.ListItems;
             cmbWorkName.MouseWheel -= new MouseEventHandler(ctl_MouseWheel);
             cmbWorkName.MouseWheel += new MouseEventHandler(ctl_MouseWheel);
+
+            cmbRemarks.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            cmbRemarks.AutoCompleteSource = AutoCompleteSource.ListItems;
+            cmbRemarks.MouseWheel -= new MouseEventHandler(ctl_MouseWheel);
+            cmbRemarks.MouseWheel += new MouseEventHandler(ctl_MouseWheel);
 
             var dict = JObject.Parse(@"{'IsWorkSelect':'Y'}");
             workdt = cls.FetchData(SpName: "USP_Work_Insert", ReqType: "SELECT_WORK", dict);
@@ -358,6 +368,18 @@ namespace InHouseInteriorsApplication
                         dgvQuotation.DataSource = Quotation_dt;
                         dgvQuotation.Rows[Quotation_dt.Rows.Count - 1].Selected = true;
                         txt_QuotationRowIndex.Text = (Quotation_dt.Rows.Count - 1).ToString();
+
+
+                        //txtWidth.Text = "0";
+                        //txtDepth.Text = "0";
+                        //txtHeight.Text = "0";
+                        //txtShelfQty.Text = "0";
+                        //txtShutterQty.Text = "0";
+                        //txtBoxQty.Text = "0";
+                        //txtBoxSqFt.Text = "0";
+
+                        isloadQuotation = true;
+
                     }
 
                 }

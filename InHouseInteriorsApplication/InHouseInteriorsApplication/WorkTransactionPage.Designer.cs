@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.grpDescription = new System.Windows.Forms.GroupBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -245,6 +245,7 @@
             this.txtTransportation.Size = new System.Drawing.Size(214, 31);
             this.txtTransportation.TabIndex = 7;
             this.txtTransportation.Text = "0";
+            this.txtTransportation.Enter += new System.EventHandler(this.TxtTransportation_Enter);
             this.txtTransportation.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtTransportation_KeyPress);
             // 
             // txtOverallTaxPer
@@ -255,6 +256,7 @@
             this.txtOverallTaxPer.Size = new System.Drawing.Size(214, 31);
             this.txtOverallTaxPer.TabIndex = 6;
             this.txtOverallTaxPer.Text = "0";
+            this.txtOverallTaxPer.Enter += new System.EventHandler(this.TxtOverallTaxPer_Enter);
             this.txtOverallTaxPer.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtOverallTaxPer_KeyPress);
             // 
             // txtQdescTaxPer
@@ -266,6 +268,7 @@
             this.txtQdescTaxPer.TabIndex = 5;
             this.txtQdescTaxPer.Text = "0";
             this.txtQdescTaxPer.TextChanged += new System.EventHandler(this.TxtQdescTaxPer_TextChanged);
+            this.txtQdescTaxPer.Enter += new System.EventHandler(this.TxtQdescTaxPer_Enter);
             this.txtQdescTaxPer.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtQdescTaxPer_KeyPress);
             // 
             // cmbRemarks
@@ -738,6 +741,7 @@
             this.txtWidth.TabIndex = 8;
             this.txtWidth.Text = "0";
             this.txtWidth.TextChanged += new System.EventHandler(this.TxtWidth_TextChanged);
+            this.txtWidth.Enter += new System.EventHandler(this.TxtWidth_Enter);
             this.txtWidth.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtWidth_KeyPress);
             // 
             // lblWidth
@@ -760,6 +764,7 @@
             this.txtBoxSqFt.TabIndex = 14;
             this.txtBoxSqFt.Text = "0";
             this.txtBoxSqFt.TextChanged += new System.EventHandler(this.TxtBoxSqFt_TextChanged);
+            this.txtBoxSqFt.Enter += new System.EventHandler(this.TxtBoxSqFt_Enter);
             this.txtBoxSqFt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtBoxSqFt_KeyPress);
             // 
             // lblShelfQty
@@ -782,6 +787,7 @@
             this.txtBoxQty.TabIndex = 13;
             this.txtBoxQty.Text = "0";
             this.txtBoxQty.TextChanged += new System.EventHandler(this.TxtBoxQty_TextChanged);
+            this.txtBoxQty.Enter += new System.EventHandler(this.TxtBoxQty_Enter);
             this.txtBoxQty.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtBoxQty_KeyPress);
             // 
             // lblBoxSqFt
@@ -804,6 +810,7 @@
             this.txtShutterQty.TabIndex = 12;
             this.txtShutterQty.Text = "0";
             this.txtShutterQty.TextChanged += new System.EventHandler(this.TxtShutterQty_TextChanged);
+            this.txtShutterQty.Enter += new System.EventHandler(this.TxtShutterQty_Enter);
             this.txtShutterQty.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtShutterQty_KeyPress);
             // 
             // lblHeight
@@ -826,6 +833,7 @@
             this.txtShelfQty.TabIndex = 11;
             this.txtShelfQty.Text = "0";
             this.txtShelfQty.TextChanged += new System.EventHandler(this.TxtShelfQty_TextChanged);
+            this.txtShelfQty.Enter += new System.EventHandler(this.TxtShelfQty_Enter);
             this.txtShelfQty.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtShelfQty_KeyPress);
             // 
             // lblShutterQty
@@ -848,6 +856,7 @@
             this.txtDepth.TabIndex = 10;
             this.txtDepth.Text = "0";
             this.txtDepth.TextChanged += new System.EventHandler(this.TxtDepth_TextChanged);
+            this.txtDepth.Enter += new System.EventHandler(this.TxtDepth_Enter);
             this.txtDepth.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtDepth_KeyPress);
             // 
             // lblBoxQty
@@ -870,6 +879,7 @@
             this.txtHeight.TabIndex = 9;
             this.txtHeight.Text = "0";
             this.txtHeight.TextChanged += new System.EventHandler(this.TxtHeight_TextChanged);
+            this.txtHeight.Enter += new System.EventHandler(this.TxtHeight_Enter);
             this.txtHeight.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtHeight_KeyPress);
             // 
             // lblDepth
@@ -954,10 +964,10 @@
             // 
             this.DgvCbDescription.AutoComplete = false;
             this.DgvCbDescription.DataPropertyName = "Description_id";
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.DgvCbDescription.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.DgvCbDescription.DefaultCellStyle = dataGridViewCellStyle9;
             this.DgvCbDescription.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox;
             this.DgvCbDescription.HeaderText = "Description";
             this.DgvCbDescription.Name = "DgvCbDescription";

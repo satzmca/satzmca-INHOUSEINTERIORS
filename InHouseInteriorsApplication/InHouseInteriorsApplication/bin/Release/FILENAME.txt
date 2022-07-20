@@ -1,0 +1,9 @@
+MainPage : RemarksMasterToolStripMenuItem1_ClickSystem.NullReferenceException: Object reference not set to an instance of an object.
+   at InHouseInteriorsApplication.GenReport..ctor() in D:\senthil\Project\In-House\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\GenReport.cs:line 28
+   at InHouseInteriorsApplication.MainPage.QuotationReportToolStripMenuItem_Click(Object sender, EventArgs e) in D:\senthil\Project\In-House\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\MainPage.cs:line 158
+MainPage : RemarksMasterToolStripMenuItem1_ClickSystem.NullReferenceException: Object reference not set to an instance of an object.
+   at InHouseInteriorsApplication.GenReport..ctor() in D:\senthil\Project\In-House\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\GenReport.cs:line 28
+   at InHouseInteriorsApplication.MainPage.QuotationReportToolStripMenuItem_Click(Object sender, EventArgs e) in D:\senthil\Project\In-House\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\MainPage.cs:line 158
+MainPage : RemarksMasterToolStripMenuItem1_ClickSystem.NullReferenceException: Object reference not set to an instance of an object.
+   at InHouseInteriorsApplication.GenReport..ctor() in D:\senthil\Project\In-House\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\GenReport.cs:line 28
+   at InHouseInteriorsApplication.MainPage.QuotationReportToolStripMenuItem_Click(Object sender, EventArgs e) in D:\senthil\Project\In-House\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\MainPage.cs:line 158

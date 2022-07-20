@@ -28,10 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.grpDescription = new System.Windows.Forms.GroupBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnClone = new System.Windows.Forms.Button();
             this.lblTransportation = new System.Windows.Forms.Label();
             this.lblOverallTaxPer = new System.Windows.Forms.Label();
             this.lblQDescTax = new System.Windows.Forms.Label();
@@ -124,7 +125,6 @@
             this.txtQuotation_id = new System.Windows.Forms.TextBox();
             this.cmbQuotation = new System.Windows.Forms.ComboBox();
             this.txt_QuotationRowIndex = new System.Windows.Forms.TextBox();
-            this.btnClone = new System.Windows.Forms.Button();
             this.grpDescription.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvQuotation)).BeginInit();
@@ -192,6 +192,18 @@
             this.panel1.Size = new System.Drawing.Size(1792, 841);
             this.panel1.TabIndex = 55;
             // 
+            // btnClone
+            // 
+            this.btnClone.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold);
+            this.btnClone.ForeColor = System.Drawing.Color.Black;
+            this.btnClone.Location = new System.Drawing.Point(1327, 726);
+            this.btnClone.Name = "btnClone";
+            this.btnClone.Size = new System.Drawing.Size(428, 46);
+            this.btnClone.TabIndex = 17;
+            this.btnClone.Text = "Clone";
+            this.btnClone.UseVisualStyleBackColor = true;
+            this.btnClone.Click += new System.EventHandler(this.BtnClone_Click);
+            // 
             // lblTransportation
             // 
             this.lblTransportation.AutoSize = true;
@@ -231,8 +243,9 @@
             this.txtTransportation.Location = new System.Drawing.Point(1526, 89);
             this.txtTransportation.Name = "txtTransportation";
             this.txtTransportation.Size = new System.Drawing.Size(214, 31);
-            this.txtTransportation.TabIndex = 65;
+            this.txtTransportation.TabIndex = 7;
             this.txtTransportation.Text = "0";
+            this.txtTransportation.Enter += new System.EventHandler(this.TxtTransportation_Enter);
             this.txtTransportation.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtTransportation_KeyPress);
             // 
             // txtOverallTaxPer
@@ -241,8 +254,9 @@
             this.txtOverallTaxPer.Location = new System.Drawing.Point(1526, 46);
             this.txtOverallTaxPer.Name = "txtOverallTaxPer";
             this.txtOverallTaxPer.Size = new System.Drawing.Size(214, 31);
-            this.txtOverallTaxPer.TabIndex = 64;
+            this.txtOverallTaxPer.TabIndex = 6;
             this.txtOverallTaxPer.Text = "0";
+            this.txtOverallTaxPer.Enter += new System.EventHandler(this.TxtOverallTaxPer_Enter);
             this.txtOverallTaxPer.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtOverallTaxPer_KeyPress);
             // 
             // txtQdescTaxPer
@@ -251,9 +265,10 @@
             this.txtQdescTaxPer.Location = new System.Drawing.Point(1526, 3);
             this.txtQdescTaxPer.Name = "txtQdescTaxPer";
             this.txtQdescTaxPer.Size = new System.Drawing.Size(214, 31);
-            this.txtQdescTaxPer.TabIndex = 63;
+            this.txtQdescTaxPer.TabIndex = 5;
             this.txtQdescTaxPer.Text = "0";
             this.txtQdescTaxPer.TextChanged += new System.EventHandler(this.TxtQdescTaxPer_TextChanged);
+            this.txtQdescTaxPer.Enter += new System.EventHandler(this.TxtQdescTaxPer_Enter);
             this.txtQdescTaxPer.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtQdescTaxPer_KeyPress);
             // 
             // cmbRemarks
@@ -263,7 +278,7 @@
             this.cmbRemarks.Location = new System.Drawing.Point(831, 78);
             this.cmbRemarks.Name = "cmbRemarks";
             this.cmbRemarks.Size = new System.Drawing.Size(481, 31);
-            this.cmbRemarks.TabIndex = 62;
+            this.cmbRemarks.TabIndex = 4;
             this.cmbRemarks.SelectedIndexChanged += new System.EventHandler(this.CmbRemarks_SelectedIndexChanged);
             // 
             // lblquotationview
@@ -284,7 +299,7 @@
             this.cmbParty.Location = new System.Drawing.Point(170, 12);
             this.cmbParty.Name = "cmbParty";
             this.cmbParty.Size = new System.Drawing.Size(481, 31);
-            this.cmbParty.TabIndex = 59;
+            this.cmbParty.TabIndex = 1;
             this.cmbParty.SelectedIndexChanged += new System.EventHandler(this.CmbParty_SelectedIndexChanged);
             // 
             // label2
@@ -306,7 +321,7 @@
             this.btnClear.Location = new System.Drawing.Point(1327, 781);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(428, 46);
-            this.btnClear.TabIndex = 58;
+            this.btnClear.TabIndex = 18;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = true;
             this.btnClear.Click += new System.EventHandler(this.BtnClear_Click);
@@ -318,7 +333,7 @@
             this.BtnSave.Location = new System.Drawing.Point(1327, 671);
             this.BtnSave.Name = "BtnSave";
             this.BtnSave.Size = new System.Drawing.Size(428, 46);
-            this.BtnSave.TabIndex = 57;
+            this.BtnSave.TabIndex = 16;
             this.BtnSave.Text = "Save";
             this.BtnSave.UseVisualStyleBackColor = true;
             this.BtnSave.Click += new System.EventHandler(this.BtnSave_Click);
@@ -568,7 +583,7 @@
             this.btnAdd.Location = new System.Drawing.Point(1327, 616);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(428, 46);
-            this.btnAdd.TabIndex = 55;
+            this.btnAdd.TabIndex = 15;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
@@ -580,7 +595,7 @@
             this.cmbQdesc.Location = new System.Drawing.Point(831, 12);
             this.cmbQdesc.Name = "cmbQdesc";
             this.cmbQdesc.Size = new System.Drawing.Size(481, 31);
-            this.cmbQdesc.TabIndex = 51;
+            this.cmbQdesc.TabIndex = 2;
             this.cmbQdesc.SelectedIndexChanged += new System.EventHandler(this.CmbQdesc_SelectedIndexChanged);
             // 
             // lblwoodtotal1
@@ -656,7 +671,7 @@
             this.cmbWorkName.Location = new System.Drawing.Point(170, 70);
             this.cmbWorkName.Name = "cmbWorkName";
             this.cmbWorkName.Size = new System.Drawing.Size(481, 31);
-            this.cmbWorkName.TabIndex = 1;
+            this.cmbWorkName.TabIndex = 3;
             this.cmbWorkName.SelectedIndexChanged += new System.EventHandler(this.CmbWorkName_SelectedIndexChanged);
             // 
             // lblTotal
@@ -713,7 +728,7 @@
             this.grpBoxSize.Location = new System.Drawing.Point(6, 115);
             this.grpBoxSize.Name = "grpBoxSize";
             this.grpBoxSize.Size = new System.Drawing.Size(1749, 94);
-            this.grpBoxSize.TabIndex = 38;
+            this.grpBoxSize.TabIndex = 7;
             this.grpBoxSize.TabStop = false;
             this.grpBoxSize.Text = "Box Size";
             // 
@@ -723,9 +738,10 @@
             this.txtWidth.Location = new System.Drawing.Point(55, 53);
             this.txtWidth.Name = "txtWidth";
             this.txtWidth.Size = new System.Drawing.Size(214, 31);
-            this.txtWidth.TabIndex = 2;
+            this.txtWidth.TabIndex = 8;
             this.txtWidth.Text = "0";
             this.txtWidth.TextChanged += new System.EventHandler(this.TxtWidth_TextChanged);
+            this.txtWidth.Enter += new System.EventHandler(this.TxtWidth_Enter);
             this.txtWidth.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtWidth_KeyPress);
             // 
             // lblWidth
@@ -745,9 +761,10 @@
             this.txtBoxSqFt.Location = new System.Drawing.Point(1483, 53);
             this.txtBoxSqFt.Name = "txtBoxSqFt";
             this.txtBoxSqFt.Size = new System.Drawing.Size(214, 31);
-            this.txtBoxSqFt.TabIndex = 8;
+            this.txtBoxSqFt.TabIndex = 14;
             this.txtBoxSqFt.Text = "0";
             this.txtBoxSqFt.TextChanged += new System.EventHandler(this.TxtBoxSqFt_TextChanged);
+            this.txtBoxSqFt.Enter += new System.EventHandler(this.TxtBoxSqFt_Enter);
             this.txtBoxSqFt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtBoxSqFt_KeyPress);
             // 
             // lblShelfQty
@@ -767,9 +784,10 @@
             this.txtBoxQty.Location = new System.Drawing.Point(1245, 53);
             this.txtBoxQty.Name = "txtBoxQty";
             this.txtBoxQty.Size = new System.Drawing.Size(214, 31);
-            this.txtBoxQty.TabIndex = 7;
+            this.txtBoxQty.TabIndex = 13;
             this.txtBoxQty.Text = "0";
             this.txtBoxQty.TextChanged += new System.EventHandler(this.TxtBoxQty_TextChanged);
+            this.txtBoxQty.Enter += new System.EventHandler(this.TxtBoxQty_Enter);
             this.txtBoxQty.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtBoxQty_KeyPress);
             // 
             // lblBoxSqFt
@@ -789,9 +807,10 @@
             this.txtShutterQty.Location = new System.Drawing.Point(1007, 53);
             this.txtShutterQty.Name = "txtShutterQty";
             this.txtShutterQty.Size = new System.Drawing.Size(214, 31);
-            this.txtShutterQty.TabIndex = 6;
+            this.txtShutterQty.TabIndex = 12;
             this.txtShutterQty.Text = "0";
             this.txtShutterQty.TextChanged += new System.EventHandler(this.TxtShutterQty_TextChanged);
+            this.txtShutterQty.Enter += new System.EventHandler(this.TxtShutterQty_Enter);
             this.txtShutterQty.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtShutterQty_KeyPress);
             // 
             // lblHeight
@@ -811,9 +830,10 @@
             this.txtShelfQty.Location = new System.Drawing.Point(769, 53);
             this.txtShelfQty.Name = "txtShelfQty";
             this.txtShelfQty.Size = new System.Drawing.Size(214, 31);
-            this.txtShelfQty.TabIndex = 5;
+            this.txtShelfQty.TabIndex = 11;
             this.txtShelfQty.Text = "0";
             this.txtShelfQty.TextChanged += new System.EventHandler(this.TxtShelfQty_TextChanged);
+            this.txtShelfQty.Enter += new System.EventHandler(this.TxtShelfQty_Enter);
             this.txtShelfQty.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtShelfQty_KeyPress);
             // 
             // lblShutterQty
@@ -833,9 +853,10 @@
             this.txtDepth.Location = new System.Drawing.Point(531, 53);
             this.txtDepth.Name = "txtDepth";
             this.txtDepth.Size = new System.Drawing.Size(214, 31);
-            this.txtDepth.TabIndex = 4;
+            this.txtDepth.TabIndex = 10;
             this.txtDepth.Text = "0";
             this.txtDepth.TextChanged += new System.EventHandler(this.TxtDepth_TextChanged);
+            this.txtDepth.Enter += new System.EventHandler(this.TxtDepth_Enter);
             this.txtDepth.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtDepth_KeyPress);
             // 
             // lblBoxQty
@@ -855,9 +876,10 @@
             this.txtHeight.Location = new System.Drawing.Point(293, 53);
             this.txtHeight.Name = "txtHeight";
             this.txtHeight.Size = new System.Drawing.Size(214, 31);
-            this.txtHeight.TabIndex = 3;
+            this.txtHeight.TabIndex = 9;
             this.txtHeight.Text = "0";
             this.txtHeight.TextChanged += new System.EventHandler(this.TxtHeight_TextChanged);
+            this.txtHeight.Enter += new System.EventHandler(this.TxtHeight_Enter);
             this.txtHeight.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtHeight_KeyPress);
             // 
             // lblDepth
@@ -942,10 +964,10 @@
             // 
             this.DgvCbDescription.AutoComplete = false;
             this.DgvCbDescription.DataPropertyName = "Description_id";
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.DgvCbDescription.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.DgvCbDescription.DefaultCellStyle = dataGridViewCellStyle9;
             this.DgvCbDescription.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox;
             this.DgvCbDescription.HeaderText = "Description";
             this.DgvCbDescription.Name = "DgvCbDescription";
@@ -1147,18 +1169,6 @@
             this.txt_QuotationRowIndex.Size = new System.Drawing.Size(159, 31);
             this.txt_QuotationRowIndex.TabIndex = 63;
             this.txt_QuotationRowIndex.Visible = false;
-            // 
-            // btnClone
-            // 
-            this.btnClone.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold);
-            this.btnClone.ForeColor = System.Drawing.Color.Black;
-            this.btnClone.Location = new System.Drawing.Point(1327, 726);
-            this.btnClone.Name = "btnClone";
-            this.btnClone.Size = new System.Drawing.Size(428, 46);
-            this.btnClone.TabIndex = 69;
-            this.btnClone.Text = "Clone";
-            this.btnClone.UseVisualStyleBackColor = true;
-            this.btnClone.Click += new System.EventHandler(this.BtnClone_Click);
             // 
             // WorkTransactionPage
             // 

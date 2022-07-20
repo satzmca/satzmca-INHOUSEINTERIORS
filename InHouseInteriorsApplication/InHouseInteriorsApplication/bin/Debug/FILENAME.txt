@@ -97,3 +97,25 @@ MainPage : WorkTransactionToolStripMenuItem_ClickSystem.ArgumentException: Colum
    at System.Windows.Forms.Form.ShowDialog(IWin32Window owner)
    at System.Windows.Forms.Form.ShowDialog()
    at InHouseInteriorsApplication.MainPage.WorkTransactionToolStripMenuItem_Click(Object sender, EventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\MainPage.cs:line 104
+WorkTransactionPage : TxtWidth_TextChangedSystem.Xml.XPath.XPathException: 'number(540 * 0.4 * 9.09109090910909E + 15 div 1000)' has an invalid token.
+   at MS.Internal.Xml.XPath.XPathParser.CheckToken(LexKind t)
+   at MS.Internal.Xml.XPath.XPathParser.ParseMethod(AstNode qyInput)
+   at MS.Internal.Xml.XPath.XPathParser.ParsePrimaryExpr(AstNode qyInput)
+   at MS.Internal.Xml.XPath.XPathParser.ParseFilterExpr(AstNode qyInput)
+   at MS.Internal.Xml.XPath.XPathParser.ParsePathExpr(AstNode qyInput)
+   at MS.Internal.Xml.XPath.XPathParser.ParseUnionExpr(AstNode qyInput)
+   at MS.Internal.Xml.XPath.XPathParser.ParseUnaryExpr(AstNode qyInput)
+   at MS.Internal.Xml.XPath.XPathParser.ParseMultiplicativeExpr(AstNode qyInput)
+   at MS.Internal.Xml.XPath.XPathParser.ParseAdditiveExpr(AstNode qyInput)
+   at MS.Internal.Xml.XPath.XPathParser.ParseRelationalExpr(AstNode qyInput)
+   at MS.Internal.Xml.XPath.XPathParser.ParseEqualityExpr(AstNode qyInput)
+   at MS.Internal.Xml.XPath.XPathParser.ParseAndExpr(AstNode qyInput)
+   at MS.Internal.Xml.XPath.XPathParser.ParseOrExpr(AstNode qyInput)
+   at MS.Internal.Xml.XPath.XPathParser.ParseExpresion(AstNode qyInput)
+   at MS.Internal.Xml.XPath.XPathParser.ParseXPathExpresion(String xpathExpresion)
+   at System.Xml.XPath.XPathExpression.Compile(String xpath, IXmlNamespaceResolver nsResolver)
+   at System.Xml.XPath.XPathNavigator.Evaluate(String xpath)
+   at InHouseInteriorsApplication.WorkTransactionPage.Evaluate(String expression) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 86
+   at InHouseInteriorsApplication.WorkTransactionPage.getFormulaCalculation(String formula_id, String sizeval, String weightval, String rateval, String totalval, String sqftplaincoatingval, String plainrateval, String totalplaincoatingval, String totalplainval, String sqftwoodcoatingval, String woodrateval, String totalwoodcoatingval, String totalwoodval) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 1506
+   at InHouseInteriorsApplication.WorkTransactionPage.DataBind() in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 1311
+   at InHouseInteriorsApplication.WorkTransactionPage.TxtWidth_TextChanged(Object sender, EventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 210

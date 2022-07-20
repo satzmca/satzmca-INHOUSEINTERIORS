@@ -93,11 +93,21 @@ namespace InHouseInteriorsApplication
         public void bindWork()
         {
             DataTable workdt = new DataTable();
-            
+
+            cmbParty.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            cmbParty.AutoCompleteSource = AutoCompleteSource.ListItems;
+            cmbParty.MouseWheel -= new MouseEventHandler(ctl_MouseWheel);
+            cmbParty.MouseWheel += new MouseEventHandler(ctl_MouseWheel);
+
             cmbWorkName.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
             cmbWorkName.AutoCompleteSource = AutoCompleteSource.ListItems;
             cmbWorkName.MouseWheel -= new MouseEventHandler(ctl_MouseWheel);
             cmbWorkName.MouseWheel += new MouseEventHandler(ctl_MouseWheel);
+
+            cmbRemarks.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            cmbRemarks.AutoCompleteSource = AutoCompleteSource.ListItems;
+            cmbRemarks.MouseWheel -= new MouseEventHandler(ctl_MouseWheel);
+            cmbRemarks.MouseWheel += new MouseEventHandler(ctl_MouseWheel);
 
             var dict = JObject.Parse(@"{'IsWorkSelect':'Y'}");
             workdt = cls.FetchData(SpName: "USP_Work_Insert", ReqType: "SELECT_WORK", dict);
@@ -358,6 +368,18 @@ namespace InHouseInteriorsApplication
                         dgvQuotation.DataSource = Quotation_dt;
                         dgvQuotation.Rows[Quotation_dt.Rows.Count - 1].Selected = true;
                         txt_QuotationRowIndex.Text = (Quotation_dt.Rows.Count - 1).ToString();
+
+
+                        //txtWidth.Text = "0";
+                        //txtDepth.Text = "0";
+                        //txtHeight.Text = "0";
+                        //txtShelfQty.Text = "0";
+                        //txtShutterQty.Text = "0";
+                        //txtBoxQty.Text = "0";
+                        //txtBoxSqFt.Text = "0";
+
+                        isloadQuotation = true;
+
                     }
 
                 }
@@ -908,6 +930,96 @@ namespace InHouseInteriorsApplication
             {
                 MessageBox.Show("Error");
                 cls.WriteException("WorkTransactionPage : BtnClone_Click" + ex.ToString());
+            }
+        }       
+
+        private void TxtQdescTaxPer_Enter(object sender, EventArgs e)
+        {
+            if (!String.IsNullOrEmpty(txtQdescTaxPer.Text))
+            {
+                txtQdescTaxPer.SelectionStart = 0;
+                txtQdescTaxPer.SelectionLength = txtQdescTaxPer.Text.Length;
+            }
+        }
+
+        private void TxtOverallTaxPer_Enter(object sender, EventArgs e)
+        {
+            if (!String.IsNullOrEmpty(txtOverallTaxPer.Text))
+            {
+                txtOverallTaxPer.SelectionStart = 0;
+                txtOverallTaxPer.SelectionLength = txtOverallTaxPer.Text.Length;
+            }
+        }
+
+        private void TxtTransportation_Enter(object sender, EventArgs e)
+        {
+            if (!String.IsNullOrEmpty(txtTransportation.Text))
+            {
+                txtTransportation.SelectionStart = 0;
+                txtTransportation.SelectionLength = txtTransportation.Text.Length;
+            }
+        }
+
+        private void TxtWidth_Enter(object sender, EventArgs e)
+        {
+            if (!String.IsNullOrEmpty(txtWidth.Text))
+            {
+                txtWidth.SelectionStart = 0;
+                txtWidth.SelectionLength = txtWidth.Text.Length;
+            }
+        }
+
+        private void TxtHeight_Enter(object sender, EventArgs e)
+        {
+            if (!String.IsNullOrEmpty(txtHeight.Text))
+            {
+                txtHeight.SelectionStart = 0;
+                txtHeight.SelectionLength = txtHeight.Text.Length;
+            }
+        }
+
+        private void TxtDepth_Enter(object sender, EventArgs e)
+        {
+            if (!String.IsNullOrEmpty(txtDepth.Text))
+            {
+                txtDepth.SelectionStart = 0;
+                txtDepth.SelectionLength = txtDepth.Text.Length;
+            }
+        }
+
+        private void TxtShelfQty_Enter(object sender, EventArgs e)
+        {
+            if (!String.IsNullOrEmpty(txtShelfQty.Text))
+            {
+                txtShelfQty.SelectionStart = 0;
+                txtShelfQty.SelectionLength = txtShelfQty.Text.Length;
+            }
+        }
+
+        private void TxtShutterQty_Enter(object sender, EventArgs e)
+        {
+            if (!String.IsNullOrEmpty(txtShutterQty.Text))
+            {
+                txtShutterQty.SelectionStart = 0;
+                txtShutterQty.SelectionLength = txtShutterQty.Text.Length;
+            }
+        }
+
+        private void TxtBoxQty_Enter(object sender, EventArgs e)
+        {
+            if (!String.IsNullOrEmpty(txtBoxQty.Text))
+            {
+                txtBoxQty.SelectionStart = 0;
+                txtBoxQty.SelectionLength = txtBoxQty.Text.Length;
+            }
+        }
+
+        private void TxtBoxSqFt_Enter(object sender, EventArgs e)
+        {
+            if (!String.IsNullOrEmpty(txtBoxSqFt.Text))
+            {
+                txtBoxSqFt.SelectionStart = 0;
+                txtBoxSqFt.SelectionLength = txtBoxSqFt.Text.Length;
             }
         }
 

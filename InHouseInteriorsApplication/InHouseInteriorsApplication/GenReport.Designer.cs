@@ -145,7 +145,7 @@ namespace InHouseInteriorsApplication
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Red;
-            this.ClientSize = new System.Drawing.Size(1620, 883);
+            this.ClientSize = new System.Drawing.Size(1741, 883);
             this.Controls.Add(this.CmbQRequest);
             this.Controls.Add(this.cmbJobOrderNo);
             this.Controls.Add(this.label1);

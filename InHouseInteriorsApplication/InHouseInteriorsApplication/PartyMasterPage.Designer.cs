@@ -48,6 +48,7 @@
             this.lblAddress1 = new System.Windows.Forms.Label();
             this.lblPartName = new System.Windows.Forms.Label();
             this.pctClose = new System.Windows.Forms.PictureBox();
+            this.cmbRemark = new System.Windows.Forms.ComboBox();
             this.grpDescription.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvParty)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctClose)).BeginInit();
@@ -66,6 +67,7 @@
             // 
             // grpDescription
             // 
+            this.grpDescription.Controls.Add(this.cmbRemark);
             this.grpDescription.Controls.Add(this.btnClear);
             this.grpDescription.Controls.Add(this.txtParty_id);
             this.grpDescription.Controls.Add(this.dgvParty);
@@ -288,6 +290,18 @@
             this.pctClose.TabStop = false;
             this.pctClose.Click += new System.EventHandler(this.PctClose_Click);
             // 
+            // cmbRemark
+            // 
+            this.cmbRemark.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbRemark.FormattingEnabled = true;
+            this.cmbRemark.Items.AddRange(new object[] {
+            "Mr",
+            "Mrs"});
+            this.cmbRemark.Location = new System.Drawing.Point(164, 25);
+            this.cmbRemark.Name = "cmbRemark";
+            this.cmbRemark.Size = new System.Drawing.Size(244, 31);
+            this.cmbRemark.TabIndex = 30;
+            // 
             // PartyMasterPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -333,5 +347,6 @@
         private System.Windows.Forms.DataGridView dgvParty;
         private System.Windows.Forms.TextBox txtParty_id;
         private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.ComboBox cmbRemark;
     }
 }

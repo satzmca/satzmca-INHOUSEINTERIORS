@@ -119,3 +119,8 @@ WorkTransactionPage : TxtWidth_TextChangedSystem.Xml.XPath.XPathException: 'numb
    at InHouseInteriorsApplication.WorkTransactionPage.getFormulaCalculation(String formula_id, String sizeval, String weightval, String rateval, String totalval, String sqftplaincoatingval, String plainrateval, String totalplaincoatingval, String totalplainval, String sqftwoodcoatingval, String woodrateval, String totalwoodcoatingval, String totalwoodval) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 1506
    at InHouseInteriorsApplication.WorkTransactionPage.DataBind() in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 1311
    at InHouseInteriorsApplication.WorkTransactionPage.TxtWidth_TextChanged(Object sender, EventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 210
+WorkTransactionPage : CmbQuotation_SelectedIndexChangedSystem.IndexOutOfRangeException: There is no row at position 0.
+   at System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   at System.Data.DataRowCollection.get_Item(Int32 index)
+   at InHouseInteriorsApplication.WorkTransactionPage.QuotationDetailBind() in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 726
+   at InHouseInteriorsApplication.WorkTransactionPage.CmbQuotation_SelectedIndexChanged(Object sender, EventArgs e) in D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\WorkTransactionPage.cs:line 698

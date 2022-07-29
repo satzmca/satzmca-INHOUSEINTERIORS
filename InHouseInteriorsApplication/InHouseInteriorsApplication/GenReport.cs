@@ -36,11 +36,12 @@ namespace InHouseInteriorsApplication
         private void Report_Load(object sender, EventArgs e)
         {
             _conn.ConnectionString = _con;
-            LoadJORecords();
+            LoadQuotation();
+           
         }
 
 
-        private void LoadJORecords()
+        private void LoadQuotation()
         {
             using (SqlConnection con = new SqlConnection(_con))
             {
@@ -70,13 +71,15 @@ namespace InHouseInteriorsApplication
         }
 
 
+
         private void btnPdf_Click(object sender, EventArgs e)
         {
             DataTable dtjo = new DataTable();
             dtjo.Columns.Add("ReqType");
             dtjo.Columns.Add("Q_Id");
+            dtjo.Columns.Add("QRequest");
 
-            dtjo.Rows.Add("Quotation", cmbJobOrderNo.SelectedValue);
+            dtjo.Rows.Add("Quotation", cmbJobOrderNo.SelectedValue, CmbQRequest.SelectedItem);
             dtRepParam = dtjo;
 
 
@@ -94,6 +97,10 @@ namespace InHouseInteriorsApplication
 
                     if (dtRepParam.Rows[0]["Q_Id"].ToString() != "" && dtRepParam.Rows[0]["Q_Id"].ToString() != null)
                         r.Report.ReportParameters["Q_Id"].Value = dtRepParam.Rows[0]["Q_Id"].ToString();
+
+
+                    if (dtRepParam.Rows[0]["QRequest"].ToString() != "" && dtRepParam.Rows[0]["QRequest"].ToString() != null)
+                        r.Report.ReportParameters["QRequest"].Value = dtRepParam.Rows[0]["QRequest"].ToString();
 
 
                     this.reportViewer1.ReportSource = r;

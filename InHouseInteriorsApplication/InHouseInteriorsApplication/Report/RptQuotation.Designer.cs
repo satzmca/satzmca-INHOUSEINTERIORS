@@ -13,6 +13,7 @@ namespace InHouseInteriorsApplication.Report
             Telerik.Reporting.Group group1 = new Telerik.Reporting.Group();
             Telerik.Reporting.ReportParameter reportParameter1 = new Telerik.Reporting.ReportParameter();
             Telerik.Reporting.ReportParameter reportParameter2 = new Telerik.Reporting.ReportParameter();
+            Telerik.Reporting.ReportParameter reportParameter3 = new Telerik.Reporting.ReportParameter();
             Telerik.Reporting.Drawing.StyleRule styleRule1 = new Telerik.Reporting.Drawing.StyleRule();
             this.groupFooterSection = new Telerik.Reporting.GroupFooterSection();
             this.groupHeaderSection = new Telerik.Reporting.GroupHeaderSection();
@@ -163,7 +164,7 @@ namespace InHouseInteriorsApplication.Report
             // pictureBox1
             // 
             this.pictureBox1.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0D), Telerik.Reporting.Drawing.Unit.Cm(0.254D));
-            this.pictureBox1.MimeType = "image/png";
+            this.pictureBox1.MimeType = "image/jpeg";
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(4.964D), Telerik.Reporting.Drawing.Unit.Cm(2.116D));
             this.pictureBox1.Sizing = Telerik.Reporting.Drawing.ImageSizeMode.Stretch;
@@ -595,6 +596,7 @@ namespace InHouseInteriorsApplication.Report
             this.textBox21.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(10D);
             this.textBox21.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Left;
             this.textBox21.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
+            this.textBox21.Style.Visible = false;
             this.textBox21.StyleName = "";
             this.textBox21.Value = "Shutter Type          :";
             // 
@@ -633,6 +635,7 @@ namespace InHouseInteriorsApplication.Report
             this.textBox23.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(10D);
             this.textBox23.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Left;
             this.textBox23.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
+            this.textBox23.Style.Visible = false;
             this.textBox23.StyleName = "";
             this.textBox23.Value = "Classic Shutter";
             // 
@@ -958,7 +961,7 @@ namespace InHouseInteriorsApplication.Report
             // 
             // textBox95
             // 
-            this.textBox95.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(7.026D), Telerik.Reporting.Drawing.Unit.Inch(2.547D));
+            this.textBox95.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(7.026D), Telerik.Reporting.Drawing.Unit.Inch(2.553D));
             this.textBox95.Name = "textBox95";
             this.textBox95.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(2.065D), Telerik.Reporting.Drawing.Unit.Inch(0.252D));
             this.textBox95.Style.BackgroundColor = System.Drawing.Color.Transparent;
@@ -972,7 +975,7 @@ namespace InHouseInteriorsApplication.Report
             this.textBox95.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Center;
             this.textBox95.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
             this.textBox95.StyleName = "";
-            this.textBox95.Value = "CLASSIC & CONTEMPORARY";
+            this.textBox95.Value = "= Iif(Parameters.QRequest.Value = \'CONTEMPORARY\',\'CONTEMPORARY\',\'CLASSIC\')";
             // 
             // reportFooterSection1
             // 
@@ -1485,7 +1488,8 @@ namespace InHouseInteriorsApplication.Report
             this.Quotation.Name = "Quotation";
             this.Quotation.Parameters.AddRange(new Telerik.Reporting.SqlDataSourceParameter[] {
             new Telerik.Reporting.SqlDataSourceParameter("@ReqType", System.Data.DbType.AnsiString, "= Parameters.ReqType.Value"),
-            new Telerik.Reporting.SqlDataSourceParameter("@Q_Id", System.Data.DbType.Int32, "= Parameters.Q_Id.Value")});
+            new Telerik.Reporting.SqlDataSourceParameter("@Q_Id", System.Data.DbType.Int32, "= Parameters.Q_Id.Value"),
+            new Telerik.Reporting.SqlDataSourceParameter("@QRequest", System.Data.DbType.AnsiString, "= Parameters.QRequest.Value")});
             this.Quotation.SelectCommand = "USP_tblTQuotation";
             this.Quotation.SelectCommandType = Telerik.Reporting.SqlDataSourceCommandType.StoredProcedure;
             // 
@@ -1519,8 +1523,12 @@ namespace InHouseInteriorsApplication.Report
             reportParameter2.Text = "Q_Id";
             reportParameter2.Type = Telerik.Reporting.ReportParameterType.Integer;
             reportParameter2.Value = "";
+            reportParameter3.AllowNull = true;
+            reportParameter3.Name = "QRequest";
+            reportParameter3.Text = "QRequest";
             this.ReportParameters.Add(reportParameter1);
             this.ReportParameters.Add(reportParameter2);
+            this.ReportParameters.Add(reportParameter3);
             styleRule1.Selectors.AddRange(new Telerik.Reporting.Drawing.ISelector[] {
             new Telerik.Reporting.Drawing.TypeSelector(typeof(Telerik.Reporting.TextItemBase)),
             new Telerik.Reporting.Drawing.TypeSelector(typeof(Telerik.Reporting.HtmlTextBox))});

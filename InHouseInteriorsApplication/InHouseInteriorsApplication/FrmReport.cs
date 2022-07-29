@@ -52,6 +52,9 @@ namespace InHouseInteriorsApplication
                     if (dtRepParam.Rows[0]["Q_Id"].ToString() != "" && dtRepParam.Rows[0]["Q_Id"].ToString() != null)
                         r.Report.ReportParameters["Q_Id"].Value = dtRepParam.Rows[0]["Q_Id"].ToString();
 
+                    if (dtRepParam.Rows[0]["QRequest"].ToString() != "" && dtRepParam.Rows[0]["QRequest"].ToString() != null)
+                        r.Report.ReportParameters["QRequest"].Value = dtRepParam.Rows[0]["QRequest"].ToString();
+
 
                     this.reportViewer1.ReportSource = r;
                     this.reportViewer1.RefreshReport();

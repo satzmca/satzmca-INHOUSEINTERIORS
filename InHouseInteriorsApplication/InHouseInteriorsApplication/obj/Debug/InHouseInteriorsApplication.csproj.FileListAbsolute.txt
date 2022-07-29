@@ -91,3 +91,7 @@ D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\I
 D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\obj\Debug\InHouseInteriorsApplication.FrmReport.resources
 D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\obj\Debug\InHouseInteriorsApplication.GenReport.resources
 D:\My\28 APR 2022\Project\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\obj\Debug\InHouseInteriorsApplication.exe.licenses
+D:\senthil\Project\In-House\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\bin\Debug\Telerik.ReportViewer.Silverlight.dll
+D:\senthil\Project\In-House\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\bin\Debug\Telerik.ReportViewer.Silverlight.pdb
+D:\senthil\Project\In-House\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\bin\Debug\Telerik.ReportViewer.Silverlight.xml
+D:\senthil\Project\In-House\satzmca-INHOUSEINTERIORS\InHouseInteriorsApplication\InHouseInteriorsApplication\obj\Debug\InHouseInteriorsApplication.GenReport.resources

@@ -109,6 +109,12 @@ namespace InHouseInteriorsApplication
             cmbRemarks.MouseWheel -= new MouseEventHandler(ctl_MouseWheel);
             cmbRemarks.MouseWheel += new MouseEventHandler(ctl_MouseWheel);
 
+            cmbQdesc.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            cmbQdesc.AutoCompleteSource = AutoCompleteSource.ListItems;
+            cmbQdesc.MouseWheel -= new MouseEventHandler(ctl_MouseWheel);
+            cmbQdesc.MouseWheel += new MouseEventHandler(ctl_MouseWheel);
+            
+
             var dict = JObject.Parse(@"{'IsWorkSelect':'Y'}");
             workdt = cls.FetchData(SpName: "USP_Work_Insert", ReqType: "SELECT_WORK", dict);
             cmbWorkName.DisplayMember = "WorkName";
@@ -153,7 +159,16 @@ namespace InHouseInteriorsApplication
         public void bindquotation()
         {
             DataTable quo_dt = new DataTable();
-            quo_dt = cls.FetchData(SpName: "USP_Quotation_Insert", ReqType: "SELECT_QUOTATION");
+            if (cmbParty.SelectedValue.ToString() != "0" && cmbParty.SelectedValue.ToString() != "")
+            {
+                var dict1 = JObject.Parse(@"{'Party_Id':'" + cmbParty.SelectedValue + "'}");
+                quo_dt = cls.FetchData(SpName: "USP_Quotation_Insert", ReqType: "SELECT_QUOTATION", dict: dict1);
+            }
+            else
+            {
+                quo_dt = cls.FetchData(SpName: "USP_Quotation_Insert", ReqType: "SELECT_QUOTATION");
+            }
+            
             cmbQuotation.DataSource = quo_dt;
             cmbQuotation.DisplayMember = "QNo";
             cmbQuotation.ValueMember = "Q_id";
@@ -677,15 +692,17 @@ namespace InHouseInteriorsApplication
         {
             try
             {
+                
                 if (cmbQuotation.SelectedValue.ToString() != "0" && cmbQuotation.SelectedValue.ToString() != "System.Data.DataRowView")
                 {
+                    //Clear();
                     isloadQuotation = false;
                     QuotationDetailBind();
                 }
-                else
-                {
-                    Clear();
-                }
+                //else
+                //{
+                //    Clear();
+                //}
             }
             catch (Exception ex)
             {
@@ -731,7 +748,19 @@ namespace InHouseInteriorsApplication
 
         private void CmbParty_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            try
+            {
+                if (cmbParty.SelectedValue.ToString() != "0" && cmbParty.SelectedValue.ToString() != "System.Data.DataRowView")
+                {
+                    bindquotation();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error");
+                cls.WriteException("WorkTransactionPage : CmbParty_SelectedIndexChanged" + ex.ToString());
+            }
+            
         }
 
         private void Label2_Click(object sender, EventArgs e)
